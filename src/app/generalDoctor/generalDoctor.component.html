@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="doctor">
+  <div *ngFor="let det of generalDocDet">
+    <div class="box">
+      <img src="{{ det.image }}" alt="" />
+      <p>Name: {{ det.doctorName }}</p>
+      <p>Specialist: {{ det.field }}</p>
+      <p>Experiance: {{ det.experiance }}</p>
+      <p>Licence no: {{ det.licenseNo }}</p>
+      <p>Available time: {{ det.available }}</p>
+    </div>
+  </div>
+</div>
+<div>
+  <button routerLink="/medicalSpec" class="back"> Back </button>
+</div>
+<app-footer></app-footer>
+
+<!-- <router-outlet></router-outlet> -->

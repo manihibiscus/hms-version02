@@ -1,0 +1,125 @@
+.adddoc{
+  background-color: #edf6ef;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  /* padding-top:  20px;
+  align-items: center;
+  justify-content: center; */
+}
+
+.container{
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 12px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.adddoc h3{
+text-align: center;
+}
+.inp-box{
+  width: 80%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+
+.split1{
+  background-color: #d1e7d5;
+  width: 350px;
+  height: 650px;
+  /* float: left; */
+
+  /* margin-left: 130px;
+  margin-top: 25px;
+  padding: 20px; */
+  padding-left: 25px;
+  border-radius: 10px;
+
+  /* margin: 30px 20px 40px 20px; */
+}
+.sel-box{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.split2{
+  background-color: #d1e7d5;
+  width: 350px;
+  height: 650px;
+  /* float: right; */
+  /* margin-right: 130px;
+  margin-top: 25px;
+  padding: 20px; */
+
+  padding-left: 25px;
+  border-radius: 10px;
+
+  /* margin: 30px 10px 40px 40px; */
+}
+.adddoc h4{
+  text-align: center;
+  padding-top: 20px;
+
+}
+.hide{
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-color: #999;
+  outline: none;
+  color: black;
+  background: transparent;
+}
+.drop{
+  background-color: white;
+  border-radius: 10px;
+}
+.title{
+  text-align: center;
+}
+.submit{
+  /* clear: both; */
+  width: 110px;
+  padding: 10px 30px;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #e5eaec,#90c79a);
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #0e0a01;
+}
+
+.error p{
+  color: red;
+  font-size: 13px;
+}
+
+/* input.ng-valid{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid green;
+  outline: none;
+  background: transparent;
+} */

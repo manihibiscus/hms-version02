@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="body">
+<div class="bimg">
+  <img src="../../assets/Image/12953573_Data_security_05.jpg" alt="">
+</div>
+<div class="blogin">
+  <div class="form-box">
+    <div class="Title">
+          <h3>Login</h3>
+    </div>
+      <form id="Login" class="inp-grp" [formGroup]="loginForm" (ngSubmit)="login()">
+          <input type="text" class="inp-box" name="user"
+          placeholder="Enter Email id " formControlName="userId"
+        pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
+        pattern2="^[AI][0-9]{4}$"
+        />
+          <div class="error" *ngIf="loginForm.controls['userId'].dirty">
+            <p *ngIf="loginForm.controls['userId'].errors?.['required']">
+              Enter the field
+            </p>
+            <p *ngIf="loginForm.controls['userId'].errors?.['pattern'] || loginForm.controls['userId'].errors?.['pattern2'] ">
+              Enter valid Email id
+            </p>
+          </div>
+          <input type="password" class="inp-box" name="l-password" placeholder="Enter Pin"
+          formControlName="password"
+          pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
+
+          <div class="error" *ngIf="loginForm.controls['password'].dirty">
+            <p *ngIf="loginForm.controls['password'].errors?.['required']">
+              Enter the field
+            </p>
+            <p *ngIf="loginForm.controls['password'].errors?.['pattern']">
+              Enter valid password
+            </p>
+          </div><br><br>
+          <a routerLink="#" class="forgot">forgot password?</a><br>
+          <input type="checkbox" class="check-box" /><span>Remember me</span><br>
+          <button type="submit" class="sub-box" name="l-submit">Log in</button>
+          <div class="Goto">
+            <ul>
+              <li>If you are new user ?<a routerLink="/patientregister">Register now!</a></li>
+              </ul><br>
+              <!-- <ul>
+              <li><a routerLink="/home">Back to Home Page</a></li>
+              </ul> -->
+          </div>
+      </form>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>

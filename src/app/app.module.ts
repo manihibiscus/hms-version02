@@ -1,0 +1,56 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { ContactUsPageComponent } from './contactUsPage/contactUsPage.component';
+import { AboutUsPageComponent } from './aboutUsPage/aboutUsPage.component';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
+import { HttpClientModule} from '@angular/common/http';
+import { GeneralDoctorComponent } from './generalDoctor/generalDoctor.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PatientRegistrationComponent } from './patientRegistration/patientRegistration.component';
+import { AdminHeaderComponent } from './adminHeader/adminHeader.component';
+import { AdminPageComponent } from './adminPage/adminPage.component';
+import { ViewStatusComponent } from './viewStatus/viewStatus.component';
+import { PatientHeaderComponent } from './patientHeader/patientHeader.component';
+import { PatientPageComponent } from './patientPage/patientPage.component';
+import { DoctorHeaderComponent } from './doctorHeader/doctorHeader.component';
+import { DoctorPageComponent } from './doctorPage/doctorPage.component';
+import { AppointmentRequestComponent } from './appointmentRequest/appointmentRequest.component';
+import { ViewQueryComponent } from './viewQuery/viewQuery.component';
+import { ViewSlotComponent } from './view-slot/view-slot.component';
+@NgModule({
+  declarations: [						
+    AppComponent,
+      ContactUsPageComponent,
+      AboutUsPageComponent,
+      HeaderComponent,
+      FooterComponent,
+      routingComponents,
+      GeneralDoctorComponent,
+      PatientRegistrationComponent,
+      AdminHeaderComponent,
+      AdminPageComponent,
+      ViewStatusComponent,
+      PatientHeaderComponent,
+      PatientPageComponent,
+      DoctorHeaderComponent,
+      DoctorPageComponent,
+      AppointmentRequestComponent,
+      ViewQueryComponent,
+      ViewSlotComponent
+   ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,ReactiveFormsModule
+    ],
+  providers: [],
+  bootstrap:[AppComponent]
+})
+export class AppModule { }
+

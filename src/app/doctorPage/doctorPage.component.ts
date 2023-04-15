@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from '../userService.service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-doctorPage',
+  templateUrl: './doctorPage.component.html',
+  styleUrls: ['./doctorPage.component.css']
+})
+export class DoctorPageComponent implements OnInit {
+  loggedInUser:any="";
+  constructor(private userServeice:UserServiceService, private route: Router) { }
+
+  ngOnInit() {
+    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.loggedInUser = JSON.parse(sessionUser);
+    } else if (this.userServeice.loggedInUser !== null) {
+      this.loggedInUser = this.userServeice.loggedInUser;
+    } else {
+      alert('You are Loggedout. Login to continue');
+      this.route.navigate(['/login']);
+    }
+  }
+
+}

@@ -1,0 +1,144 @@
+<app-header></app-header>
+<form div class="adddoc" [formGroup]="PatientRegister" (ngSubmit)="registrr()">
+  <br>
+  <h3>Patient Registration</h3>
+  <div class="container">
+  <div class="split1">
+    <h4 class="title">Personal Details</h4>
+    <label>Patient Name:</label><br />
+    <input type="text" placeholder="Patient Name" class="inp-box" formControlName="patientName" pattern="^[A-Za-z ]+$"
+      minlength="3" oninput="this.value = this.value.toUpperCase()" />
+
+    <div class="error" *ngIf="PatientRegister.controls['patientName'].dirty" >
+      <p *ngIf="PatientRegister.controls['patientName'].errors?.['required']">
+        Enter the field
+      </p>
+      <p *ngIf="PatientRegister.controls['patientName'].errors?.['pattern']">
+        Enter alphabets only
+      </p>
+      <p *ngIf="PatientRegister.controls['patientName'].errors?.['minlength']">
+        Enter valid name
+      </p>
+    </div>
+    <br />
+    <label>Father Name:</label><br />
+    <input type="text" placeholder="Father Name" class="inp-box" formControlName="fatherName" pattern="^[A-Za-z ]+$"
+      minlength="3" oninput="this.value = this.value.toUpperCase()"/>
+    <div class="error" *ngIf="PatientRegister.controls['fatherName'].dirty">
+      <p *ngIf="PatientRegister.controls['fatherName'].errors?.['required']">
+        Enter the field
+      </p>
+      <p *ngIf="PatientRegister.controls['fatherName'].errors?.['pattern']">
+        Enter alphabets only
+      </p>
+      <p *ngIf="PatientRegister.controls['fatherName'].errors?.['minlength']">
+        Enter valid name
+      </p>
+    </div>
+    <br /><br />
+    <label>Gender:</label>
+    <div class="gender-category">
+          <input type="radio" name="gender" formControlName="gender" value="male" >
+          <label for="male">Male</label>
+          <input type="radio" name="gender" formControlName="gender" value="female" >
+          <label for="female">Female</label>
+          <input type="radio" name="gender" formControlName="gender" value="other" >
+          <label for="other">Other</label>
+    </div>
+    <br /><br />
+    <label>Blood Group</label><br />
+    <input type="text" class="sel-box" placeholder="Blood Group" required formControlName="blood"
+      pattern="^(A|B|AB|O)[+-]$" oninput="this.value = this.value.toUpperCase()"  />
+    <div class="error" *ngIf="PatientRegister.controls['blood'].dirty">
+      <p *ngIf="PatientRegister.controls['blood'].errors?.['required']">
+        Enter the Blood Group
+      </p>
+      <p *ngIf="PatientRegister.controls['blood'].errors?.['pattern']">
+        Enter valid value
+      </p>
+    </div>
+    <br /><br />
+    <label>Date</label><br />
+    <input type="date" class="inp-box" placeholder="Date" required formControlName="date" />
+<br>
+    <br>
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" id="email"
+        class="inp-box"
+        pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
+        formControlName="email" />
+
+      <div class="error" *ngIf="PatientRegister.controls['email'].dirty">
+        <p *ngIf="PatientRegister.controls['email'].errors?.['required']">Please enter your Email Id</p>
+        <p *ngIf="PatientRegister.controls['email'].errors?.['pattern']">Plese enter the valid mail id</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="split2">
+    <br><br>
+    <label>Contact Number</label><br />
+    <input type="text" class="inp-box" name="phno" placeholder="Phone number" required formControlName="phone"
+      pattern="^[6789][0-9]{9}$" />
+    <div class="error" *ngIf="PatientRegister.controls['phone'].dirty">
+      <p *ngIf="PatientRegister.controls['phone'].errors?.['required']">
+        Enter the Phone Number
+      </p>
+      <p *ngIf="PatientRegister.controls['phone'].errors?.['pattern']">
+        Enter valid number
+      </p>
+    </div>
+    <br />
+    <label>Address</label><br />
+
+    <textarea type="text" class="inp-box" name="phno" placeholder="Address" required
+      formControlName="address" pattern="^[a-zA-Z0-9\s,.'-/]{3,}$" ></textarea>
+    <div class="error" *ngIf="PatientRegister.controls['address'].dirty">
+      <p *ngIf="PatientRegister.controls['address'].errors?.['required']">
+        Enter the address
+      </p>
+      <p *ngIf="PatientRegister.controls['address'].errors?.['pattern']">
+        Enter the valid field
+      </p>
+    </div>
+    <br /><br />
+    <label>Uplaod patient Image</label><br /><br />
+    <input type="file" id="file" required multiple accept="image/*" formControlName="image"/> <br>
+
+    <br><br>
+    <label>Insurance policy card availability:</label>
+    <div>
+          <input type="radio" name="gender" formControlName="insurance" value="YES" >
+          <label>Yes</label>
+          <input type="radio" name="gender" formControlName="insurance" value="NO" >
+          <label>No</label>
+    </div>
+
+    <br>
+    <div>
+      <label>Password</label><br>
+      <small>*minimum 6 to 14 character, <br> *maximum 1 special character and number</small>
+      <input type="password" formControlName="password" class="inp-box"
+        pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
+
+      <div class="error" *ngIf="PatientRegister.controls['password'].dirty">
+        <p *ngIf="PatientRegister.controls['password'].errors?.['required']">Please set your Password</p>
+        <p *ngIf="PatientRegister.controls['password'].errors?.['pattern']">Password Invalid</p>
+      </div>
+    </div><br>
+    <div>
+      <label>Confirm Password</label>
+      <input type="password" class="inp-box"
+        formControlName="cpassword" />
+      <div class="error" *ngIf="PatientRegister.controls['cpassword'].dirty">
+        <p *ngIf="PatientRegister.controls['cpassword'].errors?.['required']">Please enter the same password</p>
+        <p *ngIf="PatientRegister.controls['cpassword'].errors?.['confirmedValidator']">Password not match</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <button type="submit" class="submit" [disabled]="!PatientRegister.valid" >Register</button>
+</form>
+
+<app-footer></app-footer>

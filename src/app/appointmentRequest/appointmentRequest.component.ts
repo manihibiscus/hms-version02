@@ -1,0 +1,108 @@
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { UserServiceService } from '../userService.service';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, NgForm } from '@angular/forms';
+import { AppointmentService } from '../appointment.service';
+
+@Component({
+  selector: 'app-appointmentRequest',
+  templateUrl: './appointmentRequest.component.html',
+  styleUrls: ['./appointmentRequest.component.css']
+})
+export class AppointmentRequestComponent implements OnInit {
+  loggedInUser:any;
+  storedField:any;
+  listAppointment:any;
+  @ViewChild('appointmentForm') appointmentForm!: NgForm;
+  constructor(private userServeice:UserServiceService,
+    private route:Router, private http:HttpClient, private fb:FormBuilder,
+    private appointment:AppointmentService,) {
+      this.appointment.getAppointmentDetails().subscribe(value=>{
+        this.listAppointment=value;
+      })
+     }
+  ngOnInit() {
+    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.loggedInUser = JSON.parse(sessionUser);
+    } else if (this.userServeice.loggedInUser !== null) {
+      this.loggedInUser = this.userServeice.loggedInUser;
+    } else {
+      alert('You are Loggedout. Login to continue');
+      this.route.navigate(['/login']);
+    }
+  }
+
+  appointmentDate:any="";
+  appointmentTime:any="";
+  appointmentSpecific:any="";
+  appointmentField:any="";
+  appointmentDocName:any="";
+
+  appointmentSubmit(){
+    var body={
+      patientName:this.loggedInUser.patientName,
+      mobileno:this.loggedInUser.phone,
+      date:this.appointmentDate,
+      time:this.appointmentTime,
+      say:this.appointmentSpecific,
+      field:this.appointmentField,
+      selectedDoc:this.appointmentDocName
+    }
+
+    this.appointment.postAppointmentDetails(body).subscribe(data=>{
+      alert("Appointment Submitted");
+      this.appointmentForm.reset();
+    })
+  }
+changeValue(){
+  if(this.appointmentField=="General doctor"){
+    this.appointment.storeField="generalDoctorList";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+  else if(this.appointmentField=="Pediatrician"){
+    this.appointment.storeField="pediatricianList";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+  else if(this.appointmentField=="Gynecologist"){
+    this.appointment.storeField="gynecologist";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+  else if(this.appointmentField=="Dentist"){
+    this.appointment.storeField="dentist";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+  else if(this.appointmentField=="Cardiologist"){
+    this.appointment.storeField="cardiologist";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+  else if(this.appointmentField=="Cosmic"){
+    this.appointment.storeField="cosmic";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+  else if(this.appointmentField=="Otolaryngologist"){
+    this.appointment.storeField="otolaryngologist";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+  else if(this.appointmentField=="Psychiatrist"){
+    this.appointment.storeField="psychiatrist";
+    this.activateDb();
+    // alert(this.appointment.storeField)
+  }
+}
+
+activateDb(){
+  this.http.get<any>("http://localhost:3000"+'/'+this.appointment.storeField).subscribe(data=>{
+    this.storedField=data;
+  })
+}
+
+}

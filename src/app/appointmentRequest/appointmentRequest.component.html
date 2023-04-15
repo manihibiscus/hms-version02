@@ -1,0 +1,71 @@
+<app-patientHeader></app-patientHeader>
+<form action="" class="form" #appointmentForm="ngForm">
+  <div class="field1">
+    <label for="">Your name</label>
+    <div class="input">{{loggedInUser.patientName}} {{loggedInUser.fatherName}}</div>
+  </div>
+  <div class="field4">
+    <label for="">Choose medical field</label>
+    <div class="input">
+      <select name="" id="" class="inputselect" name="appointmentField" #field="ngModel" [(ngModel)]="appointmentField" (change)="changeValue()" >
+        <option value="" disabled selected>Medical fields</option>
+        <option value="General doctor" >General doctor</option>
+        <option value="Pediatrician">Pediatrician</option>
+        <option value="Gynecologist">Gynecologist</option>
+        <option value="Dentist" >Dentist</option>
+        <option value="Cardiologist" >Cardiologist</option>
+        <option value="Cosmic" >Cosmic</option>
+        <option value="Otolaryngologist" >Otolaryngologist</option>
+        <option value="Psychiatrist" >Psychiatrist</option>
+      </select>
+    </div>
+  </div>
+  <div *ngIf="field.errors && (field.dirty)" class="error">
+    <div [hidden]="!field.errors['required']">Please choose the field</div>
+    <!-- <div [hidden]="!field.errors['pattern']">Enter Only Alphabets </div> -->
+  </div>
+  <div class="field2">
+    <label for="">Choose doctor name</label>
+<div class="input" >
+      <select class="inputselect"  name="appointmentDocName" #dname="ngModel"
+      [(ngModel)]="appointmentDocName">
+        <option *ngFor="let docName of storedField" value="{{docName.doctorName}}">{{docName.doctorName}}</option>
+      </select>
+    </div>
+    </div>
+
+    <div class="field7">
+      <label for="">Choose date</label>
+      <div class="input"><input type="date" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div>
+    </div>
+
+  <div class="field3">
+    <label for="">Choose your timing</label>
+    <div class="input"><input type="time" class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" /></div>
+  </div>
+
+  <div class="field4">
+    <label for="">Anything to say</label>
+    *if any
+    <div class="input"><textarea name="" id="" cols="20" rows="3" name="appointmentSpecific" [(ngModel)]="appointmentSpecific" ></textarea></div>
+  </div>
+
+  <div class="field5">
+    <button class="makeaAppointment" [disabled]="!appointmentForm.valid" (click)="appointmentSubmit()">MAKE APPOINTMENT</button>
+  </div>
+</form>
+<div class="doctor">
+  <div *ngFor="let det of storedField">
+    <div class="box">
+      <img src="{{ det.image }}" alt="" />
+      <p>Name: {{ det.doctorName }}</p>
+      <p>Specialist: {{ det.field }}</p>
+      <p>Experiance: {{ det.experiance }}</p>
+      <p>Licence no: {{ det.licenseNo }}</p>
+      <p>Available time: {{ det.available }}</p>
+    </div>
+  </div>
+</div>
+<div>
+
+<app-footer></app-footer>

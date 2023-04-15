@@ -1,0 +1,297 @@
+/* content 1 */
+
+.webbody {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../../assets/Image/HomepageOk.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.webbody h3{
+  text-align: center;
+  margin-top: 35px;
+  color: #233863;
+}
+
+/* content 2 */
+.container{
+  margin-top: 5px;
+  background-color: #f7929f;
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+
+}
+.container2{
+  background-color: #f7929f;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+
+}
+.container3{
+  background-color: #e53850;
+  width: 100%;
+  height: 120px;
+  margin-top: 25px;
+  border-radius: 10px;
+
+}
+#box5{
+  background-color: aliceblue;
+  float: left;
+  width: 10%;
+  height: 120px;
+  border-radius: 10px;
+
+}
+#box6{
+  background-color: aliceblue;
+  float: right;
+  width: 70%;
+  height: 120px;
+  border-radius: 10px;
+}
+
+#box1{
+  background-color: aliceblue;
+  float: left;
+  width: 45%;
+  height: 120px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.container #box1 p{
+  color: #9b4804;
+  padding-top: 33px;
+  font-size: 20px;
+}
+
+#box1:hover ~ #box2{
+  background-color: antiquewhite;
+}
+
+#box5:hover ~ #box6{
+  width: 10%;
+
+}
+
+#box5:hover{
+  width: 80%;
+
+}
+#box2{
+  background-color: aliceblue;
+  float: right;
+  width: 45%;
+  height: 120px;
+  text-align: center;
+  border-radius: 10px;
+
+
+}
+
+.container #box2 p{
+  color: #9b4804;
+  padding-top: 33px;
+  font-size: 20px;
+}
+
+#box3{
+  background-color: aliceblue;
+  float: left;
+  width: 45%;
+  height: 120px;
+  bottom: 0px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+.container2 #box3 p{
+  color: #9b4804;
+  padding-top: 33px;
+  font-size: 20px;
+}
+
+#box4{
+  background-color: aliceblue;
+  float: right;
+  width: 45%;
+  height: 120px;
+  text-align: center;
+  border-radius: 10px;
+
+
+}
+.container2 #box4 p{
+  color: #9b4804;
+  padding-top: 33px;
+  font-size: 20px;
+}
+
+/* Content 2 */
+.segment{
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  justify-content: center;
+  /* overflow:visible; */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 30px;
+
+
+}
+.div1{
+  background-color: whitesmoke;
+  /* float:left;
+  width:32%;
+  height: 350px; */
+  border-radius: 10px;
+  border: 2px solid #ffb4a1;
+}
+.div1:hover{
+  border:2px solid #006df0;
+}
+.div2{
+  background-color: whitesmoke;
+  /* float:left;
+  width:33.5%;
+  height: 350px; */
+  /* margin-left: 7px; */
+  border-radius: 10px;
+  border: 2px solid #ffb4a1;
+}
+.div2:hover{
+  border:2px solid #006df0;
+}
+.div3{
+  background-color: whitesmoke;
+  /* float:right;
+  width:32.5%;
+  height: 350px; */
+  border-radius: 10px;
+  border: 2px solid #ffb4a1;
+}
+.div3:hover{
+  border:2px solid #006df0;
+}
+.center{
+  text-align: center;
+}
+
+.segment2{
+  width: 100%;
+  height: 250px;
+  /* overflow: visible; */
+  /* margin: auto 0; */
+  display: grid;
+  background-color: whitesmoke;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+
+
+}
+.segment2 .B1{
+  /* width: 24%;
+  float: left;
+  height: 250px; */
+  background-color: whitesmoke;
+  text-align: center;
+  border: 2px solid #ffb4a1;
+  border-radius: 5px;
+
+}
+.segment2 .B1 .center{
+  padding-top: 45px;
+
+}
+.segment2 .B1 .center h4{
+color: #233863;
+}
+
+
+.segment2 .B1:hover{
+border:2px solid #006df0;
+}
+
+.segment2 .B2:hover{
+  border:2px solid #006df0;
+
+  }
+
+.segment2 .B2{
+  /* width: 85%;
+  float: right;
+  height: 250px; */
+  background-color: whitesmoke;
+  border:2px solid #ffb4a1;
+  border-radius: 5px;
+}
+.segment2 .B2 .center div{
+  height: 40px;
+  margin-left: 25px;
+  color: #233863;
+}
+
+/* programs */
+
+.programs{
+  width: 100%;
+  height: 350px;
+  /* overflow: visible; */
+  display: grid;
+  /* margin: auto 0; */
+  background-color: whitesmoke;
+  border-radius: 5px;
+  grid-template-columns: auto auto ;
+  grid-column-gap: 10px;
+
+
+}
+.programs .ProBox1{
+  /* width: 55%;
+  float: left;
+  height: 350px; */
+  background-color: whitesmoke;
+  text-align: center;
+  border: 2px solid #ffb4a1;
+  border-radius: 5px;
+}
+.programs .ProBox1:hover{
+  border: 2px solid #006df0;
+}
+.programs .ProBox2{
+  /* width: 44%;
+  float: right;
+  height: 350px; */
+  background-color: whitesmoke;
+  text-align: center;
+  border: 2px solid #ffb4a1;
+  border-radius: 5px;
+}
+.programs .ProBox2 img{
+  height: 340px;
+}
+.programs .ProBox2:hover{
+  border: 2px solid #006df0;
+}
+.programs .ProBox1 h2
+{
+  padding-top: 25px;
+  color: #233863;
+
+}
+.programs .ProBox1 p{
+  text-align: left;
+  padding-left: 35px;
+}
+.programs .ProBox1 .hor{
+  width:30%;
+  height: 1px;
+  background-color: #233863;
+}

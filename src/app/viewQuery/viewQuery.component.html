@@ -1,0 +1,21 @@
+<app-adminHeader></app-adminHeader>
+<!-- {{getQuery|json}} -->
+<form class="form">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Name</th>
+      <th>Email Id</th>
+      <th>Query Message</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let query of getQuery">
+        <td>{{query.id}}</td>
+        <td>{{query.name}}</td>
+        <td>{{query.emailId}}</td>
+        <td>{{query.queryMessage}}</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<app-footer></app-footer>
