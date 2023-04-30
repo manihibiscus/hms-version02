@@ -11,6 +11,7 @@ import { AppointmentService } from '../appointment.service';
   styleUrls: ['./appointmentRequest.component.css']
 })
 export class AppointmentRequestComponent implements OnInit {
+
   loggedInUser:any;
   storedField:any;
   listAppointment:any;
@@ -50,7 +51,6 @@ export class AppointmentRequestComponent implements OnInit {
       field:this.appointmentField,
       selectedDoc:this.appointmentDocName
     }
-
     this.appointment.postAppointmentDetails(body).subscribe(data=>{
       alert("Appointment Submitted");
       this.appointmentForm.reset();
