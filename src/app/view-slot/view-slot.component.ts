@@ -47,9 +47,9 @@ export class ViewSlotComponent {
     this.aTime=acceptTime;
     this.aSay=acceptSay,
     this.aDoctorName=doctorName;
-    alert("This slot is conformed");
+    // alert("This slot is conformed");
     this.service.acceptDeleteAppointment(acceptId).subscribe(()=>{
-      alert("Accepted"+acceptId);
+      // alert("Accepted"+acceptId);
       this.ngOnInit();
     });
     this.postAcceptDetails();
@@ -67,6 +67,7 @@ export class ViewSlotComponent {
     this.doctorName=docName;
     // this.postCancelDetails();
     this.service.deleteAppointment(cancelId).subscribe(()=>{
+      // window.confirm('Are you sure you want to cancel?');
       alert("Cancelled"+cancelId);
       this.ngOnInit();
     });
