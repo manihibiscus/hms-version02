@@ -15,6 +15,8 @@ import { PatientRegistrationComponent } from './patientRegistration/patientRegis
 import { ViewStatusComponent } from './viewStatus/viewStatus.component';
 import { ViewQueryComponent } from './viewQuery/viewQuery.component';
 import { ViewSlotComponent } from './view-slot/view-slot.component';
+import { GenerateBillsComponent } from './generate-bills/generate-bills.component';
+import { SlotComponent } from './slot/slot.component';
 
 
 const routes: Routes = [
@@ -87,9 +89,18 @@ component:ViewQueryComponent
   component:AppointmentRequestComponent
 },
 {
-  path:"viewslot",
+  path:"requestSlot",
   component:ViewSlotComponent
+},
+{
+  path:"generateBills",
+  component:GenerateBillsComponent
+},
+{
+  path:"slot",
+  component:SlotComponent
 }
+
 ];
 
 @NgModule({

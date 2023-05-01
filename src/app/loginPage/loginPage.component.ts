@@ -53,7 +53,6 @@ export class LoginPageComponent implements OnInit {
       }
     })
   }
-
   admins() {
     this.http.get<any>("http://localhost:3000/adminDetails").subscribe(res=>{
       const users=res.find((a:any)=>{
@@ -64,7 +63,7 @@ export class LoginPageComponent implements OnInit {
         this.loginForm.reset();
           this.userService.loggedInUser = users;
           sessionStorage.setItem('loggedInUser', JSON.stringify(users));
-        this.router.navigate(['adminhome'])
+        this.router.navigate(['adminhome' ])
       }
       else{
         this.errors=true

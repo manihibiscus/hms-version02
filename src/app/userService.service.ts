@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class UserServiceService {
 loggedInUser:any="";
+
+// viewStatus:any="true";
+
 constructor(){ }
 
 }

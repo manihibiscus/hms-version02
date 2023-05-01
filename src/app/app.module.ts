@@ -22,8 +22,10 @@ import { DoctorPageComponent } from './doctorPage/doctorPage.component';
 import { AppointmentRequestComponent } from './appointmentRequest/appointmentRequest.component';
 import { ViewQueryComponent } from './viewQuery/viewQuery.component';
 import { ViewSlotComponent } from './view-slot/view-slot.component';
+import { GenerateBillsComponent } from './generate-bills/generate-bills.component';
+import { SlotComponent } from './slot/slot.component';
 @NgModule({
-  declarations: [						
+  declarations: [							
     AppComponent,
       ContactUsPageComponent,
       AboutUsPageComponent,
@@ -41,7 +43,9 @@ import { ViewSlotComponent } from './view-slot/view-slot.component';
       DoctorPageComponent,
       AppointmentRequestComponent,
       ViewQueryComponent,
-      ViewSlotComponent
+      ViewSlotComponent,
+      GenerateBillsComponent,
+      SlotComponent
    ],
   imports: [
     BrowserModule,

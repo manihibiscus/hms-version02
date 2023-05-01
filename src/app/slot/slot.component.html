@@ -1,4 +1,5 @@
-<app-adminHeader></app-adminHeader>
+
+<app-doctorHeader></app-doctorHeader>
 <!-- {{getQuery|json}} -->
 <form class="form">
   <table>
@@ -9,23 +10,17 @@
       <th>Appointment date</th>
       <th>Appointment time</th>
       <th>Health issue</th>
-      <th>Select</th>
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of getAppointment">
+      <tr *ngFor="let appointment of slotAllocated">
         <td>{{appointment.id}}</td>
         <td>{{appointment.patientName}}</td>
         <td>{{appointment.mobileno}}</td>
         <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
         <td>{{appointment.time}}</td>
         <td>{{appointment.say}}</td>
-        <td>
-          <button class="back"  (click)="accept(appointment.id)" >Accept</button>
-          <button class="back"  (click)="cancel(appointment.id,appointment.patientName,appointment.mobileno,appointment.date, appointment.selectedDoc )">Cancel</button>
-        </td>
       </tr>
     </tbody>
   </table>
 </form>
-<!-- <button (click)="doctorView()">Doctor View</button> -->
 <app-footer></app-footer>

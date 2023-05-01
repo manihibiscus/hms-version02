@@ -37,17 +37,6 @@ table thead th{
   font-weight: bold;
   color: #0e0a01;
 }
-
-/* .back[hidden] {
+.back[hidden] {
   display: none;
-} */
-
-/* .c1
-{
-background-color: green;
-color: white;
-} */
-/* .c2{
-background-color: red;
-color: white;
-} */
+}

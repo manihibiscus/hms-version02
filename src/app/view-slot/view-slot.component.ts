@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { AppointmentService } from '../appointment.service';
+import { AppointmentCancelService } from '../appointmentCancel.service';
+import { UserServiceService } from '../userService.service';
 
 @Component({
   selector: 'app-view-slot',
@@ -7,9 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-slot.component.css']
 })
 export class ViewSlotComponent {
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private userService:UserServiceService, private service:AppointmentService, private cancelService:AppointmentCancelService) { }
   getAppointment:any="";
-  
+
 
   ngOnInit() {
     this.http.get<any>("http://localhost:3000/appointmentDetails").subscribe(data=>{
@@ -17,19 +20,40 @@ export class ViewSlotComponent {
     })
   }
   date:any=new Date();
-  isDisableAccept:any=false;
-  isHiddenAccept:any=false;
-  isDisableCancel:any=false;
-  isHiddenCancel:any=false;
+  // isDisableAccept:any=false;
+  // isHiddenAccept:any=false;
+  // isDisableCancel:any=false;
+  // isHiddenCancel:any=false;
 
-  accept(){
+  accept(id: number){
     alert("This slot is conformed");
-    this.isDisableAccept=true;
-    this.isHiddenAccept=true;
   }
-  cancel(){
-    this.isDisableCancel=true;
-    this.isHiddenCancel=true;
-    alert("this slot is canceled");
+  cName:any=""
+  cMobileNo:any=""
+  cDate:any=""
+  doctorName:any=""
+  cancel(cancelId: number, cancelName: any, cancelMobileNo: any, cancelDate: any, docName:any){
+    // this.postCancelDetails(cancelName, cancelMobileNo, cancelDate);
+    this.cName=cancelName;
+    this.cMobileNo=cancelMobileNo;
+    this.cDate=cancelDate;
+    this.doctorName=docName;
+    // this.postCancelDetails();
+    this.service.deleteAppointment(cancelId).subscribe(()=>{
+      alert("Cancelled"+cancelId);
+      this.ngOnInit();
+    });
+    this.postCancelDetails();
   }
+  postCancelDetails(){
+    var body={
+          cName:this.cName,
+          cMobileNo:this.cMobileNo,
+          cDate:this.cDate,
+          octorName:this.doctorName
+        }
+  this.cancelService.postCancelledRequest(body).subscribe(value=>{
+  });
+  }
+
 }

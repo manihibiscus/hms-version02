@@ -23,7 +23,7 @@ export class GeneralDoctorComponent implements OnInit {
       this.route.params.subscribe(paramdata=>{
         this.SearchFor=paramdata['check'];
     })
-
   })
 }
+
 }

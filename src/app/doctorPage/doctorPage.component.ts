@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class DoctorPageComponent implements OnInit {
   loggedInUser:any="";
   constructor(private userServeice:UserServiceService, private route: Router) { }
-
+  
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
     if (sessionUser) {
@@ -22,5 +22,4 @@ export class DoctorPageComponent implements OnInit {
       this.route.navigate(['/login']);
     }
   }
-
 }

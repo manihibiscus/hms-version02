@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AppointmentService {
-
+baseUrl:any="http://localhost:3000";
 constructor(private http:HttpClient) { }
 storeField:any=""
 postAppointmentDetails(body:any){
@@ -13,6 +13,9 @@ postAppointmentDetails(body:any){
 }
 getAppointmentDetails(){
   return this.http.get("http://localhost:3000/appointmentDetails");
+}
+deleteAppointment(id: number){
+  return this.http.delete(`${this.baseUrl}/appointmentDetails/${id}`);
 }
 
 }
