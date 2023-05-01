@@ -13,7 +13,7 @@ export class SlotComponent implements OnInit {
   // status:any=this.service.viewStatus;
   slotAllocated:any=""
   ngOnInit() {
-    this.http.get<any>("http://localhost:3000/appointmentDetails").subscribe(data=>{
+    this.http.get<any>("http://localhost:3000/acceptRequest").subscribe(data=>{
     this.slotAllocated=data;
     // alert(this.status)
     })

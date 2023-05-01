@@ -7,6 +7,7 @@
       <th>S.No</th>
       <th>Patient name</th>
       <th>Contact no</th>
+      <th>Doctor Name</th>
       <th>Appointment date</th>
       <th>Appointment time</th>
       <th>Health issue</th>
@@ -14,11 +15,12 @@
     <tbody>
       <tr *ngFor="let appointment of slotAllocated">
         <td>{{appointment.id}}</td>
-        <td>{{appointment.patientName}}</td>
-        <td>{{appointment.mobileno}}</td>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.mobileNo}}</td>
+        <td>{{appointment.doctorName}}</td>
         <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
-        <td>{{appointment.time}}</td>
-        <td>{{appointment.say}}</td>
+        <td>{{appointment.timeing}}</td>
+        <td>{{appointment.problem}}</td>
       </tr>
     </tbody>
   </table>

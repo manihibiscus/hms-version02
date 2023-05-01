@@ -1,11 +1,14 @@
 <app-adminHeader></app-adminHeader>
 <!-- {{getQuery|json}} -->
+<h2 style="text-align: center;">Requested Slot</h2>
 <form class="form">
   <table>
     <thead>
       <th>S.No</th>
       <th>Patient name</th>
       <th>Contact no</th>
+      <th>Medical Field</th>
+      <th>Doctor Name</th>
       <th>Appointment date</th>
       <th>Appointment time</th>
       <th>Health issue</th>
@@ -16,13 +19,72 @@
         <td>{{appointment.id}}</td>
         <td>{{appointment.patientName}}</td>
         <td>{{appointment.mobileno}}</td>
+        <td>{{appointment.field}}</td>
+        <td>{{appointment.selectedDoc}}</td>
         <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
         <td>{{appointment.time}}</td>
         <td>{{appointment.say}}</td>
         <td>
-          <button class="back"  (click)="accept(appointment.id)" >Accept</button>
-          <button class="back"  (click)="cancel(appointment.id,appointment.patientName,appointment.mobileno,appointment.date, appointment.selectedDoc )">Cancel</button>
+          <button class="back"   (click)="accept(appointment.id,appointment.patientName,appointment.mobileno,appointment.date,appointment.time, appointment.say, appointment.selectedDoc)">Accept</button>
+          <button class="back"   (click)="cancel(appointment.id,appointment.patientName,appointment.mobileno,appointment.date, appointment.selectedDoc )">Cancel</button>
         </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<br>
+<br>
+<br>
+<h2 style="text-align: center;">Accepted Slot</h2>
+
+<form class="form">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Contact no</th>
+      <th>Doctor Name</th>
+      <th>Appointment date</th>
+      <th>Appointment time</th>
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of acceptedAppointment">
+        <td>{{appointment.id}}</td>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.mobileNo}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
+        <td>{{appointment.timeing}}</td>
+        <!-- <td>{{appointment.problem}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</form>
+<br>
+<br>
+<br>
+<h2 style="text-align: center;">Cancelled Slot</h2>
+<form class="form">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Contact no</th>
+      <th>Appointment date</th>
+      <th>Doctor Name</th>
+      <!-- <th>Appointment time</th> -->
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of canceledAppointment">
+        <td>{{appointment.id}}</td>
+        <td>{{appointment.cName}}</td>
+        <td>{{appointment.cMobileNo}}</td>
+        <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <!-- <td>{{appointment.timeing}}</td> -->
+        <!-- <td>{{appointment.problem}}</td> -->
       </tr>
     </tbody>
   </table>

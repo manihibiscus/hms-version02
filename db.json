@@ -88,6 +88,21 @@
       "password": "pratheep@28",
       "cpassword": "pratheep@28",
       "id": 5
+    },
+    {
+      "patientName": "NAVEEN",
+      "fatherName": "SELVARAJ",
+      "gender": "male",
+      "blood": "O+",
+      "date": "2002-09-12",
+      "email": "naveenjayanthi3562@gmail.com",
+      "phone": "9597243562",
+      "address": "Erode",
+      "image": "C:\\fakepath\\photo.png",
+      "insurance": "NO",
+      "password": "Naveen@777",
+      "cpassword": "Naveen@777",
+      "id": 6
     }
   ],
   "adminDetails": [
@@ -291,25 +306,38 @@
   "appointmentDetails": [],
   "cancelledRequest": [
     {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-02",
-      "octorName": "Dr. Sowndammal H MS",
+      "cName": "KISHORE KUMAR ",
+      "cMobileNo": "7373102828",
+      "cDate": "2023-05-09",
+      "doctorName": "Dr. Manogar S MD",
       "id": 1
     },
     {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-03",
-      "octorName": "Dr. Malarkodi V MBBS",
+      "cName": "NAVEEN",
+      "cMobileNo": "9597243562",
+      "cDate": "2023-05-02",
+      "doctorName": "Dr. Kavitha V MD",
       "id": 2
+    }
+  ],
+  "acceptRequest": [
+    {
+      "name": "KISHORE KUMAR ",
+      "mobileNo": "7373102828",
+      "date": "2023-05-02",
+      "timeing": "09:30",
+      "problem": "General checkup",
+      "doctorName": "Dr. Naveen S MS",
+      "id": 1
     },
     {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-04",
-      "octorName": "Dr. Pooja C MD",
-      "id": 3
+      "name": "NAVEEN",
+      "mobileNo": "9597243562",
+      "date": "2023-05-02",
+      "timeing": "15:00",
+      "problem": "",
+      "doctorName": "Dr. Mekala V MBBS",
+      "id": 2
     }
   ]
 }

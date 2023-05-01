@@ -17,5 +17,7 @@ getAppointmentDetails(){
 deleteAppointment(id: number){
   return this.http.delete(`${this.baseUrl}/appointmentDetails/${id}`);
 }
-
+acceptDeleteAppointment(acceptId: number){
+  return this.http.delete(`${this.baseUrl}/appointmentDetails/${acceptId}`);
+}
 }
