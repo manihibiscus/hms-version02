@@ -40,13 +40,15 @@ export class ViewSlotComponent {
   aTime:any=""
   aSay:any=""
   aDoctorName:any=""
-  accept(acceptId: number, acceptName: any, acceptMobileNo: any, acceptDate: any,acceptTime: any, acceptSay:any, doctorName:any){
+  aDoctorField:any=""
+  accept(acceptId: number, acceptName: any, acceptMobileNo: any, acceptDate: any,acceptTime: any, acceptSay:any, doctorName:any, doctorField: any){
     this.aName=acceptName;
     this.aMobileNo=acceptMobileNo;
     this.aDate=acceptDate;
     this.aTime=acceptTime;
-    this.aSay=acceptSay,
+    this.aSay=acceptSay;
     this.aDoctorName=doctorName;
+    this.aDoctorField=doctorField;
     // alert("This slot is conformed");
     this.service.acceptDeleteAppointment(acceptId).subscribe(()=>{
       // alert("Accepted"+acceptId);
@@ -91,7 +93,8 @@ export class ViewSlotComponent {
       date:this.aDate,
       timeing:this.aTime,
       problem:this.aSay,
-      doctorName:this.aDoctorName
+      doctorName:this.aDoctorName,
+      doctorField:this.aDoctorField
     }
     this.cancelService.postAcceptRequest(acceptBody).subscribe(data=>{
     });

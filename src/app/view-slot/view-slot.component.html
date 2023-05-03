@@ -25,7 +25,7 @@
         <td>{{appointment.time}}</td>
         <td>{{appointment.say}}</td>
         <td>
-          <button class="back"   (click)="accept(appointment.id,appointment.patientName,appointment.mobileno,appointment.date,appointment.time, appointment.say, appointment.selectedDoc)">Accept</button>
+          <button class="back"   (click)="accept(appointment.id,appointment.patientName,appointment.mobileno,appointment.date,appointment.time, appointment.say, appointment.selectedDoc, appointment.field)">Accept</button>
           <button class="back"   (click)="cancel(appointment.id,appointment.patientName,appointment.mobileno,appointment.date, appointment.selectedDoc )">Cancel</button>
         </td>
       </tr>
@@ -44,6 +44,7 @@
       <th>Patient name</th>
       <th>Contact no</th>
       <th>Doctor Name</th>
+      <th>Doctor Field</th>
       <th>Appointment date</th>
       <th>Appointment time</th>
       <!-- <th>Health issue</th> -->
@@ -54,6 +55,7 @@
         <td>{{appointment.name}}</td>
         <td>{{appointment.mobileNo}}</td>
         <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.doctorField}}</td>
         <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
         <td>{{appointment.timeing}}</td>
         <!-- <td>{{appointment.problem}}</td> -->

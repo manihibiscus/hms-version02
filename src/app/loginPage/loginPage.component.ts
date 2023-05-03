@@ -43,7 +43,7 @@ export class LoginPageComponent implements OnInit {
 
       if(patient){
         alert("Login Successfully");
-        this.loginForm.reset();
+        // this.loginForm.reset();
           this.userService.loggedInUser = patient;
           sessionStorage.setItem('loggedInUser', JSON.stringify(patient));
         this.router.navigate(['patienthome'])
