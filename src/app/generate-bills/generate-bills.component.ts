@@ -3,6 +3,7 @@ import { ContactServiceService } from '../contactService.service';
 import { GenerateBillsService } from './generateBills.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenerateBills } from './generateBills.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-generate-bills',
@@ -10,8 +11,11 @@ import { GenerateBills } from './generateBills.model';
   styleUrls: ['./generate-bills.component.css']
 })
 export class GenerateBillsComponent {
-  dateNow : Date=new Date()
-  constructor(private service:GenerateBillsService, private fb:FormBuilder) { }
+  dateNow : Date=new Date();
+  otherFee:any="";
+  conFee: number = parseFloat(this.otherFee);
+
+  constructor(private service:GenerateBillsService, private fb:FormBuilder, private generateBills:GenerateBillsService) { }
   getBills:any="";
   genereateBills:any=""
   billForm=this.fb.group({
@@ -31,18 +35,28 @@ export class GenerateBillsComponent {
     });
 
   }
-  sum(){
-    // let a=this.billForm.controls['consultingFee'].value;
-    // let b=this.billForm.controls['otherFee'].value;
-    // this.billForm.valueChanges.subscribe(() => {
-    //   this.total =parseInt(a)+
-    // });
+  result!:number
+  sum(value1:string, value2:string){
+   this.result=parseInt(value1)+parseInt(value2)
+    // alert(this.result);
   }
   generate(row:any){
     this.billForm.controls['patinetName'].setValue(row.name);
     this.billForm.controls['doctorName'].setValue(row.doctorName);
     this.billForm.controls['doctorField'].setValue(row.doctorField);
     this.billForm.controls['contactNo'].setValue(row.mobileNo);
+  }
+  submitBill(){
+    this.generateBillDetailsObj.name=this.billForm.value.patinetName;
+    this.generateBillDetailsObj.doctorName=this.billForm.value.doctorName;
+    this.generateBillDetailsObj.doctorField=this.billForm.value.doctorField;
+    this.generateBillDetailsObj.mobileNo=this.billForm.value.contactNo;
+    this.generateBillDetailsObj.consultingFee='₹'+this.billForm.value.consultingFee;
+    this.generateBillDetailsObj.otherFee= '₹'+this.billForm.value.otherFee;
+    this.generateBillDetailsObj.Total='₹'+this.result;
+    this.generateBills.postBillDetails(this.generateBillDetailsObj).subscribe(res=>{
+      alert("Generarted");
+    })
   }
 
 

@@ -85,7 +85,7 @@ export class ViewSlotComponent {
   this.cancelService.postCancelledRequest(body).subscribe(value=>{
   });
   }
-
+  acceptanceStatus:any="Pending"
   postAcceptDetails(){
     var acceptBody={
       name:this.aName,
@@ -94,7 +94,8 @@ export class ViewSlotComponent {
       timeing:this.aTime,
       problem:this.aSay,
       doctorName:this.aDoctorName,
-      doctorField:this.aDoctorField
+      doctorField:this.aDoctorField,
+      acceptanceStatus:this.acceptanceStatus
     }
     this.cancelService.postAcceptRequest(acceptBody).subscribe(data=>{
     });

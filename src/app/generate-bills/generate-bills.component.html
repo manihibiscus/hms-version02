@@ -13,13 +13,13 @@
       <th>Generate Bills</th>
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of getBills">
+      <tr *ngFor="let appointment of getBills" class="tableScroll">
         <td>{{appointment.id}}</td>
         <td>{{appointment.name}}</td>
         <td>{{appointment.mobileNo}}</td>
         <td>{{appointment.doctorName}}</td>
         <td>{{appointment.doctorField}}</td>
-        <td></td>
+        <td>{{appointment.acceptanceStatus}}</td>
         <!-- <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td> -->
         <!-- <td>{{appointment.timeing}}</td> -->
         <td>
@@ -57,20 +57,20 @@
   </div>
   <div class="Box2">
  <div class="field2">
-    <label for="">Consulting Fee: </label><br>
-    <input type="text" class="amount" formControlName="consultingFee" id="cost1" onchange="sum()">
+    <label for="">Consulting Fee: </label>
+    <input type="number" class="amount" #consultingfee formControlName="consultingFee">
   </div>
   <div class="field2">
-    <label for="">Other Fee: </label><br><br>
-    <input type="text" class="amount" formControlName="otherFee" >
+    <label for="">Other Fee: </label>
+    <input type="number" class="amount" #otherfee formControlName="otherFee" (change)="sum(consultingfee.value,otherfee.value)"  >
   </div>
   <div class="field2">
-    <label for="">Total Fee: </label><br><br>
-    <input type="number" class="amount" formControlName="doctorName">
+    <label for="">Total Fee: {{result|currency:'INR'}}</label><br><br>
+    <!-- <input type="number" class="amount" > -->
   </div>
   <br>
   <div class="submit">
-    <button class="submit">Submit</button>
+    <button class="submit" (click)="submitBill()" [disabled]="!billForm.valid">Submit</button>
   </div>
 </div>
   </div>

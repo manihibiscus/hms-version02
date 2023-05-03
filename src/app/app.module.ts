@@ -25,15 +25,15 @@ import { ViewSlotComponent } from './view-slot/view-slot.component';
 import { GenerateBillsComponent } from './generate-bills/generate-bills.component';
 import { SlotComponent } from './slot/slot.component';
 // import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { DialogBillsComponent } from './dialogBills/dialogBills.component';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatTableModule } from '@angular/material/table';
+// import { MatPaginatorModule } from '@angular/material/paginator';
+// import { MatSortModule } from '@angular/material/sort';
+// import { DialogBillsComponent } from './dialogBills/dialogBills.component';
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       ContactUsPageComponent,
       AboutUsPageComponent,
@@ -53,20 +53,20 @@ import { DialogBillsComponent } from './dialogBills/dialogBills.component';
       ViewQueryComponent,
       ViewSlotComponent,
       GenerateBillsComponent,
-      SlotComponent,
-      DialogBillsComponent
+      SlotComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+    ReactiveFormsModule
+    
+    // MatInputModule,
+    // MatFormFieldModule,
+    // MatTableModule,
+    // MatPaginatorModule,
+    // MatSortModule
 
     ],
   providers: [],
