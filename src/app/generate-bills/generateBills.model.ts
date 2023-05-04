@@ -8,3 +8,5 @@ export class GenerateBills{
     otherFee:any="";
     Total:any="";
 }
+
+

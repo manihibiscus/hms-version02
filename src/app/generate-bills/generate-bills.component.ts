@@ -4,7 +4,7 @@ import { GenerateBillsService } from './generateBills.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenerateBills } from './generateBills.model';
 import { HttpClient } from '@angular/common/http';
-import { empty } from 'rxjs';
+import { GModel } from './gModel';
 
 @Component({
   selector: 'app-generate-bills',
@@ -14,10 +14,11 @@ import { empty } from 'rxjs';
 export class GenerateBillsComponent {
   dateNow : Date=new Date();
   otherFee:any="";
-  
+
   constructor(private service:GenerateBillsService, private fb:FormBuilder, private generateBills:GenerateBillsService) { }
   getBills:any="";
-  genereateBills:any=""
+  genereateBills:any="";
+  getReceipterDetails:any=""
   billForm=this.fb.group({
     patientId:[,[Validators.required] ],
     patinetName:[,[Validators.required] ],
@@ -29,24 +30,39 @@ export class GenerateBillsComponent {
   })
 
   generateBillDetailsObj : GenerateBills=new GenerateBills()
+  gModelObj : GModel= new GModel();
   total:any=0;
   ngOnInit() {
     this.service.getAcceptRequest().subscribe(data=>{
       this.getBills=data
     });
-
+    this.generateBills.getBillDetails().subscribe(value=>{
+      this.getReceipterDetails=value
+    });
+    // alert(this.getBills.value.acceptanceStatus);
+    // if(this.getBills.value.acceptanceStatus=="pending"){
+    //   let reference=document.getElementById("refgenerate");
+    // }
+    // this.gModelObj.status=this.getBills.acceptanceStatus.value;
+    // alert(this.gModelObj.status);
   }
   result!:number | null
   sum(value1:string, value2:string){
    this.result=parseInt(value1)+parseInt(value2)
     // alert(this.result);
   }
-  generate(row:any){
+  generate(row:any, acceptance:any){
+    if(acceptance=="success"){
     this.billForm.controls['patientId'].setValue(row.id);
     this.billForm.controls['patinetName'].setValue(row.name);
     this.billForm.controls['doctorName'].setValue(row.doctorName);
     this.billForm.controls['doctorField'].setValue(row.doctorField);
     this.billForm.controls['contactNo'].setValue(row.mobileNo);
+      // alert(acceptance);
+    }
+    else{
+      row.isDisabled=true;
+    }
   }
   submitBill(){
     this.generateBillDetailsObj.patientId=this.billForm.value.patientId;

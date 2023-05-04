@@ -1,4 +1,3 @@
-
 <app-doctorHeader></app-doctorHeader>
 <!-- {{getQuery|json}} -->
 <form class="form">
@@ -23,7 +22,7 @@
         <td>{{appointment.timeing}}</td>
         <td>{{appointment.problem}}</td>
         <td>
-          <button (click)="AddToBill(appointment,appointment.id)">ADD</button>
+          <button [disabled]="appointment.isDisabled" id="refchange" (click)="AddToBill(appointment,appointment.id)">ADD</button>
         </td>
       </tr>
     </tbody>

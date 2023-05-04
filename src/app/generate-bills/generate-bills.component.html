@@ -23,8 +23,8 @@
         <!-- <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td> -->
         <!-- <td>{{appointment.timeing}}</td> -->
         <td>
-          <button class="back" (click)="generate(appointment)">Generate</button>
-          <!-- <button class="back"    >Generate</button> -->
+          <button [disabled]="appointment.isDisabled" id="refgenerate" (click)="generate(appointment,appointment.acceptanceStatus)">Generate</button>
+          <!-- <button class="back">Generate</button> -->
         </td>
       </tr>
     </tbody>
@@ -77,24 +77,41 @@
   <div class="submit">
     <button class="submit" (click)="submitBill()" [disabled]="!billForm.valid">Submit</button>
   </div>
-</div>
+  </div>
   </div>
 </div>
 </div>
 </form>
+<div class="div">
+  <form class="form">
+    <table>
+      <thead>
+        <th>S.No</th>
+        <th>Patient name</th>
+        <th>Contact no</th>
+        <th>Doctor Name</th>
+        <th>Doctor Field</th>
+        <th>Consulting Fee</th>
+        <th>Other Fee</th>
+        <th>Total</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of getReceipterDetails">
+          <td>{{appointment.id}}</td>
+          <td>{{appointment.name}}</td>
+          <td>{{appointment.mobileNo}}</td>
+          <td>{{appointment.doctorName}}</td>
+          <td>{{appointment.doctorField}}</td>
+          <td>{{appointment.consultingFee}}</td>
+          <td>{{appointment.otherFee}}</td>
+          <td>{{appointment.Total}}</td>
+          <!-- <td>
+            <button [disabled]="appointment.isDisabled" id="refchange" (click)="AddToBill(appointment,appointment.id)">ADD</button>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </form>
 
-<!-- <form [formGroup]="billForm">
-  <mat-form-field>
-    <mat-label>First Name</mat-label>
-    <input matInput formControlName="firstName">
-    <mat-error *ngIf="billForm.controls['firstName'].invalid">Please enter a first name.</mat-error>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-label>Last Name</mat-label>
-    <input matInput formControlName="lastName">
-    <mat-error *ngIf="billForm.controls['lastName'].invalid">Please enter a last name.</mat-error>
-  </mat-form-field>
-</form> -->
-
+</div>
 <app-footer></app-footer>

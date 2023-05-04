@@ -37,6 +37,7 @@ export class AppointmentRequestComponent implements OnInit {
 
   appointmentDate:any="";
   appointmentTime:any="";
+  appointmentMinute:any="";
   appointmentSpecific:any="";
   appointmentField:any="";
   appointmentDocName:any="";
@@ -46,7 +47,7 @@ export class AppointmentRequestComponent implements OnInit {
       patientName:this.loggedInUser.patientName,
       mobileno:this.loggedInUser.phone,
       date:this.appointmentDate,
-      time:this.appointmentTime,
+      time:this.appointmentTime+':'+this.appointmentMinute,
       say:this.appointmentSpecific,
       field:this.appointmentField,
       selectedDoc:this.appointmentDocName

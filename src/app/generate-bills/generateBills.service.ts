@@ -16,4 +16,7 @@ postBillDetails(body:any){
 deleteGeneratedBills(id:any){
   return this.http.delete(`${this.baseUrl}/acceptRequest/${id}`);
 }
+getBillDetails(){
+  return this.http.get("http://localhost:3000/billDetails");
+}
 }

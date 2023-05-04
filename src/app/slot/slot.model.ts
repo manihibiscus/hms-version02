@@ -6,5 +6,5 @@ export class StatusUpdate{
   // problem:any=""
   // doctorName:any=""
   // doctorField:any=""
-  acceptanceStatus:any=""
+  acceptanceStatus:any="pending"
 }

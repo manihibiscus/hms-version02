@@ -29,6 +29,7 @@
 <div class="input" >
       <select class="inputselect"  name="appointmentDocName" #dname="ngModel"
       [(ngModel)]="appointmentDocName">
+      <option value="" disabled selected>Doctors Name</option>
         <option *ngFor="let docName of storedField" value="{{docName.doctorName}}">{{docName.doctorName}}</option>
       </select>
     </div>
@@ -41,7 +42,29 @@
 
   <div class="field3">
     <label for="">Choose your timing</label>
-    <div class="input"><input type="time" class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" /></div>
+    <div class="input">
+    <!-- <select class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" > -->
+    <select class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime">
+      <option value="09" >09</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+
+    </select>
+    <span>
+    <select class="inputfield" #dminute="ngModel" required name="appointmentMinute" [(ngModel)]="appointmentMinute">
+      <option value="00">00</option>
+      <option value="15">15</option>
+      <option value="30">30</option>
+      <option value="45">45</option>
+    </select>
+  </span></div>
   </div>
 
   <div class="field4">

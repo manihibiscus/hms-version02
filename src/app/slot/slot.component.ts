@@ -14,14 +14,22 @@ export class SlotComponent implements OnInit {
   constructor(private http:HttpClient,private service:UserServiceService, private doctorSlot:DoctorSlotServiceService) { }
   // status:any=this.service.viewStatus;
   slotAllocated:any=""
-  treatmentStatus:StatusUpdate=new StatusUpdate()
+  treatmentStatus:StatusUpdate=new StatusUpdate();
+
   ngOnInit() {
     this.http.get<any>("http://localhost:3000/acceptRequest").subscribe(data=>{
     this.slotAllocated=data;
     // alert(this.status)
-    })
+    });
+    // if(this.treatmentStatus.acceptanceStatus=="")
+    if(this.treatmentStatus.acceptanceStatus!="pending"){
+      let ref=document.getElementById("refchange")
+
+    }
   }
+  
   value:any="success";
+  // status:boolean=false;
   AddToBill(details:any, id:any){
     // this.treatmentStatus.name=details.name;
     // this.treatmentStatus.mobileNo=details.mobileNo;
@@ -33,6 +41,9 @@ export class SlotComponent implements OnInit {
     this.treatmentStatus.acceptanceStatus=this.value;
     this.doctorSlot.updateAcceptedDetails(this.treatmentStatus,id).subscribe(()=>{
       alert("Updated");
-    })
+    });
+    details.isDisabled=true;
+
+    // this.status=true;
   }
 }
