@@ -304,8 +304,50 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [],
-  "acceptRequest": [],
+  "cancelledRequest": [
+    {
+      "cName": "DINESH",
+      "cMobileNo": "9750051165",
+      "cDate": "2023-05-03",
+      "doctorName": "Dr. Madhavi M MS",
+      "id": 1
+    }
+  ],
+  "acceptRequest": [
+    {
+      "name": "DINESH",
+      "mobileNo": "9750051165",
+      "date": "2023-05-02",
+      "timeing": "11:31",
+      "problem": "",
+      "doctorName": "Dr. Poornima V MS",
+      "doctorField": "General doctor",
+      "acceptanceStatus": "success",
+      "id": 3
+    },
+    {
+      "name": "DINESH",
+      "mobileNo": "9750051165",
+      "date": "2023-05-02",
+      "timeing": "11:33",
+      "problem": "",
+      "doctorName": "Dr. Kavitha V MD",
+      "doctorField": "Gynecologist",
+      "acceptanceStatus": "success",
+      "id": 4
+    },
+    {
+      "name": "DINESH",
+      "mobileNo": "9750051165",
+      "date": "2023-05-03",
+      "timeing": "11:50",
+      "problem": "",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "acceptanceStatus": "success",
+      "id": 5
+    }
+  ],
   "billDetails": [
     {
       "patientId": 1,
@@ -317,6 +359,50 @@
       "otherFee": "₹120",
       "Total": "₹320",
       "id": 1
+    },
+    {
+      "patientId": 1,
+      "name": "DINESH",
+      "doctorName": "Dr. Kavitha V MD",
+      "doctorField": "Gynecologist",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹12",
+      "otherFee": "₹32",
+      "Total": "₹44",
+      "id": 2
+    },
+    {
+      "patientId": 1,
+      "name": "DINESH",
+      "doctorName": "Dr. Kavitha V MD",
+      "doctorField": "Gynecologist",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹300",
+      "otherFee": "₹400",
+      "Total": "₹700",
+      "id": 3
+    },
+    {
+      "patientId": 6,
+      "name": "DINESH",
+      "doctorName": "Dr. Mekala V MBBS",
+      "doctorField": "General doctor",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹300",
+      "otherFee": "₹302",
+      "Total": "₹602",
+      "id": 4
+    },
+    {
+      "patientId": 2,
+      "name": "DINESH",
+      "doctorName": "Dr. Poornima V MS",
+      "doctorField": "General doctor",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹120",
+      "otherFee": "₹123",
+      "Total": "₹243",
+      "id": 5
     }
   ]
 }

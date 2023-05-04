@@ -14,8 +14,7 @@ import { empty } from 'rxjs';
 export class GenerateBillsComponent {
   dateNow : Date=new Date();
   otherFee:any="";
-  conFee: number = parseFloat(this.otherFee);
-
+  
   constructor(private service:GenerateBillsService, private fb:FormBuilder, private generateBills:GenerateBillsService) { }
   getBills:any="";
   genereateBills:any=""
@@ -73,6 +72,4 @@ export class GenerateBillsComponent {
       this.ngOnInit();
     })
   }
-
-
 }
