@@ -304,129 +304,19 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [
-    {
-      "cName": "MANIKANDAN",
-      "cMobileNo": "9361798897",
-      "cDate": "2023-05-04",
-      "doctorName": "Dr. Poornima V MS",
-      "id": 1
-    }
-  ],
-  "acceptRequest": [
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-03",
-      "timeing": "14:34",
-      "problem": "",
-      "doctorName": "Dr. Poornima V MS",
-      "doctorField": "General doctor",
-      "id": 1
-    },
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-04",
-      "timeing": "14:36",
-      "problem": null,
-      "doctorName": "Dr. Kavitha V MD",
-      "doctorField": "Gynecologist",
-      "id": 2
-    },
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-04",
-      "timeing": "18:00",
-      "problem": "",
-      "doctorName": "Dr. Pooja C MD",
-      "doctorField": "Cardiologist",
-      "id": 3
-    },
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-04",
-      "timeing": "18:01",
-      "problem": null,
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "id": 4
-    },
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-04",
-      "timeing": "17:01",
-      "problem": null,
-      "doctorName": "Dr. Sowndammal H MS",
-      "doctorField": "Psychiatrist",
-      "id": 5
-    },
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-01",
-      "timeing": "18:49",
-      "problem": "",
-      "doctorName": "Dr. Poornima V MS",
-      "doctorField": "General doctor",
-      "acceptanceStatus": "Pending",
-      "id": 6
-    },
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-02",
-      "timeing": "20:25",
-      "problem": "",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "acceptanceStatus": "Pending",
-      "id": 7
-    }
-  ],
+  "cancelledRequest": [],
+  "acceptRequest": [],
   "billDetails": [
     {
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Poornima V MS",
+      "patientId": 1,
+      "name": "DINESH",
+      "doctorName": "Dr. Mekala V MBBS",
       "doctorField": "General doctor",
-      "mobileNo": "9361798897",
-      "consultingFee": 123,
-      "otherFee": 236,
-      "Total": 359,
+      "mobileNo": "9750051165",
+      "consultingFee": "₹200",
+      "otherFee": "₹120",
+      "Total": "₹320",
       "id": 1
-    },
-    {
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Kavitha V MD",
-      "doctorField": "Gynecologist",
-      "mobileNo": "9361798897",
-      "consultingFee": "$526",
-      "otherFee": 856,
-      "Total": 1382,
-      "id": 2
-    },
-    {
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Kavitha V MD",
-      "doctorField": "Gynecologist",
-      "mobileNo": "9361798897",
-      "consultingFee": "$526",
-      "otherFee": 856,
-      "Total": 1382,
-      "id": 3
-    },
-    {
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Poornima V MS",
-      "doctorField": "General doctor",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹263",
-      "otherFee": "₹632",
-      "Total": "₹895",
-      "id": 4
     }
   ]
 }

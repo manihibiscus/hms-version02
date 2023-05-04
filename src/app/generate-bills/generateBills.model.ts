@@ -1,4 +1,5 @@
 export class GenerateBills{
+    patientId:any='';
     name:any='';
     doctorName:any="";
     doctorField:any="";

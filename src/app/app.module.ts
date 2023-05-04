@@ -14,7 +14,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientRegistrationComponent } from './patientRegistration/patientRegistration.component';
 import { AdminHeaderComponent } from './adminHeader/adminHeader.component';
 import { AdminPageComponent } from './adminPage/adminPage.component';
-import { ViewStatusComponent } from './viewStatus/viewStatus.component';
 import { PatientHeaderComponent } from './patientHeader/patientHeader.component';
 import { PatientPageComponent } from './patientPage/patientPage.component';
 import { DoctorHeaderComponent } from './doctorHeader/doctorHeader.component';
@@ -44,7 +43,6 @@ import { SlotComponent } from './slot/slot.component';
       PatientRegistrationComponent,
       AdminHeaderComponent,
       AdminPageComponent,
-      ViewStatusComponent,
       PatientHeaderComponent,
       PatientPageComponent,
       DoctorHeaderComponent,
@@ -61,7 +59,7 @@ import { SlotComponent } from './slot/slot.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
-    
+
     // MatInputModule,
     // MatFormFieldModule,
     // MatTableModule,

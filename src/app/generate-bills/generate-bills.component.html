@@ -32,6 +32,11 @@
   <div class="generateBills" [formGroup]="billForm" >
     <h2 style="text-align: center;">Generate Recepit</h2>
     <h5 style="padding-left: 355px;margin-top: 0px;">Date: {{dateNow| date:"dd/MM/YYYY"}}</h5>
+    <small style="padding-top:0;padding-left: 355px;margin-top: 0px;">Time: {{dateNow| date: 'shortTime'}}</small>
+    <div class="idField">
+      <label for="">Patient Id: </label>
+      <input type="number" class="id-box" formControlName="patientId">
+    </div>
     <div class="split2">
     <div class="Box1">
     <div class="field">
@@ -62,10 +67,10 @@
   </div>
   <div class="field2">
     <label for="">Other Fee: </label>
-    <input type="number" class="amount" #otherfee formControlName="otherFee" (change)="sum(consultingfee.value,otherfee.value)"  >
+    <input type="number" class="amount" #otherfee formControlName="otherFee" id="ref" (change)="sum(consultingfee.value,otherfee.value)"  >
   </div>
   <div class="field2">
-    <label for="">Total Fee: {{result|currency:'INR'}}</label><br><br>
+    <label for="">Total Fee: {{result|currency:'INR'}} </label><br><br>
     <!-- <input type="number" class="amount" > -->
   </div>
   <br>

@@ -12,7 +12,6 @@ import { LoginPageComponent } from './loginPage/loginPage.component';
 import { MedialSpecPageComponent } from './medialSpecPage/medialSpecPage.component';
 import { PatientPageComponent } from './patientPage/patientPage.component';
 import { PatientRegistrationComponent } from './patientRegistration/patientRegistration.component';
-import { ViewStatusComponent } from './viewStatus/viewStatus.component';
 import { ViewQueryComponent } from './viewQuery/viewQuery.component';
 import { ViewSlotComponent } from './view-slot/view-slot.component';
 import { GenerateBillsComponent } from './generate-bills/generate-bills.component';
@@ -59,10 +58,6 @@ const routes: Routes = [
   {
     path:'adminhome',
     component:AdminPageComponent
-  },
-  {
-    path:'viewstatus',
-    component:ViewStatusComponent
   },
   {
     path:'logout',
