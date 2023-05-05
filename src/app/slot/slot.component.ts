@@ -19,15 +19,9 @@ export class SlotComponent implements OnInit {
   ngOnInit() {
     this.http.get<any>("http://localhost:3000/acceptRequest").subscribe(data=>{
     this.slotAllocated=data;
-    // alert(this.status)
     });
-    // if(this.treatmentStatus.acceptanceStatus=="")
-    if(this.treatmentStatus.acceptanceStatus!="pending"){
-      let ref=document.getElementById("refchange")
-
-    }
   }
-  
+
   value:any="success";
   // status:boolean=false;
   AddToBill(details:any, id:any){

@@ -1,0 +1,63 @@
+<app-patientHeader></app-patientHeader>
+<!-- <form class="form">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Contact no</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Consulting Fee</th>
+      <th>Other Fee</th>
+      <th>Total</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of loggedInUser">
+        <td>{{payment.id}}</td>
+        <td>{{payment.name}}</td>
+        <td>{{payment.mobileNo}}</td>
+        <td>{{payment.doctorName}}</td>
+        <td>{{payment.doctorField}}</td>
+        <td>{{payment.consultingFee}}</td>
+        <td>{{payment.otherFee}}</td>
+        <td>{{payment.Total}}</td>
+        <td>
+          <button [disabled]="payment.isDisabled" id="refchange" (click)="pay(payment,payment.id)">Pay</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+
+
+  <form action="">
+    <table>
+      <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Contact no</th>
+      <th>Consulting Fee</th>
+      <th>Other Fee</th>
+      <th>Total</th>
+      <th>Select</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{loggedInUser.id}}</td>
+          <td>{{loggedInUser.patientName}}</td>
+          <td>{{loggedInUser.doctorName}}</td>
+          <td>{{loggedInUser.doctorField}}</td>
+          <td>{{loggedInUser.mobileNo}}</td>
+          <td>{{loggedInUser.consultingFee}}</td>
+          <td>{{loggedInUser.otherFee}}</td>
+          <td>{{loggedInUser.Total}}</td>
+          <td>
+            <button [disabled]="loggedInUser.isDisabled" id="refchange" (click)="pay(loggedInUser)">Pay</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </form>
+<app-footer></app-footer>

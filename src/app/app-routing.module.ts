@@ -16,6 +16,7 @@ import { ViewQueryComponent } from './viewQuery/viewQuery.component';
 import { ViewSlotComponent } from './view-slot/view-slot.component';
 import { GenerateBillsComponent } from './generate-bills/generate-bills.component';
 import { SlotComponent } from './slot/slot.component';
+import { PayBillsComponent } from './payBills/payBills.component';
 
 
 const routes: Routes = [
@@ -94,6 +95,10 @@ component:ViewQueryComponent
 {
   path:"slot",
   component:SlotComponent
+},
+{
+  path:"payBills",
+  component:PayBillsComponent
 }
 
 ];

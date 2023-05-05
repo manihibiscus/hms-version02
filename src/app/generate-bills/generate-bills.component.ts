@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenerateBills } from './generateBills.model';
 import { HttpClient } from '@angular/common/http';
 import { GModel } from './gModel';
+import { ShowBillToPatient } from './showBill.model';
 
 @Component({
   selector: 'app-generate-bills',
@@ -15,7 +16,7 @@ export class GenerateBillsComponent {
   dateNow : Date=new Date();
   otherFee:any="";
 
-  constructor(private service:GenerateBillsService, private fb:FormBuilder, private generateBills:GenerateBillsService) { }
+  constructor(private service:GenerateBillsService,private http:HttpClient, private fb:FormBuilder, private generateBills:GenerateBillsService) { }
   getBills:any="";
   genereateBills:any="";
   getReceipterDetails:any=""
@@ -79,9 +80,35 @@ export class GenerateBillsComponent {
       alert("Generarted");
     })
     this.deleteGenerate(this.generateBillDetailsObj.patientId);
+    this.showBill(this.generateBillDetailsObj);
     this.billForm.reset();
     this.result=null;
 
+  }
+  showPatientBill:any=""
+  showBill(billData:any){
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
+      const userBill=value.find((a:any)=>{
+        return a.phone===billData.mobileNo
+      });
+      if(userBill){
+        this.showPatientBill=userBill;
+      }
+      this.sendToPatient(userBill.id)
+    })
+  }
+  showPatientBillObj : ShowBillToPatient = new ShowBillToPatient();
+  sendToPatient(userId:any){
+    this.showPatientBillObj.doctorName=this.generateBillDetailsObj.doctorName;
+    this.showPatientBillObj.doctorField=this.generateBillDetailsObj.doctorField;
+    this.showPatientBillObj.mobileNo=this.generateBillDetailsObj.mobileNo;
+    this.showPatientBillObj.consultingFee=this.generateBillDetailsObj.consultingFee;
+    this.showPatientBillObj.otherFee=this.generateBillDetailsObj.otherFee;
+    this.showPatientBillObj.Total=this.generateBillDetailsObj.Total;
+
+    this.generateBills.updatePatientRegistration(this.showPatientBillObj,userId).subscribe(()=>{
+      alert("Updated to PatientRegister");
+    })
   }
   deleteGenerate(value:any){
     this.generateBills.deleteGeneratedBills(value).subscribe(data=>{

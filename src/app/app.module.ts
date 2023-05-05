@@ -31,8 +31,9 @@ import { SlotComponent } from './slot/slot.component';
 // import { MatPaginatorModule } from '@angular/material/paginator';
 // import { MatSortModule } from '@angular/material/sort';
 // import { DialogBillsComponent } from './dialogBills/dialogBills.component';
+import { PayBillsComponent } from './payBills/payBills.component';
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       ContactUsPageComponent,
       AboutUsPageComponent,
@@ -51,7 +52,8 @@ import { SlotComponent } from './slot/slot.component';
       ViewQueryComponent,
       ViewSlotComponent,
       GenerateBillsComponent,
-      SlotComponent
+      SlotComponent,
+      PayBillsComponent
    ],
   imports: [
     BrowserModule,

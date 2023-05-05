@@ -1,0 +1,27 @@
+.form{
+  margin: auto 0 ;
+  background-color: white;
+  /* justify-content: space-between ; */
+
+}
+table,thead,th,tbody,tr,td{
+  border: 4px solid white;
+  border-collapse:collapse;
+}
+table{
+  /* justify-content: space-between ; */
+  margin: 0 auto ;
+  background-color: whitesmoke;
+  width: 80%;
+}
+
+table tbody tr td{
+  text-align: center;
+  padding: 12px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 12px;
+
+}

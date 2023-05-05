@@ -19,4 +19,7 @@ deleteGeneratedBills(id:any){
 getBillDetails(){
   return this.http.get("http://localhost:3000/billDetails");
 }
+updatePatientRegistration(details:any, id:any){
+  return this.http.patch(`${this.baseUrl}/patientRegistration/${id}`, details)
+}
 }
