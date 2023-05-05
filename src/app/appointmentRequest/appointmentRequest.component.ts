@@ -15,6 +15,7 @@ export class AppointmentRequestComponent implements OnInit {
   loggedInUser:any;
   storedField:any;
   listAppointment:any;
+  todayDate:Date=new Date();
   @ViewChild('appointmentForm') appointmentForm!: NgForm;
   constructor(private userServeice:UserServiceService,
     private route:Router, private http:HttpClient, private fb:FormBuilder,
@@ -38,24 +39,46 @@ export class AppointmentRequestComponent implements OnInit {
   appointmentDate:any="";
   appointmentTime:any="";
   appointmentMinute:any="";
+  appointmetnAmPM:any="";
   appointmentSpecific:any="";
   appointmentField:any="";
   appointmentDocName:any="";
+
+  amStatus:boolean=false;
+  pmStatus:boolean=false;
+
+  filterDates(): boolean {
+    return new Date(this.appointmentDate) >= this.todayDate;
+  }
+  chageFormat(){
+    if((this.appointmentTime>=9 && this.appointmentTime<=11)){
+      this.pmStatus=true;
+      this.amStatus=false;
+      // alert(this.pmStatus)
+    }
+    else if((this.appointmentTime>=1 && this.appointmentTime<=6)|| this.appointmentTime==12){
+      this.pmStatus=false;
+      this.amStatus=true;
+    }
+  }
 
   appointmentSubmit(){
     var body={
       patientName:this.loggedInUser.patientName,
       mobileno:this.loggedInUser.phone,
       date:this.appointmentDate,
-      time:this.appointmentTime+':'+this.appointmentMinute,
+      time:this.appointmentTime+':'+this.appointmentMinute+this.appointmetnAmPM,
       say:this.appointmentSpecific,
       field:this.appointmentField,
       selectedDoc:this.appointmentDocName
     }
     this.appointment.postAppointmentDetails(body).subscribe(data=>{
       alert("Appointment Submitted");
-      this.appointmentForm.reset();
+      this.appointmentForm.resetForm();
+      let refe=document.getElementById("ref");
+      refe?.click();
     })
+
   }
 changeValue(){
   if(this.appointmentField=="General doctor"){

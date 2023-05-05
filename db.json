@@ -51,12 +51,13 @@
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
       "id": 2,
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Malarkodi V MBBS",
+      "doctorField": "General doctor",
       "mobileNo": "8072702981",
       "consultingFee": "₹300",
-      "otherFee": "₹300",
-      "Total": "₹600"
+      "otherFee": "₹200",
+      "Total": "₹500",
+      "remarkMessage": "MJjksncsd"
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -116,7 +117,8 @@
       "insurance": "NO",
       "password": "Naveen@777",
       "cpassword": "Naveen@777",
-      "id": 6
+      "id": 6,
+      "remarkMessage": "HI naveen"
     }
   ],
   "adminDetails": [
@@ -318,107 +320,68 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [],
-  "acceptRequest": [],
+  "cancelledRequest": [
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-05",
+      "doctorName": "Dr. Madhavi M MS",
+      "id": 1
+    },
+    {
+      "cName": "NAVEEN",
+      "cMobileNo": "9597243562",
+      "cDate": "2023-05-06",
+      "doctorName": "Dr. Mythili M MD",
+      "id": 2
+    }
+  ],
+  "acceptRequest": [
+    {
+      "name": "SATHISH KUMAR",
+      "mobileNo": "8072702981",
+      "date": "2023-05-06",
+      "timeing": "09:00AM",
+      "problem": "",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "acceptanceStatus": "Pending",
+      "id": 2
+    },
+    {
+      "name": "SATHISH KUMAR",
+      "mobileNo": "8072702981",
+      "date": "2023-05-06",
+      "timeing": "09:00AM",
+      "problem": "",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "acceptanceStatus": "Pending",
+      "id": 3
+    }
+  ],
   "billDetails": [
     {
       "patientId": 1,
-      "name": "MANIKANDAN",
+      "name": "SATHISH KUMAR",
       "doctorName": "Dr. Mekala V MBBS",
       "doctorField": "General doctor",
-      "mobileNo": "9361798897",
+      "mobileNo": "8072702981",
       "consultingFee": "₹300",
       "otherFee": "₹300",
       "Total": "₹600",
       "id": 1
     },
     {
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Naveen S MS",
-      "doctorField": "Cardiologist",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹300",
-      "otherFee": "₹600",
-      "Total": "₹900",
-      "id": 2
-    },
-    {
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Mekala V MBBS",
+      "patientId": 4,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Malarkodi V MBBS",
       "doctorField": "General doctor",
-      "mobileNo": "9361798897",
+      "mobileNo": "8072702981",
       "consultingFee": "₹300",
-      "otherFee": "₹300",
-      "Total": "₹600",
-      "id": 3
-    },
-    {
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Manikandan V MS",
-      "doctorField": "General doctor",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹200",
-      "otherFee": "₹300",
+      "otherFee": "₹200",
       "Total": "₹500",
-      "id": 4
-    },
-    {
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹300",
-      "otherFee": "₹300",
-      "Total": "₹600",
-      "id": 5
-    },
-    {
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Mekala V MBBS",
-      "doctorField": "General doctor",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹300",
-      "otherFee": "₹500",
-      "Total": "₹800",
-      "id": 6
-    },
-    {
-      "patientId": 3,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Poornima V MS",
-      "doctorField": "General doctor",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹300",
-      "otherFee": "₹300",
-      "Total": "₹600",
-      "id": 7
-    },
-    {
-      "patientId": 3,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹300",
-      "otherFee": "₹300",
-      "Total": "₹600",
-      "id": 8
-    },
-    {
-      "patientId": 2,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Mekala V MBBS",
-      "doctorField": "General doctor",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹300",
-      "otherFee": "₹700",
-      "Total": "₹1000",
-      "id": 9
+      "id": 2
     }
   ]
 }

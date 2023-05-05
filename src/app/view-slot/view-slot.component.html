@@ -75,16 +75,24 @@
       <th>Contact no</th>
       <th>Appointment date</th>
       <th>Doctor Name</th>
+      <th>Remarks</th>
+      <th>Send</th>
       <!-- <th>Appointment time</th> -->
       <!-- <th>Health issue</th> -->
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of canceledAppointment">
+      <tr *ngFor="let appointment of canceledAppointment"[formGroup]="remarkMessage" >
         <td>{{appointment.id}}</td>
         <td>{{appointment.cName}}</td>
         <td>{{appointment.cMobileNo}}</td>
         <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>
         <td>{{appointment.doctorName}}</td>
+        <td>
+          <textarea name="remark" id="" cols="20" rows="3" formControlName="rkMessage"></textarea>
+        </td>
+        <td>
+          <button (click)="sendRemarks(appointment)">Send</button>
+        </td>
         <!-- <td>{{appointment.timeing}}</td> -->
         <!-- <td>{{appointment.problem}}</td> -->
       </tr>

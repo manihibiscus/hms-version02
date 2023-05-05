@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { AppointmentService } from '../appointment.service';
 import { AppointmentCancelService } from '../appointmentCancel.service';
 import { UserServiceService } from '../userService.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { RemarkServiceService } from './remarkService.service';
 
 @Component({
   selector: 'app-view-slot',
@@ -11,7 +13,12 @@ import { UserServiceService } from '../userService.service';
 })
 
 export class ViewSlotComponent {
-  constructor(private http:HttpClient,private userService:UserServiceService, private service:AppointmentService, private cancelService:AppointmentCancelService) { }
+  constructor(private http:HttpClient,
+    private userService:UserServiceService,
+    private service:AppointmentService,
+    private cancelService:AppointmentCancelService,
+    private fb:FormBuilder,
+    private remark:RemarkServiceService) { }
   getAppointment:any="";
   acceptedAppointment:any="";
   canceledAppointment:any="";
@@ -99,5 +106,34 @@ export class ViewSlotComponent {
     }
     this.cancelService.postAcceptRequest(acceptBody).subscribe(data=>{
     });
+  }
+  showRemarked:any=""
+  sendRemarks(RemarkDetails:any){
+    alert("Send to" + RemarkDetails.cName)
+    this.showRemark(RemarkDetails)
+  }
+  showRemark(details:any){
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
+      const patientRemark=value.find((a:any)=>{
+        return a.phone===details.cMobileNo
+      });
+      if(patientRemark){
+        this.sendRemarkToPatient(patientRemark)
+      }
+    })
+  }
+
+  baseUrl:any="http://localhost:3000";
+  remarkMessage=this.fb.group({
+    rkMessage:['',Validators.required]
+  })
+  sendRemarkToPatient(getValue:any){
+    // alert(getValue.id);
+    var body={
+      remarkMessage:this.remarkMessage.value.rkMessage
+    }
+    this.remark.updateRemark(body,getValue.id).subscribe(()=>{
+      alert("Remark Updated");
+    })
   }
 }

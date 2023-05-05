@@ -1,7 +1,8 @@
 .form
 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 230px 1fr 1fr;
+  grid-column-gap: 5px;
   background-color: white;
 }
 .input
@@ -18,11 +19,12 @@
   border-left: 0;
   border-right: 0;
   background: transparent;
+  text-align: center;
 }
 label{
   font-size: 18px;
 }
-.inputselect{
+/* .inputselect{
   width: 160px;
   text-align: center;
   border-top: 0;
@@ -32,7 +34,7 @@ label{
 }
 .inputselect option{
   color: green;
-}
+} */
 .makeaAppointment{
   width: 200px;
   padding: 10px 30px;
@@ -94,7 +96,9 @@ table{
   background-color: whitesmoke;
   width: 80%;
 }
-
+.field1, .field4, .field2, .field7, .field3, .field4, .field5{
+  text-align: left;
+}
 table tbody tr td{
   text-align: center;
   padding: 12px;
@@ -104,5 +108,41 @@ table thead th{
   text-align: center;
   padding: 12px;
 
+}
+
+select {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+select:hover{
+  border:1px solid black;
+}
+select option {
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+
+input[type="date"] {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

@@ -7,7 +7,7 @@
   <div class="field4">
     <label for="">Choose medical field</label>
     <div class="input">
-      <select name="" id="" class="inputselect" name="appointmentField" #field="ngModel" [(ngModel)]="appointmentField" (change)="changeValue()" >
+      <select name="" id=""  name="appointmentField" #field="ngModel" [(ngModel)]="appointmentField" (change)="changeValue()" >
         <option value="" disabled selected>Medical fields</option>
         <option value="General doctor" >General doctor</option>
         <option value="Pediatrician">Pediatrician</option>
@@ -27,7 +27,7 @@
   <div class="field2">
     <label for="">Choose doctor name</label>
 <div class="input" >
-      <select class="inputselect"  name="appointmentDocName" #dname="ngModel"
+      <select   name="appointmentDocName" #dname="ngModel"
       [(ngModel)]="appointmentDocName">
       <option value="" disabled selected>Doctors Name</option>
         <option *ngFor="let docName of storedField" value="{{docName.doctorName}}">{{docName.doctorName}}</option>
@@ -37,6 +37,7 @@
 
     <div class="field7">
       <label for="">Choose date</label>
+      <!-- <div class="input"><input type="date" [disabled]="!filterDates()" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div> -->
       <div class="input"><input type="date" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div>
     </div>
 
@@ -44,7 +45,8 @@
     <label for="">Choose your timing</label>
     <div class="input">
     <!-- <select class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" > -->
-    <select class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime">
+    <select  #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" (change)="chageFormat()">
+      <option value="" disabled selected>hrs</option>
       <option value="09" >09</option>
       <option value="10">10</option>
       <option value="11">11</option>
@@ -58,13 +60,23 @@
 
     </select>
     <span>
-    <select class="inputfield" #dminute="ngModel" required name="appointmentMinute" [(ngModel)]="appointmentMinute">
+    <select  #dminute="ngModel" required name="appointmentMinute" [(ngModel)]="appointmentMinute">
+      <option value="" disabled selected >min</option>
       <option value="00">00</option>
       <option value="15">15</option>
       <option value="30">30</option>
       <option value="45">45</option>
     </select>
-  </span></div>
+    <select  #dAmPm="ngModel" required name="appointmentAMPM" [(ngModel)]="appointmetnAmPM">
+      <!-- <option value="" disabled selected >AM/PM</option> -->
+      <option value="AM" [hidden]="amStatus">AM</option>
+      <option value="PM" [hidden]="pmStatus">PM</option>
+
+    </select>
+  </span><span>
+
+  </span>
+</div>
   </div>
 
   <div class="field4">
@@ -78,7 +90,7 @@
   </div>
 </form>
 <div class="doctor">
-  <div *ngFor="let det of storedField">
+  <div *ngFor="let det of storedField" id="ref">
     <div class="box">
       <img src="{{ det.image }}" alt="" />
       <p>Name: {{ det.doctorName }}</p>
