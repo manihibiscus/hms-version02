@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../userService.service';
 import { Router } from '@angular/router';
+import { PatientServiceService } from '../patientPage/patientService.service';
 
 @Component({
   selector: 'app-payBills',
@@ -21,13 +22,19 @@ export class PayBillsComponent implements OnInit {
 
   // }
   loggedInUser:any=""
-  constructor(private userServeice:UserServiceService, private route:Router) { }
+
+  constructor(private userServeice:UserServiceService, private route:Router,
+    private patService:PatientServiceService) { }
 
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
     if (sessionUser) {
       this.loggedInUser = JSON.parse(sessionUser);
     }
+    else if(this.patService.logoutStatus){
+
+    }
+
     // else if (this.userServeice.loggedInUser !== null) {
     //   this.loggedInUser = this.userServeice.loggedInUser;
     // } else {

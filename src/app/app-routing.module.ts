@@ -60,10 +60,10 @@ const routes: Routes = [
     path:'adminhome',
     component:AdminPageComponent
   },
-  {
-    path:'logout',
-    component:HomePageComponent
-  },
+  // {
+  //   path:'logout',
+  //   component:HomePageComponent
+  // },
 {
   path:'viewQuery',
 component:ViewQueryComponent

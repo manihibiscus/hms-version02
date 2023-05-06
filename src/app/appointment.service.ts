@@ -20,4 +20,7 @@ deleteAppointment(id: number){
 acceptDeleteAppointment(acceptId: number){
   return this.http.delete(`${this.baseUrl}/appointmentDetails/${acceptId}`);
 }
+updateAppointmentStatus(details:any, id:any){
+  return this.http.patch(`${this.baseUrl}/patientRegistration/${id}`,details);
+}
 }

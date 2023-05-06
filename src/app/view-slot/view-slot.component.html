@@ -19,14 +19,14 @@
         <td>{{appointment.id}}</td>
         <td>{{appointment.patientName}}</td>
         <td>{{appointment.mobileno}}</td>
-        <td>{{appointment.field}}</td>
-        <td>{{appointment.selectedDoc}}</td>
-        <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
-        <td>{{appointment.time}}</td>
+        <td>{{appointment.doctorField}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.appointmentDate}}</td>
+        <td>{{appointment.appointmentTime}}</td>
         <td>{{appointment.say}}</td>
         <td>
-          <button class="back"   (click)="accept(appointment.id,appointment.patientName,appointment.mobileno,appointment.date,appointment.time, appointment.say, appointment.selectedDoc, appointment.field)">Accept</button>
-          <button class="back"   (click)="cancel(appointment.id,appointment.patientName,appointment.mobileno,appointment.date, appointment.selectedDoc )">Cancel</button>
+          <button class="back"   (click)="accept(appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate,appointment.appointmentTime, appointment.say, appointment.doctorName, appointment.doctorField)">Accept</button>
+          <button class="back"   (click)="cancel(appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate, appointment.doctorName )">Cancel</button>
         </td>
       </tr>
     </tbody>
@@ -86,7 +86,7 @@
         <td>{{appointment.cName}}</td>
         <td>{{appointment.cMobileNo}}</td>
         <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>
-        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.cdoctorName}}</td>
         <td>
           <textarea name="remark" id="" cols="20" rows="3" formControlName="rkMessage"></textarea>
         </td>

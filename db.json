@@ -28,21 +28,23 @@
       "password": "Mani@777",
       "cpassword": "Mani@777",
       "id": 1,
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Mekala V MBBS",
-      "doctorField": "General doctor",
+      "mobileno": "9361798897",
+      "appointmentDate": "2023-05-07",
+      "appointmentTime": "12:30PM",
+      "say": "Cholostal problem",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Pooja C MD",
       "mobileNo": "9361798897",
       "consultingFee": "₹300",
-      "otherFee": "₹700",
-      "Total": "₹1000"
+      "otherFee": "₹200",
+      "Total": "₹500"
     },
     {
       "patientName": "SATHISH KUMAR",
       "fatherName": "SIDHURAJ",
       "gender": "male",
       "blood": "A+",
-      "date": "2004-06-12",
+      "date": "2023-05-07",
       "email": "sathishkumar12062004@gmail.com",
       "phone": "8072702981",
       "address": "371/205B, Chella kutti kadu Erumapalayam po,",
@@ -50,14 +52,7 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 2,
-      "doctorName": "Dr. Malarkodi V MBBS",
-      "doctorField": "General doctor",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "remarkMessage": "MJjksncsd"
+      "id": 2
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -117,8 +112,7 @@
       "insurance": "NO",
       "password": "Naveen@777",
       "cpassword": "Naveen@777",
-      "id": 6,
-      "remarkMessage": "HI naveen"
+      "id": 6
     }
   ],
   "adminDetails": [
@@ -320,68 +314,19 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [
-    {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-05",
-      "doctorName": "Dr. Madhavi M MS",
-      "id": 1
-    },
-    {
-      "cName": "NAVEEN",
-      "cMobileNo": "9597243562",
-      "cDate": "2023-05-06",
-      "doctorName": "Dr. Mythili M MD",
-      "id": 2
-    }
-  ],
-  "acceptRequest": [
-    {
-      "name": "SATHISH KUMAR",
-      "mobileNo": "8072702981",
-      "date": "2023-05-06",
-      "timeing": "09:00AM",
-      "problem": "",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "acceptanceStatus": "Pending",
-      "id": 2
-    },
-    {
-      "name": "SATHISH KUMAR",
-      "mobileNo": "8072702981",
-      "date": "2023-05-06",
-      "timeing": "09:00AM",
-      "problem": "",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "doctorField": "Gynecologist",
-      "acceptanceStatus": "Pending",
-      "id": 3
-    }
-  ],
+  "cancelledRequest": [],
+  "acceptRequest": [],
   "billDetails": [
     {
       "patientId": 1,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Mekala V MBBS",
-      "doctorField": "General doctor",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹300",
-      "otherFee": "₹300",
-      "Total": "₹600",
-      "id": 1
-    },
-    {
-      "patientId": 4,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Malarkodi V MBBS",
-      "doctorField": "General doctor",
-      "mobileNo": "8072702981",
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Pooja C MD",
+      "doctorField": "Cardiologist",
+      "mobileNo": "9361798897",
       "consultingFee": "₹300",
       "otherFee": "₹200",
       "Total": "₹500",
-      "id": 2
+      "id": 1
     }
   ]
 }

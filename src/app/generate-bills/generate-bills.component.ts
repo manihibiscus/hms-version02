@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ContactServiceService } from '../contactService.service';
 import { GenerateBillsService } from './generateBills.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GenerateBills } from './generateBills.model';
@@ -115,4 +114,5 @@ export class GenerateBillsComponent {
       this.ngOnInit();
     })
   }
-}
+
+  }

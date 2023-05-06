@@ -5,7 +5,7 @@ import { AppointmentCancelService } from '../appointmentCancel.service';
 import { UserServiceService } from '../userService.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { RemarkServiceService } from './remarkService.service';
-
+import { PatientPageComponent } from '../patientPage/patientPage.component';
 @Component({
   selector: 'app-view-slot',
   templateUrl: './view-slot.component.html',
@@ -18,7 +18,8 @@ export class ViewSlotComponent {
     private service:AppointmentService,
     private cancelService:AppointmentCancelService,
     private fb:FormBuilder,
-    private remark:RemarkServiceService) { }
+    private remark:RemarkServiceService,
+    ) { }
   getAppointment:any="";
   acceptedAppointment:any="";
   canceledAppointment:any="";
@@ -67,30 +68,44 @@ export class ViewSlotComponent {
   cName:any=""
   cMobileNo:any=""
   cDate:any=""
-  doctorName:any=""
+  cdoctorName:any=""
   cancel(cancelId: number, cancelName: any, cancelMobileNo: any, cancelDate: any, docName:any){
     // this.postCancelDetails(cancelName, cancelMobileNo, cancelDate);
     this.cName=cancelName;
     this.cMobileNo=cancelMobileNo;
     this.cDate=cancelDate;
-    this.doctorName=docName;
+    this.cdoctorName=docName;
     // this.postCancelDetails();
     this.service.deleteAppointment(cancelId).subscribe(()=>{
       // window.confirm('Are you sure you want to cancel?');
       alert("Cancelled"+cancelId);
       this.ngOnInit();
     });
-    this.postCancelDetails();
+    this.postCancelDetails(cancelMobileNo);
   }
-  postCancelDetails(){
+  postCancelDetails(cancelMobileNo:any){
     var body={
           cName:this.cName,
           cMobileNo:this.cMobileNo,
           cDate:this.cDate,
-          doctorName:this.doctorName
+          cdoctorName:this.cdoctorName
         }
   this.cancelService.postCancelledRequest(body).subscribe(value=>{
   });
+  alert("Post to Cancel DB");
+  this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(res=>{
+      const getUser=res.find((a:any)=>{
+        return a.phone===cancelMobileNo
+      });
+      if(getUser){
+        this.postCancelToPatient(body,getUser);
+      }
+    })
+  }
+  postCancelToPatient(body:any,getUser:any){
+    this.cancelService.postCancelToPatientRegistration(body,getUser.id).subscribe(()=>{
+      alert("Post to Patient Details"+getUser);
+    });
   }
   acceptanceStatus:any="Pending"
   postAcceptDetails(){
@@ -118,7 +133,7 @@ export class ViewSlotComponent {
         return a.phone===details.cMobileNo
       });
       if(patientRemark){
-        this.sendRemarkToPatient(patientRemark)
+        this.sendRemarkToPatient(patientRemark,details)
       }
     })
   }
@@ -127,13 +142,30 @@ export class ViewSlotComponent {
   remarkMessage=this.fb.group({
     rkMessage:['',Validators.required]
   })
-  sendRemarkToPatient(getValue:any){
+  sendRemarkToPatient(getValue:any,cancleDetails:any){
     // alert(getValue.id);
     var body={
       remarkMessage:this.remarkMessage.value.rkMessage
     }
     this.remark.updateRemark(body,getValue.id).subscribe(()=>{
       alert("Remark Updated");
+    })
+    this.updateLoggedInUser(getValue,cancleDetails);
+  }
+pat!:PatientPageComponent;
+  updateLoggedInUser(getValue:any,cancelDetails:any){
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
+      const patient=data.find((b:any)=>{
+        return b.phone===cancelDetails.cMobileNo;
+      });
+
+      if(patient){
+        alert("loggedInUser value Updated");
+        // this.loginForm.reset();
+          // this.userService.loggedInUser = patient;
+          // sessionStorage.setItem('loggedInUser', JSON.stringify(patient));
+          // this.pat.ngOnInit();
+      }
     })
   }
 }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserServiceService } from '../userService.service';
+import { PatientServiceService } from './patientService.service';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-patientPage',
@@ -9,12 +12,18 @@ import { UserServiceService } from '../userService.service';
 })
 export class PatientPageComponent implements OnInit {
   loggedInUser:any=""
-  constructor(private userServeice:UserServiceService, private route:Router) { }
+  constructor(private userServeice:UserServiceService, private route:Router,
+    private pr:PatientServiceService,
+    private http:HttpClient
+    ) { }
 
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
     if (sessionUser) {
       this.loggedInUser = JSON.parse(sessionUser);
+    }
+    else if(this.pr.logoutStatus){
+      this.loggedOff(sessionUser);
     }
     //  else if (this.userServeice.loggedInUser !== null) {
     //   this.loggedInUser = this.userServeice.loggedInUser;
@@ -23,6 +32,12 @@ export class PatientPageComponent implements OnInit {
     //   this.route.navigate(['/login']);
     // }
   }
+
+  loggedOff(value:any){
+    // this.loggedInUser=""
+    value=sessionStorage.removeItem('loggedInUser')
+  }
+
   }
 
 

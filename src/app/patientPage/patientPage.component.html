@@ -1,3 +1,61 @@
 <app-patientHeader></app-patientHeader>
-{{loggedInUser.patientName}}
+{{loggedInUser|json}}
+<h2 style="text-align: center;">Accepted Slot</h2>
+
+<form class="form">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Contact no</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Appointment date</th>
+      <th>Appointment time</th>
+      <th>Treatment Status</th>
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{loggedInUser.id}}</td>
+        <td>{{loggedInUser.patientName}}</td>
+        <td>{{loggedInUser.mobileNo}}</td>
+        <td>{{loggedInUser.doctorName}}</td>
+        <td>{{loggedInUser.doctorField}}</td>
+        <td>{{loggedInUser.appointmentDate}}</td>
+        <td>{{loggedInUser.appointmentTime}}</td>
+        <td>{{loggedInUser.treatmentStatus}}</td>
+        <!-- <td>{{appointment.problem}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</form>
+<h2 style="text-align: center;">Cancelled Slot</h2>
+<form class="form">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Contact no</th>
+      <th>Appointment date</th>
+      <th>Doctor Name</th>
+      <th>Remarks</th>
+      <th>Send</th>
+      <!-- <th>Appointment time</th> -->
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{loggedInUser.id}}</td>
+        <td>{{loggedInUser.cName}}</td>
+        <td>{{loggedInUser.cMobileNo}}</td>
+        <td>{{loggedInUser.cDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{loggedInUser.cdoctorName}}</td>
+        <!-- <td>{{appointment.timeing}}</td> -->
+        <!-- <td>{{appointment.problem}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</form>
+<button >Verify</button>
 <app-footer></app-footer>

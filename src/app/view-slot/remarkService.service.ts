@@ -12,4 +12,5 @@ constructor(private http:HttpClient) { }
 updateRemark(details:any, id:any){
   return this.http.patch(`${this.baseUrl}/patientRegistration/${id}`, details)
 }
+
 }

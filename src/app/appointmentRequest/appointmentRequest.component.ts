@@ -66,19 +66,36 @@ export class AppointmentRequestComponent implements OnInit {
     var body={
       patientName:this.loggedInUser.patientName,
       mobileno:this.loggedInUser.phone,
-      date:this.appointmentDate,
-      time:this.appointmentTime+':'+this.appointmentMinute+this.appointmetnAmPM,
+      appointmentDate:this.appointmentDate,
+      appointmentTime:this.appointmentTime+':'+this.appointmentMinute+this.appointmetnAmPM,
       say:this.appointmentSpecific,
-      field:this.appointmentField,
-      selectedDoc:this.appointmentDocName
+      doctorField:this.appointmentField,
+      doctorName:this.appointmentDocName
     }
     this.appointment.postAppointmentDetails(body).subscribe(data=>{
       alert("Appointment Submitted");
+      this.a(body)
       this.appointmentForm.resetForm();
       let refe=document.getElementById("ref");
       refe?.click();
     })
 
+  }
+  a(body:any){
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
+      const appStatus=value.find((a:any)=>{
+        return a.phone===body.mobileno
+      });
+      if(appStatus){
+        this.updateAppointmentDetailsToPatient(appStatus,body)
+      }
+    })
+  }
+
+  updateAppointmentDetailsToPatient(appStatus:any, value:any){
+    this.appointment.updateAppointmentStatus(value,appStatus.id).subscribe(()=>{
+      alert("AppointmentDetails are updated to the patientRegisterd DB");
+    })
   }
 changeValue(){
   if(this.appointmentField=="General doctor"){
