@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UserServiceService } from '../userService.service';
 import { PatientServiceService } from './patientService.service';
 import { HttpClient } from '@angular/common/http';
+import { PatientModel } from './patient.model';
 
 
 @Component({
@@ -11,20 +12,23 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./patientPage.component.css']
 })
 export class PatientPageComponent implements OnInit {
-  loggedInUser:any=""
+  loggedUser:any=""
   constructor(private userServeice:UserServiceService, private route:Router,
     private pr:PatientServiceService,
     private http:HttpClient
     ) { }
+    userLogObj : PatientModel=new PatientModel();
 
   ngOnInit() {
-    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    // sessionStorage.setItem('updateUser', JSON.stringify(this.userServeice.loggedInUser));
+    let sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
     if (sessionUser) {
-      this.loggedInUser = JSON.parse(sessionUser);
+      this.loggedUser = JSON.parse(sessionUser);
+      // this.refresh(sessionUser);
     }
-    else if(this.pr.logoutStatus){
-      this.loggedOff(sessionUser);
-    }
+    // else if(this.pr.logoutStatus){
+    //   this.loggedOff(sessionUser);
+    // }
     //  else if (this.userServeice.loggedInUser !== null) {
     //   this.loggedInUser = this.userServeice.loggedInUser;
     // } else {
@@ -33,11 +37,17 @@ export class PatientPageComponent implements OnInit {
     // }
   }
 
-  loggedOff(value:any){
-    // this.loggedInUser=""
-    value=sessionStorage.removeItem('loggedInUser')
-  }
+  // loggedOff(value:any){
+  //   // this.loggedInUser=""
+  //   value=sessionStorage.removeItem('loggedInUser')
+  // }
+  // refresh(sessionUser:any){
+  //   sessionStorage.setItem('updateUser', JSON.stringify(this.userLogObj.userLogged));
+  //   sessionUser = sessionStorage.removeItem('updateUser');
+  //   this.loggedUser = JSON.parse(sessionUser);
+  //   alert("Reload"+this.userLogObj.userLogged);
+  // }
 
-  }
+}
 
 

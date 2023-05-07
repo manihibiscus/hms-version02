@@ -30,14 +30,18 @@
       "id": 1,
       "mobileno": "9361798897",
       "appointmentDate": "2023-05-07",
-      "appointmentTime": "12:30PM",
-      "say": "Cholostal problem",
-      "doctorField": "Cardiologist",
-      "doctorName": "Dr. Pooja C MD",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Cosmic",
+      "doctorName": "Dr. Mythili M MD",
       "mobileNo": "9361798897",
       "consultingFee": "₹300",
       "otherFee": "₹200",
-      "Total": "₹500"
+      "Total": "₹500",
+      "cName": "MANIKANDAN",
+      "cMobileNo": "9361798897",
+      "cDate": "2023-05-07",
+      "cdoctorName": "Dr. Madhavi M MS"
     },
     {
       "patientName": "SATHISH KUMAR",
@@ -328,7 +332,18 @@
       "id": 2
     }
   ],
-  "appointmentDetails": [],
+  "appointmentDetails": [
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "9361798897",
+      "appointmentDate": "2023-05-07",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Cosmic",
+      "doctorName": "Dr. Mythili M MD",
+      "id": 1
+    }
+  ],
   "cancelledRequest": [
     {
       "cName": "NAVEEN",
@@ -336,9 +351,28 @@
       "cDate": "2023-05-06",
       "cdoctorName": "Dr. Thilagavathi V MS",
       "id": 1
+    },
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "9361798897",
+      "cDate": "2023-05-07",
+      "cdoctorName": "Dr. Madhavi M MS",
+      "id": 2
     }
   ],
-  "acceptRequest": [],
+  "acceptRequest": [
+    {
+      "name": "MANIKANDAN",
+      "mobileNo": "9361798897",
+      "date": "2023-05-06",
+      "timeing": "10:00AM",
+      "problem": "",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "acceptanceStatus": "Pending",
+      "id": 1
+    }
+  ],
   "billDetails": [
     {
       "patientId": 1,

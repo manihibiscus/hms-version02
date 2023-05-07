@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { GetLoginService } from '../getLogin.service';
 import { UserServiceService } from '../userService.service';
 import { Location } from '@angular/common';
+import { PatientModel } from '../patientPage/patient.model';
 
 @Component({
   selector: 'app-loginPage',
@@ -25,7 +26,7 @@ export class LoginPageComponent implements OnInit {
     password:[,[Validators.required]]
   })
   errors:any=false;
-
+  userLogObj : PatientModel=new PatientModel();
   login(){
     this.patients();
     this.admins();
@@ -44,6 +45,7 @@ export class LoginPageComponent implements OnInit {
       if(patient){
         alert("Login Successfully");
         // this.loginForm.reset();
+          this.userLogObj.userLogged=patient;
           this.userService.loggedInUser = patient;
           sessionStorage.setItem('loggedInUser', JSON.stringify(patient));
         this.router.navigate(['patienthome'])

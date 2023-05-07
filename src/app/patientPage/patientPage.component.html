@@ -1,6 +1,6 @@
 <app-patientHeader></app-patientHeader>
-{{loggedInUser|json}}
-<h2 style="text-align: center;">Accepted Slot</h2>
+{{loggedUser|json}}
+<h2 style="text-align: center;">Appointment Status</h2>
 
 <form class="form">
   <table>
@@ -17,14 +17,14 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{loggedInUser.id}}</td>
-        <td>{{loggedInUser.patientName}}</td>
-        <td>{{loggedInUser.mobileNo}}</td>
-        <td>{{loggedInUser.doctorName}}</td>
-        <td>{{loggedInUser.doctorField}}</td>
-        <td>{{loggedInUser.appointmentDate}}</td>
-        <td>{{loggedInUser.appointmentTime}}</td>
-        <td>{{loggedInUser.treatmentStatus}}</td>
+        <td>{{loggedUser.id}}</td>
+        <td>{{loggedUser.patientName}}</td>
+        <td>{{loggedUser.mobileNo}}</td>
+        <td>{{loggedUser.doctorName}}</td>
+        <td>{{loggedUser.doctorField}}</td>
+        <td>{{loggedUser.appointmentDate}}</td>
+        <td>{{loggedUser.appointmentTime}}</td>
+        <td>{{loggedUser.treatmentStatus}}</td>
         <!-- <td>{{appointment.problem}}</td> -->
       </tr>
     </tbody>
@@ -46,16 +46,16 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{loggedInUser.id}}</td>
-        <td>{{loggedInUser.cName}}</td>
-        <td>{{loggedInUser.cMobileNo}}</td>
-        <td>{{loggedInUser.cDate | date: 'dd/MM/yyyy'}}</td>
-        <td>{{loggedInUser.cdoctorName}}</td>
+        <td>{{loggedUser.id}}</td>
+        <td>{{loggedUser.cName}}</td>
+        <td>{{loggedUser.cMobileNo}}</td>
+        <td>{{loggedUser.cDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{loggedUser.cdoctorName}}</td>
         <!-- <td>{{appointment.timeing}}</td> -->
         <!-- <td>{{appointment.problem}}</td> -->
       </tr>
     </tbody>
   </table>
 </form>
-<button >Verify</button>
+<!-- <button (click)="ve()" >Verify</button> -->
 <app-footer></app-footer>
