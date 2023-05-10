@@ -42,7 +42,21 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 2
+      "id": 2,
+      "mobileno": "8072702981",
+      "appointmentDate": "2023-05-10",
+      "appointmentTime": "10:00AM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Poornima V MS",
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-10",
+      "cdoctorName": "Dr. Mathumitha V MD",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹300",
+      "Total": "₹500"
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -102,7 +116,22 @@
       "insurance": "NO",
       "password": "Naveen@777",
       "cpassword": "Naveen@777",
-      "id": 6
+      "id": 6,
+      "mobileno": "9597243562",
+      "appointmentDate": "2023-05-10",
+      "appointmentTime": "10:15AM",
+      "say": "",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Kavitha V MD",
+      "mobileNo": "9597243562",
+      "consultingFee": "₹200",
+      "otherFee": "₹300",
+      "Total": "₹500",
+      "cName": "NAVEEN",
+      "cMobileNo": "9597243562",
+      "cDate": "2023-05-10",
+      "cdoctorName": "Dr. Kavitha V MD",
+      "remarkMessage": "SOrry"
     },
     {
       "patientName": "SARASWATHI",
@@ -319,9 +348,112 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [],
+  "cancelledRequest": [
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-10",
+      "cdoctorName": "Dr. Madhavi M MS",
+      "id": 1
+    },
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-10",
+      "cdoctorName": "Dr. Madhavi M MS",
+      "id": 2
+    },
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-10",
+      "cdoctorName": "Dr. Mathumitha V MD",
+      "id": 3
+    },
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-10",
+      "cdoctorName": "Dr. Poornima V MS",
+      "id": 4
+    },
+    {
+      "cName": "NAVEEN",
+      "cMobileNo": "9597243562",
+      "cDate": "2023-05-10",
+      "cdoctorName": "Dr. Kavitha V MD",
+      "id": 5
+    }
+  ],
   "acceptRequest": [],
-  "billDetails": [],
+  "billDetails": [
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹1000",
+      "otherFee": "₹200",
+      "Total": "₹1200",
+      "id": 1
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹500",
+      "otherFee": "₹200",
+      "Total": "₹700",
+      "id": 2
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Mathumitha V MD",
+      "doctorField": "Dentist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹300",
+      "Total": "₹500",
+      "id": 3
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹300",
+      "Total": "₹500",
+      "id": 4
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹300",
+      "Total": "₹500",
+      "id": 5
+    },
+    {
+      "patientId": 1,
+      "name": "NAVEEN",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "9597243562",
+      "consultingFee": "₹200",
+      "otherFee": "₹300",
+      "Total": "₹500",
+      "id": 6
+    }
+  ],
   "forgotPassDetails": [
     {
       "userId": "manihibiscus@gmail.com",
