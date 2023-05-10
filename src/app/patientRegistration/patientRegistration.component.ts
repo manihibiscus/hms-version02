@@ -4,6 +4,7 @@ import { FormBuilder,FormControl,FormGroup, Validators } from '@angular/forms'
 import { RegisterServiceService } from '../registerService.service';
 import { Router } from '@angular/router';
 import { confirmedValidator } from '../confrimPass';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-patientRegistration',
@@ -23,7 +24,10 @@ export class PatientRegistrationComponent implements OnInit {
   // patID:any="";
   // insure:any=""
 
-  constructor(private formBuilder:FormBuilder, private service: RegisterServiceService, private route:Router) { }
+  constructor(private formBuilder:FormBuilder,
+    private service: RegisterServiceService,
+    private route:Router,
+    private http:HttpClient) { }
   PatientRegister=this.formBuilder.group({
     patientName:[,[Validators.required,]],
     fatherName:[,[Validators.required]],
@@ -62,6 +66,21 @@ export class PatientRegistrationComponent implements OnInit {
       alert("Please fill all the Details");
     }
     else if(this.PatientRegister.valid){
+      // this.service.postRegDet(this.PatientRegister.value).subscribe(data =>{
+      //   alert("Registerd Sucessfully Press ok to Login");
+      //   this.PatientRegister.reset();
+      //   this.route.navigate(['login']);
+      // }, err=>{
+      //   alert("Something went wrong");
+      // })
+      this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
+    const compare=data.find((a:any)=>{
+      return a.email===this.PatientRegister.value.email;
+    });
+    if(compare){
+      alert(this.PatientRegister.value.email+','+' '+"This Email was Already Registered ");
+    }
+    else{
       this.service.postRegDet(this.PatientRegister.value).subscribe(data =>{
         alert("Registerd Sucessfully Press ok to Login");
         this.PatientRegister.reset();
@@ -69,6 +88,8 @@ export class PatientRegistrationComponent implements OnInit {
       }, err=>{
         alert("Something went wrong");
       })
+    }
+  })
     }
 
   }

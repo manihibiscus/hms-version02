@@ -46,7 +46,7 @@
           <label for="other">Other</label>
     </div>
     <br /><br />
-    <label>Blood Group</label><br />
+    <!-- <label>Blood Group</label><br />
     <input type="text" class="sel-box" placeholder="Blood Group" required formControlName="blood"
       pattern="^(A|B|AB|O)[+-]$" oninput="this.value = this.value.toUpperCase()"  />
     <div class="error" *ngIf="PatientRegister.controls['blood'].dirty">
@@ -56,6 +56,26 @@
       <p *ngIf="PatientRegister.controls['blood'].errors?.['pattern']">
         Enter valid value
       </p>
+    </div> -->
+    <label>Blood Group</label><br />
+    <select class="SelectInput" formControlName="blood">
+      <option  value="" disabled selected>Choose Blood Group</option>
+      <option value="A+">A+ve</option>
+      <option value="A+">B+ve</option>
+      <option value="A+">A-ve</option>
+      <option value="A+">B-ve</option>
+      <option value="A+">O+ve</option>
+      <option value="A+">O-ve</option>
+      <option value="A+">AB+ve</option>
+      <option value="A+">AB-ve</option>
+      </select>
+       <div class="error" *ngIf="PatientRegister.controls['blood'].dirty">
+      <p *ngIf="PatientRegister.controls['blood'].errors?.['required']">
+        Choose the Blood Group
+      </p>
+      <!-- <p *ngIf="PatientRegister.controls['blood'].errors?.['pattern']">
+        Enter valid value
+      </p> -->
     </div>
     <br /><br />
     <label>Date</label><br />

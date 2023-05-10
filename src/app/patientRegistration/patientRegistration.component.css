@@ -123,3 +123,16 @@ text-align: center;
   outline: none;
   background: transparent;
 } */
+
+.SelectInput{
+  width: 50%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+
+}

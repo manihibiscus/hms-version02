@@ -27,21 +27,7 @@
       "insurance": "YES",
       "password": "Mani@777",
       "cpassword": "Mani@777",
-      "id": 1,
-      "mobileno": "9361798897",
-      "appointmentDate": "2023-05-08",
-      "appointmentTime": "12:15PM",
-      "say": "",
-      "doctorField": "Cosmic",
-      "doctorName": "Dr. Mythili M MD",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "cName": "MANIKANDAN",
-      "cMobileNo": "9361798897",
-      "cDate": "2023-05-07",
-      "cdoctorName": "Dr. Madhavi M MS"
+      "id": 1
     },
     {
       "patientName": "SATHISH KUMAR",
@@ -116,22 +102,22 @@
       "insurance": "NO",
       "password": "Naveen@777",
       "cpassword": "Naveen@777",
-      "id": 6,
-      "mobileno": "9597243562",
-      "appointmentDate": "2023-05-06",
-      "appointmentTime": "09:30AM",
-      "say": "",
-      "doctorField": "Gynecologist",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "cName": "NAVEEN",
-      "cMobileNo": "9597243562",
-      "cDate": "2023-05-06",
-      "cdoctorName": "Dr. Thilagavathi V MS",
-      "remarkMessage": "That time Doctor will be not available"
+      "id": 6
+    },
+    {
+      "patientName": "SARASWATHI",
+      "fatherName": "SUBRAMANI",
+      "gender": "female",
+      "blood": "A+",
+      "date": "1980-02-03",
+      "email": "saras@gmail.com",
+      "phone": "9361798897",
+      "address": "371/205B, Chella kutti kadu Erumapalayam po,",
+      "image": "C:\\fakepath\\photo.png",
+      "insurance": "NO",
+      "password": "Saras@777",
+      "cpassword": "Saras@777",
+      "id": 7
     }
   ],
   "adminDetails": [
@@ -332,85 +318,18 @@
       "id": 2
     }
   ],
-  "appointmentDetails": [
-    {
-      "patientName": "MANIKANDAN",
-      "mobileno": "9361798897",
-      "appointmentDate": "2023-05-07",
-      "appointmentTime": "09:00AM",
-      "say": "",
-      "doctorField": "Cosmic",
-      "doctorName": "Dr. Mythili M MD",
-      "id": 1
-    },
-    {
-      "patientName": "MANIKANDAN",
-      "mobileno": "9361798897",
-      "appointmentDate": "2023-05-08",
-      "appointmentTime": "12:15PM",
-      "say": "",
-      "doctorField": "Cosmic",
-      "doctorName": "Dr. Mythili M MD",
-      "id": 2
-    }
-  ],
-  "cancelledRequest": [
-    {
-      "cName": "NAVEEN",
-      "cMobileNo": "9597243562",
-      "cDate": "2023-05-06",
-      "cdoctorName": "Dr. Thilagavathi V MS",
-      "id": 1
-    },
-    {
-      "cName": "MANIKANDAN",
-      "cMobileNo": "9361798897",
-      "cDate": "2023-05-07",
-      "cdoctorName": "Dr. Madhavi M MS",
-      "id": 2
-    }
-  ],
-  "acceptRequest": [
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "9361798897",
-      "date": "2023-05-06",
-      "timeing": "10:00AM",
-      "problem": "",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "doctorField": "Gynecologist",
-      "acceptanceStatus": "Pending",
-      "id": 1
-    }
-  ],
-  "billDetails": [
-    {
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Pooja C MD",
-      "doctorField": "Cardiologist",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "id": 1
-    },
-    {
-      "patientId": 1,
-      "name": "NAVEEN",
-      "doctorName": "Dr. Manogar S MD",
-      "doctorField": "Otolaryngologist",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "id": 2
-    }
-  ],
+  "appointmentDetails": [],
+  "cancelledRequest": [],
+  "acceptRequest": [],
+  "billDetails": [],
   "forgotPassDetails": [
     {
       "userId": "manihibiscus@gmail.com",
       "id": 1
+    },
+    {
+      "userId": "sathishkumar12062004@gmail.com",
+      "id": 2
     }
   ]
 }
