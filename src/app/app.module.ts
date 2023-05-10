@@ -32,8 +32,9 @@ import { SlotComponent } from './slot/slot.component';
 // import { MatSortModule } from '@angular/material/sort';
 // import { DialogBillsComponent } from './dialogBills/dialogBills.component';
 import { PayBillsComponent } from './payBills/payBills.component';
+import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.component';
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
       ContactUsPageComponent,
       AboutUsPageComponent,
@@ -53,7 +54,8 @@ import { PayBillsComponent } from './payBills/payBills.component';
       ViewSlotComponent,
       GenerateBillsComponent,
       SlotComponent,
-      PayBillsComponent
+      PayBillsComponent,
+      ForgotPasswordComponent
    ],
   imports: [
     BrowserModule,

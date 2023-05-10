@@ -406,5 +406,11 @@
       "Total": "₹500",
       "id": 2
     }
+  ],
+  "forgotPassDetails": [
+    {
+      "userId": "manihibiscus@gmail.com",
+      "id": 1
+    }
   ]
 }

@@ -34,9 +34,9 @@
               Enter valid password
             </p>
           </div><br><br>
-          <a routerLink="#" class="forgot">forgot password?</a><br><br>
+          <a routerLink="/forgotPassword" class="forgot">forgot password?</a><br><br>
           <!-- <input type="checkbox" class="check-box" /><span>Remember me</span><br> -->
-          <button type="submit" class="sub-box" name="l-submit">Log in</button>
+          <button type="submit" class="sub-box" name="l-submit" [disabled]="loginForm.invalid">Log in</button>
           <div class="Goto">
             <ul>
               <li>If you are new user ?<a routerLink="/patientregister">Register now!</a></li>
