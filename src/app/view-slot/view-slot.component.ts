@@ -69,44 +69,30 @@ export class ViewSlotComponent {
   cMobileNo:any=""
   cDate:any=""
   cdoctorName:any=""
-  cancel(cancelId: number, cancelName: any, cancelMobileNo: any, cancelDate: any, docName:any){
-    // this.postCancelDetails(cancelName, cancelMobileNo, cancelDate);
+
+  cancel(cancel:any,cancelId: number, cancelName: any, cancelMobileNo: any, cancelDate: any, docName:any){
+
     this.cName=cancelName;
     this.cMobileNo=cancelMobileNo;
     this.cDate=cancelDate;
     this.cdoctorName=docName;
-    // this.postCancelDetails();
+    var body={
+      cName:this.cName,
+      cMobileNo:this.cMobileNo,
+      cDate:this.cDate,
+      cdoctorName:this.cdoctorName
+    }
+    this.cancelService.postCancelledRequest(body).subscribe(value=>{
+      alert("Post to Cancel DB" + cancel.cName);
+    });
     this.service.deleteAppointment(cancelId).subscribe(()=>{
-      // window.confirm('Are you sure you want to cancel?');
       alert("Cancelled"+cancelId);
       this.ngOnInit();
     });
-    this.postCancelDetails(cancelMobileNo);
+    // this.postCancelDetails(cancelMobileNo);
   }
-  postCancelDetails(cancelMobileNo:any){
-    var body={
-          cName:this.cName,
-          cMobileNo:this.cMobileNo,
-          cDate:this.cDate,
-          cdoctorName:this.cdoctorName
-        }
-  this.cancelService.postCancelledRequest(body).subscribe(value=>{
-  });
-  alert("Post to Cancel DB");
-  this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(res=>{
-      const getUser=res.find((a:any)=>{
-        return a.phone===cancelMobileNo
-      });
-      if(getUser){
-        this.postCancelToPatient(body,getUser);
-      }
-    })
-  }
-  postCancelToPatient(body:any,getUser:any){
-    this.cancelService.postCancelToPatientRegistration(body,getUser.id).subscribe(()=>{
-      alert("Post to Patient Details"+getUser);
-    });
-  }
+
+
   acceptanceStatus:any="Pending"
   postAcceptDetails(){
     var acceptBody={
@@ -145,6 +131,10 @@ export class ViewSlotComponent {
   sendRemarkToPatient(getValue:any,cancleDetails:any){
     // alert(getValue.id);
     var body={
+      cName:this.cName,
+      cMobileNo:this.cMobileNo,
+      cDate:this.cDate,
+      cdoctorName:this.cdoctorName,
       remarkMessage:this.remarkMessage.value.rkMessage
     }
     this.remark.updateRemark(body,getValue.id).subscribe(()=>{

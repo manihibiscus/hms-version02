@@ -29,20 +29,16 @@
       "cpassword": "Mani@777",
       "id": 1,
       "mobileno": "9361798897",
-      "appointmentDate": "2023-05-11",
-      "appointmentTime": "01:30PM",
-      "say": "",
-      "doctorField": "Cardiologist",
-      "doctorName": "Dr. Pooja C MD",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹2000",
-      "otherFee": "₹300",
-      "Total": "₹2300",
+      "appointmentDate": "2023-05-12",
+      "appointmentTime": "04:30PM",
+      "say": "Cavity checkup",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Mathumitha V MD",
       "cName": "MANIKANDAN",
       "cMobileNo": "9361798897",
-      "cDate": "2023-05-11",
-      "cdoctorName": "Dr. Pooja C MD",
-      "remarkMessage": "mnbmbn"
+      "cDate": "2023-05-12",
+      "cdoctorName": "Dr. Mathumitha V MD",
+      "remarkMessage": ""
     },
     {
       "patientName": "SATHISH KUMAR",
@@ -57,21 +53,7 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 2,
-      "mobileno": "8072702981",
-      "appointmentDate": "2023-05-10",
-      "appointmentTime": "10:00AM",
-      "say": "",
-      "doctorField": "",
-      "doctorName": "",
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-10",
-      "cdoctorName": "Dr. Mathumitha V MD",
-      "mobileNo": "",
-      "consultingFee": "",
-      "otherFee": "",
-      "Total": ""
+      "id": 2
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -131,22 +113,7 @@
       "insurance": "NO",
       "password": "Naveen@777",
       "cpassword": "Naveen@777",
-      "id": 6,
-      "mobileno": "9597243562",
-      "appointmentDate": "2023-05-13",
-      "appointmentTime": "02:15PM",
-      "say": null,
-      "doctorField": "Gynecologist",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "cName": "NAVEEN",
-      "cMobileNo": "9597243562",
-      "cDate": "2023-05-13",
-      "cdoctorName": "Dr. Thilagavathi V MS",
-      "remarkMessage": "SOrry"
+      "id": 6
     },
     {
       "patientName": "SARASWATHI",
@@ -365,197 +332,15 @@
   "appointmentDetails": [],
   "cancelledRequest": [
     {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-10",
-      "cdoctorName": "Dr. Madhavi M MS",
-      "id": 1
-    },
-    {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-10",
-      "cdoctorName": "Dr. Madhavi M MS",
-      "id": 2
-    },
-    {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-10",
+      "cName": "MANIKANDAN",
+      "cMobileNo": "9361798897",
+      "cDate": "2023-05-12",
       "cdoctorName": "Dr. Mathumitha V MD",
-      "id": 3
-    },
-    {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-10",
-      "cdoctorName": "Dr. Poornima V MS",
-      "id": 4
-    },
-    {
-      "cName": "NAVEEN",
-      "cMobileNo": "9597243562",
-      "cDate": "2023-05-10",
-      "cdoctorName": "Dr. Kavitha V MD",
-      "id": 5
-    },
-    {
-      "cName": "MANIKANDAN",
-      "cMobileNo": "9361798897",
-      "cDate": "2023-05-10",
-      "cdoctorName": "Dr. Mythili M MD",
-      "id": 6
-    },
-    {
-      "cName": "MANIKANDAN",
-      "cMobileNo": "9361798897",
-      "cDate": "2023-05-11",
-      "cdoctorName": "Dr. Pooja C MD",
-      "id": 7
-    },
-    {
-      "cName": "NAVEEN",
-      "cMobileNo": "9597243562",
-      "cDate": "2023-05-13",
-      "cdoctorName": "Dr. Thilagavathi V MS",
-      "id": 8
+      "id": 1
     }
   ],
   "acceptRequest": [],
-  "billDetails": [
-    {
-      "patientId": 1,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹1000",
-      "otherFee": "₹200",
-      "Total": "₹1200",
-      "id": 1
-    },
-    {
-      "patientId": 1,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "doctorField": "Gynecologist",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹500",
-      "otherFee": "₹200",
-      "Total": "₹700",
-      "id": 2
-    },
-    {
-      "patientId": 1,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Mathumitha V MD",
-      "doctorField": "Dentist",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹200",
-      "otherFee": "₹300",
-      "Total": "₹500",
-      "id": 3
-    },
-    {
-      "patientId": 1,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹200",
-      "otherFee": "₹300",
-      "Total": "₹500",
-      "id": 4
-    },
-    {
-      "patientId": 1,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹200",
-      "otherFee": "₹300",
-      "Total": "₹500",
-      "id": 5
-    },
-    {
-      "patientId": 1,
-      "name": "NAVEEN",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹200",
-      "otherFee": "₹300",
-      "Total": "₹500",
-      "id": 6
-    },
-    {
-      "patientId": 1,
-      "name": "MANIKANDAN",
-      "doctorName": "Dr. Sidhuraj H MD",
-      "doctorField": "Psychiatrist",
-      "mobileNo": "9361798897",
-      "consultingFee": "₹2000",
-      "otherFee": "₹300",
-      "Total": "₹2300",
-      "id": 7
-    },
-    {
-      "patientId": 1,
-      "name": "NAVEEN",
-      "doctorName": "Dr. Poornima V MS",
-      "doctorField": "General doctor",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹200",
-      "otherFee": "₹300",
-      "Total": "₹500",
-      "id": 8
-    },
-    {
-      "patientId": 1,
-      "name": "NAVEEN",
-      "doctorName": "Dr. Naveen S MS",
-      "doctorField": "Cardiologist",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹500",
-      "otherFee": "₹1000",
-      "Total": "₹1500",
-      "id": 9
-    },
-    {
-      "patientId": 1,
-      "name": "NAVEEN",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹200",
-      "otherFee": "₹300",
-      "Total": "₹500",
-      "id": 10
-    },
-    {
-      "patientId": 1,
-      "name": "NAVEEN",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "doctorField": "Gynecologist",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "id": 11
-    },
-    {
-      "patientId": 1,
-      "name": "NAVEEN",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "9597243562",
-      "consultingFee": "₹300",
-      "otherFee": "₹200",
-      "Total": "₹500",
-      "id": 12
-    }
-  ],
+  "billDetails": [],
   "forgotPassDetails": [
     {
       "userId": "manihibiscus@gmail.com",
