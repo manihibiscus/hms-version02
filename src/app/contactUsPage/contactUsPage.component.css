@@ -4,7 +4,7 @@
   background-color: white;
   /* overflow: visible; */
   display: grid;
-  grid-template-columns: 50% auto;
+  grid-template-columns: 70% auto;
   grid-column-gap: 10px;
 }
 .contact .Box1{
@@ -48,7 +48,7 @@ text-align: center;
 }
 .head{
   background-color: whitesmoke;
-  
+
 }
 .head h2{
   text-align: center;

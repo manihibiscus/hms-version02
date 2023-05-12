@@ -82,6 +82,7 @@
   </div>
 </div>
 </div>
+<br>
 </form>
 <div class="div">
   <form class="form">
@@ -95,6 +96,7 @@
         <th>Consulting Fee</th>
         <th>Other Fee</th>
         <th>Total</th>
+        <th>Select</th>
       </thead>
       <tbody>
         <tr *ngFor="let appointment of getReceipterDetails">
@@ -106,9 +108,9 @@
           <td>{{appointment.consultingFee}}</td>
           <td>{{appointment.otherFee}}</td>
           <td>{{appointment.Total}}</td>
-          <!-- <td>
-            <button [disabled]="appointment.isDisabled" id="refchange" (click)="AddToBill(appointment,appointment.id)">ADD</button>
-          </td> -->
+          <td>
+            <button (click)="showBill(appointment)">ADD PATIENT</button>
+          </td>
         </tr>
       </tbody>
     </table>

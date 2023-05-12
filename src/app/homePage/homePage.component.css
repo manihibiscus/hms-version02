@@ -1,18 +1,25 @@
 /* content 1 */
-
+.body{
+  display: grid;
+  grid-template-columns: 500px 50px;
+}
 .webbody {
   height: 100vh;
   width: 100%;
   background-image: url(../../assets/Image/HomepageOk.jpg);
-  background-size: cover;
+  /* background-size: cover;
   background-position: center;
-  position: relative;
+  position: relative; */
 }
 .webbody h3{
   text-align: center;
   margin-top: 35px;
   color: #233863;
 }
+.scroll{
+  overflow: auto;
+}
+
 
 /* content 2 */
 .container{

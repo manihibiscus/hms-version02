@@ -77,12 +77,11 @@ export class GenerateBillsComponent {
     ref?.click();
     this.generateBills.postBillDetails(this.generateBillDetailsObj).subscribe(res=>{
       alert("Generarted");
-    })
+    });
     this.deleteGenerate(this.generateBillDetailsObj.patientId);
-    this.showBill(this.generateBillDetailsObj);
+    // this.showBill(this.generateBillDetailsObj);
     this.billForm.reset();
     this.result=null;
-
   }
   showPatientBill:any=""
   showBill(billData:any){
@@ -92,8 +91,8 @@ export class GenerateBillsComponent {
       });
       if(userBill){
         this.showPatientBill=userBill;
+        this.sendToPatient(userBill.id)
       }
-      this.sendToPatient(userBill.id)
     })
   }
   showPatientBillObj : ShowBillToPatient = new ShowBillToPatient();
@@ -104,7 +103,6 @@ export class GenerateBillsComponent {
     this.showPatientBillObj.consultingFee=this.generateBillDetailsObj.consultingFee;
     this.showPatientBillObj.otherFee=this.generateBillDetailsObj.otherFee;
     this.showPatientBillObj.Total=this.generateBillDetailsObj.Total;
-
     this.generateBills.updatePatientRegistration(this.showPatientBillObj,userId).subscribe(()=>{
       alert("Updated to PatientRegister");
     })
