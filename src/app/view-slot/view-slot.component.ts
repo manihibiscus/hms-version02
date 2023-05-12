@@ -109,9 +109,11 @@ export class ViewSlotComponent {
     });
   }
   showRemarked:any=""
+  hidden:any=""
   sendRemarks(RemarkDetails:any){
     alert("Send to" + RemarkDetails.cName)
     this.showRemark(RemarkDetails)
+    this.hidden="true"
   }
   showRemark(details:any){
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
@@ -148,7 +150,6 @@ pat!:PatientPageComponent;
       const patient=data.find((b:any)=>{
         return b.phone===cancelDetails.cMobileNo;
       });
-
       if(patient){
         alert("loggedInUser value Updated");
         // this.loginForm.reset();

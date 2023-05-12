@@ -91,7 +91,7 @@
           <textarea name="remark" id="" cols="20" rows="3" formControlName="rkMessage"></textarea>
         </td>
         <td>
-          <button [disabled]="remarkMessage.invalid" (click)="sendRemarks(appointment)">Send</button>
+          <button [disabled]="remarkMessage.invalid" [hidden]="hidden"  (click)="sendRemarks(appointment)">Send</button>
         </td>
         <!-- <td>{{appointment.timeing}}</td> -->
         <!-- <td>{{appointment.problem}}</td> -->
@@ -100,4 +100,4 @@
   </table>
 </form>
 <!-- <button (click)="doctorView()">Doctor View</button> -->
-<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->

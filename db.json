@@ -34,11 +34,11 @@
       "say": "Cavity checkup",
       "doctorField": "Dentist",
       "doctorName": "Dr. Mathumitha V MD",
-      "cName": "MANIKANDAN",
-      "cMobileNo": "9361798897",
-      "cDate": "2023-05-12",
-      "cdoctorName": "Dr. Mathumitha V MD",
-      "remarkMessage": ""
+      "cName": "",
+      "cMobileNo": "",
+      "cDate": "",
+      "cdoctorName": "",
+      "remarkMessage": "sdd"
     },
     {
       "patientName": "SATHISH KUMAR",
