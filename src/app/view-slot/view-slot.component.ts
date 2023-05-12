@@ -49,7 +49,8 @@ export class ViewSlotComponent {
   aSay:any=""
   aDoctorName:any=""
   aDoctorField:any=""
-  accept(acceptId: number, acceptName: any, acceptMobileNo: any, acceptDate: any,acceptTime: any, acceptSay:any, doctorName:any, doctorField: any){
+  accept(acceptId: number, acceptName: any, acceptMobileNo: any,
+        acceptDate: any,acceptTime: any, acceptSay:any, doctorName:any, doctorField: any){
     this.aName=acceptName;
     this.aMobileNo=acceptMobileNo;
     this.aDate=acceptDate;
@@ -62,8 +63,25 @@ export class ViewSlotComponent {
       // alert("Accepted"+acceptId);
       this.ngOnInit();
     });
+    this.acceptToPatient(acceptMobileNo);
     this.postAcceptDetails();
   }
+  appStatus:any="Accepted for appointment"
+  acceptToPatient(acceptMobileNo:any){
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
+      const patient=value.find((a:any)=>{
+        return a.phone===acceptMobileNo
+    });
+    var body={
+      appStatus:this.appStatus
+    }
+    if(patient){
+      this.http.patch<any>("http://localhost:3000/patientRegistration/"+patient.id,body).subscribe(data=>{
+        alert("Updated to Patient DB");
+      })
+    }
+  })
+}
 
   cName:any=""
   cMobileNo:any=""

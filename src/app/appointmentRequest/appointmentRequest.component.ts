@@ -61,7 +61,7 @@ export class AppointmentRequestComponent implements OnInit {
       this.amStatus=true;
     }
   }
-
+  appStatus:any="Pending for appointment"
   appointmentSubmit(){
     var body={
       patientName:this.loggedInUser.patientName,
@@ -70,7 +70,8 @@ export class AppointmentRequestComponent implements OnInit {
       appointmentTime:this.appointmentTime+':'+this.appointmentMinute+this.appointmetnAmPM,
       say:this.appointmentSpecific,
       doctorField:this.appointmentField,
-      doctorName:this.appointmentDocName
+      doctorName:this.appointmentDocName,
+      appStatus:this.appStatus
     }
     this.appointment.postAppointmentDetails(body).subscribe(data=>{
       alert("Appointment Submitted");

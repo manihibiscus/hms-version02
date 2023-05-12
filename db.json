@@ -27,18 +27,7 @@
       "insurance": "YES",
       "password": "Mani@777",
       "cpassword": "Mani@777",
-      "id": 1,
-      "mobileno": "9361798897",
-      "appointmentDate": "2023-05-12",
-      "appointmentTime": "04:30PM",
-      "say": "Cavity checkup",
-      "doctorField": "Dentist",
-      "doctorName": "Dr. Mathumitha V MD",
-      "cName": "",
-      "cMobileNo": "",
-      "cDate": "",
-      "cdoctorName": "",
-      "remarkMessage": "sdd"
+      "id": 1
     },
     {
       "patientName": "SATHISH KUMAR",
@@ -53,7 +42,18 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 2
+      "id": 2,
+      "mobileno": "8072702981",
+      "appointmentDate": "2023-05-13",
+      "appointmentTime": "12:45PM",
+      "say": "Cavity",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sathishkumar S MS",
+      "appStatus": "Accepted for appointment",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹800",
+      "Total": "₹1000"
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -330,17 +330,21 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [
+  "cancelledRequest": [],
+  "acceptRequest": [],
+  "billDetails": [
     {
-      "cName": "MANIKANDAN",
-      "cMobileNo": "9361798897",
-      "cDate": "2023-05-12",
-      "cdoctorName": "Dr. Mathumitha V MD",
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Sathishkumar S MS",
+      "doctorField": "Dentist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹800",
+      "Total": "₹1000",
       "id": 1
     }
   ],
-  "acceptRequest": [],
-  "billDetails": [],
   "forgotPassDetails": [
     {
       "userId": "manihibiscus@gmail.com",
