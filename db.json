@@ -13,7 +13,18 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 2
+      "id": 2,
+      "mobileno": "8072702981",
+      "appointmentDate": "2023-05-14",
+      "appointmentTime": "02:30PM",
+      "say": "Ear problem",
+      "doctorField": "Otolaryngologist",
+      "doctorName": "Dr. Manogar S MD",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "consultingFee": "₹500",
+      "otherFee": "₹300",
+      "Total": "₹800"
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -323,20 +334,7 @@
       "id": 3
     }
   ],
-  "appointmentDetails": [
-    {
-      "patientName": "MANIKANDAN",
-      "mobileno": "8072393102",
-      "appointmentDate": "2023-05-14",
-      "appointmentTime": "01:00PM",
-      "say": "",
-      "doctorField": "General doctor",
-      "doctorName": "Dr. Mekala V MBBS",
-      "attemptStatus": "true",
-      "appStatus": "Pending for appointment",
-      "id": 1
-    }
-  ],
+  "appointmentDetails": [],
   "cancelledRequest": [
     {
       "cName": "MANIKANDAN",
@@ -344,9 +342,28 @@
       "cDate": "2023-05-14",
       "cdoctorName": "Dr. Manogar S MD",
       "id": 1
+    },
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-05-14",
+      "cdoctorName": "Dr. Mekala V MBBS",
+      "id": 2
     }
   ],
   "acceptRequest": [],
-  "billDetails": [],
+  "billDetails": [
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Manogar S MD",
+      "doctorField": "Otolaryngologist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹500",
+      "otherFee": "₹300",
+      "Total": "₹800",
+      "id": 1
+    }
+  ],
   "forgotPassDetails": []
 }

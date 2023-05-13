@@ -2,16 +2,23 @@
 
 <div class="content">
   <div class="box1">
-    <h1>Applicants Count : <span>{{appointmentCount.length}}</span></h1>
+    <h2>Applicants Count : <span>{{appointmentCount.length}}</span></h2>
     <button class="button2" routerLink="/requestSlot">View Applicants</button>
 
   </div>
  <div class="box1">
-  <h1>Registered People Count</h1>
-  <div class="count" ><p>{{registeredCount.length}}</p></div>
+  <h2>Registered People Count</h2>
+  <!-- <div class="count" ><p>{{registeredCount.length}}</p></div> -->
+  <button class="button4" >{{registeredCount.length}}</button>
+
 </div>
- <a class="box1"><div >
-  <h1>Patients Details</h1>
+<div class="box1">
+  <h2>Query Count : <span>{{queryCount.length}}</span></h2>
+  <button class="button3" routerLink="/viewQuery">View Query</button>
+</div>
+ <a class="box1">
+  <div >
+  <h2>Patients Details</h2>
   <button class="button" (click)="show()">Show Details</button>
 </div>
 </a>

@@ -11,6 +11,7 @@ export class AdminPageComponent implements OnInit {
   constructor(private http:HttpClient) { }
   registeredCount:any=""
   appointmentCount:any=""
+  queryCount:any=""
   status:boolean=false
   ngOnInit() {
       this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
@@ -19,8 +20,8 @@ export class AdminPageComponent implements OnInit {
       this.http.get<any>("http://localhost:3000/appointmentDetails").subscribe(value=>{
         this.appointmentCount=value
       });
-      this.http.get<any>("http://localhost:3000/appointmentDetails").subscribe(value=>{
-        this.appointmentCount=value
+      this.http.get<any>("http://localhost:3000/queryDetails").subscribe(data1=>{
+        this.queryCount=data1
       });
 
   }
