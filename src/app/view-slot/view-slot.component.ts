@@ -155,7 +155,9 @@ export class ViewSlotComponent {
       cMobileNo:this.cMobileNo,
       cDate:this.cDate,
       cdoctorName:this.cdoctorName,
-      remarkMessage:this.remarkMessage.value.rkMessage
+      remarkMessage:this.remarkMessage.value.rkMessage,
+      attemptStatus:"false",
+      appStatus:"Cancelled! (Try again)"
     }
     this.remark.updateRemark(body,getValue.id).subscribe(()=>{
       alert("Remark Updated");
@@ -169,7 +171,7 @@ pat!:PatientPageComponent;
         return b.phone===cancelDetails.cMobileNo;
       });
       if(patient){
-        alert("loggedInUser value Updated");
+        // alert("loggedInUser value Updated");
         // this.loginForm.reset();
           // this.userService.loggedInUser = patient;
           // sessionStorage.setItem('loggedInUser', JSON.stringify(patient));

@@ -12,6 +12,7 @@ import { PatientServiceService } from '../patientPage/patientService.service';
 export class PayBillsComponent implements OnInit {
 
   // constructor(private http:HttpClient) { }
+
   // getPaymentDetails:any=""
   // ngOnInit() {
   //   this.http.get<any>("http://localhost:3000/patientRegistration").subscribe((data)=>{
@@ -22,9 +23,10 @@ export class PayBillsComponent implements OnInit {
 
   // }
   loggedInUser:any=""
-
+  refereshData:any=""
   constructor(private userServeice:UserServiceService, private route:Router,
-    private patService:PatientServiceService) { }
+    private patService:PatientServiceService,
+    private http:HttpClient) { }
 
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
@@ -41,6 +43,14 @@ export class PayBillsComponent implements OnInit {
     //   alert('You are Loggedout. Login to continue');
     //   this.route.navigate(['/login']);
     // }
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
+        const value=data.find((a:any)=>{
+          return a.email===this.loggedInUser.email
+        })
+        if(value){
+          this.refereshData=value
+        }
+    })
   }
   pay(user:any){
 alert(user.Total)

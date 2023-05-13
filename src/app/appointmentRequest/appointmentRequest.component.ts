@@ -16,10 +16,14 @@ export class AppointmentRequestComponent implements OnInit {
   storedField:any;
   listAppointment:any;
   todayDate:Date=new Date();
+  Attempt:any=""
+  // AttemptStatus:any;
   @ViewChild('appointmentForm') appointmentForm!: NgForm;
   constructor(private userServeice:UserServiceService,
-    private route:Router, private http:HttpClient, private fb:FormBuilder,
-    private appointment:AppointmentService,) {
+    private route:Router, private http:HttpClient,
+    private fb:FormBuilder,
+    private appointment:AppointmentService,)
+     {
       this.appointment.getAppointmentDetails().subscribe(value=>{
         this.listAppointment=value;
       })
@@ -34,6 +38,15 @@ export class AppointmentRequestComponent implements OnInit {
       alert('You are Loggedout. Login to continue');
       this.route.navigate(['/login']);
     }
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
+      const attempt=value.find((a:any)=>{
+        return a.patientName===this.loggedInUser.patientName
+      });
+      // if(attempt){
+        this.Attempt=attempt.attemptStatus;
+      // }
+    })
+
   }
 
   appointmentDate:any="";
@@ -62,6 +75,7 @@ export class AppointmentRequestComponent implements OnInit {
     }
   }
   appStatus:any="Pending for appointment"
+
   appointmentSubmit(){
     var body={
       patientName:this.loggedInUser.patientName,
@@ -71,7 +85,9 @@ export class AppointmentRequestComponent implements OnInit {
       say:this.appointmentSpecific,
       doctorField:this.appointmentField,
       doctorName:this.appointmentDocName,
+      attemptStatus:"true",
       appStatus:this.appStatus
+
     }
     this.appointment.postAppointmentDetails(body).subscribe(data=>{
       alert("Appointment Submitted");
@@ -96,6 +112,7 @@ export class AppointmentRequestComponent implements OnInit {
   updateAppointmentDetailsToPatient(appStatus:any, value:any){
     this.appointment.updateAppointmentStatus(value,appStatus.id).subscribe(()=>{
       alert("AppointmentDetails are updated to the patientRegisterd DB");
+      this.ngOnInit();
     })
   }
 changeValue(){

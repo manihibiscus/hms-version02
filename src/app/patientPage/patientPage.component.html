@@ -1,11 +1,11 @@
 <app-patientHeader></app-patientHeader>
-{{loggedUser|json}}
+<!-- {{loggedUser|json}} -->
 <h2 style="text-align: center;">Appointment Status</h2>
 
 <form class="form">
   <table>
     <thead>
-      <th>S.No</th>
+      <th>Patient no</th>
       <th>Patient name</th>
       <th>Contact no</th>
       <th>Doctor Name</th>
@@ -17,14 +17,14 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{loggedUser.id}}</td>
-        <td>{{loggedUser.patientName}}</td>
-        <td>{{loggedUser.mobileNo}}</td>
-        <td>{{loggedUser.doctorName}}</td>
-        <td>{{loggedUser.doctorField}}</td>
-        <td>{{loggedUser.appointmentDate}}</td>
-        <td>{{loggedUser.appointmentTime}}</td>
-        <td>{{loggedUser.appStatus}}</td>
+        <td>{{refereshData.id}}</td>
+        <td>{{refereshData.patientName}}</td>
+        <td>{{refereshData.phone}}</td>
+        <td>{{refereshData.doctorName}}</td>
+        <td>{{refereshData.doctorField}}</td>
+        <td>{{refereshData.appointmentDate}}</td>
+        <td>{{refereshData.appointmentTime}}</td>
+        <td>{{refereshData.appStatus}}</td>
         <!-- <td>{{appointment.problem}}</td> -->
       </tr>
     </tbody>
@@ -34,24 +34,24 @@
 <form class="form">
   <table>
     <thead>
-      <th>S.No</th>
+      <th>Patient no</th>
       <th>Patient name</th>
       <th>Contact no</th>
       <th>Appointment date</th>
       <th>Doctor Name</th>
       <th>Remarks</th>
-      <th>Send</th>
+      <!-- <th>Send</th> -->
       <!-- <th>Appointment time</th> -->
       <!-- <th>Health issue</th> -->
     </thead>
     <tbody>
       <tr>
-        <td>{{loggedUser.id}}</td>
-        <td>{{loggedUser.cName}}</td>
-        <td>{{loggedUser.cMobileNo}}</td>
-        <td>{{loggedUser.cDate | date: 'dd/MM/yyyy'}}</td>
-        <td>{{loggedUser.cdoctorName}}</td>
-        <!-- <td>{{appointment.timeing}}</td> -->
+        <td>{{refereshData.id}}</td>
+        <td>{{refereshData.cName}}</td>
+        <td>{{refereshData.cMobileNo}}</td>
+        <td>{{refereshData.cDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{refereshData.cdoctorName}}</td>
+        <td>{{refereshData.remarkMessage}}</td>
         <!-- <td>{{appointment.problem}}</td> -->
       </tr>
     </tbody>

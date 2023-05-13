@@ -18,7 +18,7 @@ export class PatientPageComponent implements OnInit {
     private http:HttpClient
     ) { }
     userLogObj : PatientModel=new PatientModel();
-
+    refereshData:any="";
   ngOnInit() {
     // sessionStorage.setItem('updateUser', JSON.stringify(this.userServeice.loggedInUser));
     let sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
@@ -35,6 +35,14 @@ export class PatientPageComponent implements OnInit {
     //   alert('You are Loggedout. Login to continue');
     //   this.route.navigate(['/login']);
     // }
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
+        const value=data.find((a:any)=>{
+          return a.email===this.loggedUser.email
+        })
+        if(value){
+          this.refereshData=value
+        }
+    })
   }
 
   // loggedOff(value:any){

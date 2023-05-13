@@ -7,7 +7,7 @@
   <div class="field4">
     <label for="">Choose medical field</label>
     <div class="input">
-      <select name="" id=""  name="appointmentField" #field="ngModel" [(ngModel)]="appointmentField" (change)="changeValue()" >
+      <select name="" id=""  name="appointmentField" #field="ngModel" [(ngModel)]="appointmentField" (change)="changeValue()" [disabled]="Attempt">
         <option value="" disabled selected>Medical fields</option>
         <option value="General doctor" >General doctor</option>
         <option value="Pediatrician">Pediatrician</option>
@@ -28,7 +28,7 @@
     <label for="">Choose doctor name</label>
 <div class="input" >
       <select   name="appointmentDocName" #dname="ngModel"
-      [(ngModel)]="appointmentDocName">
+      [(ngModel)]="appointmentDocName" [disabled]="Attempt">
       <option value="" disabled selected>Doctors Name</option>
         <option *ngFor="let docName of storedField" value="{{docName.doctorName}}">{{docName.doctorName}}</option>
       </select>
@@ -38,14 +38,14 @@
     <div class="field7">
       <label for="">Choose date</label>
       <!-- <div class="input"><input type="date" [disabled]="!filterDates()" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div> -->
-      <div class="input"><input type="date" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div>
+      <div class="input"><input type="date" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" [disabled]="Attempt"/></div>
     </div>
 
   <div class="field3">
     <label for="">Choose your timing</label>
     <div class="input">
     <!-- <select class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" > -->
-    <select  #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" (change)="chageFormat()">
+    <select  #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" (change)="chageFormat()" [disabled]="Attempt">
       <option value="" disabled selected>hrs</option>
       <option value="09" >09</option>
       <option value="10">10</option>
@@ -60,14 +60,14 @@
 
     </select>
     <span>
-    <select  #dminute="ngModel" required name="appointmentMinute" [(ngModel)]="appointmentMinute">
+    <select  #dminute="ngModel" required name="appointmentMinute" [(ngModel)]="appointmentMinute" [disabled]="Attempt">
       <option value="" disabled selected >min</option>
       <option value="00">00</option>
       <option value="15">15</option>
       <option value="30">30</option>
       <option value="45">45</option>
     </select>
-    <select  #dAmPm="ngModel" required name="appointmentAMPM" [(ngModel)]="appointmetnAmPM">
+    <select  #dAmPm="ngModel" required name="appointmentAMPM" [(ngModel)]="appointmetnAmPM" [disabled]="Attempt">
       <!-- <option value="" disabled selected >AM/PM</option> -->
       <option value="AM" [hidden]="amStatus">AM</option>
       <option value="PM" [hidden]="pmStatus">PM</option>
@@ -82,11 +82,11 @@
   <div class="field4">
     <label for="">Anything to say</label>
     *if any
-    <div class="input"><textarea name="" id="" cols="20" rows="3" name="appointmentSpecific" [(ngModel)]="appointmentSpecific" ></textarea></div>
+    <div class="input"><textarea name="" id="" cols="20" rows="3" name="appointmentSpecific" [(ngModel)]="appointmentSpecific" [disabled]="Attempt"></textarea></div>
   </div>
 
   <div class="field5">
-    <button class="makeaAppointment" [disabled]="!appointmentForm.valid" (click)="appointmentSubmit()">MAKE APPOINTMENT</button>
+    <button class="makeaAppointment" [disabled]="!appointmentForm.valid" (click)="appointmentSubmit()" [disabled]="Attempt">MAKE APPOINTMENT</button>
   </div>
 </form>
 <div class="doctor">
@@ -102,4 +102,7 @@
   </div>
 </div>
 <div>
+  <div class="message" [hidden]="!field.disabled">
+    <p style="color:red">You will not make another appointment!</p>
+  </div>
 <!-- <app-footer></app-footer> -->

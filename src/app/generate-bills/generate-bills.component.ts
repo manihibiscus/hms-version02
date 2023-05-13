@@ -97,9 +97,6 @@ export class GenerateBillsComponent {
   }
   showPatientBillObj : ShowBillToPatient = new ShowBillToPatient();
   sendToPatient(userId:any){
-    this.showPatientBillObj.doctorName=this.generateBillDetailsObj.doctorName;
-    this.showPatientBillObj.doctorField=this.generateBillDetailsObj.doctorField;
-    this.showPatientBillObj.mobileNo=this.generateBillDetailsObj.mobileNo;
     this.showPatientBillObj.consultingFee=this.generateBillDetailsObj.consultingFee;
     this.showPatientBillObj.otherFee=this.generateBillDetailsObj.otherFee;
     this.showPatientBillObj.Total=this.generateBillDetailsObj.Total;

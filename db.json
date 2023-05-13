@@ -15,21 +15,6 @@
   ],
   "patientRegistration": [
     {
-      "patientName": "MANIKANDAN",
-      "fatherName": "SIDHURAJ",
-      "gender": "male",
-      "blood": "A+",
-      "date": "2001-10-05",
-      "email": "manihibiscus@gmail.com",
-      "phone": "9361798897",
-      "address": "371/205B, Chella kutti kadu Erumapalayam po,",
-      "image": "C:\\fakepath\\doctor (1).png",
-      "insurance": "YES",
-      "password": "Mani@777",
-      "cpassword": "Mani@777",
-      "id": 1
-    },
-    {
       "patientName": "SATHISH KUMAR",
       "fatherName": "SIDHURAJ",
       "gender": "male",
@@ -49,7 +34,7 @@
       "say": "",
       "doctorField": "Gynecologist",
       "doctorName": "Dr. Thilagavathi V MS",
-      "appStatus": "Pending for appointment",
+      "appStatus": "Accepted for appointment",
       "mobileNo": "8072702981",
       "consultingFee": "₹200",
       "otherFee": "₹800",
@@ -128,7 +113,44 @@
       "insurance": "NO",
       "password": "Saras@777",
       "cpassword": "Saras@777",
-      "id": 7
+      "id": 7,
+      "mobileno": "9361798897",
+      "appointmentDate": "2023-05-14",
+      "appointmentTime": "10:00AM",
+      "say": "",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "consultingFee": "₹300",
+      "otherFee": "₹200",
+      "Total": "₹500"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "fatherName": "SIDHURAJ",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-10-05",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "address": "371/205B, Chella kuttikadu erumapalayam",
+      "image": "C:\\fakepath\\4950247_19834 (1).jpg",
+      "insurance": "NO",
+      "password": "Mani@777",
+      "cpassword": "Mani@777",
+      "id": 8,
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-05-14",
+      "appointmentTime": "10:00AM",
+      "say": "General checkup",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "consultingFee": "₹600",
+      "otherFee": "₹2000",
+      "Total": "₹2600"
     }
   ],
   "adminDetails": [
@@ -335,21 +357,21 @@
       "id": 3
     }
   ],
-  "appointmentDetails": [
+  "appointmentDetails": [],
+  "cancelledRequest": [],
+  "acceptRequest": [
     {
-      "patientName": "SATHISH KUMAR",
-      "mobileno": "8072702981",
-      "appointmentDate": "2023-05-13",
-      "appointmentTime": "10:15AM",
-      "say": "",
-      "doctorField": "Gynecologist",
+      "name": "SATHISH KUMAR",
+      "mobileNo": "8072702981",
+      "date": "2023-05-13",
+      "timeing": "10:15AM",
+      "problem": "",
       "doctorName": "Dr. Thilagavathi V MS",
-      "appStatus": "Pending for appointment",
+      "doctorField": "Gynecologist",
+      "acceptanceStatus": "Pending",
       "id": 1
     }
   ],
-  "cancelledRequest": [],
-  "acceptRequest": [],
   "billDetails": [
     {
       "patientId": 1,
@@ -361,6 +383,28 @@
       "otherFee": "₹800",
       "Total": "₹1000",
       "id": 1
+    },
+    {
+      "patientId": 2,
+      "name": "SARASWATHI",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "mobileNo": "9361798897",
+      "consultingFee": "₹300",
+      "otherFee": "₹200",
+      "Total": "₹500",
+      "id": 2
+    },
+    {
+      "patientId": 2,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹600",
+      "otherFee": "₹2000",
+      "Total": "₹2600",
+      "id": 3
     }
   ],
   "forgotPassDetails": [

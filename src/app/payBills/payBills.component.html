@@ -44,16 +44,16 @@
       </thead>
       <tbody>
         <tr>
-          <td>{{loggedInUser.id}}</td>
-          <td>{{loggedInUser.patientName}}</td>
-          <td>{{loggedInUser.doctorName}}</td>
-          <td>{{loggedInUser.doctorField}}</td>
-          <td>{{loggedInUser.mobileNo}}</td>
-          <td>{{loggedInUser.consultingFee}}</td>
-          <td>{{loggedInUser.otherFee}}</td>
-          <td>{{loggedInUser.Total}}</td>
+          <td>{{refereshData.id}}</td>
+          <td>{{refereshData.patientName}}</td>
+          <td>{{refereshData.doctorName}}</td>
+          <td>{{refereshData.doctorField}}</td>
+          <td>{{refereshData.phone}}</td>
+          <td>{{refereshData.consultingFee}}</td>
+          <td>{{refereshData.otherFee}}</td>
+          <td>{{refereshData.Total}}</td>
           <td>
-            <button [disabled]="loggedInUser.isDisabled" id="refchange" (click)="pay(loggedInUser)">Pay</button>
+            <button [disabled]="refereshData.isDisabled" id="refchange" (click)="pay(refereshData)">Pay</button>
           </td>
         </tr>
 
