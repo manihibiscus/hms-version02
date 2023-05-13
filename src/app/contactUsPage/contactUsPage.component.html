@@ -2,7 +2,7 @@
 <div class="contact">
   <div class="Box1">
 
-    <h2>Contact Us</h2>
+    <!-- <h2>Contact Us</h2>
     <h3 class="head">MANI MEDICAL CENTER AND HOSPITAL</h3>
     <h3 class="pad">Details</h3>
     <p class="pad"> <i>99, Avanashi Road, <br>
@@ -16,15 +16,17 @@
     Medical Records : + 91-422-4 82 31**, 3641 <br>
     Phone : + 91-422 432 38** , +91-422 432 *00* , +91-422 580 3*0* <br>
 </i>
-  </p>
+  </p> -->
+  <img src="../../assets/contact.jpg" alt="" style="height: 500px; width: 913px;">
   </div>
   <div class="Box2">
     <h2>Query Box</h2>
     <form  #queryForm="ngForm" class="queryform" (ngSubmit)="submitQuery()" >
       <div class="email">
-        <label >Enter your email : </label>
+        <label >Email : </label>
         <input type="email" class="field" name="email" #emailId="ngModel" [(ngModel)]="email" required
         pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
+        placeholder="Enter your email"
         />
       </div>
       <div *ngIf="emailId.errors && (emailId.dirty)" class="error">
@@ -33,9 +35,9 @@
       </div>
       <br>
       <div class="email">
-        <label>Enter your name :  </label>
+        <label>Name :  </label>
         <input type="text" class="field" name="qName" #name="ngModel" [(ngModel)]="contactName" required
-        pattern="^[A-Za-z ]+$"
+        pattern="^[A-Za-z ]+$" placeholder="Enter your name"
         />
         <!-- <textarea name="" id="" cols="30" rows="5" formControlName="message"></textarea> -->
       </div>
@@ -45,9 +47,22 @@
       </div>
       <br>
       <div class="email">
+        <label for="">Mobile Number:</label>
+        <input type="text" name="mobileNo" #qMobile="ngModel"
+
+        [(ngModel)]="mobile" required pattern="^[6789][0-9]{9}$" class="field"
+        placeholder="Enter your mobile number">
+      </div>
+      <br>
+      <div *ngIf="qMobile.errors && (qMobile.dirty)" class="error">
+        <div [hidden]="!qMobile.errors['required']">Enter Mobile Number</div>
+        <div [hidden]="!qMobile.errors['pattern']">Enter Valid Mobile Number</div>
+      </div>
+      <div class="email">
         <label>Enter your Query :  </label><br><br>
         <!-- <input type="email" class="emailfield"/> -->
-        <textarea name="" id="" cols="30" rows="5" name="message" #qMessage="ngModel" [(ngModel)]="message" required minlength="3"></textarea>
+        <textarea name="" id="" cols="30" rows="5" name="message" #qMessage="ngModel" [(ngModel)]="message" required minlength="3"
+        placeholder="Enter your questions"></textarea>
       </div>
       <div *ngIf="qMessage.errors && (qMessage.dirty)" class="error">
         <div [hidden]="!qMessage.errors['required']">Please Enter Your Query</div>

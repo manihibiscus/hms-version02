@@ -14,7 +14,7 @@
   background-color: whitesmoke;
   padding-left: 15px;
   border-radius: 5px;
-  border:1px solid #233863;
+  /* border:1px solid #233863; */
 }
 /* .Box1:hover{
   border:2px solid #233863;
@@ -41,8 +41,8 @@ text-align: center;
   float: right; */
   background-color: whitesmoke;
   border-radius: 5px;
-  border:1px solid #233863;
-
+  border:2px solid #233863;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 
 }
@@ -70,7 +70,7 @@ text-align: center;
   padding-left: 15px;
   padding-top: 15px;
   border-radius: 10px;
-  border:1px solid #233863;
+  border:2px solid #233863;
 
 
 }
@@ -79,7 +79,7 @@ text-align: center;
   padding-left: 15px;
   padding-top: 15px;
   border-radius: 10px;
-  border:1px solid #233863;
+  border:2px solid #233863;
 
 
 }
@@ -88,13 +88,16 @@ text-align: center;
   padding-left: 15px;
   padding-top: 15px;
   border-radius: 10px;
-  border:1px solid #233863;
+  border:2px solid #233863;
 
 
 }
 .email
 {
-  padding-left: 55px;
+  padding-left: 45px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #233863;
+
 }
 .email textarea{
   border-radius: 8px;
@@ -111,7 +114,8 @@ text-align: center;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px solid black;
+  width: 50%;
+  border-bottom: 2px solid black;
   outline: none;
   background: transparent;
 

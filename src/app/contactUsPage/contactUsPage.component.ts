@@ -27,6 +27,7 @@ export class ContactUsPageComponent implements OnInit {
   email:any="";
   contactName:any="";
   message:any="";
+  mobile:any=""
   datum:any="";
 
   submitQuery(){

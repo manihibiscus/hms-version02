@@ -15,7 +15,7 @@ export class PatientHeaderComponent implements OnInit  {
   constructor(private route:Router, private user:UserServiceService,
     private patService:PatientServiceService) { }
     ngOnInit(): void{
-      
+
     }
   patientObj!:PatientPageComponent;
   // statusValue:boolean=false;
