@@ -24,7 +24,11 @@
         <td>{{refereshData.doctorField}}</td>
         <td>{{refereshData.appointmentDate}}</td>
         <td>{{refereshData.appointmentTime}}</td>
-        <td>{{refereshData.appStatus}}</td>
+        <td [ngClass]="{violet:refereshData.appStatus == 'Pending for appointment',
+            green:refereshData.appStatus == 'Accepted for appointment',
+            red:refereshData.appStatus == 'Cancelled! (Try again)'} ">
+            {{refereshData.appStatus}}
+        </td>
         <!-- <td>{{appointment.problem}}</td> -->
       </tr>
     </tbody>

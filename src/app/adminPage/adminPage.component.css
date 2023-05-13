@@ -1,0 +1,87 @@
+.form{
+  margin: auto 0 ;
+  background-color: white;
+  /* justify-content: space-between ; */
+  font-size: 12px;
+}
+table,thead,th,tbody,tr,td{
+  border: 4px solid white;
+  border-collapse:collapse;
+}
+table{
+  /* justify-content: space-between ; */
+  margin: 0 auto ;
+  background-color: whitesmoke;
+  width: 80%;
+}
+
+table tbody tr td{
+  text-align: center;
+  padding: 12px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 12px;
+
+}
+.back{
+  width: 70px;
+  padding: 5px 5px;
+  display: inline;
+  margin: auto;
+  background: linear-gradient(to right, #e5eaec,#dfebe1);
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #0e0a01;
+}
+
+
+.content
+{
+  display:grid;
+  grid-template-columns: 33% 33% 32%;
+  grid-column-gap:10px;
+  width: 100%;
+  height: 250px;
+  margin: auto 0 ;
+}
+.box1{
+  background-color: rgb(248, 235, 235);
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.box1 h1{
+  text-align: center;
+  padding-top: 50px;
+  color: #233863;
+
+}
+.box1 p{
+  text-align: center;
+  font-size: 50px;
+  color: green;
+}
+
+.button{
+  margin-left: 150px;
+  padding:15px 15px 15px 15px ;
+  margin-top:20px;
+  border:0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #e7d2d2;
+}
+.button2{
+  margin-left: 145px;
+  padding:15px 15px 15px 15px ;
+  margin-top:20px;
+  border:0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #e7d2d2;
+}

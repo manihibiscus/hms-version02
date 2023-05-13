@@ -25,3 +25,15 @@ table thead th{
   padding: 12px;
 
 }
+.violet{
+  color: violet;
+  font-weight: bolder;
+}
+.red{
+  color: red;
+  font-weight: bolder;
+}
+.green{
+  color:green;
+  font-size: bolder;
+}

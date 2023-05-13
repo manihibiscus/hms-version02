@@ -25,16 +25,12 @@ export class PayBillsComponent implements OnInit {
   loggedInUser:any=""
   refereshData:any=""
   constructor(private userServeice:UserServiceService, private route:Router,
-    private patService:PatientServiceService,
     private http:HttpClient) { }
 
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
     if (sessionUser) {
       this.loggedInUser = JSON.parse(sessionUser);
-    }
-    else if(this.patService.logoutStatus){
-
     }
 
     // else if (this.userServeice.loggedInUser !== null) {

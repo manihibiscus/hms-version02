@@ -19,6 +19,7 @@ export class PatientPageComponent implements OnInit {
     ) { }
     userLogObj : PatientModel=new PatientModel();
     refereshData:any="";
+    color:any=""
   ngOnInit() {
     // sessionStorage.setItem('updateUser', JSON.stringify(this.userServeice.loggedInUser));
     let sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
@@ -42,7 +43,7 @@ export class PatientPageComponent implements OnInit {
         if(value){
           this.refereshData=value
         }
-    })
+    });
   }
 
   // loggedOff(value:any){
