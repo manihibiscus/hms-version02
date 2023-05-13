@@ -5,13 +5,13 @@
   /* overflow: visible; */
   display: grid;
   grid-template-columns: 70% auto;
-  grid-column-gap: 10px;
+
 }
 .contact .Box1{
   /* width: 22%;
   height: 500px;
   float: left; */
-  background-color: whitesmoke;
+  background-color: #fafafa;
   padding-left: 15px;
   border-radius: 5px;
   /* border:1px solid #233863; */
@@ -39,7 +39,7 @@ text-align: center;
   /* width: 74%;
   height: 500px;
   float: right; */
-  background-color: whitesmoke;
+  background-color: #fafafa;
   border-radius: 5px;
   border:2px solid #233863;
   font-family: Verdana, Geneva, Tahoma, sans-serif;

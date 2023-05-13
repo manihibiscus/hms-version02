@@ -13,10 +13,11 @@
 .body{
   display: grid;
   grid-template-columns: auto auto;
+  background-color: #fafafa;
 }
 .bimg img{
   padding-left: 100px;
-  width:500px;
+  width:700px;
   height:500px;
 }
 .form-box{
