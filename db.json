@@ -13,7 +13,18 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 1
+      "id": 1,
+      "mobileno": "8072702981",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "Regular cardio theraphy",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "Total": "",
+      "consultingFee": "",
+      "otherFee": ""
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -43,23 +54,7 @@
       "insurance": "YES",
       "password": "Dinesh@8",
       "cpassword": "Dinesh@8",
-      "id": 3,
-      "mobileno": "9750051165",
-      "appointmentDate": "",
-      "appointmentTime": "",
-      "say": "",
-      "doctorField": "",
-      "doctorName": "",
-      "attemptStatus": "false",
-      "appStatus": "",
-      "Total": "",
-      "consultingFee": "",
-      "otherFee": "",
-      "cName": "DINESH",
-      "cMobileNo": "9750051165",
-      "cDate": "2023-05-15",
-      "cdoctorName": "Dr. Mythili M MD",
-      "remarkMessage": "sended"
+      "id": 3
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -331,144 +326,36 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [
-    {
-      "cName": "DINESH",
-      "cMobileNo": "9750051165",
-      "cDate": "2023-05-15",
-      "cdoctorName": "Dr. Mythili M MD",
-      "id": 1
-    }
-  ],
+  "cancelledRequest": [],
   "acceptRequest": [],
   "billDetails": [
     {
       "patientId": 1,
-      "name": "DINESH",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "9750051165",
-      "consultingFee": "₹532",
-      "otherFee": "₹22163",
-      "Total": "₹22695",
-      "status": " Still not send patient",
-      "id": 1
-    },
-    {
-      "patientId": 1,
-      "name": "DINESH",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "mobileNo": "9750051165",
-      "consultingFee": "₹8552",
-      "otherFee": "₹6325",
-      "Total": "₹14877",
-      "status": "sended",
-      "id": 2
-    },
-    {
-      "patientId": 1,
-      "name": "DINESH",
-      "doctorName": "Dr. Saraswathi S MS",
-      "doctorField": "Dentist",
-      "mobileNo": "9750051165",
-      "consultingFee": "₹600",
-      "otherFee": "₹300",
-      "Total": "₹900",
-      "status": "sended to patient",
-      "id": 3
-    },
-    {
-      "patientId": 1,
-      "name": "DINESH",
-      "doctorName": "Dr. Mekala V MBBS",
-      "doctorField": "General doctor",
-      "mobileNo": "9750051165",
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Naveen S MS",
+      "doctorField": "Cardiologist",
+      "mobileNo": "8072702981",
       "consultingFee": "₹800",
       "otherFee": "₹200",
       "Total": "₹1000",
       "status": "sended to patient",
-      "id": 4
-    },
-    {
-      "patientId": 1,
-      "name": "DINESH",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "doctorField": "Gynecologist",
-      "mobileNo": "9750051165",
-      "consultingFee": "₹800",
-      "otherFee": "₹20",
-      "Total": "₹820",
-      "status": "sended to patient",
-      "id": 5
+      "id": 1
     }
   ],
   "forgotPassDetails": [],
   "paymentHistory": [
     {
-      "patientName": "DINESH",
-      "email": "dineshdharneesh1734@gmail.com",
-      "phone": "9750051165",
-      "appointmentDate": "2023-05-16",
-      "doctorField": "Pediatrician",
-      "doctorName": "Dr. Madhavi M MS",
-      "consultingFee": "₹532",
-      "otherFee": "₹22163",
-      "Total": "₹22695",
-      "paymentStatus": "Success",
-      "id": 1
-    },
-    {
-      "patientName": "DINESH",
-      "email": "dineshdharneesh1734@gmail.com",
-      "phone": "9750051165",
-      "appointmentDate": "2023-05-16",
-      "doctorField": "Pediatrician",
-      "doctorName": "Dr. Madhavi M MS",
-      "consultingFee": "₹8552",
-      "otherFee": "₹6325",
-      "Total": "₹14877",
-      "paymentStatus": "Success",
-      "id": 2
-    },
-    {
-      "patientName": "DINESH",
-      "email": "dineshdharneesh1734@gmail.com",
-      "phone": "9750051165",
-      "appointmentDate": "2023-05-12",
-      "doctorField": "Dentist",
-      "doctorName": "Dr. Saraswathi S MS",
-      "consultingFee": "₹600",
-      "otherFee": "₹300",
-      "Total": "₹900",
-      "paymentStatus": "Success",
-      "id": 3
-    },
-    {
-      "patientName": "DINESH",
-      "email": "dineshdharneesh1734@gmail.com",
-      "phone": "9750051165",
-      "appointmentDate": "2023-05-14",
-      "doctorField": "General doctor",
-      "doctorName": "Dr. Mekala V MBBS",
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-05-15",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Naveen S MS",
       "consultingFee": "₹800",
       "otherFee": "₹200",
       "Total": "₹1000",
       "paymentStatus": "Success",
-      "id": 4
-    },
-    {
-      "patientName": "DINESH",
-      "email": "dineshdharneesh1734@gmail.com",
-      "phone": "9750051165",
-      "appointmentDate": "2023-05-15",
-      "doctorField": "Gynecologist",
-      "doctorName": "Dr. Thilagavathi V MS",
-      "consultingFee": "₹800",
-      "otherFee": "₹20",
-      "Total": "₹820",
-      "paymentStatus": "Success",
-      "id": 5
+      "id": 1
     }
   ]
 }
