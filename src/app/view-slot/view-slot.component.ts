@@ -121,7 +121,8 @@ export class ViewSlotComponent {
       problem:this.aSay,
       doctorName:this.aDoctorName,
       doctorField:this.aDoctorField,
-      acceptanceStatus:this.acceptanceStatus
+      acceptanceStatus:this.acceptanceStatus,
+      reporingStatus:"pending"
     }
     this.cancelService.postAcceptRequest(acceptBody).subscribe(data=>{
     });

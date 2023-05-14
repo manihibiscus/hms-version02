@@ -96,6 +96,7 @@
         <th>Consulting Fee</th>
         <th>Other Fee</th>
         <th>Total</th>
+        <th>Status</th>
         <th>Select</th>
       </thead>
       <tbody>
@@ -108,8 +109,9 @@
           <td>{{appointment.consultingFee}}</td>
           <td>{{appointment.otherFee}}</td>
           <td>{{appointment.Total}}</td>
+          <td>{{appointment.status}}</td>
           <td>
-            <button (click)="showBill(appointment)">ADD PATIENT</button>
+            <button (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' ">ADD PATIENT</button>
           </td>
         </tr>
       </tbody>

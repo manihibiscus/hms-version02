@@ -7,6 +7,7 @@ export class GenerateBills{
     consultingFee:any="";
     otherFee:any="";
     Total:any="";
+    status:any=""
 }
 
 

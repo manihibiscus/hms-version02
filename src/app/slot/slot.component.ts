@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../userService.service';
 import { StatusUpdate } from './slot.model';
 import { DoctorSlotServiceService } from './doctorSlotService.service';
+import { subscribeOn } from 'rxjs';
 
 @Component({
   selector: 'app-slot',
@@ -36,8 +37,13 @@ export class SlotComponent implements OnInit {
     this.doctorSlot.updateAcceptedDetails(this.treatmentStatus,id).subscribe(()=>{
       alert("Updated");
     });
-    details.isDisabled=true;
-
+    var body={
+      reporingStatus:"Reported to admin"
+    }
+    this.http.patch<any>("http://localhost:3000/acceptRequest/"+id,body).subscribe(()=>{
+    alert("Seneded")
+    this.ngOnInit();
+    });
     // this.status=true;
   }
 }

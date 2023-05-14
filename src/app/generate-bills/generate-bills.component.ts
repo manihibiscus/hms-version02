@@ -73,6 +73,7 @@ export class GenerateBillsComponent {
     this.generateBillDetailsObj.consultingFee='₹'+this.billForm.value.consultingFee;
     this.generateBillDetailsObj.otherFee= '₹'+this.billForm.value.otherFee;
     this.generateBillDetailsObj.Total='₹'+this.result;
+    this.generateBillDetailsObj.status=" Still not send to patient";
     let ref=document.getElementById("ref");
     ref?.click();
     this.generateBills.postBillDetails(this.generateBillDetailsObj).subscribe(res=>{
@@ -91,18 +92,24 @@ export class GenerateBillsComponent {
       });
       if(userBill){
         this.showPatientBill=userBill;
-        this.sendToPatient(userBill.id)
+        this.sendToPatient(userBill, billData)
       }
     })
   }
   showPatientBillObj : ShowBillToPatient = new ShowBillToPatient();
-  sendToPatient(userId:any){
+  sendToPatient(userId:any, billData:any){
     this.showPatientBillObj.consultingFee=this.generateBillDetailsObj.consultingFee;
     this.showPatientBillObj.otherFee=this.generateBillDetailsObj.otherFee;
     this.showPatientBillObj.Total=this.generateBillDetailsObj.Total;
-    this.generateBills.updatePatientRegistration(this.showPatientBillObj,userId).subscribe(()=>{
+    this.generateBills.updatePatientRegistration(this.showPatientBillObj,userId.id).subscribe(()=>{
       alert("Updated to PatientRegister");
-    })
+    });
+    var body={
+      status:"sended to patient"
+    }
+    this.http.patch<any>("http://localhost:3000/billDetails/"+billData.id,body).subscribe(()=>{
+      this.ngOnInit();
+    });
   }
   deleteGenerate(value:any){
     this.generateBills.deleteGeneratedBills(value).subscribe(data=>{

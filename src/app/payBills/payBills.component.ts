@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../userService.service';
 import { Router } from '@angular/router';
 import { PatientServiceService } from '../patientPage/patientService.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-payBills',
@@ -27,7 +28,7 @@ export class PayBillsComponent implements OnInit {
   historyPayment:any=""
   baseUrl:any="http://localhost:3000"
   showStatus:any="true"
-  constructor(private userServeice:UserServiceService, private route:Router,
+  constructor(private userServeice:UserServiceService, private route:Router,private fb:FormBuilder,
     private http:HttpClient) { }
 
   ngOnInit() {
@@ -60,6 +61,11 @@ export class PayBillsComponent implements OnInit {
     });
 
   }
+
+  paying=this.fb.group({
+    totalPay:[,]
+  })
+
   pay(user:any){
     var body={
       patientName:user.patientName,
