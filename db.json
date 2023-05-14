@@ -15,19 +15,16 @@
       "cpassword": "Sathish@777",
       "id": 1,
       "mobileno": "8072702981",
-      "appointmentDate": "2023-05-15",
-      "appointmentTime": "10:30AM",
-      "say": "",
-      "doctorField": "Gynecologist",
-      "doctorName": "Dr. Thilagavathi V MS",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "Regular cardio theraphy",
+      "doctorField": "",
+      "doctorName": "",
       "attemptStatus": "false",
-      "appStatus": "Cancelled! (Try again)",
+      "appStatus": "",
       "Total": "",
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-15",
-      "cdoctorName": "Dr. Thilagavathi V MS",
-      "remarkMessage": "MKLmvdsnvdvksnknvd"
+      "consultingFee": "",
+      "otherFee": ""
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -60,18 +57,20 @@
       "id": 3,
       "mobileno": "9750051165",
       "appointmentDate": "2023-05-15",
-      "appointmentTime": "10:00AM",
+      "appointmentTime": "11:00AM",
       "say": "",
-      "doctorField": "Dentist",
-      "doctorName": "Dr. Saraswathi S MS",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Thilagavathi V MS",
       "attemptStatus": "false",
       "appStatus": "Cancelled! (Try again)",
       "Total": "",
-      "cName": "",
-      "cMobileNo": "",
-      "cDate": "",
-      "cdoctorName": "",
-      "remarkMessage": "jnjnkjkj"
+      "consultingFee": "",
+      "otherFee": "",
+      "cName": "DINESH",
+      "cMobileNo": "9750051165",
+      "cDate": "2023-05-15",
+      "cdoctorName": "Dr. Thilagavathi V MS",
+      "remarkMessage": "HI"
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -345,35 +344,44 @@
   "appointmentDetails": [],
   "cancelledRequest": [
     {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-13",
-      "cdoctorName": "Dr. Madhavi M MS",
-      "reporting": "Sended",
-      "id": 1,
-      "remarkMessage": "dd"
-    },
-    {
-      "cName": "SATHISH KUMAR",
-      "cMobileNo": "8072702981",
-      "cDate": "2023-05-15",
-      "cdoctorName": "Dr. Thilagavathi V MS",
-      "reporting": "Sended",
-      "id": 2,
-      "remarkMessage": "MKLmvdsnvdvksnknvd"
-    },
-    {
       "cName": "DINESH",
       "cMobileNo": "9750051165",
       "cDate": "2023-05-15",
-      "cdoctorName": "Dr. Saraswathi S MS",
+      "cdoctorName": "Dr. Thilagavathi V MS",
       "reporting": "Sended",
-      "id": 3,
-      "remarkMessage": "jnjnkjkj"
+      "id": 1,
+      "remarkMessage": "HI"
     }
   ],
   "acceptRequest": [],
-  "billDetails": [],
+  "billDetails": [
+    {
+      "patientId": 1,
+      "name": "DINESH",
+      "doctorName": "Dr. Mathumitha V MD",
+      "doctorField": "Dentist",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹500",
+      "otherFee": "₹200",
+      "Total": "₹700",
+      "status": "sended to patient",
+      "id": 1
+    }
+  ],
   "forgotPassDetails": [],
-  "paymentHistory": []
+  "paymentHistory": [
+    {
+      "patientName": "DINESH",
+      "email": "dineshdharneesh1734@gmail.com",
+      "phone": "9750051165",
+      "appointmentDate": "2023-05-15",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Mathumitha V MD",
+      "consultingFee": "₹500",
+      "otherFee": "₹200",
+      "Total": "₹700",
+      "paymentStatus": "Success",
+      "id": 1
+    }
+  ]
 }
