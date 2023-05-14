@@ -49,14 +49,14 @@ table thead th{
   margin: auto 0 ;
 }
 .box1{
-  background-color: #1994c5;
+  background-color: white;
   border-radius: 10px;
-  border: 2px solid white;
+  border: 3px solid #077caa;
 }
 .box1 h2{
   text-align: center;
   padding-top: 50px;
-  color: white;
+  color: #077caa;
 
 }
 .box1 p{
@@ -73,8 +73,11 @@ table thead th{
   border-radius: 10px;
   text-align: center;
   font-size: 18px;
- background-color: #077caa;
-  color: whitesmoke;}
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
+
+}
 .button2{
   margin-left: 90px;
   padding:15px 15px 15px 15px ;
@@ -84,7 +87,11 @@ table thead th{
   text-align: center;
   font-size: 18px;
   background-color: #077caa;
-  color: whitesmoke;}
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
+
+}
 .button3{
   margin-left: 100px;
   padding:15px 15px 15px 15px ;
@@ -94,7 +101,11 @@ table thead th{
   text-align: center;
   font-size: 18px;
   background-color: #077caa;
-  color: whitesmoke;}
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
+
+}
 .button4{
   margin-left: 133px;
   padding:15px 15px 15px 15px ;
@@ -104,6 +115,8 @@ table thead th{
   text-align: center;
   font-size: 18px;
   background-color: #077caa;
-  color: whitesmoke;
   font-size: 22px;
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
 }
