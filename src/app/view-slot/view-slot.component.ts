@@ -98,7 +98,8 @@ export class ViewSlotComponent {
       cName:this.cName,
       cMobileNo:this.cMobileNo,
       cDate:this.cDate,
-      cdoctorName:this.cdoctorName
+      cdoctorName:this.cdoctorName,
+      reporting:"pending"
     }
     this.cancelService.postCancelledRequest(body).subscribe(value=>{
       alert("Post to Cancel DB" + cancel.cName);
@@ -128,11 +129,19 @@ export class ViewSlotComponent {
     });
   }
   showRemarked:any=""
-  hidden:any=""
+  remarkMessage=this.fb.group({
+    rkMessage:['',Validators.required]
+  })
   sendRemarks(RemarkDetails:any){
-    alert("Send to" + RemarkDetails.cName)
-    this.showRemark(RemarkDetails)
-    this.hidden="true"
+    alert("Send to" + RemarkDetails)
+    this.showRemark(RemarkDetails);
+    var body={
+      remarkMessage:this.remarkMessage.value.rkMessage,
+      reporting:"Sended"
+    }
+    this.http.patch<any>("http://localhost:3000/cancelledRequest/"+RemarkDetails.id,body).subscribe(()=>{
+      alert("Reporting");
+    })
   }
   showRemark(details:any){
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
@@ -146,9 +155,7 @@ export class ViewSlotComponent {
   }
 
   baseUrl:any="http://localhost:3000";
-  remarkMessage=this.fb.group({
-    rkMessage:['',Validators.required]
-  })
+
   sendRemarkToPatient(getValue:any,cancleDetails:any){
     // alert(getValue.id);
     var body={

@@ -15,16 +15,19 @@
       "cpassword": "Sathish@777",
       "id": 1,
       "mobileno": "8072702981",
-      "appointmentDate": "",
-      "appointmentTime": "",
-      "say": "Regular cardio theraphy",
-      "doctorField": "",
-      "doctorName": "",
+      "appointmentDate": "2023-05-15",
+      "appointmentTime": "10:30AM",
+      "say": "",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Thilagavathi V MS",
       "attemptStatus": "false",
-      "appStatus": "",
+      "appStatus": "Cancelled! (Try again)",
       "Total": "",
-      "consultingFee": "",
-      "otherFee": ""
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-15",
+      "cdoctorName": "Dr. Thilagavathi V MS",
+      "remarkMessage": "MKLmvdsnvdvksnknvd"
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -54,7 +57,21 @@
       "insurance": "YES",
       "password": "Dinesh@8",
       "cpassword": "Dinesh@8",
-      "id": 3
+      "id": 3,
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-05-15",
+      "appointmentTime": "10:00AM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Saraswathi S MS",
+      "attemptStatus": "false",
+      "appStatus": "Cancelled! (Try again)",
+      "Total": "",
+      "cName": "",
+      "cMobileNo": "",
+      "cDate": "",
+      "cdoctorName": "",
+      "remarkMessage": "jnjnkjkj"
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -326,36 +343,37 @@
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [],
-  "acceptRequest": [],
-  "billDetails": [
+  "cancelledRequest": [
     {
-      "patientId": 1,
-      "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Naveen S MS",
-      "doctorField": "Cardiologist",
-      "mobileNo": "8072702981",
-      "consultingFee": "₹800",
-      "otherFee": "₹200",
-      "Total": "₹1000",
-      "status": "sended to patient",
-      "id": 1
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-13",
+      "cdoctorName": "Dr. Madhavi M MS",
+      "reporting": "Sended",
+      "id": 1,
+      "remarkMessage": "dd"
+    },
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-15",
+      "cdoctorName": "Dr. Thilagavathi V MS",
+      "reporting": "Sended",
+      "id": 2,
+      "remarkMessage": "MKLmvdsnvdvksnknvd"
+    },
+    {
+      "cName": "DINESH",
+      "cMobileNo": "9750051165",
+      "cDate": "2023-05-15",
+      "cdoctorName": "Dr. Saraswathi S MS",
+      "reporting": "Sended",
+      "id": 3,
+      "remarkMessage": "jnjnkjkj"
     }
   ],
+  "acceptRequest": [],
+  "billDetails": [],
   "forgotPassDetails": [],
-  "paymentHistory": [
-    {
-      "patientName": "SATHISH KUMAR",
-      "email": "sathishkumar12062004@gmail.com",
-      "phone": "8072702981",
-      "appointmentDate": "2023-05-15",
-      "doctorField": "Cardiologist",
-      "doctorName": "Dr. Naveen S MS",
-      "consultingFee": "₹800",
-      "otherFee": "₹200",
-      "Total": "₹1000",
-      "paymentStatus": "Success",
-      "id": 1
-    }
-  ]
+  "paymentHistory": []
 }

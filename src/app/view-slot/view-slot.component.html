@@ -76,6 +76,7 @@
       <th>Appointment date</th>
       <th>Doctor Name</th>
       <th>Remarks</th>
+      <th>Report to Patinet</th>
       <th>Send</th>
       <!-- <th>Appointment time</th> -->
       <!-- <th>Health issue</th> -->
@@ -87,11 +88,13 @@
         <td>{{appointment.cMobileNo}}</td>
         <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>
         <td>{{appointment.cdoctorName}}</td>
-        <td>
+        <td [hidden]="appointment.reporting=='Sended' ">
           <textarea name="remark" id="" cols="20" rows="3" formControlName="rkMessage"></textarea>
         </td>
+        <td>{{appointment.remarkMessage}}</td>
+        <td>{{appointment.reporting}}</td>
         <td>
-          <button [disabled]="remarkMessage.invalid" [hidden]="hidden"  (click)="sendRemarks(appointment)">Send</button>
+          <button [hidden]="appointment.reporting=='Sended' " [disabled]="remarkMessage.invalid"  (click)="sendRemarks(appointment)">Send</button>
         </td>
         <!-- <td>{{appointment.timeing}}</td> -->
         <!-- <td>{{appointment.problem}}</td> -->
