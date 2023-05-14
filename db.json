@@ -13,18 +13,18 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 2,
+      "id": 1,
       "mobileno": "8072702981",
-      "appointmentDate": "2023-05-14",
-      "appointmentTime": "02:30PM",
-      "say": "Ear problem",
-      "doctorField": "Otolaryngologist",
-      "doctorName": "Dr. Manogar S MD",
-      "attemptStatus": "true",
-      "appStatus": "Accepted for appointment",
-      "consultingFee": "₹500",
-      "otherFee": "₹300",
-      "Total": "₹800"
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -39,7 +39,7 @@
       "insurance": "YES",
       "password": "kISHORE@18",
       "cpassword": "kISHORE@18",
-      "id": 3
+      "id": 2
     },
     {
       "patientName": "DINESH",
@@ -54,7 +54,7 @@
       "insurance": "YES",
       "password": "Dinesh@8",
       "cpassword": "Dinesh@8",
-      "id": 4
+      "id": 3
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -69,7 +69,7 @@
       "insurance": "NO",
       "password": "pratheep@28",
       "cpassword": "pratheep@28",
-      "id": 5
+      "id": 4
     },
     {
       "patientName": "NAVEEN",
@@ -114,20 +114,7 @@
       "insurance": "NO",
       "password": "Mani@777",
       "cpassword": "Mani@777",
-      "id": 8,
-      "mobileno": "8072393102",
-      "appointmentDate": "2023-05-14",
-      "appointmentTime": "01:00PM",
-      "say": "",
-      "doctorField": "General doctor",
-      "doctorName": "Dr. Mekala V MBBS",
-      "attemptStatus": "true",
-      "appStatus": "Pending for appointment",
-      "cName": "MANIKANDAN",
-      "cMobileNo": "8072393102",
-      "cDate": "2023-05-14",
-      "cdoctorName": "Dr. Manogar S MD",
-      "remarkMessage": "dd"
+      "id": 8
     }
   ],
   "adminDetails": [
@@ -318,52 +305,65 @@
     {
       "emailId": "manihibiscus@gmail.com",
       "name": "Manikandan S",
-      "queryMessage": "HI, Thank you",
-      "id": 1
-    },
-    {
-      "emailId": "sathishkumar@gmail.com",
-      "name": "Sathish kumar S",
-      "queryMessage": "I need to make a appointment",
-      "id": 2
-    },
-    {
-      "emailId": "manihibiscus@gmail.com",
-      "name": "Manikandan S",
-      "queryMessage": "HInknvdvdvb",
-      "id": 3
+      "mobile": "8072393102",
+      "queryMessage": "HI Hello",
+      "id": 5
     }
   ],
   "appointmentDetails": [],
-  "cancelledRequest": [
-    {
-      "cName": "MANIKANDAN",
-      "cMobileNo": "8072393102",
-      "cDate": "2023-05-14",
-      "cdoctorName": "Dr. Manogar S MD",
-      "id": 1
-    },
-    {
-      "cName": "MANIKANDAN",
-      "cMobileNo": "8072393102",
-      "cDate": "2023-05-14",
-      "cdoctorName": "Dr. Mekala V MBBS",
-      "id": 2
-    }
-  ],
+  "cancelledRequest": [],
   "acceptRequest": [],
   "billDetails": [
     {
       "patientId": 1,
       "name": "SATHISH KUMAR",
-      "doctorName": "Dr. Manogar S MD",
-      "doctorField": "Otolaryngologist",
+      "doctorName": "Dr. Sowndammal H MS",
+      "doctorField": "Psychiatrist",
       "mobileNo": "8072702981",
       "consultingFee": "₹500",
-      "otherFee": "₹300",
-      "Total": "₹800",
+      "otherFee": "₹600",
+      "Total": "₹1100",
       "id": 1
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹500",
+      "otherFee": "₹600",
+      "Total": "₹1100",
+      "id": 2
     }
   ],
-  "forgotPassDetails": []
+  "forgotPassDetails": [],
+  "paymentHistory": [
+    {
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-05-14",
+      "doctorField": "Psychiatrist",
+      "doctorName": "Dr. Sowndammal H MS",
+      "consultingFee": "₹500",
+      "otherFee": "₹600",
+      "Total": "₹1100",
+      "paymentStatus": "Success",
+      "id": 1
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-05-15",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Madhavi M MS",
+      "consultingFee": "₹500",
+      "otherFee": "₹600",
+      "Total": "₹1100",
+      "paymentStatus": "Success",
+      "id": 2
+    }
+  ]
 }

@@ -34,6 +34,7 @@ export class ContactUsPageComponent implements OnInit {
     var body={
       emailId:this.email,
       name:this.contactName,
+      mobile:this.mobile,
       queryMessage:this.message
     }
     this.contactService.postQueryDetails(body).subscribe(data=>{

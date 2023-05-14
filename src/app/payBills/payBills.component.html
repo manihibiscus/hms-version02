@@ -30,6 +30,7 @@
 
 
   <form action="">
+    <h2 style="text-align: center;">Bill</h2>
     <table>
       <thead>
       <th>S.No</th>
@@ -53,8 +54,43 @@
           <td>{{refereshData.otherFee}}</td>
           <td>{{refereshData.Total}}</td>
           <td>
-            <button [disabled]="refereshData.isDisabled" id="refchange" (click)="pay(refereshData)">Pay</button>
+            <button [disabled]="refereshData.Total=='' " id="refchange" (click)="pay(refereshData)">Pay</button>
           </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </form>
+
+  <br>
+  <br>
+  <form action="">
+    <h2 style="text-align: center;">Appointment History</h2>
+    <table>
+      <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Appointment Date</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Contact no</th>
+      <th>Consulting Fee</th>
+      <th>Other Fee</th>
+      <th>Total</th>
+      <th>Payment Status</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{historyPayment.id}}</td>
+          <td>{{historyPayment.patientName}}</td>
+          <td>{{historyPayment.appointmentDate}}</td>
+          <td>{{historyPayment.doctorName}}</td>
+          <td>{{historyPayment.doctorField}}</td>
+          <td>{{historyPayment.phone}}</td>
+          <td>{{historyPayment.consultingFee}}</td>
+          <td>{{historyPayment.otherFee}}</td>
+          <td>{{historyPayment.Total}}</td>
+          <td>{{historyPayment.paymentStatus}}</td>
         </tr>
 
       </tbody>
