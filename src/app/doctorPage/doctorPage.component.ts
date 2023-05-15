@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../userService.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-doctorPage',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class DoctorPageComponent implements OnInit {
   loggedInUser:any="";
-  constructor(private userServeice:UserServiceService, private route: Router) { }
-  
+  constructor(private userServeice:UserServiceService, private route: Router,private http:HttpClient) { }
+  patient:any=""
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
     if (sessionUser) {
@@ -21,5 +22,8 @@ export class DoctorPageComponent implements OnInit {
       alert('You are Loggedout. Login to continue');
       this.route.navigate(['/login']);
     }
+    this.http.get<any>("http://localhost:3000/acceptRequest").subscribe((data)=>{
+        this.patient=data
+    })
   }
 }
