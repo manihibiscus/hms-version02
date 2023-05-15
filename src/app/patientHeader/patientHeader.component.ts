@@ -20,10 +20,21 @@ export class PatientHeaderComponent implements OnInit  {
   patientObj!:PatientPageComponent;
   // statusValue:boolean=false;
   // @ViewChild(PatientPageComponent) componentA!: PatientPageComponent;
-  logout(){
-    this.patService.logoutStatus=true;
-    alert('You are Loggedout'+this.patService.logoutStatus);
+  // logout(){
+    // this.patService.logoutStatus=true;
+    // alert('You are Loggedout'+this.patService.logoutStatus);
     // this.patientObj.ngOnInit();
     // this.route.navigate(['/login']);
+
+  // }
+  logout() {
+    confirm('Are you sure to logout');
+
+    this.user.loggedInUser = null;
+
+    sessionStorage.removeItem('loggedInUser');
+    alert('You are logout succussfully');
+    // Navigate back to the login page
+    this.route.navigate(['/home']);
   }
 }
