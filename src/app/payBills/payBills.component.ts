@@ -36,13 +36,12 @@ export class PayBillsComponent implements OnInit {
     if (sessionUser) {
       this.loggedInUser = JSON.parse(sessionUser);
     }
-
-    // else if (this.userServeice.loggedInUser !== null) {
-    //   this.loggedInUser = this.userServeice.loggedInUser;
-    // } else {
-    //   alert('You are Loggedout. Login to continue');
-    //   this.route.navigate(['/login']);
-    // }
+    else if (this.userServeice.loggedInUser !== null) {
+      this.loggedInUser = this.userServeice.loggedInUser;
+    } else {
+      alert('You are Loggedout. Login to continue');
+      this.route.navigate(['/login']);
+    }
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
         const value=data.find((a:any)=>{
           return a.email===this.loggedInUser.email

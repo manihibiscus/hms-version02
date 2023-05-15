@@ -28,7 +28,7 @@ export class PatientHeaderComponent implements OnInit  {
 
   // }
   logout() {
-    confirm('Are you sure to logout');
+    // confirm('Are you sure to logout');
 
     this.user.loggedInUser = null;
 

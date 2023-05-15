@@ -6,6 +6,7 @@ import { UserServiceService } from '../userService.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { RemarkServiceService } from './remarkService.service';
 import { PatientPageComponent } from '../patientPage/patientPage.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-view-slot',
   templateUrl: './view-slot.component.html',
@@ -19,12 +20,24 @@ export class ViewSlotComponent {
     private cancelService:AppointmentCancelService,
     private fb:FormBuilder,
     private remark:RemarkServiceService,
+    private userServeice:UserServiceService,
+    private route:Router
     ) { }
   getAppointment:any="";
   acceptedAppointment:any="";
   canceledAppointment:any="";
+  loggedInUser:any=""
 
   ngOnInit() {
+    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.loggedInUser = JSON.parse(sessionUser);
+    } else if (this.userServeice.loggedInUser !== null) {
+      this.loggedInUser = this.userServeice.loggedInUser;
+    } else {
+      alert('You are Loggedout. Login to continue');
+      this.route.navigate(['/login']);
+    }
     this.http.get<any>("http://localhost:3000/appointmentDetails").subscribe(data=>{
       this.getAppointment=data;
     });

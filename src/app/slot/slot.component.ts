@@ -4,6 +4,7 @@ import { UserServiceService } from '../userService.service';
 import { StatusUpdate } from './slot.model';
 import { DoctorSlotServiceService } from './doctorSlotService.service';
 import { subscribeOn } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-slot',
@@ -12,12 +13,22 @@ import { subscribeOn } from 'rxjs';
 })
 export class SlotComponent implements OnInit {
 
-  constructor(private http:HttpClient,private service:UserServiceService, private doctorSlot:DoctorSlotServiceService) { }
+  constructor(private http:HttpClient,private service:UserServiceService,
+    private doctorSlot:DoctorSlotServiceService, private userServeice:UserServiceService,private route:Router) { }
   // status:any=this.service.viewStatus;
   slotAllocated:any=""
   treatmentStatus:StatusUpdate=new StatusUpdate();
-
+  loggedInUser:any=""
   ngOnInit() {
+    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.loggedInUser = JSON.parse(sessionUser);
+    } else if (this.userServeice.loggedInUser !== null) {
+      this.loggedInUser = this.userServeice.loggedInUser;
+    } else {
+      alert('You are Loggedout. Login to continue');
+      this.route.navigate(['/login']);
+    }
     this.http.get<any>("http://localhost:3000/acceptRequest").subscribe(data=>{
     this.slotAllocated=data;
     });

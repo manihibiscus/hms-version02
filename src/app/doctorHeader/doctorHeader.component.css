@@ -49,3 +49,13 @@ h2
 {
   text-align: center;
 }
+.logout
+{
+  border: 0;
+  background: transparent;
+  font-size: 18px;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: 'Times New Roman', Times, serif;
+  color: #233863;
+  font-weight: bolder;
+}

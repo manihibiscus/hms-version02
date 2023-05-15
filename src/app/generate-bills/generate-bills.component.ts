@@ -5,6 +5,8 @@ import { GenerateBills } from './generateBills.model';
 import { HttpClient } from '@angular/common/http';
 import { GModel } from './gModel';
 import { ShowBillToPatient } from './showBill.model';
+import { UserServiceService } from '../userService.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-generate-bills',
@@ -15,10 +17,16 @@ export class GenerateBillsComponent {
   dateNow : Date=new Date();
   otherFee:any="";
 
-  constructor(private service:GenerateBillsService,private http:HttpClient, private fb:FormBuilder, private generateBills:GenerateBillsService) { }
+  constructor(private service:GenerateBillsService,
+    private http:HttpClient,
+    private fb:FormBuilder,
+     private generateBills:GenerateBillsService,
+     private userServeice:UserServiceService,
+     private route:Router) { }
   getBills:any="";
   genereateBills:any="";
   getReceipterDetails:any=""
+  loggedInUser:any=""
   billForm=this.fb.group({
     patientId:[,[Validators.required] ],
     patinetName:[,[Validators.required] ],
@@ -33,6 +41,15 @@ export class GenerateBillsComponent {
   gModelObj : GModel= new GModel();
   total:any=0;
   ngOnInit() {
+    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    if (sessionUser) {
+      this.loggedInUser = JSON.parse(sessionUser);
+    } else if (this.userServeice.loggedInUser !== null) {
+      this.loggedInUser = this.userServeice.loggedInUser;
+    } else {
+      alert('You are Loggedout. Login to continue');
+      this.route.navigate(['/login']);
+    }
     this.service.getAcceptRequest().subscribe(data=>{
       this.getBills=data
     });
