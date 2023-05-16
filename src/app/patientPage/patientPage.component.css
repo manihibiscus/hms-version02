@@ -37,3 +37,11 @@ table thead th{
   color:green;
   font-size: bolder;
 }
+.green2{
+  color: gray;
+  font-size: bolder;
+}
+.red2{
+  color: red;
+  font-weight: bolder;
+}

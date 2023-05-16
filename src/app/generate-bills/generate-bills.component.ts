@@ -110,6 +110,7 @@ export class GenerateBillsComponent {
       if(userBill){
         this.showPatientBill=userBill;
         this.sendToPatient(userBill, billData)
+        // this.patchToPatient(userBill);
       }
     })
   }
@@ -121,10 +122,17 @@ export class GenerateBillsComponent {
     this.generateBills.updatePatientRegistration(this.showPatientBillObj,userId.id).subscribe(()=>{
       alert("Updated to PatientRegister");
     });
+    var val={
+      appStatus:"Payment Pending"
+    }
+    this.http.patch<any>("http://localhost:3000/patientRegistration/"+userId.id,val).subscribe(()=>{
+      alert("Appomitment Status Updated");
+    })
     var body={
       status:"sended to patient"
     }
     this.http.patch<any>("http://localhost:3000/billDetails/"+billData.id,body).subscribe(()=>{
+      alert("Patched to billDetails DB ")
       this.ngOnInit();
     });
   }
@@ -133,5 +141,12 @@ export class GenerateBillsComponent {
       this.ngOnInit();
     })
   }
-
+  // patchToPatient(Userid:any){
+  //   var body={
+  //     appStatus:"Payment Pending"
+  //   }
+  //   this.http.patch<any>("http://localhost:3000/patientRegistration/"+Userid.id,body).subscribe(()=>{
+  //     alert("Appomitment Status Updated");
+  //   })
+  // }
   }

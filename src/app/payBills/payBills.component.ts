@@ -42,6 +42,7 @@ export class PayBillsComponent implements OnInit {
       alert('You are Loggedout. Login to continue');
       this.route.navigate(['/login']);
     }
+    
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
         const value=data.find((a:any)=>{
           return a.email===this.loggedInUser.email

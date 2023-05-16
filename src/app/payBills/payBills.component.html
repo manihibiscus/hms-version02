@@ -90,7 +90,7 @@
           <td>{{historyPayment.consultingFee}}</td>
           <td>{{historyPayment.otherFee}}</td>
           <td>{{historyPayment.Total}}</td>
-          <td>{{historyPayment.paymentStatus}}</td>
+          <td [ngClass]="{green:historyPayment.paymentStatus == 'Success' }">{{historyPayment.paymentStatus}}</td>
         </tr>
 
       </tbody>

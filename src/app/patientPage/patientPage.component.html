@@ -26,7 +26,9 @@
         <td>{{refereshData.appointmentTime}}</td>
         <td [ngClass]="{violet:refereshData.appStatus == 'Pending for appointment',
             green:refereshData.appStatus == 'Accepted for appointment',
-            red:refereshData.appStatus == 'Cancelled! (Try again)'} ">
+            red:refereshData.appStatus == 'Cancelled! (Try again)',
+            green2:refereshData.appStatus == 'Treatment was Completed',
+            red2:refereshData.appStatus == 'Payment Pending'} ">
             {{refereshData.appStatus}}
         </td>
         <!-- <td>{{appointment.problem}}</td> -->
