@@ -4,6 +4,7 @@ import { UserServiceService } from '../userService.service';
 import { Router } from '@angular/router';
 import { PatientServiceService } from '../patientPage/patientService.service';
 import { FormBuilder } from '@angular/forms';
+import { BillServiceService } from './billService.service';
 
 @Component({
   selector: 'app-payBills',
@@ -28,8 +29,9 @@ export class PayBillsComponent implements OnInit {
   historyPayment:any=""
   baseUrl:any="http://localhost:3000"
   showStatus:any="true"
+  history:any=""
   constructor(private userServeice:UserServiceService, private route:Router,private fb:FormBuilder,
-    private http:HttpClient) { }
+    private http:HttpClient, private service:BillServiceService) { }
 
   ngOnInit() {
     const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
@@ -42,7 +44,7 @@ export class PayBillsComponent implements OnInit {
       alert('You are Loggedout. Login to continue');
       this.route.navigate(['/login']);
     }
-    
+
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
         const value=data.find((a:any)=>{
           return a.email===this.loggedInUser.email
@@ -59,6 +61,9 @@ export class PayBillsComponent implements OnInit {
           this.historyPayment=history
         }
     });
+    this.service.searchPayment(this.loggedInUser.phone).subscribe((value)=>{
+      this.history=value;
+    })
 
   }
 

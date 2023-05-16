@@ -73,7 +73,7 @@ export class SlotComponent implements OnInit {
   patchToPatient(details:any, id:any){
     var body={
       appStatus:"Treatment was Completed",
-      attemptStatus:"false"
+      // attemptStatus:"false"
     }
     this.http.patch<any>("http://localhost:3000/patientRegistration/"+id,body).subscribe(()=>{
       alert("Updated to Patient DB");

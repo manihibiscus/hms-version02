@@ -15,11 +15,13 @@ export class PatientPageComponent implements OnInit {
   loggedUser:any=""
   constructor(private userServeice:UserServiceService, private route:Router,
     private pr:PatientServiceService,
-    private http:HttpClient
+    private http:HttpClient, private service:PatientServiceService
     ) { }
     userLogObj : PatientModel=new PatientModel();
     refereshData:any="";
     color:any=""
+    cancel:any=""
+    completed:any=""
   ngOnInit() {
     // sessionStorage.setItem('updateUser', JSON.stringify(this.userServeice.loggedInUser));
     let sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
@@ -44,6 +46,12 @@ export class PatientPageComponent implements OnInit {
           this.refereshData=value
         }
     });
+    this.service.searchCancel(this.loggedUser.phone).subscribe((value)=>{
+      this.cancel=value
+    });
+    this.service.searchAccept(this.loggedUser.phone).subscribe((data1)=>{
+      this.completed=data1;
+    })
   }
 
   // loggedOff(value:any){

@@ -80,17 +80,17 @@
       <th>Payment Status</th>
       </thead>
       <tbody>
-        <tr>
-          <td>{{historyPayment.id}}</td>
-          <td>{{historyPayment.patientName}}</td>
-          <td>{{historyPayment.appointmentDate}}</td>
-          <td>{{historyPayment.doctorName}}</td>
-          <td>{{historyPayment.doctorField}}</td>
-          <td>{{historyPayment.phone}}</td>
-          <td>{{historyPayment.consultingFee}}</td>
-          <td>{{historyPayment.otherFee}}</td>
-          <td>{{historyPayment.Total}}</td>
-          <td [ngClass]="{green:historyPayment.paymentStatus == 'Success' }">{{historyPayment.paymentStatus}}</td>
+        <tr *ngFor="let item of history">
+          <td>{{item.id}}</td>
+          <td>{{item.patientName}}</td>
+          <td>{{item.appointmentDate}}</td>
+          <td>{{item.doctorName}}</td>
+          <td>{{item.doctorField}}</td>
+          <td>{{item.phone}}</td>
+          <td>{{item.consultingFee}}</td>
+          <td>{{item.otherFee}}</td>
+          <td>{{item.Total}}</td>
+          <td [ngClass]="{green:item.paymentStatus == 'Success' }">{{item.paymentStatus}}</td>
         </tr>
 
       </tbody>
