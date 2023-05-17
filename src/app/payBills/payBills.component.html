@@ -54,7 +54,8 @@
           <td>{{refereshData.otherFee}}</td>
           <td>{{refereshData.Total}}</td>
           <td>
-            <button [disabled]="refereshData.Total=='' " id="refchange" (click)="pay(refereshData)">Pay</button>
+            <!-- <button [disabled]="refereshData.Total=='' " id="refchange" (click)="pay(refereshData)">Pay</button> -->
+            <button [disabled]=" refereshData.consultingFee==null || refereshData.consultingFee=='' || refereshData.doctorName==null || refereshData.doctorName=='' " id="refchange" (click)="pay(refereshData)">Pay</button>
           </td>
         </tr>
 

@@ -59,7 +59,16 @@
       "insurance": "YES",
       "password": "Dinesh@8",
       "cpassword": "Dinesh@8",
-      "id": 3
+      "id": 3,
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-05-17",
+      "appointmentTime": "12:00PM",
+      "say": "Cardio Theraphy",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Naveen S MS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "Total": ""
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -131,7 +140,16 @@
       "insurance": "NO",
       "password": "Mani@777",
       "cpassword": "Mani@777",
-      "id": 7
+      "id": 7,
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-05-18",
+      "appointmentTime": "12:15PM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Mekala V MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "Total": ""
     },
     {
       "patientName": "NAVANNETH",
@@ -146,7 +164,19 @@
       "insurance": "NO",
       "password": "Navaneeth@777",
       "cpassword": "Navaneeth@777",
-      "id": 8
+      "id": 8,
+      "mobileno": "9361798897",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": "",
+      "remarkMessage": ""
     },
     {
       "patientName": "PRAVEEN",
@@ -434,7 +464,32 @@
       "remarkMessage": "Sorry"
     }
   ],
-  "acceptRequest": [],
+  "acceptRequest": [
+    {
+      "name": "DINESH",
+      "mobileNo": "9750051165",
+      "date": "2023-05-17",
+      "timeing": "12:00PM",
+      "problem": "Cardio Theraphy",
+      "doctorName": "Dr. Naveen S MS",
+      "doctorField": "Cardiologist",
+      "acceptanceStatus": "Pending",
+      "reporingStatus": "pending",
+      "id": 1
+    },
+    {
+      "name": "MANIKANDAN",
+      "mobileNo": "8072393102",
+      "date": "2023-05-18",
+      "timeing": "12:15PM",
+      "problem": "",
+      "doctorName": "Dr. Mekala V MBBS",
+      "doctorField": "General doctor",
+      "acceptanceStatus": "Pending",
+      "reporingStatus": "pending",
+      "id": 3
+    }
+  ],
   "billDetails": [
     {
       "patientId": 1,
@@ -495,6 +550,43 @@
       "Total": "₹100",
       "status": "sended to patient",
       "id": 5
+    },
+    {
+      "patientId": 2,
+      "name": "NAVANNETH",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "mobileNo": "9361798897",
+      "consultingFee": "₹800",
+      "otherFee": "₹20",
+      "Total": "₹820",
+      "status": "sended to patient",
+      "id": 6,
+      "appStatus": "Payment Pending"
+    },
+    {
+      "patientId": 4,
+      "name": "NAVANNETH",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "9361798897",
+      "consultingFee": "₹80",
+      "otherFee": "₹520",
+      "Total": "₹600",
+      "status": "sended to patient",
+      "id": 7
+    },
+    {
+      "patientId": 4,
+      "name": "NAVANNETH",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "mobileNo": "9361798897",
+      "consultingFee": "₹200",
+      "otherFee": "₹200",
+      "Total": "₹400",
+      "status": "sended to patient",
+      "id": 8
     }
   ],
   "forgotPassDetails": [],
@@ -563,6 +655,45 @@
       "Total": "₹100",
       "paymentStatus": "Success",
       "id": 5
+    },
+    {
+      "patientName": "NAVANNETH",
+      "email": "navaneeth@gmail.com",
+      "phone": "9361798897",
+      "appointmentDate": "2023-05-18",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": "",
+      "paymentStatus": "Success",
+      "id": 6
+    },
+    {
+      "patientName": "NAVANNETH",
+      "email": "navaneeth@gmail.com",
+      "phone": "9361798897",
+      "appointmentDate": "2023-05-18",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Madhavi M MS",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": "",
+      "paymentStatus": "Success",
+      "id": 7
+    },
+    {
+      "patientName": "NAVANNETH",
+      "email": "navaneeth@gmail.com",
+      "phone": "9361798897",
+      "appointmentDate": "2023-05-18",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "consultingFee": "₹200",
+      "otherFee": "₹200",
+      "Total": "₹400",
+      "paymentStatus": "Success",
+      "id": 8
     }
   ]
 }

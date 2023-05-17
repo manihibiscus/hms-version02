@@ -86,9 +86,7 @@ export class AppointmentRequestComponent implements OnInit {
       doctorField:this.appointmentField,
       doctorName:this.appointmentDocName,
       attemptStatus:"true",
-      appStatus:this.appStatus,
-      Total:""
-
+      appStatus:this.appStatus
     }
     this.appointment.postAppointmentDetails(body).subscribe(data=>{
       alert("Appointment Submitted");
