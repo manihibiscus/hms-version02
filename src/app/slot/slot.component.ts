@@ -70,6 +70,7 @@ export class SlotComponent implements OnInit {
       }
     })
   }
+  
   patchToPatient(details:any, id:any){
     var body={
       appStatus:"Treatment was Completed",

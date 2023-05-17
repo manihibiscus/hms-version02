@@ -74,7 +74,19 @@
       "insurance": "NO",
       "password": "pratheep@28",
       "cpassword": "pratheep@28",
-      "id": 4
+      "id": 4,
+      "mobileno": "8667095212",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "general session",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "Total": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "remarkMessage": ""
     },
     {
       "patientName": "NAVEEN",
@@ -374,6 +386,13 @@
       "mobile": "8072393102",
       "queryMessage": "HI Hello",
       "id": 5
+    },
+    {
+      "emailId": "praveen@gmail.com",
+      "name": "Praveen",
+      "mobile": "7585965859",
+      "queryMessage": "I want vaccine for polio",
+      "id": 6
     }
   ],
   "appointmentDetails": [],
@@ -464,6 +483,18 @@
       "Total": "₹520",
       "status": "sended to patient",
       "id": 4
+    },
+    {
+      "patientId": 1,
+      "name": "PRATHEEPRAJ ",
+      "doctorName": "Dr. Sowndammal H MS",
+      "doctorField": "Psychiatrist",
+      "mobileNo": "8667095212",
+      "consultingFee": "₹80",
+      "otherFee": "₹20",
+      "Total": "₹100",
+      "status": "sended to patient",
+      "id": 5
     }
   ],
   "forgotPassDetails": [],
@@ -519,6 +550,19 @@
       "Total": "₹520",
       "paymentStatus": "Success",
       "id": 4
+    },
+    {
+      "patientName": "PRATHEEPRAJ ",
+      "email": "pratheepraj2002@gmail.com",
+      "phone": "8667095212",
+      "appointmentDate": "2023-05-17",
+      "doctorField": "Psychiatrist",
+      "doctorName": "Dr. Sowndammal H MS",
+      "consultingFee": "₹80",
+      "otherFee": "₹20",
+      "Total": "₹100",
+      "paymentStatus": "Success",
+      "id": 5
     }
   ]
 }

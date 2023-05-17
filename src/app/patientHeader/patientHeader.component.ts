@@ -35,6 +35,6 @@ export class PatientHeaderComponent implements OnInit  {
     sessionStorage.removeItem('loggedInUser');
     alert('You are logout succussfully');
     // Navigate back to the login page
-    this.route.navigate(['/home']);
+    this.route.navigate(['/login']);
   }
 }

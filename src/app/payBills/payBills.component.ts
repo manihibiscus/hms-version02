@@ -101,7 +101,8 @@ export class PayBillsComponent implements OnInit {
       Total:"",
       attemptStatus:"false",
       appointmentTime:"",
-      appStatus:""
+      appStatus:"",
+      remarkMessage:""
     }
     // this.http.get<any>("http://localhost:3000/paymentHistory").subscribe(data1=>{
     //   const patientFind=data1.find((a:any)=>{
