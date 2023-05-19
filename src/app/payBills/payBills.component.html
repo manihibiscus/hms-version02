@@ -81,8 +81,8 @@
       <th>Payment Status</th>
       </thead>
       <tbody>
-        <tr *ngFor="let item of history">
-          <td>{{item.id}}</td>
+        <tr *ngFor="let item of history; let i=index">
+          <td>{{i+1}}</td>
           <td>{{item.patientName}}</td>
           <td>{{item.appointmentDate}}</td>
           <td>{{item.doctorName}}</td>
