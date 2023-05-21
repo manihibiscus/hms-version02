@@ -6,6 +6,7 @@
   <table>
     <thead>
       <th>S.No</th>
+      <th>Patient ID</th>
       <th>Patient name</th>
       <th>Contact no</th>
       <th>Doctor Name</th>
@@ -14,7 +15,8 @@
       <th>Generate Bills</th>
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of getBills" class="tableScroll">
+      <tr *ngFor="let appointment of getBills let i=index" class="tableScroll">
+        <td>{{i+1}}</td>
         <td>{{appointment.id}}</td>
         <td>{{appointment.name}}</td>
         <td>{{appointment.mobileNo}}</td>

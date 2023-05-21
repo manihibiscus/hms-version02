@@ -35,7 +35,7 @@
     </div>
     </div>
 
-    <div class="field7">
+    <div class="field7" (change)="note()">
       <label for="">Choose date</label>
       <!-- <div class="input"><input type="date" [disabled]="!filterDates()" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div> -->
       <div class="input"><input type="date" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" [disabled]="Attempt"/></div>
@@ -67,7 +67,7 @@
       <option value="30">30</option>
       <option value="45">45</option>
     </select>
-    <select  #dAmPm="ngModel" required name="appointmentAMPM" [(ngModel)]="appointmetnAmPM" [disabled]="Attempt">
+    <select  #dAmPm="ngModel" required name="appointmentAMPM" [(ngModel)]="appointmetnAmPM" [disabled]="Attempt" (change)="note2()">
       <!-- <option value="" disabled selected >AM/PM</option> -->
       <option value="AM" [hidden]="amStatus">AM</option>
       <option value="PM" [hidden]="pmStatus">PM</option>
@@ -89,6 +89,9 @@
     <button class="makeaAppointment" [disabled]="!appointmentForm.valid" (click)="appointmentSubmit()" [disabled]="Attempt">MAKE APPOINTMENT</button>
   </div>
 </form>
+<div class="notice" *ngIf="notice" style="width: 100%; color: green; font-weight: bolder;">
+  <p >Check the working hours details of the doctor below and select the time</p>
+</div>
 <div class="doctor">
   <div *ngFor="let det of storedField" id="ref">
     <div class="box">

@@ -15,21 +15,21 @@
       "cpassword": "Sathish@777",
       "id": 1,
       "mobileno": "8072702981",
-      "appointmentDate": "2023-05-19",
-      "appointmentTime": "11:15AM",
-      "say": "",
-      "doctorField": "Cosmic",
-      "doctorName": "Dr. Mythili M MD",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "ss",
+      "doctorField": "",
+      "doctorName": "",
       "attemptStatus": "false",
-      "appStatus": "Cancelled! (Try again)",
+      "appStatus": "",
       "consultingFee": "",
       "otherFee": "",
       "Total": "",
-      "remarkMessage": "Not Available",
+      "remarkMessage": "",
       "cName": "SATHISH KUMAR",
       "cMobileNo": "8072702981",
-      "cDate": "2023-05-19",
-      "cdoctorName": "Dr. Mythili M MD"
+      "cDate": "2023-05-22",
+      "cdoctorName": "Dr. Thilagavathi V MS"
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -83,8 +83,10 @@
       "doctorField": "Cardiologist",
       "doctorName": "Dr. Naveen S MS",
       "attemptStatus": "true",
-      "appStatus": "Accepted for appointment",
-      "Total": ""
+      "appStatus": "Payment Pending",
+      "Total": "₹164",
+      "consultingFee": "₹82",
+      "otherFee": "₹82"
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -164,8 +166,10 @@
       "doctorField": "General doctor",
       "doctorName": "Dr. Mekala V MBBS",
       "attemptStatus": "true",
-      "appStatus": "Accepted for appointment",
-      "Total": ""
+      "appStatus": "Payment Pending",
+      "Total": "₹90",
+      "consultingFee": "₹85",
+      "otherFee": "₹5"
     },
     {
       "patientName": "NAVANNETH",
@@ -487,34 +491,27 @@
       "reporting": "Sended",
       "id": 5,
       "remarkMessage": "Not Available"
-    }
-  ],
-  "acceptRequest": [
-    {
-      "name": "DINESH",
-      "mobileNo": "9750051165",
-      "date": "2023-05-17",
-      "timeing": "12:00PM",
-      "problem": "Cardio Theraphy",
-      "doctorName": "Dr. Naveen S MS",
-      "doctorField": "Cardiologist",
-      "acceptanceStatus": "Pending",
-      "reporingStatus": "pending",
-      "id": 1
     },
     {
-      "name": "MANIKANDAN",
-      "mobileNo": "8072393102",
-      "date": "2023-05-18",
-      "timeing": "12:15PM",
-      "problem": "",
-      "doctorName": "Dr. Mekala V MBBS",
-      "doctorField": "General doctor",
-      "acceptanceStatus": "Pending",
-      "reporingStatus": "pending",
-      "id": 3
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-22",
+      "cdoctorName": "Dr. Madhavi M MS",
+      "reporting": "Sended",
+      "id": 6,
+      "remarkMessage": "not Available"
+    },
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-05-22",
+      "cdoctorName": "Dr. Thilagavathi V MS",
+      "reporting": "Sended",
+      "id": 7,
+      "remarkMessage": "INvalid"
     }
   ],
+  "acceptRequest": [],
   "billDetails": [
     {
       "patientId": 1,
@@ -636,6 +633,90 @@
       "Total": "₹1000",
       "status": "sended to patient",
       "id": 10
+    },
+    {
+      "patientId": 4,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹45",
+      "otherFee": "₹45",
+      "Total": "₹90",
+      "status": "sended to patient",
+      "id": 11
+    },
+    {
+      "patientId": 4,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹800",
+      "otherFee": "₹20",
+      "Total": "₹820",
+      "status": "sended to patient",
+      "id": 12
+    },
+    {
+      "patientId": 4,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Mathumitha V MD",
+      "doctorField": "Dentist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹800",
+      "otherFee": "₹20",
+      "Total": "₹820",
+      "status": "sended to patient",
+      "id": 13
+    },
+    {
+      "patientId": 1,
+      "name": "DINESH",
+      "doctorName": "Dr. Naveen S MS",
+      "doctorField": "Cardiologist",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹82",
+      "otherFee": "₹82",
+      "Total": "₹164",
+      "status": "sended to patient",
+      "id": 14
+    },
+    {
+      "patientId": 3,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Mekala V MBBS",
+      "doctorField": "General doctor",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹85",
+      "otherFee": "₹5",
+      "Total": "₹90",
+      "status": "sended to patient",
+      "id": 15
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Naveen S MS",
+      "doctorField": "Cardiologist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹52",
+      "otherFee": "₹22",
+      "Total": "₹74",
+      "status": "sended to patient",
+      "id": 16
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Kavitha V MD",
+      "doctorField": "Gynecologist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹44",
+      "otherFee": "₹4",
+      "Total": "₹48",
+      "status": "sended to patient",
+      "id": 17
     }
   ],
   "forgotPassDetails": [],
@@ -756,6 +837,45 @@
       "Total": "₹1000",
       "paymentStatus": "Success",
       "id": 9
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-05-22",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Mathumitha V MD",
+      "consultingFee": "₹800",
+      "otherFee": "₹20",
+      "Total": "₹820",
+      "paymentStatus": "Success",
+      "id": 10
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-05-22",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Naveen S MS",
+      "consultingFee": "₹52",
+      "otherFee": "₹22",
+      "Total": "₹74",
+      "paymentStatus": "Success",
+      "id": 11
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-05-23",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Kavitha V MD",
+      "consultingFee": "₹44",
+      "otherFee": "₹4",
+      "Total": "₹48",
+      "paymentStatus": "Success",
+      "id": 12
     }
   ]
 }

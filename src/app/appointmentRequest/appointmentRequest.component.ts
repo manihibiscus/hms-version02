@@ -86,7 +86,8 @@ export class AppointmentRequestComponent implements OnInit {
       doctorField:this.appointmentField,
       doctorName:this.appointmentDocName,
       attemptStatus:"true",
-      appStatus:this.appStatus
+      appStatus:this.appStatus,
+      remarkMessage:""
     }
     this.appointment.postAppointmentDetails(body).subscribe(data=>{
       alert("Appointment Submitted");
@@ -162,5 +163,13 @@ activateDb(){
     this.storedField=data;
   })
 }
-
+notice:boolean=false
+note(){
+  this.notice=true
+  // alert("Check the working hours details of the doctor below and select the time")
+}
+note2(){
+  this.notice=false
+  // alert("Check the working hours details of the doctor below and select the time")
+}
 }

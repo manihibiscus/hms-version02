@@ -182,6 +182,7 @@ export class ViewSlotComponent {
     }
     this.remark.updateRemark(body,getValue.id).subscribe(()=>{
       alert("Remark Updated");
+      this.ngOnInit();
     })
     this.updateLoggedInUser(getValue,cancleDetails);
   }

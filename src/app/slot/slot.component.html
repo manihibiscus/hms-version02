@@ -15,8 +15,8 @@
       <th>Select</th>
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of slotAllocated">
-        <td>{{appointment.id}}</td>
+      <tr *ngFor="let appointment of slotAllocated let i =index">
+        <td>{{i+1}}</td>
         <td>{{appointment.name}}</td>
         <td>{{appointment.mobileNo}}</td>
         <td>{{appointment.doctorName}}</td>

@@ -15,8 +15,8 @@
       <th>Select</th>
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of getAppointment">
-        <td>{{appointment.id}}</td>
+      <tr *ngFor="let appointment of getAppointment let i =index">
+        <td>{{i+1}}</td>
         <td>{{appointment.patientName}}</td>
         <td>{{appointment.mobileno}}</td>
         <td>{{appointment.doctorField}}</td>
@@ -50,8 +50,8 @@
       <!-- <th>Health issue</th> -->
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of acceptedAppointment">
-        <td>{{appointment.id}}</td>
+      <tr *ngFor="let appointment of acceptedAppointment let i =index">
+        <td>{{i+1}}</td>
         <td>{{appointment.name}}</td>
         <td>{{appointment.mobileNo}}</td>
         <td>{{appointment.doctorName}}</td>
@@ -84,8 +84,8 @@
       <!-- <th>Health issue</th> -->
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of canceledAppointment"[formGroup]="remarkMessage" >
-        <td>{{appointment.id}}</td>
+      <tr *ngFor="let appointment of canceledAppointment let i =index "[formGroup]="remarkMessage"  >
+        <td>{{i+1}}</td>
         <td>{{appointment.cName}}</td>
         <td>{{appointment.cMobileNo}}</td>
         <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>

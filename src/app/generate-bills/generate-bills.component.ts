@@ -116,10 +116,18 @@ export class GenerateBillsComponent {
   }
   showPatientBillObj : ShowBillToPatient = new ShowBillToPatient();
   sendToPatient(userId:any, billData:any){
-    this.showPatientBillObj.consultingFee=this.generateBillDetailsObj.consultingFee;
-    this.showPatientBillObj.otherFee=this.generateBillDetailsObj.otherFee;
-    this.showPatientBillObj.Total=this.generateBillDetailsObj.Total;
-    this.generateBills.updatePatientRegistration(this.showPatientBillObj,userId.id).subscribe(()=>{
+    var cost={
+      consultingFee:billData.consultingFee,
+      otherFee:billData.otherFee,
+      Total:billData.Total
+    }
+
+    // ------ This is a another Method to collet the data using the seperate ts class and use it-------
+
+    // this.showPatientBillObj.consultingFee=this.generateBillDetailsObj.consultingFee;
+    // this.showPatientBillObj.otherFee=this.generateBillDetailsObj.otherFee;
+    // this.showPatientBillObj.Total=this.generateBillDetailsObj.Total;
+    this.generateBills.updatePatientRegistration(cost,userId.id).subscribe(()=>{
       alert("Updated to PatientRegister");
     });
     var val={
@@ -133,7 +141,6 @@ export class GenerateBillsComponent {
     }
     this.http.patch<any>("http://localhost:3000/billDetails/"+billData.id,body).subscribe(()=>{
       alert("Patched to billDetails DB ")
-      this.ngOnInit();
     });
   }
   deleteGenerate(value:any){
