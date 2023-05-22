@@ -6,22 +6,24 @@
   <table>
     <thead>
       <th>S.No</th>
-      <th>Patient ID</th>
+      <!-- <th>Patient ID</th> -->
       <th>Patient name</th>
       <th>Contact no</th>
       <th>Doctor Name</th>
       <th>Doctor Field</th>
+      <th>Appointment Date</th>
       <th>Treatment Status</th>
       <th>Generate Bills</th>
     </thead>
     <tbody>
       <tr *ngFor="let appointment of getBills let i=index" class="tableScroll">
         <td>{{i+1}}</td>
-        <td>{{appointment.id}}</td>
+        <!-- <td>{{appointment.id}}</td> -->
         <td>{{appointment.name}}</td>
         <td>{{appointment.mobileNo}}</td>
         <td>{{appointment.doctorName}}</td>
         <td>{{appointment.doctorField}}</td>
+        <td>{{appointment.date}}</td>
         <td>{{appointment.acceptanceStatus}}</td>
         <!-- <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td> -->
         <!-- <td>{{appointment.timeing}}</td> -->
@@ -36,10 +38,10 @@
     <h2 style="text-align: center;">Generate Recepit</h2>
     <h5 style="padding-left: 355px;margin-top: 0px;">Date: {{dateNow| date:"dd/MM/YYYY"}}</h5>
     <small style="padding-top:0;padding-left: 355px;margin-top: 0px;">Time: {{dateNow| date: 'shortTime'}}</small>
-    <div class="idField">
+    <!-- <div class="idField">
       <label for="">Patient Id: </label>
       <input type="number" class="id-box" formControlName="patientId">
-    </div>
+    </div> -->
     <div class="split2">
     <div class="Box1">
     <div class="field">
@@ -95,12 +97,13 @@
         <th>Contact no</th>
         <th>Doctor Name</th>
         <th>Doctor Field</th>
+        <th>Appointment Date</th>
         <th>Consulting Fee</th>
         <th>Other Fee</th>
         <th>Total</th>
         <th>Status</th>
         <th>Select</th>
-        <!-- <th>Payment Status</th> -->
+        <th>Payment Status</th>
       </thead>
       <tbody>
         <tr *ngFor="let appointment of getReceipterDetails">
@@ -109,16 +112,17 @@
           <td>{{appointment.mobileNo}}</td>
           <td>{{appointment.doctorName}}</td>
           <td>{{appointment.doctorField}}</td>
+          <td>{{appointment.appointmentDate}}</td>
           <td>{{appointment.consultingFee}}</td>
           <td>{{appointment.otherFee}}</td>
           <td>{{appointment.Total}}</td>
           <td>{{appointment.status}}</td>
-          <!-- <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
+          <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
           green:appointment.paymentStatus == 'Paid'} ">
             {{appointment.paymentStatus}}
-          </td> -->
+          </td>
           <td>
-            <button (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' ">ADD PATIENT</button>
+            <button (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' || appointment.paymentStatus=='Paid' ">ADD PATIENT</button>
           </td>
         </tr>
       </tbody>

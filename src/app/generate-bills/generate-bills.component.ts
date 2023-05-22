@@ -34,7 +34,8 @@ export class GenerateBillsComponent {
     doctorField:[,[Validators.required]],
     contactNo:[,[Validators.required]],
     consultingFee:[,[Validators.required]],
-    otherFee:[,[Validators.required]]
+    otherFee:[,[Validators.required]],
+    appointmentDate:[,]
   })
 
   generateBillDetailsObj : GenerateBills=new GenerateBills()
@@ -75,6 +76,8 @@ export class GenerateBillsComponent {
     this.billForm.controls['doctorName'].setValue(row.doctorName);
     this.billForm.controls['doctorField'].setValue(row.doctorField);
     this.billForm.controls['contactNo'].setValue(row.mobileNo);
+    this.billForm.controls['appointmentDate'].setValue(row.date);
+
       // alert(acceptance);
     }
     else{
@@ -91,6 +94,7 @@ export class GenerateBillsComponent {
     this.generateBillDetailsObj.otherFee= '₹'+this.billForm.value.otherFee;
     this.generateBillDetailsObj.Total='₹'+this.result;
     this.generateBillDetailsObj.status=" Still not send to patient";
+    this.generateBillDetailsObj.appointmentDate=this.billForm.value.appointmentDate;
     let ref=document.getElementById("ref");
     ref?.click();
     this.generateBills.postBillDetails(this.generateBillDetailsObj).subscribe(res=>{
@@ -117,9 +121,11 @@ export class GenerateBillsComponent {
   showPatientBillObj : ShowBillToPatient = new ShowBillToPatient();
   sendToPatient(userId:any, billData:any){
     var cost={
+      doctorName:billData.doctorName,
       consultingFee:billData.consultingFee,
       otherFee:billData.otherFee,
-      Total:billData.Total
+      Total:billData.Total,
+      appointmentDate:billData.appointmentDate
     }
 
     // ------ This is a another Method to collet the data using the seperate ts class and use it-------
@@ -143,11 +149,13 @@ export class GenerateBillsComponent {
       alert("Patched to billDetails DB ")
     });
   }
+
   deleteGenerate(value:any){
     this.generateBills.deleteGeneratedBills(value).subscribe(data=>{
       this.ngOnInit();
     })
   }
+
   // patchToPatient(Userid:any){
   //   var body={
   //     appStatus:"Payment Pending"

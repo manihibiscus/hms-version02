@@ -88,13 +88,25 @@ export class PayBillsComponent implements OnInit {
       alert("Posted to payHistory DB");
       // this.showStatus="true";
     });
-    // this.unPaid()
-    this.sample(user);
+    this.unPaid()
   }
+
+  // Send the message to ADMIN
   unPaid(){
+    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe((get)=>{
+      const getting=get.find((b:any)=>{
+        return this.loggedInUser.phone==b.phone
+      })
+      if(getting){
+        this.compare(getting)
+      }
+    })
+  }
+  compare(value:any){
     this.http.get<any>("http://localhost:3000/billDetails").subscribe((val)=>{
       const findId=val.find((a:any)=>{
-        return this.loggedInUser.phone===a.mobileNo
+        this.ngOnInit
+        return (a.mobileNo===value.phone && a.appointmentDate===value.appointmentDate && a.Total===value.Total)
       });
       if(findId){
         this.paid(findId);
@@ -107,9 +119,11 @@ export class PayBillsComponent implements OnInit {
     }
     this.http.patch<any>("http://localhost:3000/billDetails/"+findId.id,body).subscribe(()=>{
       alert("Paided to admin");
+      this.sample();
+
     })
   }
-  sample(user:any){
+  sample(){
     var value={
       appointmentDate:"",
       doctorField:"",
@@ -128,7 +142,7 @@ export class PayBillsComponent implements OnInit {
     //   });
     //   if(patientFind){
     //     this.historyPayment=patientFind;
-        this.http.patch<any>(`${this.baseUrl}/patientRegistration/${user.id}`,value).subscribe(()=>{
+        this.http.patch<any>(`${this.baseUrl}/patientRegistration/${this.loggedInUser.id}`,value).subscribe(()=>{
           alert("Updated to Patient DB");
           this.ngOnInit();
         })

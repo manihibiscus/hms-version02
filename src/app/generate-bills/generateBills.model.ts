@@ -9,6 +9,7 @@ export class GenerateBills{
     Total:any="";
     status:any="";
     paymentStatus:any="Unpaid";
+    appointmentDate:any=""; 
 }
 
 
