@@ -88,8 +88,26 @@ export class PayBillsComponent implements OnInit {
       alert("Posted to payHistory DB");
       // this.showStatus="true";
     });
+    // this.unPaid()
     this.sample(user);
-
+  }
+  unPaid(){
+    this.http.get<any>("http://localhost:3000/billDetails").subscribe((val)=>{
+      const findId=val.find((a:any)=>{
+        return this.loggedInUser.phone===a.mobileNo
+      });
+      if(findId){
+        this.paid(findId);
+      }
+    });
+  }
+  paid(findId:any){
+    var body={
+      paymentStatus:"Paid"
+    }
+    this.http.patch<any>("http://localhost:3000/billDetails/"+findId.id,body).subscribe(()=>{
+      alert("Paided to admin");
+    })
   }
   sample(user:any){
     var value={

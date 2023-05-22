@@ -100,6 +100,7 @@
         <th>Total</th>
         <th>Status</th>
         <th>Select</th>
+        <!-- <th>Payment Status</th> -->
       </thead>
       <tbody>
         <tr *ngFor="let appointment of getReceipterDetails">
@@ -112,6 +113,10 @@
           <td>{{appointment.otherFee}}</td>
           <td>{{appointment.Total}}</td>
           <td>{{appointment.status}}</td>
+          <!-- <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
+          green:appointment.paymentStatus == 'Paid'} ">
+            {{appointment.paymentStatus}}
+          </td> -->
           <td>
             <button (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' ">ADD PATIENT</button>
           </td>
