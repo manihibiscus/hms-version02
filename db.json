@@ -13,7 +13,19 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 1
+      "id": 1,
+      "mobileno": "8072702981",
+      "appointmentDate": "2023-05-27",
+      "appointmentTime": "10:15AM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Mekala V MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Treatment was Completed",
+      "remarkMessage": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -119,7 +131,19 @@
       "insurance": "NO",
       "password": "Mani@777",
       "cpassword": "Mani@777",
-      "id": 7
+      "id": 7,
+      "mobileno": "8072393102",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "remarkMessage": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
     },
     {
       "patientName": "NAVANNETH",
@@ -379,7 +403,20 @@
       "remarkMessage": "Not Available"
     }
   ],
-  "acceptRequest": [],
+  "acceptRequest": [
+    {
+      "name": "SATHISH KUMAR",
+      "mobileNo": "8072702981",
+      "date": "2023-05-27",
+      "timeing": "10:15AM",
+      "problem": "",
+      "doctorName": "Dr. Mekala V MBBS",
+      "doctorField": "General doctor",
+      "acceptanceStatus": "success",
+      "reporingStatus": "Reported to admin",
+      "id": 1
+    }
+  ],
   "billDetails": [
     {
       "patientId": 1,
@@ -408,9 +445,42 @@
       "paymentStatus": "Paid",
       "appointmentDate": "2023-05-24",
       "id": 2
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Kavitha V MD",
+      "doctorField": "Gynecologist",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹20",
+      "otherFee": "₹10",
+      "Total": "₹30",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-05-24",
+      "id": 3
+    },
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Mathumitha V MD",
+      "doctorField": "Dentist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-05-27",
+      "id": 4
     }
   ],
-  "forgotPassDetails": [],
+  "forgotPassDetails": [
+    {
+      "userId": "manihibiscus@gmail.com",
+      "id": 1
+    }
+  ],
   "paymentHistory": [
     {
       "patientName": "NAVEEN",
@@ -437,6 +507,32 @@
       "Total": "₹21",
       "paymentStatus": "Success",
       "id": 2
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-05-24",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Kavitha V MD",
+      "consultingFee": "₹20",
+      "otherFee": "₹10",
+      "Total": "₹30",
+      "paymentStatus": "Success",
+      "id": 3
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-05-27",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Mathumitha V MD",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "paymentStatus": "Success",
+      "id": 4
     }
   ]
 }
