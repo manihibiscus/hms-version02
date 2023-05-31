@@ -147,6 +147,7 @@ export class GenerateBillsComponent {
     }
     this.http.patch<any>("http://localhost:3000/billDetails/"+billData.id,body).subscribe(()=>{
       alert("Patched to billDetails DB ")
+      this.ngOnInit();
     });
   }
 

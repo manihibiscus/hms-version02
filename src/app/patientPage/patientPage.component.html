@@ -8,7 +8,7 @@
     <thead>
       <th>Patient no</th>
       <th>Patient name</th>
-      <th>Contact no</th>
+      <!-- <th>Contact no</th> -->
       <th>Doctor Name</th>
       <th>Doctor Field</th>
       <th>Appointment date</th>
@@ -20,8 +20,8 @@
     <tbody>
       <tr>
         <td>{{refereshData.id}}</td>
-        <td>{{refereshData.patientName}}</td>
-        <td>{{refereshData.phone}}</td>
+        <td>{{refereshData.patientName +' '+ refereshData.fatherName}}</td>
+        <!-- <td>{{refereshData.phone}}</td> -->
         <td>{{refereshData.doctorName}}</td>
         <td>{{refereshData.doctorField}}</td>
         <td>{{refereshData.appointmentDate}}</td>
@@ -46,7 +46,7 @@
     <thead>
       <th>Serial no</th>
       <th>Patient name</th>
-      <th>Contact no</th>
+      <!-- <th>Contact no</th> -->
       <th>Doctor Name</th>
       <th>Doctor Field</th>
       <th>Consulting Fees</th>
@@ -58,7 +58,7 @@
       <tr *ngFor="let item of completed; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{item.name}}</td>
-        <td>{{item.mobileNo}}</td>
+        <!-- <td>{{item.mobileNo}}</td> -->
         <td>{{item.doctorName}}</td>
         <td>{{item.doctorField}}</td>
         <td>{{item.consultingFee}}</td>
@@ -77,7 +77,7 @@
     <thead>
       <th>Serial no</th>
       <th>Patient name</th>
-      <th>Contact no</th>
+      <!-- <th>Contact no</th> -->
       <th>Appointment date</th>
       <th>Doctor Name</th>
       <th>Remarks</th>
@@ -89,7 +89,7 @@
       <tr *ngFor="let item of cancel; let i = index">
         <td>{{i + 1}}</td>
         <td>{{item.cName}}</td>
-        <td>{{item.cMobileNo}}</td>
+        <!-- <td>{{item.cMobileNo}}</td> -->
         <td>{{item.cDate | date: 'dd/MM/yyyy'}}</td>
         <td>{{item.cdoctorName}}</td>
         <td>{{item.remarkMessage}}</td>
