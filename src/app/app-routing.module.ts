@@ -18,6 +18,7 @@ import { GenerateBillsComponent } from './generate-bills/generate-bills.componen
 import { SlotComponent } from './slot/slot.component';
 import { PayBillsComponent } from './payBills/payBills.component';
 import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.component';
+import { ConformationGuard } from './conformation.guard';
 
 
 const routes: Routes = [
@@ -79,7 +80,8 @@ component:ViewQueryComponent
 },
 {
   path:"patientregister",
-  component:PatientRegistrationComponent
+  component:PatientRegistrationComponent,
+  canDeactivate:[ConformationGuard]
 },
 {
   path:"appointment",

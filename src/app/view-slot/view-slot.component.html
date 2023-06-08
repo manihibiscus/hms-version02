@@ -1,17 +1,17 @@
 <app-adminHeader></app-adminHeader>
 <!-- {{getQuery|json}} -->
-<h2 style="text-align: center;">Requested Slot</h2>
+<h2 style="text-align: center;color: #071468;">Requested Slot</h2>
 <form class="form">
   <table>
-    <thead>
+    <thead style="color: #071468;">
       <th>S.No</th>
-      <th>Patient name</th>
-      <th>Contact no</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
       <th>Medical Field</th>
       <th>Doctor Name</th>
-      <th>Appointment date</th>
-      <th>Appointment time</th>
-      <th>Health issue</th>
+      <th>Appointment Date</th>
+      <th>Appointment Time</th>
+      <!-- <th>Health issue</th> -->
       <th>Select</th>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
         <td>{{appointment.doctorName}}</td>
         <td>{{appointment.appointmentDate}}</td>
         <td>{{appointment.appointmentTime}}</td>
-        <td>{{appointment.say}}</td>
+        <!-- <td>{{appointment.say}}</td> -->
         <td>
           <button class="back"   (click)="accept(appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate,appointment.appointmentTime, appointment.say, appointment.doctorName, appointment.doctorField)">Accept</button>
           <button class="back"   (click)="cancel(appointment,appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate, appointment.doctorName )">Cancel</button>
@@ -35,18 +35,18 @@
 <br>
 <br>
 <br>
-<h2 style="text-align: center;">Accepted Slot</h2>
+<h2 style="text-align: center;color: #071468;">Accepted Slot</h2>
 
 <form class="form">
   <table>
-    <thead>
+    <thead style="color: #071468;">
       <th>S.No</th>
-      <th>Patient name</th>
-      <th>Contact no</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
       <th>Doctor Name</th>
       <th>Doctor Field</th>
-      <th>Appointment date</th>
-      <th>Appointment time</th>
+      <th>Appointment Date</th>
+      <th>Appointment Time</th>
       <!-- <th>Health issue</th> -->
     </thead>
     <tbody>
@@ -66,14 +66,14 @@
 <br>
 <br>
 <br>
-<h2 style="text-align: center;">Cancelled Slot</h2>
+<h2 style="text-align: center;color: #071468;">Cancelled Slot</h2>
 <form class="form">
   <table>
-    <thead>
+    <thead style="color: #071468;">
       <th>S.No</th>
-      <th>Patient name</th>
-      <th>Contact no</th>
-      <th>Appointment date</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Appointment Date</th>
       <th>Doctor Name</th>
       <th>Remarks</th>
       <th>Report to Patinet</th>

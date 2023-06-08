@@ -33,8 +33,9 @@ import { SlotComponent } from './slot/slot.component';
 // import { DialogBillsComponent } from './dialogBills/dialogBills.component';
 import { PayBillsComponent } from './payBills/payBills.component';
 import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.component';
+import { ConformationGuard } from './conformation.guard';
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
       ContactUsPageComponent,
       AboutUsPageComponent,
@@ -71,7 +72,7 @@ import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.compone
     // MatSortModule
 
     ],
-  providers: [],
+  providers: [ConformationGuard],
   bootstrap:[AppComponent]
 })
 export class AppModule { }

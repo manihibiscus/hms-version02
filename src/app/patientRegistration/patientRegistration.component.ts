@@ -5,13 +5,14 @@ import { RegisterServiceService } from '../registerService.service';
 import { Router } from '@angular/router';
 import { confirmedValidator } from '../confrimPass';
 import { HttpClient } from '@angular/common/http';
+import { IDeactivateComponent } from '../conformation.guard';
 
 @Component({
   selector: 'app-patientRegistration',
   templateUrl: './patientRegistration.component.html',
   styleUrls: ['./patientRegistration.component.css']
 })
-export class PatientRegistrationComponent implements OnInit {
+export class PatientRegistrationComponent implements OnInit,IDeactivateComponent {
 
   // patName:any="";
   // patFathName:any="";
@@ -28,7 +29,10 @@ export class PatientRegistrationComponent implements OnInit {
     private service: RegisterServiceService,
     private route:Router,
     private http:HttpClient) { }
-  PatientRegister=this.formBuilder.group({
+
+    clickStatus:any="false"
+
+    PatientRegister=this.formBuilder.group({
     patientName:[,[Validators.required,]],
     fatherName:[,[Validators.required]],
     gender:[,[Validators.required]],
@@ -46,6 +50,7 @@ export class PatientRegistrationComponent implements OnInit {
   )
 
   registrr(){
+    this.clickStatus="true"
     // var value1=this.patName.substring(0,3).toUpperCase();
     // var value2=this.patPhone.substring(6);
     // var result=value1+value2;
@@ -96,5 +101,13 @@ export class PatientRegistrationComponent implements OnInit {
   ngOnInit() {
 
   }
-
+  canExit(){
+    if(this.PatientRegister.invalid)
+      {
+      return confirm("Your content was not saved");
+    }
+    else{
+      return true;
+    }
+  }
 }

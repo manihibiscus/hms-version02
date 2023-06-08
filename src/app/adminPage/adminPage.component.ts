@@ -53,8 +53,8 @@ export class AdminPageComponent implements OnInit {
     patient.isEdit=true
   }
   deleted(patient:any){
-
+    this.http.delete<any>("http://localhost:3000/patientRegistration/"+patient.id).subscribe(()=>{
+      alert("Deleted");
+    })
   }
-
-
 }

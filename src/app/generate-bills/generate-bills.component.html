@@ -4,11 +4,11 @@
 <form class="form">
   <div class="split">
   <table>
-    <thead>
+    <thead style="color: #071468;">
       <th>S.No</th>
       <!-- <th>Patient ID</th> -->
-      <th>Patient name</th>
-      <th>Contact no</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
       <th>Doctor Name</th>
       <th>Doctor Field</th>
       <th>Appointment Date</th>
@@ -35,7 +35,7 @@
     </tbody>
   </table>
   <div class="generateBills" [formGroup]="billForm" >
-    <h2 style="text-align: center;">Generate Recepit</h2>
+    <h2 style="text-align: center;color: #071468;">Generate Recepit</h2>
     <h5 style="padding-left: 355px;margin-top: 0px;">Date: {{dateNow| date:"dd/MM/YYYY"}}</h5>
     <small style="padding-top:0;padding-left: 355px;margin-top: 0px;">Time: {{dateNow| date: 'shortTime'}}</small>
     <!-- <div class="idField">
@@ -45,19 +45,19 @@
     <div class="split2">
     <div class="Box1">
     <div class="field">
-      <label for="">Patient Name: </label>
+      <label for="" style="color: #071468;">Patient Name: </label>
       <input type="text" class="inp-box" formControlName="patinetName">
     </div>
     <div class="field">
-      <label for="">Doctor Name: </label>
+      <label for="" style="color: #071468;">Doctor Name: </label>
       <input type="text" class="inp-box" formControlName="doctorName">
     </div>
     <div class="field">
-      <label for="">Doctor Field: </label>
+      <label for="" style="color: #071468;">Doctor Field: </label>
       <input type="text" class="inp-box" formControlName="doctorField">
     </div>
     <div class="field">
-      <label for="">Contact No: </label>
+      <label for="" style="color: #071468;">Contact No: </label>
       <input type="text" class="inp-box" formControlName="contactNo">
     </div>
     <!-- <div class="dName">
@@ -67,15 +67,15 @@
   </div>
   <div class="Box2">
  <div class="field2">
-    <label for="">Consulting Fee: </label>
+    <label for="" style="color: #071468;">Consulting Fee: </label>
     <input type="number" class="amount" #consultingfee formControlName="consultingFee">
   </div>
   <div class="field2">
-    <label for="">Other Fee: </label>
+    <label for="" style="color: #071468;">Other Fee: </label>
     <input type="number" class="amount" #otherfee formControlName="otherFee" id="ref" (change)="sum(consultingfee.value,otherfee.value)"  >
   </div>
   <div class="field2">
-    <label for="">Total Fee: {{result|currency:'INR'}} </label><br><br>
+    <label for="" style="color: #071468;">Total Fee: {{result|currency:'INR'}} </label><br><br>
     <!-- <input type="number" class="amount" > -->
   </div>
   <br>
@@ -89,12 +89,14 @@
 <br>
 </form>
 <div class="div">
+  <h2 style="color: #071468; text-align: center;">Payment Details</h2>
+
   <form class="form">
     <table>
-      <thead>
+      <thead style="color: #071468;">
         <th>S.No</th>
-        <th>Patient name</th>
-        <th>Contact no</th>
+        <th>Patient Name</th>
+        <th>Contact No</th>
         <th>Doctor Name</th>
         <th>Doctor Field</th>
         <th>Appointment Date</th>
