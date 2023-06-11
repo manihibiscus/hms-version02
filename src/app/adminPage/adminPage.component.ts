@@ -32,7 +32,6 @@ export class AdminPageComponent implements OnInit {
       alert('You are Loggedout. Login to continue');
       this.route.navigate(['/login']);
     }
-
       this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
         this.registeredCount=data
       });
@@ -55,6 +54,7 @@ export class AdminPageComponent implements OnInit {
   deleted(patient:any){
     this.http.delete<any>("http://localhost:3000/patientRegistration/"+patient.id).subscribe(()=>{
       alert("Deleted");
+      this.ngOnInit();
     })
   }
 }

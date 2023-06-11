@@ -94,7 +94,10 @@ export class LoginPageComponent implements OnInit {
   refresh(): void {
     window.location.reload();
   }
+  // password !: string;
+  show: boolean = false;
+
+  visiblePassword() {
+    this.show = !this.show;
+  }
 }
-
-
-

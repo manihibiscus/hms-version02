@@ -26,4 +26,5 @@ export class DoctorPageComponent implements OnInit {
         this.patient=data
     })
   }
+  
 }

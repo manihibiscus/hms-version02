@@ -88,7 +88,7 @@ export class PatientRegistrationComponent implements OnInit,IDeactivateComponent
     else{
       this.service.postRegDet(this.PatientRegister.value).subscribe(data =>{
         alert("Registerd Sucessfully Press ok to Login");
-        this.PatientRegister.reset();
+        // this.PatientRegister.reset();
         this.route.navigate(['login']);
       }, err=>{
         alert("Something went wrong");

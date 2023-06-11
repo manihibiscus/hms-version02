@@ -92,17 +92,21 @@ span{
 .Goto ul li a{
   text-decoration: none;
   font-size: 14px;
-  color: #7c3c11;
-  text-decoration: underline;
+  color: #233863;
+  text-decoration: none;
+  /* font-weight: bolder; */
 
 }
 .Goto ul li a:hover{
   color: #233863;
+  text-decoration: underline;
 }
 .forgot{
   font-size: 14px;
-  color: #7c3c11;
-  text-decoration: underline;
+  /* font-weight: bolder; */
+  /* color: #7c3c11; */
+  color: #233863;
+  text-decoration: none;
 }
 
 .forgot:hover{

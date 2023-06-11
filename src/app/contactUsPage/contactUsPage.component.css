@@ -60,7 +60,7 @@ text-align: center;
   background-color: white;
   /* overflow: visible; */
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 33.3% 33.3% 32.3%;
   grid-column-gap: 10px;
 
 }
