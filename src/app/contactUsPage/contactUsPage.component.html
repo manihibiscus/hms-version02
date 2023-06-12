@@ -37,12 +37,13 @@
       <div class="email">
         <label>Name :  </label>
         <input type="text" class="field" name="qName" #name="ngModel" [(ngModel)]="contactName" required
-        pattern="^[A-Za-z ]+$" placeholder="Enter your name"
+        pattern="^[A-Za-z ]+$" placeholder="Enter your name" minlength="3"
         />
         <!-- <textarea name="" id="" cols="30" rows="5" formControlName="message"></textarea> -->
       </div>
       <div *ngIf="name.errors && (name.dirty)" class="error">
         <div [hidden]="!name.errors['required']">Please Enter Name</div>
+        <div [hidden]="!name.errors['minlength']">Please Valid Name</div>
         <div [hidden]="!name.errors['pattern']">Enter Only Alphabets </div>
       </div>
       <br>

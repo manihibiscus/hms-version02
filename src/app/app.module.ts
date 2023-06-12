@@ -64,13 +64,11 @@ import { ConformationGuard } from './conformation.guard';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
-
     // MatInputModule,
     // MatFormFieldModule,
     // MatTableModule,
     // MatPaginatorModule,
     // MatSortModule
-
     ],
   providers: [ConformationGuard],
   bootstrap:[AppComponent]

@@ -103,10 +103,9 @@ text-align: center;
   border-radius: 8px;
 }
 .error{
-  padding-left: 55px;
+  padding-left:100px;
   color: red;
   font-size: 12px;
-  padding-left: 175px;
   padding-top: 4px;
 }
 .field

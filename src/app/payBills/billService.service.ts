@@ -5,6 +5,7 @@ import { Observable, map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class BillServiceService {
 url:any="http://localhost:3000/paymentHistory";
 constructor(private http:HttpClient) { }
@@ -18,4 +19,5 @@ searchPayment(mobile: any): Observable<any> {
     })
   );
 }
+
 }

@@ -12,7 +12,6 @@
           <input type="text" class="inp-box" name="user"
           placeholder="Enter Email id " formControlName="userId"
         pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
-        pattern2="^[AI][0-9]{4}$"
         /> <br>
           <div class="error" *ngIf="loginForm.controls['userId'].dirty">
             <p *ngIf="loginForm.controls['userId'].errors?.['required']">
