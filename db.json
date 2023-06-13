@@ -15,13 +15,13 @@
       "cpassword": "Sathish@777",
       "id": 1,
       "mobileno": "8072702981",
-      "appointmentDate": "2023-06-13",
-      "appointmentTime": "12:15PM",
+      "appointmentDate": "",
+      "appointmentTime": "",
       "say": "General Session",
-      "doctorField": "Pediatrician",
-      "doctorName": "Dr. Madhavi M MS",
-      "attemptStatus": "true",
-      "appStatus": "Accepted for appointment",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
       "remarkMessage": "",
       "consultingFee": "",
       "otherFee": "",
@@ -117,13 +117,13 @@
       "cpassword": "Mani@777",
       "id": 7,
       "mobileno": "8072393102",
-      "appointmentDate": "2023-06-13",
-      "appointmentTime": "10:30AM",
+      "appointmentDate": "",
+      "appointmentTime": "",
       "say": "",
-      "doctorField": "Dentist",
-      "doctorName": "Dr. Mathumitha V MD",
-      "attemptStatus": "true",
-      "appStatus": "Pending for appointment",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
       "remarkMessage": "",
       "consultingFee": "",
       "otherFee": "",
@@ -453,21 +453,7 @@
       "id": 6
     }
   ],
-  "appointmentDetails": [
-    {
-      "patientName": "MANIKANDAN",
-      "mobileno": "8072393102",
-      "appointmentDate": "2023-06-13",
-      "appointmentTime": "10:30AM",
-      "say": "",
-      "doctorField": "Dentist",
-      "doctorName": "Dr. Mathumitha V MD",
-      "attemptStatus": "true",
-      "appStatus": "Pending for appointment",
-      "remarkMessage": "",
-      "id": 1
-    }
-  ],
+  "appointmentDetails": [],
   "cancelledRequest": [
     {
       "cName": "MANIKANDAN",
@@ -479,20 +465,7 @@
       "remarkMessage": "Not Available"
     }
   ],
-  "acceptRequest": [
-    {
-      "name": "SATHISH KUMAR",
-      "mobileNo": "8072702981",
-      "date": "2023-06-13",
-      "timeing": "12:15PM",
-      "problem": "General Session",
-      "doctorName": "Dr. Madhavi M MS",
-      "doctorField": "Pediatrician",
-      "acceptanceStatus": "Pending",
-      "reporingStatus": "pending",
-      "id": 1
-    }
-  ],
+  "acceptRequest": [],
   "billDetails": [
     {
       "patientId": 1,
@@ -563,6 +536,62 @@
       "paymentStatus": "Paid",
       "appointmentDate": "2023-06-13",
       "id": 5
+    },
+    {
+      "patientId": 1,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹10",
+      "Total": "₹210",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-13",
+      "id": 6
+    },
+    {
+      "patientId": 2,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Mathumitha V MD",
+      "doctorField": "Dentist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹45",
+      "otherFee": "₹520",
+      "Total": "₹565",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-13",
+      "id": 7
+    },
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "doctorField": "Gynecologist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹100",
+      "otherFee": "₹20",
+      "Total": "₹120",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-14",
+      "id": 8
+    },
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Madhavi M MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹780",
+      "otherFee": "₹520",
+      "Total": "₹1300",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-14",
+      "id": 9
     }
   ],
   "forgotPassDetails": [
@@ -636,6 +665,58 @@
       "Total": "₹120",
       "paymentStatus": "Success",
       "id": 5
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "appointmentDate": "2023-06-13",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Madhavi M MS",
+      "consultingFee": "₹200",
+      "otherFee": "₹10",
+      "Total": "₹210",
+      "paymentStatus": "Success",
+      "id": 6
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-13",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Mathumitha V MD",
+      "consultingFee": "₹45",
+      "otherFee": "₹520",
+      "Total": "₹565",
+      "paymentStatus": "Success",
+      "id": 7
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-14",
+      "doctorField": "Gynecologist",
+      "doctorName": "Dr. Thilagavathi V MS",
+      "consultingFee": "₹100",
+      "otherFee": "₹20",
+      "Total": "₹120",
+      "paymentStatus": "Success",
+      "id": 8
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-14",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Madhavi M MS",
+      "consultingFee": "₹780",
+      "otherFee": "₹520",
+      "Total": "₹1300",
+      "paymentStatus": "Success",
+      "id": 9
     }
   ]
 }

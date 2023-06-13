@@ -6,7 +6,7 @@
   <div class="split1" style="color: #071468;">
     <h4 class="title">Personal Details</h4>
     <label>Patient Name:</label><br />
-    <input type="text" placeholder="Patient Name" class="inp-box" formControlName="patientName"
+    <input type="text" placeholder="Enter your Name" class="inp-box" formControlName="patientName"
     pattern="^[A-Za-z]+[\s]{0,1}[A-Za-z]+$"
       minlength="3" oninput="this.value = this.value.toUpperCase()" />
 
@@ -21,9 +21,9 @@
         Enter valid name
       </p>
     </div>
-    <br />
+    <br /> <br>
     <label>Father Name:</label><br />
-    <input type="text" placeholder="Father Name" class="inp-box" formControlName="fatherName"
+    <input type="text" placeholder="Enter your Father Name" class="inp-box" formControlName="fatherName"
     pattern="^[A-Za-z]+[\s]{0,1}[A-Za-z]+$"
 
     minlength="3" oninput="this.value = this.value.toUpperCase()"/>
@@ -38,7 +38,7 @@
         Enter valid name
       </p>
     </div>
-    <br /><br />
+    <br /> <br>
     <label>Gender:</label>
     <div class="gender-category">
           <input type="radio" name="gender" formControlName="gender" value="male" >
@@ -48,7 +48,7 @@
           <input type="radio" name="gender" formControlName="gender" value="other" >
           <label for="other">Other</label>
     </div>
-    <br /><br />
+    <br />
     <!-- <label>Blood Group</label><br />
     <input type="text" class="sel-box" placeholder="Blood Group" required formControlName="blood"
       pattern="^(A|B|AB|O)[+-]$" oninput="this.value = this.value.toUpperCase()"  />
@@ -89,7 +89,7 @@
       <label for="email">Email</label><br>
       <input type="email" id="email"
         class="inp-box"
-
+      placeholder="Enter Email Id"
         pattern="^[a-z0-9]+[a-z0-9]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
 
         formControlName="email" />
@@ -105,7 +105,7 @@
     <br><br>
     <label>Contact Number</label><br />
     <input type="text" class="inp-box" name="phno" placeholder="Phone number" required formControlName="phone"
-      pattern="^[6789][0-9]{9}$" />
+      pattern="^[6-9](?!.*(\d)\1{4})\d{9}$" />
     <div class="error" *ngIf="PatientRegister.controls['phone'].dirty">
       <p *ngIf="PatientRegister.controls['phone'].errors?.['required']">
         Enter the Phone Number
@@ -117,7 +117,7 @@
     <br />
     <label>Address</label><br />
 
-    <textarea type="text" class="inp-box" name="phno" placeholder="Address" required
+    <textarea type="text" class="inp-box" name="phno" placeholder="Enter Address" required
       formControlName="address" pattern="^[a-zA-Z0-9\s,.'-/]{3,}$" ></textarea>
     <div class="error" *ngIf="PatientRegister.controls['address'].dirty">
       <p *ngIf="PatientRegister.controls['address'].errors?.['required']">

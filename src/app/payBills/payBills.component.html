@@ -41,7 +41,7 @@
       <th>Consulting Fee</th>
       <th>Other Fee</th>
       <th>Total</th>
-      <th>Select</th>
+      <!-- <th>Select</th> -->
       </thead>
       <tbody>
         <tr>
@@ -53,16 +53,47 @@
           <td>{{refereshData.consultingFee}}</td>
           <td>{{refereshData.otherFee}}</td>
           <td>{{refereshData.Total}}</td>
-          <td>
-            <!-- <button [disabled]="refereshData.Total=='' " id="refchange" (click)="pay(refereshData)">Pay</button> -->
-            <button [disabled]=" refereshData.consultingFee==null || refereshData.consultingFee=='' || refereshData.doctorName==null || refereshData.doctorName=='' " id="refchange" (click)="pay(refereshData)">Pay</button>
-          </td>
         </tr>
-
       </tbody>
     </table>
-  </form>
-
+  </form><br>
+  <div class="debit" [formGroup]="debitCardForm" [hidden]="(refereshData.consultingFee==null || refereshData.consultingFee=='' )">
+<h2>Pay on Credit/Debit card</h2>
+    <div class="cardNumber">
+      <label for="">Debit/Credit Card Number: </label><br><br>
+      <input type="text" name="cardNumber" formControlName="cardNumber" pattern="[0-9]{16}" id="field1" placeholder="Enter the 16 digits Card No">
+      <div class="cardNoValid" *ngIf="debitCardForm.controls['cardNumber'].dirty">
+        <p *ngIf="debitCardForm.controls['cardNumber'].errors?.['required']">
+          Enter the Field
+        </p>
+        <p *ngIf="debitCardForm.controls['cardNumber'].errors?.['pattern']">
+          Enter the Valid Credit/Debit Card Number
+        </p>
+      </div>
+      </div><br>
+      <div class="month">
+        <label for="">Expiration Date (MM/YY): </label><br><br>
+        <input type="month" name="expireDate" formControlName="expireDate" id="field2">
+        <div class="expDateValid" *ngIf="debitCardForm.controls['expireDate'].dirty">
+          <p *ngIf="debitCardForm.controls['expireDate'].errors?.['required']">
+           Please Enter the Field
+          </p>
+        </div>
+        </div><br>
+        <div class="ccv">
+          <label for="">CCV Number:</label>
+          <input type="text" name="ccvNumber" formControlName="ccvNumber" pattern="^[0-9]{3,4}$" id="field3" placeholder="CCV No">
+          <div class="ccvValid" *ngIf="(debitCardForm.controls['ccvNumber'].dirty || debitCardForm.controls['ccvNumber'].touched) && debitCardForm.controls['ccvNumber'].invalid ">
+            <p *ngIf="debitCardForm.controls['ccvNumber'].errors?.['required']">
+             Please Enter the Field
+            </p>
+            <p *ngIf="debitCardForm.controls['ccvNumber'].errors?.['pattern']">
+              Please Enter Valid CVV number
+             </p>
+          </div><br>
+          <button [disabled]="debitCardForm.invalid" style="margin: 30px 50px 10px 120px" id="refchange" (click)="pay(refereshData)">Pay</button>
+    </div>
+  </div>
   <br>
   <br>
   <form action="">

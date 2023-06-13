@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../userService.service';
 import { Router } from '@angular/router';
 import { PatientServiceService } from '../patientPage/patientService.service';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { BillServiceService } from './billService.service';
 
 @Component({
@@ -12,18 +12,6 @@ import { BillServiceService } from './billService.service';
   styleUrls: ['./payBills.component.css']
 })
 export class PayBillsComponent implements OnInit {
-
-  // constructor(private http:HttpClient) { }
-
-  // getPaymentDetails:any=""
-  // ngOnInit() {
-  //   this.http.get<any>("http://localhost:3000/patientRegistration").subscribe((data)=>{
-  //       this.getPaymentDetails=data;
-  //   })
-  // }
-  // pay(value1:any, value2:any){
-
-  // }
   loggedInUser:any=""
   refereshData:any=""
   historyPayment:any=""
@@ -70,7 +58,11 @@ export class PayBillsComponent implements OnInit {
   paying=this.fb.group({
     totalPay:[,]
   })
-
+  debitCardForm=this.fb.group({
+    cardNumber:[,[Validators.required]],
+    expireDate:[,[Validators.required]],
+    ccvNumber:[,[Validators.required]]
+  })
   pay(user:any){
     var body={
       patientName:user.patientName,

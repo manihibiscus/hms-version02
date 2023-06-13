@@ -26,7 +26,7 @@
         <label >Email : </label>
         <input type="email" class="field" name="email" #emailId="ngModel" [(ngModel)]="email" required
         pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
-        placeholder="Enter your email"
+        placeholder="Enter your Email"
         />
       </div>
       <div *ngIf="emailId.errors && (emailId.dirty)" class="error">
@@ -37,7 +37,7 @@
       <div class="email">
         <label>Name :  </label>
         <input type="text" class="field" name="qName" #name="ngModel" [(ngModel)]="contactName" required
-        pattern="^[A-Za-z ]+$" placeholder="Enter your name" minlength="3"
+        pattern="^[A-Za-z ]+$" placeholder="Enter your Name" minlength="3"
         />
         <!-- <textarea name="" id="" cols="30" rows="5" formControlName="message"></textarea> -->
       </div>
@@ -52,7 +52,7 @@
         <input type="text" name="mobileNo" #qMobile="ngModel"
 
         [(ngModel)]="mobile" required pattern="^[6789][0-9]{9}$" class="field"
-        placeholder="Enter your mobile number">
+        placeholder="Enter your Mobile Number">
       </div>
       <br>
       <div *ngIf="qMobile.errors && (qMobile.dirty)" class="error">
@@ -63,7 +63,7 @@
         <label>Enter your Query :  </label><br><br>
         <!-- <input type="email" class="emailfield"/> -->
         <textarea name="" id="" cols="30" rows="5" name="message" #qMessage="ngModel" [(ngModel)]="message" required minlength="3"
-        placeholder="Enter your questions"></textarea>
+        placeholder="Enter your Questions"></textarea>
       </div>
       <div *ngIf="qMessage.errors && (qMessage.dirty)" class="error">
         <div [hidden]="!qMessage.errors['required']">Please Enter Your Query</div>
@@ -79,31 +79,27 @@
 <div class="head"><h2>Peripheral Centers</h2></div>
 <div class="contact2">
 <div class="b1">
-<p><i>MMCH CITY CENTER <br>
-No.18, Vivekananda Road, Ram Nagar, <br>
+<h4 style="color: #071468;text-align: center;">MMCH CITY CENTER</h4>
+<p style="text-align: center;font-size: 18px;">No.18, Vivekananda Road, Ram Nagar, <br>
 Coimbatore-641009, India. <br>
 Phone :+91 422  43797**, 22325** <br>
-</i>
 </p>
 </div>
 <div class="b2">
-<p>
-  <i>
-MMCH SULUR HOSPITAL <br>
+<h4 style="color: #071468;text-align: center;">MMCH SULUR HOSPITAL</h4>
+<p style="text-align: center;font-size: 18px;">
 242 b, Trichy Road, Sulur, <br>
 Coimbatore-641402, India. <br>
 Phone :+91 422  222 8 2** <br>
-</i>
+
 </p>
 </div>
 <div class="b3">
-<p>
-<i>
-MMCH SPECIALITY HOSPITAL <br>
+<h4 style="color: #071468;text-align: center;">MMCH SPECIALITY HOSPITAL</h4>
+<p style="text-align: center;font-size: 18px;">
 16, Palaniappa Street, <br>
 Erode  638009, India. <br>
 Phone :+91 424 2256**6, 22264** <br>
-</i>
 </p>
 </div>
 
