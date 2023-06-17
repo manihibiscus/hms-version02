@@ -44,11 +44,10 @@ text-align: center;
   border:2px solid #233863;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 420px;
-
+  margin-top: 20px;
 }
 .head{
   background-color: whitesmoke;
-
 }
 .head h2{
   text-align: center;

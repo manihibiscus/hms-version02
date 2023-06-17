@@ -1,5 +1,20 @@
 <app-header class="fixed"></app-header>
 <!-- <div class="scroll"> -->
+    <dialog [open]="flash" class="dialog">
+      <img src="../../assets/multiply.png" style="width: 30px;height: 30px;position: absolute; right: 15px;" (click)="closeBanner()">
+      <img src="../../assets/lantern.png" style="width: 100px;height: 100px;position: absolute; left: 15px;" (click)="closeBanner()" *ngIf="eventTitile=='Wish you Many More Happy Christmas!' || eventTitile=='Wish you Happy New Year!' ">
+      <img src="../../assets/lantern.png" style="width: 100px;height: 100px;position: absolute; right: 45px;" (click)="closeBanner()"*ngIf="eventTitile=='Wish you Many More Happy Christmas!' || eventTitile=='Wish you Happy New Year!' ">
+      <img [src]="link" alt="">
+   <h2 style="text-align: center;">{{eventTitile}}</h2>
+<h3>{{con1}}</h3>
+<h3>{{con2}}</h3>
+<!-- <img src="../../assets/blood.jpg" alt="" style="width: 200px; height: 200px; position: absolute;"> -->
+
+    </dialog >
+
+<div>
+  <div [ngClass]="{view:blur==true}" >
+
 <div class="body">
 
 
@@ -110,6 +125,9 @@
   </div>
   </div>
  </div>
+
+</div>
+
 <!-- </div> -->
 
   <!-- <div class="container">

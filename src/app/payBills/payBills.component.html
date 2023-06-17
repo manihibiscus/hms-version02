@@ -57,7 +57,7 @@
       </tbody>
     </table>
   </form><br>
-  <div class="debit" [formGroup]="debitCardForm" [hidden]="(refereshData.consultingFee==null || refereshData.consultingFee=='' )">
+  <div class="debit" [formGroup]="debitCardForm" [hidden]="!(refereshData.consultingFee==null || refereshData.consultingFee=='' )">
 <h2>Pay on Credit/Debit card</h2>
     <div class="cardNumber">
       <label for="">Debit/Credit Card Number: </label><br><br>

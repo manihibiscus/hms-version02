@@ -30,7 +30,7 @@ hr{
 nav {
   display: grid;
   grid-template-columns: 40px 440px 1fr 1fr;
-  padding: 10px 50px 10px 50px;
+  padding: 15px 50px 10px 50px;
 
 }
 nav img{
@@ -47,6 +47,7 @@ nav ul li {
   list-style-type: none;
   display: inline-block;
 }
+
 .header nav ul{
   margin-left: 50px;
 }

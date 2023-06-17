@@ -718,5 +718,38 @@
       "paymentStatus": "Success",
       "id": 9
     }
+  ],
+  "Event":[
+    {
+      "eventName":"Happy Health Day",
+      "date":"Apl 07",
+      "content1":"Health is the greatest wealth. Happy World Health Day!",
+      "content2":"Staying healthy is physical, emotional, and social. Stay healthy. Happy World Health Day!",
+      "content3":"To keep the body in good health is a duty",
+      "content4":"otherwise, we shall not be able to trim the lamp of wisdom and keep our mind strong and clear",
+      "link":"../../assets/world-cancer-day.png",
+
+      "id":1
+    },
+    {
+      "eventName":"Wish you Many More Happy Christmas!",
+      "date":"Jun 17",
+      "content1":"Christmas isn't just a day, it's a frame of mind.",
+      "content2":"Love the giver more than the gift.",
+      "content3":"Christmas is a stocking stuffed with sugary goodness.",
+      "content4":"It's the most wonderful time of the year!",
+      "link":"../../assets/christmas-tree.png",
+      "id":2
+    },
+    {
+      "eventName":"Wish you Happy New Year!",
+      "date":"Jan 01",
+      "content1":"Dear world, I am excited to be alive in you, and I am thankful for another year.",
+      "content2":"Cheers to a New year and another chance for us to get it right.",
+      "content3":"Don't live the same year 75 times and call it a life.” —Robin Sharma",
+      "content4":"Celebrate endings—for they precede new beginnings.",
+      "link":"../../assets/calendar.png",
+      "id":3
+    }
   ]
 }
