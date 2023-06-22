@@ -32,7 +32,7 @@ this.http.get<any>("http://localhost:3000/Event").subscribe((data)=>{
   const event=data.find((a:any)=>{
     var eventDate=new Date(a.date).getDate();
     var eventMonth=new Date(a.date).getMonth();
-    return eventDate==nowDate && eventMonth==nowMonth;
+    return eventDate==nowDate && eventMonth==nowMonth
   });
   if(event){
 this.open(event);

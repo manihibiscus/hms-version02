@@ -1,4 +1,5 @@
 <app-patientHeader></app-patientHeader>
+<!-- {{getTiming|json}} -->
 <h2 style="text-align:center">Make Appointment</h2>
 <form action="" class="form" #appointmentForm="ngForm">
   <div class="field1">
@@ -25,58 +26,44 @@
     <div [hidden]="!field.errors['required']">Please Choose the Field</div>
     <!-- <div [hidden]="!field.errors['pattern']">Enter Only Alphabets </div> -->
   </div>
-  <div class="field2">
+    <div class="field2">
     <label for="">Choose Doctor Name</label>
-<div class="input" >
+    <div class="input" >
       <select   name="appointmentDocName" #dname="ngModel"
-      [(ngModel)]="appointmentDocName" [disabled]="Attempt">
+      [(ngModel)]="appointmentDocName" [disabled]="Attempt" (change)="doctorName()">
       <option value="" disabled selected>Doctors Name</option>
         <option *ngFor="let docName of storedField" value="{{docName.doctorName}}">{{docName.doctorName}}</option>
       </select>
     </div>
     </div>
 
-    <div class="field7" (change)="note()">
+    <div class="field7" >
       <label for="">Choose Date</label>
       <!-- <div class="input"><input type="date" [disabled]="!filterDates()" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div> -->
-      <div class="input"><input type="date" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" [disabled]="Attempt"/></div>
+      <div class="input" >
+        <input (change)="note()" type="date" class="inputfield" [min]="minDate" [max]="maxDate" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" [disabled]="Attempt"/>
+      </div>
     </div>
 
   <div class="field3">
     <label for="">Choose your Timing</label>
     <div class="input">
     <!-- <select class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" > -->
-    <select  #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" (change)="chageFormat()" [disabled]="Attempt">
-      <option value="" disabled selected>hrs</option>
-      <option value="09" >09</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
-      <option value="12">12</option>
-      <option value="01">01</option>
-      <option value="02">02</option>
-      <option value="03">03</option>
-      <option value="04">04</option>
-      <option value="05">05</option>
-      <option value="06">06</option>
+      <select name="" id="" (change)="checking()" name="appointmentTime" #timing="ngModel"
+      [(ngModel)]="appointmentTime" >
+        <option  value="" disabled selected >Select Timing</option>
+        <!-- <option *ngFor="let item of doctorDetails.timing; let i=index" [hidden]="item==h[{{i+1}}]"  value="{{item}}">{{item}}</option> -->
+        <option *ngFor="let item of doctorDetails.timing; let i=index"
+        [hidden]="item == h09|| item == h0930 || item== h10 || item == h1030 ||
+                  item == h11|| item == h1130 || item== h12 || item == h1230 ||
+                  item == h12|| item == h1230 || item== h01 || item == h0130 ||
+                  item == h02|| item == h0230 || item== h03 || item == h0330 ||
+                  item == h04"
 
-    </select>
-    <span>
-    <select  #dminute="ngModel" required name="appointmentMinute" [(ngModel)]="appointmentMinute" [disabled]="Attempt">
-      <option value="" disabled selected >min</option>
-      <option value="00">00</option>
-      <option value="15">15</option>
-      <option value="30">30</option>
-      <option value="45">45</option>
-    </select>
-    <select  #dAmPm="ngModel" required name="appointmentAMPM" [(ngModel)]="appointmetnAmPM" [disabled]="Attempt" (change)="note2()">
-      <option value="" disabled selected >am/pm</option>
-      <option value="AM" [hidden]="amStatus">AM</option>
-      <option value="PM" [hidden]="pmStatus">PM</option>
 
-    </select>
-  </span><span>
+        [value]="item">{{item}}</option>
+      </select>
 
-  </span>
 </div>
   </div>
 
