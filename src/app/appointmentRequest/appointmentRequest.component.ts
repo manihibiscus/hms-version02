@@ -177,7 +177,7 @@ doctorName(){
   })
 }
 notice:boolean=false;
-a:any=''
+appDet:any=''
 h09:any='';
 h0930:any='';
 h10:any='';
@@ -196,9 +196,36 @@ h04:any='';
 
 note(){
   this.notice=true
+  if(this.appointmentTime==null || this.appointmentTime==''){
+  this.empty();
+  }
+  else{
+    this.appointmentTime='';
+    this.note();
+  }
+}
+empty(){
+this.h09='';
+this.h0930='';
+this.h10='';
+this.h1030='';
+this.h11='';
+this.h1130='';
+this.h12='';
+this.h1230='';
+this.h01='';
+this.h0130='';
+this.h02='';
+this.h0230='';
+this.h03='';
+this.h0330='';
+this.h04='';
+this.timimg();
+}
+timimg(){
   this.timingService.searchTimingBefore(this.appointmentDate, this.appointmentDocName).subscribe(data=>{
-    this.a=data
-    for(let item of this.a){
+    this.appDet=data
+    for(let item of this.appDet){
       if(item.appointmentTime=="09:00AM"){
         this.h09=item.appointmentTime
       }
@@ -248,7 +275,6 @@ note(){
     // var count=Object.keys(this.a).length
     // alert(count)
   })
-
 }
 
 note2(){
@@ -270,7 +296,7 @@ chageFormat(){
 
 }
 checking(){
-  alert("mani")
+  this.notice=false
 }
 
 }

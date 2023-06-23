@@ -36,7 +36,6 @@
       </select>
     </div>
     </div>
-
     <div class="field7" >
       <label for="">Choose Date</label>
       <!-- <div class="input"><input type="date" [disabled]="!filterDates()" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div> -->
@@ -59,8 +58,6 @@
                   item == h12|| item == h1230 || item== h01 || item == h0130 ||
                   item == h02|| item == h0230 || item== h03 || item == h0330 ||
                   item == h04"
-
-
         [value]="item">{{item}}</option>
       </select>
 
@@ -85,7 +82,7 @@
 <div class="doctor">
   <div *ngFor="let det of storedField" id="ref">
     <div class="box">
-      <img src="{{ det.image }}" alt="" />
+      <img [src]="det.image" alt="" />
       <p>Name: {{ det.doctorName }}</p>
       <p>Specialist: {{ det.field }}</p>
       <p>Experiance: {{ det.experiance }}</p>
