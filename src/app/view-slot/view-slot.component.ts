@@ -62,7 +62,7 @@ export class ViewSlotComponent {
   aSay:any=""
   aDoctorName:any=""
   aDoctorField:any=""
-  accept(acceptId: number, acceptName: any, acceptMobileNo: any,
+  accept(accpetedDetails:any, acceptId: number, acceptName: any, acceptMobileNo: any,
         acceptDate: any,acceptTime: any, acceptSay:any, doctorName:any, doctorField: any){
     this.aName=acceptName;
     this.aMobileNo=acceptMobileNo;
@@ -71,13 +71,25 @@ export class ViewSlotComponent {
     this.aSay=acceptSay;
     this.aDoctorName=doctorName;
     this.aDoctorField=doctorField;
-    // alert("This slot is conformed");
-    this.service.acceptDeleteAppointment(acceptId).subscribe(()=>{
-      // alert("Accepted"+acceptId);
-      this.ngOnInit();
-    });
+    this.first(accpetedDetails);
     this.acceptToPatient(acceptMobileNo);
     this.postAcceptDetails();
+  }
+  first(appDetail:any){
+    this.http.get<any>("http://localhost:3000/appointmentDetails").subscribe(info=>{
+      const update=info.find((search:any)=>{
+        return search.patientName===appDetail.patientName && search.mobileno===appDetail.mobileno && search.appointmentDate===appDetail.appointmentDate && search.appointmentTime===appDetail.appointmentTime
+      });
+      if(update){
+        var body={
+          status:"Viewed"
+        }
+        this.http.patch<any>("http://localhost:3000/appointmentDetails/"+update.id,body).subscribe(()=>{
+          alert("Updated on appointmentDetails DB");
+          this.ngOnInit();
+      });
+      }
+    })
   }
   appStatus:any="Accepted for appointment"
   acceptToPatient(acceptMobileNo:any){
@@ -115,13 +127,9 @@ export class ViewSlotComponent {
       reporting:"pending"
     }
     this.cancelService.postCancelledRequest(body).subscribe(value=>{
-      alert("Post to Cancel DB" + cancel.cName);
+      alert("Posted to Cancel DB");
     });
-    this.service.deleteAppointment(cancelId).subscribe(()=>{
-      alert("Cancelled"+cancelId);
-      this.ngOnInit();
-    });
-    // this.postCancelDetails(cancelMobileNo);
+    this.first(cancel);
   }
 
 
@@ -170,7 +178,6 @@ export class ViewSlotComponent {
   baseUrl:any="http://localhost:3000";
 
   sendRemarkToPatient(getValue:any,cancleDetails:any){
-    // alert(getValue.id);
     var body={
       cName:this.cName,
       cMobileNo:this.cMobileNo,
@@ -183,22 +190,7 @@ export class ViewSlotComponent {
     this.remark.updateRemark(body,getValue.id).subscribe(()=>{
       alert("Remark Updated");
       this.ngOnInit();
-    })
-    this.updateLoggedInUser(getValue,cancleDetails);
-  }
-pat!:PatientPageComponent;
-  updateLoggedInUser(getValue:any,cancelDetails:any){
-    this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
-      const patient=data.find((b:any)=>{
-        return b.phone===cancelDetails.cMobileNo;
-      });
-      if(patient){
-        // alert("loggedInUser value Updated");
-        // this.loginForm.reset();
-          // this.userService.loggedInUser = patient;
-          // sessionStorage.setItem('loggedInUser', JSON.stringify(patient));
-          // this.pat.ngOnInit();
-      }
+      this.remarkMessage.get('rkMessage')?.reset('');
     })
   }
 }

@@ -11,8 +11,8 @@
       <th>Query Message</th>
     </thead>
     <tbody>
-      <tr *ngFor="let query of getQuery">
-        <td>{{query.id}}</td>
+      <tr *ngFor="let query of getQuery ; let i=index">
+        <td>{{i+1}}</td>
         <td>{{query.name}}</td>
         <td>{{query.emailId}}</td>
         <td>{{query.mobile}}</td>

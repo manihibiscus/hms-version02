@@ -75,7 +75,7 @@
     <input type="number" class="amount" #otherfee formControlName="otherFee" id="ref" (change)="sum(consultingfee.value,otherfee.value)"  >
   </div>
   <div class="field2">
-    <label for="" style="color: #071468;">Total Fee: {{result|currency:'INR'}} </label><br><br>
+    <label for="" style="color: #071468;">Total Fee: {{result }} </label><br><br>
     <!-- <input type="number" class="amount" > -->
   </div>
   <br>
@@ -131,5 +131,5 @@
     </table>
   </form>
 </div>
-{{showPatientBill|json}}
+<!-- {{showPatientBill|json}} -->
 <!-- <app-footer></app-footer> -->

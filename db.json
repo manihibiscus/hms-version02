@@ -28,7 +28,21 @@
       "insurance": "YES",
       "password": "kISHORE@18",
       "cpassword": "kISHORE@18",
-      "id": 2
+      "id": 2,
+      "mobileno": "7373102828",
+      "appointmentDate": "2023-06-24",
+      "appointmentTime": "09:30AM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "attemptStatus": "true",
+      "appStatus": "Payment Pending",
+      "appoimtmentHour": "09:30AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "consultingFee": "₹85",
+      "otherFee": "₹52",
+      "Total": "₹137"
     },
     {
       "patientName": "DINESH",
@@ -73,7 +87,18 @@
       "insurance": "NO",
       "password": "Naveen@777",
       "cpassword": "Naveen@777",
-      "id": 5
+      "id": 5,
+      "mobileno": "9597243562",
+      "appointmentDate": "2023-06-23",
+      "appointmentTime": "10:00AM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Kalaiselvi MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "appoimtmentHour": "10:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": ""
     },
     {
       "patientName": "SARASWATHI",
@@ -105,16 +130,23 @@
       "cpassword": "Mani@777",
       "id": 7,
       "mobileno": "8072393102",
-      "appointmentDate": "2023-06-23",
-      "appointmentTime": "11:30AM",
-      "say": "",
-      "doctorField": "General doctor",
-      "doctorName": "Dr. Kalaiselvi MBBS",
-      "attemptStatus": "true",
-      "appStatus": "Pending for appointment",
-      "appoimtmentHour": "11:30AM",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "Cavity Checkup",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "appoimtmentHour": "09:00AM",
       "apppointmentMin": "",
-      "remarkMessage": ""
+      "remarkMessage": "",
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-24",
+      "cdoctorName": "Dr. Sedhuragavan MS",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
     },
     {
       "patientName": "NAVANNETH",
@@ -233,18 +265,7 @@
       "insurance": "NO",
       "password": "Praveen@777",
       "cpassword": "Praveen@777",
-      "id": 16,
-      "mobileno": "8569578459",
-      "appointmentDate": "2023-06-23",
-      "appointmentTime": "09:00AM",
-      "say": "",
-      "doctorField": "General doctor",
-      "doctorName": "Dr. Kalaiselvi MBBS",
-      "attemptStatus": "true",
-      "appStatus": "Pending for appointment",
-      "appoimtmentHour": "09:00AM",
-      "apppointmentMin": "",
-      "remarkMessage": ""
+      "id": 16
     }
   ],
   "adminDetails": [
@@ -656,8 +677,72 @@
   ],
   "appointmentDetails": [
     {
-      "patientName": "PRAVEEN KUMAR",
-      "mobileno": "8569578459",
+      "patientName": "KISHORE KUMAR ",
+      "mobileno": "7373102828",
+      "appointmentDate": "2023-06-24",
+      "appointmentTime": "09:30AM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:30AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 1,
+      "status": "Viewed"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-24",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 2,
+      "status": "Viewed"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-24",
+      "appointmentTime": "11:30AM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "11:30AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 3,
+      "status": "Viewed"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-24",
+      "appointmentTime": "11:00AM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "11:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 4,
+      "status": "Viewed"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
       "appointmentDate": "2023-06-23",
       "appointmentTime": "09:00AM",
       "say": "",
@@ -668,34 +753,141 @@
       "appoimtmentHour": "09:00AM",
       "apppointmentMin": "",
       "remarkMessage": "",
-      "id": 5
+      "id": 5,
+      "status": "Viewed"
     },
     {
       "patientName": "MANIKANDAN",
       "mobileno": "8072393102",
-      "appointmentDate": "2023-06-23",
-      "appointmentTime": "11:30AM",
+      "appointmentDate": "2023-06-24",
+      "appointmentTime": "12:30PM",
       "say": "",
-      "doctorField": "General doctor",
-      "doctorName": "Dr. Kalaiselvi MBBS",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
       "attemptStatus": "true",
       "appStatus": "Pending for appointment",
-      "appoimtmentHour": "11:30AM",
+      "appoimtmentHour": "12:30PM",
       "apppointmentMin": "",
       "remarkMessage": "",
-      "id": 6
+      "id": 6,
+      "status": "Viewed"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-27",
+      "appointmentTime": "09:00AM",
+      "say": "Cavity Checkup",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 7,
+      "status": "Viewed"
     }
   ],
-  "cancelledRequest": [],
+  "cancelledRequest": [
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-24",
+      "cdoctorName": "Dr. Sedhuragavan MS",
+      "reporting": "Sended",
+      "id": 1,
+      "remarkMessage": "Not Available"
+    },
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-24",
+      "cdoctorName": "Dr. Sedhuragavan MS",
+      "reporting": "Sended",
+      "id": 2,
+      "remarkMessage": "Not Available"
+    },
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-24",
+      "cdoctorName": "Dr. Sedhuragavan MS",
+      "reporting": "Sended",
+      "id": 3,
+      "remarkMessage": "Not Available"
+    },
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-23",
+      "cdoctorName": "Dr. Kalaiselvi MBBS",
+      "reporting": "Sended",
+      "id": 4,
+      "remarkMessage": "Not Available"
+    },
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-24",
+      "cdoctorName": "Dr. Sedhuragavan MS",
+      "reporting": "Sended",
+      "id": 5,
+      "remarkMessage": "Not Available Try Next Day"
+    }
+  ],
   "acceptRequest": [],
-  "billDetails": [],
+  "billDetails": [
+    {
+      "patientId": 1,
+      "name": "KISHORE KUMAR ",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "doctorField": "Dentist",
+      "mobileNo": "7373102828",
+      "consultingFee": "₹85",
+      "otherFee": "₹52",
+      "Total": "₹137",
+      "status": "sended to patient",
+      "paymentStatus": "Unpaid",
+      "appointmentDate": "2023-06-24",
+      "id": 1
+    },
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "doctorField": "Dentist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹52",
+      "otherFee": "₹100",
+      "Total": "₹152",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-27",
+      "id": 2
+    }
+  ],
   "forgotPassDetails": [
     {
       "userId": "manihibiscus@gmail.com",
       "id": 1
     }
   ],
-  "paymentHistory": [],
+  "paymentHistory": [
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-27",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "consultingFee": "₹52",
+      "otherFee": "₹100",
+      "Total": "₹152",
+      "paymentStatus": "Success",
+      "id": 1
+    }
+  ],
   "Event": [
     {
       "eventName": "Happy Health Day",
