@@ -1,15 +1,13 @@
 .adddoc{
-  background-color: #edf6ef;
+  background-color: #cbd3cc;
   width: 80%;
   height: 100%;
   margin: auto;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  padding-bottom: 60px;
-  background: url("../../assets/register.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;  /* padding-top:  20px;
+  padding-bottom: 20px;
+  /* padding-top:  20px;
   align-items: center;
   justify-content: center; */
 }
