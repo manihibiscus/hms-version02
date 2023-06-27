@@ -52,6 +52,7 @@ export class PatientPageComponent implements OnInit {
     this.service.searchAccept(this.loggedUser.phone).subscribe((data1)=>{
       this.completed=data1;
     })
+    
   }
 
   // loggedOff(value:any){

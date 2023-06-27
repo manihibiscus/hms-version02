@@ -103,7 +103,25 @@
       "insurance": "NO",
       "password": "Mani@777",
       "cpassword": "Mani@777",
-      "id": 7
+      "id": 7,
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-28",
+      "appointmentTime": "11:00AM",
+      "say": "",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Swetha MS",
+      "attemptStatus": "false",
+      "appStatus": "Cancelled! (Try again)",
+      "appoimtmentHour": "11:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "Not Available",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": "",
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-28",
+      "cdoctorName": "Dr. Swetha MS"
     },
     {
       "patientName": "NAVANNETH",
@@ -633,16 +651,96 @@
     }
   ],
   "appointmentDetails": [
-
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-28",
+      "appointmentTime": "09:00AM",
+      "say": "Cavity Problem",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 1,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-29",
+      "appointmentTime": "11:00AM",
+      "say": "",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Swetha MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "11:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 2,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-28",
+      "appointmentTime": "11:00AM",
+      "say": "",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Swetha MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "11:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 3,
+      "status": "Cancelled"
+    }
   ],
   "cancelledRequest": [
-
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-06-28",
+      "cdoctorName": "Dr. Swetha MS",
+      "reporting": "Sended",
+      "id": 1,
+      "remarkMessage": "Not Available"
+    }
   ],
-  "acceptRequest": [
-
-  ],
+  "acceptRequest": [],
   "billDetails": [
-
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "doctorField": "Dentist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹50",
+      "otherFee": "₹50",
+      "Total": "₹100",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-28",
+      "id": 1
+    },
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Swetha MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹85",
+      "otherFee": "₹45",
+      "Total": "₹130",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-29",
+      "id": 2
+    }
   ],
   "forgotPassDetails": [
     {
@@ -651,7 +749,32 @@
     }
   ],
   "paymentHistory": [
-
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-28",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "consultingFee": "₹50",
+      "otherFee": "₹50",
+      "Total": "₹100",
+      "paymentStatus": "Success",
+      "id": 1
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-29",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Swetha MS",
+      "consultingFee": "₹85",
+      "otherFee": "₹45",
+      "Total": "₹130",
+      "paymentStatus": "Success",
+      "id": 2
+    }
   ],
   "Event": [
     {

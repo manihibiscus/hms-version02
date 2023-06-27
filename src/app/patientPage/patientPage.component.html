@@ -70,6 +70,7 @@
       </tr>
     </tbody>
   </table>
+  <p [hidden]="!(completed.length==0)" style="color: red;text-align: center;">* No Appointment History Available *</p>
 </form>
 <h2 style="text-align: center;color: #071468;">Cancelled History</h2>
 <form class="form">
@@ -97,6 +98,8 @@
       </tr>
     </tbody>
   </table>
+  <p [hidden]="!(cancel.length==0)" style="color: red;text-align: center;">* No Cancelled History Available *</p>
+
 </form>
 </div>
 <!-- <button (click)="ve()" >Verify</button> -->

@@ -65,7 +65,7 @@ export class LoginPageComponent implements OnInit {
         this.loginForm.reset();
           this.userService.loggedInUser = users;
           sessionStorage.setItem('loggedInUser', JSON.stringify(users));
-        this.router.navigate(['adminhome' ])
+        this.router.navigate(['requestSlot' ])
       }
       else{
         this.errors=true
