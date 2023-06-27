@@ -6,7 +6,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  /* padding-top:  20px;
+  padding-bottom: 60px;
+  background: url("../../assets/register.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;  /* padding-top:  20px;
   align-items: center;
   justify-content: center; */
 }
@@ -37,11 +40,11 @@ text-align: center;
 }
 
 .split1{
-  background-color: #d1e7d5;
+  background-color: whitesmoke;
   width: 350px;
-  height: 650px;
+  height: 550px;
   /* float: left; */
-
+  border: 3px solid white;
   /* margin-left: 130px;
   margin-top: 25px;
   padding: 20px; */
@@ -62,14 +65,14 @@ text-align: center;
     background: transparent;
 }
 .split2{
-  background-color: #d1e7d5;
+  background-color: whitesmoke;
   width: 350px;
-  height: 650px;
+  height: 550px;
   /* float: right; */
   /* margin-right: 130px;
   margin-top: 25px;
   padding: 20px; */
-
+  border: 3px solid white;
   padding-left: 25px;
   border-radius: 10px;
 
@@ -137,3 +140,7 @@ text-align: center;
   background: transparent;
 
 }
+/* input.ng-invalid
+{border :5px solid red;}
+input.ng-valid
+{border :5px solid green;} */

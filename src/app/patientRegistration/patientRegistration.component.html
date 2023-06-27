@@ -7,18 +7,18 @@
     <h4 class="title">Personal Details</h4>
     <label>Patient Name:</label><br />
     <input type="text" placeholder="Enter your Name" class="inp-box" formControlName="patientName"
-    pattern="^[A-Za-z]+[\s]{0,1}[A-Za-z]+$"
-      minlength="3" oninput="this.value = this.value.toUpperCase()" />
+      pattern="^(?!.*([a-zA-Z])\1\1)[a-zA-Z]+[a-zA-Z\s]+$"
+      minlength="3" oninput="this.value = this.value.toUpperCase()"/>
 
     <div class="error" *ngIf="PatientRegister.controls['patientName'].dirty" >
       <p *ngIf="PatientRegister.controls['patientName'].errors?.['required']">
-        Enter the field
+        Enter the Field
       </p>
       <p *ngIf="PatientRegister.controls['patientName'].errors?.['pattern']">
-        Enter alphabets only
+        Enter Valid Name
       </p>
       <p *ngIf="PatientRegister.controls['patientName'].errors?.['minlength']">
-        Enter valid name
+        Enter Valid Name
       </p>
     </div>
     <br /> <br>

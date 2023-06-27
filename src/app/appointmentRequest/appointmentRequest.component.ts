@@ -35,14 +35,16 @@ getTimingBefore:any='';
       this.appointment.getAppointmentDetails().subscribe(value=>{
         this.listAppointment=value;
       })
-      const currentDate = new Date();
-    this.minDate = currentDate.toISOString().split('T')[0];
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    this.minDate = tomorrow.toISOString().split('T')[0];
     const oneWeekLater = new Date();
-    oneWeekLater.setDate(oneWeekLater.getDate() + 6);
+    oneWeekLater.setDate(oneWeekLater.getDate() + 7);
     this.maxDate = oneWeekLater.toISOString().split('T')[0];
      }
   ngOnInit() {
-    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    const sessionUser = sessionStorage.getItem('loggedInUser');
     if (sessionUser) {
       this.loggedInUser = JSON.parse(sessionUser);
     } else if (this.userServeice.loggedInUser !== null) {
@@ -268,9 +270,9 @@ timimg(){
       else if(item.appointmentTime=="04:00PM"){
         this.h04=item.appointmentTime
       }
-      else{
-        alert("Engaged")
-      }
+      // else{
+      //   alert("Engaged")
+      // }
     }
     // var count=Object.keys(this.a).length
     // alert(count)

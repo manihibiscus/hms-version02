@@ -38,7 +38,7 @@ nav img{
 }
 nav ul{
   display: grid;
-  grid-template-columns: 80px 110px 90px;
+  grid-template-columns: 110px 90px;
 }
 
 

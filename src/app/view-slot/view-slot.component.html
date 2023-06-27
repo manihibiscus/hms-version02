@@ -15,7 +15,7 @@
       <th>Select</th>
     </thead>
     <tbody>
-      <tr *ngFor="let appointment of getAppointment let i =index" [hidden]="appointment.status=='Viewed'">
+      <tr *ngFor="let appointment of getAppointment let i =index" [hidden]="appointment.status=='Accepted' ||appointment.status=='Cancelled' ">
         <!-- <td>{{i+1}}</td> -->
         <td>{{appointment.patientName}}</td>
         <td>{{appointment.mobileno}}</td>

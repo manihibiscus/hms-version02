@@ -82,7 +82,7 @@ export class ViewSlotComponent {
       });
       if(update){
         var body={
-          status:"Viewed"
+          status:"Accepted"
         }
         this.http.patch<any>("http://localhost:3000/appointmentDetails/"+update.id,body).subscribe(()=>{
           alert("Updated on appointmentDetails DB");
@@ -129,7 +129,23 @@ export class ViewSlotComponent {
     this.cancelService.postCancelledRequest(body).subscribe(value=>{
       alert("Posted to Cancel DB");
     });
-    this.first(cancel);
+    this.firstcancel(cancel);
+  }
+  firstcancel(appDetail:any){
+    this.http.get<any>("http://localhost:3000/appointmentDetails").subscribe(info=>{
+      const update=info.find((search:any)=>{
+        return search.patientName===appDetail.patientName && search.mobileno===appDetail.mobileno && search.appointmentDate===appDetail.appointmentDate && search.appointmentTime===appDetail.appointmentTime
+      });
+      if(update){
+        var body={
+          status:"Cancelled"
+        }
+        this.http.patch<any>("http://localhost:3000/appointmentDetails/"+update.id,body).subscribe(()=>{
+          alert("Updated on appointmentDetails DB");
+          this.ngOnInit();
+      });
+      }
+    })
   }
 
 

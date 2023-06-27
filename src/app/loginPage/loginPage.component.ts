@@ -82,7 +82,7 @@ export class LoginPageComponent implements OnInit {
         this.loginForm.reset();
           this.userService.loggedInUser = doctor;
           sessionStorage.setItem('loggedInUser', JSON.stringify(doctor));
-        this.router.navigate(['doctorhome'])
+        this.router.navigate(['slot'])
       }
       else{
         this.errors=true
