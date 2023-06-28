@@ -40,7 +40,7 @@ text-align: center;
 .split1{
   background-color: whitesmoke;
   width: 350px;
-  height: 550px;
+  height: 630px;
   /* float: left; */
   border: 3px solid white;
   /* margin-left: 130px;
@@ -65,7 +65,7 @@ text-align: center;
 .split2{
   background-color: whitesmoke;
   width: 350px;
-  height: 550px;
+  height: 630px;
   /* float: right; */
   /* margin-right: 130px;
   margin-top: 25px;
@@ -110,7 +110,7 @@ text-align: center;
   color: #071468;
 }
 .sub{
-  margin: 60px 100px;
+  margin: 40px 100px;
 }
 .error p{
   color: red;

@@ -1,5 +1,6 @@
 <app-doctorHeader></app-doctorHeader>
 <!-- {{getQuery|json}} -->
+{{loggedInUser|json}}
 <h2 style="text-align:center;color: #071468;">Patient Details</h2>
 {{slotAllocated.name}}
 <form class="form">
@@ -31,5 +32,8 @@
       </tr>
     </tbody>
   </table>
+    <p [hidden]="!(slotAllocated.length==0)" style="color: red;text-align: center;">* No Patients Available *</p>
+
 </form>
+
 <!-- <app-footer></app-footer> -->

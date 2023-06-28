@@ -13,7 +13,18 @@
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
-      "id": 1
+      "id": 1,
+      "mobileno": "8072702981",
+      "appointmentDate": "2023-06-29",
+      "appointmentTime": "10:30AM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "appoimtmentHour": "10:30AM",
+      "apppointmentMin": "",
+      "remarkMessage": ""
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -87,7 +98,21 @@
       "insurance": "NO",
       "password": "Naveen@777",
       "cpassword": "Naveen@777",
-      "id": 5
+      "id": 5,
+      "mobileno": "9597243562",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "appoimtmentHour": "01:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
     },
     {
       "patientName": "SARASWATHI",
@@ -119,23 +144,16 @@
       "cpassword": "Mani@777",
       "id": 7,
       "mobileno": "8072393102",
-      "appointmentDate": "2023-06-28",
-      "appointmentTime": "11:00AM",
+      "appointmentDate": "2023-06-29",
+      "appointmentTime": "10:00AM",
       "say": "",
-      "doctorField": "Pediatrician",
-      "doctorName": "Dr. Swetha MS",
-      "attemptStatus": "false",
-      "appStatus": "Cancelled! (Try again)",
-      "appoimtmentHour": "11:00AM",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "appoimtmentHour": "10:00AM",
       "apppointmentMin": "",
-      "remarkMessage": "Not Available",
-      "consultingFee": "",
-      "otherFee": "",
-      "Total": "",
-      "cName": "MANIKANDAN",
-      "cMobileNo": "8072393102",
-      "cDate": "2023-06-28",
-      "cdoctorName": "Dr. Swetha MS"
+      "remarkMessage": ""
     },
     {
       "patientName": "NAVANNETH",
@@ -255,6 +273,20 @@
       "password": "Praveen@777",
       "cpassword": "Praveen@777",
       "id": 16
+    },
+    {
+      "patientName": "KAMAL",
+      "fatherName": "RAJAN",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-10-05",
+      "email": "kamal@gmail.com",
+      "phone": "8564785236",
+      "address": "Erode",
+      "insurance": "YES",
+      "password": "Kamal@777",
+      "cpassword": "Kamal@777",
+      "id": 17
     }
   ],
   "adminDetails": [
@@ -269,37 +301,22 @@
   ],
   "doctorDetails": [
     {
-      "userId": "doctor@gmail.com",
-      "password": "Doctor@7"
+      "doctorName": "Dr. Malarkodi MBBS",
+      "field": "General doctor",
+      "userId": "malarkodi@gmail.com",
+      "password": "Malarkodi@123"
     },
     {
-      "userId": "doctor2@gmail.com",
-      "password": "Doctor2@7"
+      "doctorName": "Dr. Murugan MBBS",
+      "field": "General doctor",
+      "userId": "murugan@gmail.com",
+      "password": "Murugan@123"
     }
   ],
   "generalDoctorList": [
     {
       "image": "../../assets/Image/doctor.png",
-      "doctorName": "Dr. Kalaiselvi MBBS",
-      "field": "General doctor",
-      "experiance": "16 Years",
-      "licenseNo": "LI2000B72365",
-      "available": "09:00 AM - 12:00 PM",
-      "timing": [
-        "09:00AM",
-        "09:30AM",
-        "10:00AM",
-        "10:30AM",
-        "11:00AM",
-        "11:30AM",
-        "12:00PM"
-      ],
-      "id": 1,
-      "count": 0
-    },
-    {
-      "image": "../../assets/Image/doctor.png",
-      "doctorName": "Dr. Poornima MBBS",
+      "doctorName": "Dr. Malarkodi MBBS",
       "field": "General doctor",
       "experiance": "26 Years",
       "licenseNo": "LI2000B72352",
@@ -728,6 +745,70 @@
       "remarkMessage": "",
       "id": 4,
       "status": "Accepted"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-29",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Ganesh MD",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 5,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-06-29",
+      "appointmentTime": "10:00AM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "10:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 8,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "mobileno": "8072702981",
+      "appointmentDate": "2023-06-29",
+      "appointmentTime": "10:30AM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "10:30AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 9,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "NAVEEN",
+      "mobileno": "9597243562",
+      "appointmentDate": "2023-06-29",
+      "appointmentTime": "01:00PM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Murugan MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "01:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 10,
+      "status": "Accepted"
     }
   ],
   "cancelledRequest": [
@@ -738,10 +819,35 @@
       "cdoctorName": "Dr. Swetha MS",
       "reporting": "Sended",
       "id": 1,
-      "remarkMessage": "Not Available"
+      "remarkMessage": "Doctor Not Available"
     }
   ],
-  "acceptRequest": [],
+  "acceptRequest": [
+    {
+      "name": "MANIKANDAN",
+      "mobileNo": "8072393102",
+      "date": "2023-06-29",
+      "timeing": "10:00AM",
+      "problem": "",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "doctorField": "General doctor",
+      "acceptanceStatus": "Pending",
+      "reporingStatus": "pending",
+      "id": 3
+    },
+    {
+      "name": "SATHISH KUMAR",
+      "mobileNo": "8072702981",
+      "date": "2023-06-29",
+      "timeing": "10:30AM",
+      "problem": "",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "doctorField": "General doctor",
+      "acceptanceStatus": "Pending",
+      "reporingStatus": "pending",
+      "id": 4
+    }
+  ],
   "billDetails": [
     {
       "patientId": 1,
@@ -784,6 +890,34 @@
       "paymentStatus": "Paid",
       "appointmentDate": "2023-06-28",
       "id": 3
+    },
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Ganesh MD",
+      "doctorField": "Dentist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹500",
+      "otherFee": "₹50",
+      "Total": "₹550",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-29",
+      "id": 4
+    },
+    {
+      "patientId": 5,
+      "name": "NAVEEN",
+      "doctorName": "Dr. Murugan MBBS",
+      "doctorField": "General doctor",
+      "mobileNo": "9597243562",
+      "consultingFee": "₹72",
+      "otherFee": "₹100",
+      "Total": "₹172",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-29",
+      "id": 5
     }
   ],
   "forgotPassDetails": [
@@ -831,6 +965,32 @@
       "Total": "₹137",
       "paymentStatus": "Success",
       "id": 3
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-29",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Ganesh MD",
+      "consultingFee": "₹500",
+      "otherFee": "₹50",
+      "Total": "₹550",
+      "paymentStatus": "Success",
+      "id": 4
+    },
+    {
+      "patientName": "NAVEEN",
+      "email": "naveenjayanthi3562@gmail.com",
+      "phone": "9597243562",
+      "appointmentDate": "2023-06-29",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Murugan MBBS",
+      "consultingFee": "₹72",
+      "otherFee": "₹100",
+      "Total": "₹172",
+      "paymentStatus": "Success",
+      "id": 5
     }
   ],
   "Event": [

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../userService.service';
 import { StatusUpdate } from './slot.model';
 import { DoctorSlotServiceService } from './doctorSlotService.service';
-import { subscribeOn } from 'rxjs';
+import { Observable, map, subscribeOn } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
@@ -29,9 +29,22 @@ export class SlotComponent implements OnInit {
       alert('You are Loggedout. Login to continue');
       this.route.navigate(['/login']);
     }
-    this.http.get<any>("http://localhost:3000/acceptRequest").subscribe(data=>{
+    // this.http.get<any>("http://localhost:3000/acceptRequest").subscribe(data=>{
+    // this.slotAllocated=data;
+    // });
+    this.searchPatient().subscribe((data)=>{
     this.slotAllocated=data;
-    });
+    })
+  }
+  searchPatient(): Observable<any> {
+    return this.http.get<any>("http://localhost:3000/acceptRequest").pipe(
+      map((data) => {
+        return data.filter(
+          (item:any) =>
+            item.doctorName === this.loggedInUser.doctorName && item.doctorField === this.loggedInUser.field
+        );
+      })
+    );
   }
 
   value:any="success";
@@ -70,7 +83,7 @@ export class SlotComponent implements OnInit {
       }
     })
   }
-  
+
   patchToPatient(details:any, id:any){
     var body={
       appStatus:"Treatment was Completed",
@@ -80,4 +93,5 @@ export class SlotComponent implements OnInit {
       alert("Updated to Patient DB");
     })
   }
+
 }

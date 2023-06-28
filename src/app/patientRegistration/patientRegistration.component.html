@@ -7,8 +7,9 @@
     <h4 class="title">Personal Details</h4>
     <label>Patient Name:</label><br />
     <input type="text" placeholder="Enter your Name" class="inp-box" formControlName="patientName"
-      pattern="^(?!.*([a-zA-Z])\1\1)[a-zA-Z]+[a-zA-Z\s]+$"
-      minlength="3" oninput="this.value = this.value.toUpperCase()"/>
+    pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$"
+
+    oninput="this.value = this.value.toUpperCase()"/>
 
     <div class="error" *ngIf="PatientRegister.controls['patientName'].dirty" >
       <p *ngIf="PatientRegister.controls['patientName'].errors?.['required']">
@@ -17,29 +18,27 @@
       <p *ngIf="PatientRegister.controls['patientName'].errors?.['pattern']">
         Enter Valid Name
       </p>
-      <p *ngIf="PatientRegister.controls['patientName'].errors?.['minlength']">
+      <!-- <p *ngIf="PatientRegister.controls['patientName'].errors?.['minlength']">
         Enter Valid Name
-      </p>
+      </p> -->
     </div>
     <br /> <br>
     <label>Father Name:</label><br />
     <input type="text" placeholder="Enter your Father Name" class="inp-box" formControlName="fatherName"
-    pattern="^[A-Za-z]+[\s]{0,1}[A-Za-z]+$"
+    pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$"
 
-    minlength="3" oninput="this.value = this.value.toUpperCase()"/>
+     oninput="this.value = this.value.toUpperCase()"/>
     <div class="error" *ngIf="PatientRegister.controls['fatherName'].dirty">
       <p *ngIf="PatientRegister.controls['fatherName'].errors?.['required']">
         Enter the field
       </p>
       <p *ngIf="PatientRegister.controls['fatherName'].errors?.['pattern']">
-        Enter alphabets only
+        Enter Valid Name
       </p>
-      <p *ngIf="PatientRegister.controls['fatherName'].errors?.['minlength']">
-        Enter valid name
-      </p>
+
     </div>
     <br /> <br>
-    <label>Gender:</label>
+    <label>Gender:</label><br><br>
     <div class="gender-category">
           <input type="radio" name="gender" formControlName="gender" value="male" >
           <label for="male">Male</label>
@@ -114,11 +113,12 @@
         Enter valid number
       </p>
     </div>
-    <br />
+    <br /><br>
     <label>Address</label><br />
 
     <textarea type="text" class="inp-box" name="phno" placeholder="Enter Address" required
-      formControlName="address" pattern="^[a-zA-Z0-9\s,.'-/]{3,}$" ></textarea>
+      formControlName="address"
+      pattern="^[a-zA-Z0-9\s,.'-/]{3,}$" ></textarea>
     <div class="error" *ngIf="PatientRegister.controls['address'].dirty">
       <p *ngIf="PatientRegister.controls['address'].errors?.['required']">
         Enter the address
@@ -132,7 +132,7 @@
     <input type="file" id="file" required multiple accept="image/*" formControlName="image"/> <br> -->
 
     <br><br>
-    <label>Insurance Policy Card Availability:</label>
+    <label>Insurance Policy Card Availability:</label><br><br>
     <div>
           <input type="radio" name="insurence" formControlName="insurance" value="YES" >
           <label>Yes</label>
@@ -143,7 +143,7 @@
     <br>
     <div>
       <label>Password</label><br>
-      <small>*minimum 6 to 14 character, <br> *maximum 1 special character and number</small>
+      <small>*minimum 6 to maximum 14 character, <br> *minimum 1 special character and number</small>
       <input type="password" formControlName="password" class="inp-box"
         pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
 
