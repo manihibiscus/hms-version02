@@ -21,10 +21,13 @@
       "doctorField": "General doctor",
       "doctorName": "Dr. Malarkodi MBBS",
       "attemptStatus": "true",
-      "appStatus": "Accepted for appointment",
+      "appStatus": "Payment Pending",
       "appoimtmentHour": "10:30AM",
       "apppointmentMin": "",
-      "remarkMessage": ""
+      "remarkMessage": "",
+      "consultingFee": "₹200",
+      "otherFee": "₹150",
+      "Total": "₹350"
     },
     {
       "patientName": "KISHORE KUMAR ",
@@ -144,16 +147,19 @@
       "cpassword": "Mani@777",
       "id": 7,
       "mobileno": "8072393102",
-      "appointmentDate": "2023-06-29",
-      "appointmentTime": "10:00AM",
+      "appointmentDate": "",
+      "appointmentTime": "",
       "say": "",
-      "doctorField": "General doctor",
-      "doctorName": "Dr. Malarkodi MBBS",
-      "attemptStatus": "true",
-      "appStatus": "Accepted for appointment",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
       "appoimtmentHour": "10:00AM",
       "apppointmentMin": "",
-      "remarkMessage": ""
+      "remarkMessage": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
     },
     {
       "patientName": "NAVANNETH",
@@ -311,6 +317,108 @@
       "field": "General doctor",
       "userId": "murugan@gmail.com",
       "password": "Murugan@123"
+    },
+    {
+      "doctorName": "Dr. Thiru MBBS",
+      "field": "General doctor",
+      "userId":"thiru@gmail.com",
+      "password":"Thiru@123"
+    },
+    {
+      "doctorName": "Dr. Swetha MS",
+      "field": "PediatricianList",
+      "userId":"swetha@gmail.com",
+      "password":"swetha@123"
+    },
+    {
+      "doctorName": "Dr. Pranav Ram MS",
+      "field": "PediatricianList",
+      "userId":"pranav@gmail.com",
+      "password":"pranav@123"
+    },
+    {
+      "doctorName": "Dr. Thilagavathi MS",
+      "field": "Gynecologist",
+      "userId":"thilagavathi@gmail.com",
+      "password":"Thilagavathi@123"
+    },
+    {
+      "doctorName": "Dr. Kavitha MD",
+      "field": "Gynecologist",
+      "userId":"kavitha@gmail.com",
+      "password":"Kavitha@123"
+    },
+    {
+      "doctorName": "Dr. Hari Gokul MD",
+      "field": "Dentist",
+      "userId":"hari@gmail.com",
+      "password":"Hari@123"
+    },
+    {
+      "doctorName": "Dr. Sedhuragavan MS",
+      "field": "Dentist",
+      "userId":"sedhu@gmail.com",
+      "password":"Sedhu@123"
+    },
+    {
+      "doctorName": "Dr. Gautam MS",
+      "field": "Dentist",
+      "userId":"gautam@gmail.com",
+      "password":"Gautam@123"
+    },
+    {
+      "doctorName": "Dr. Ganesh MD",
+      "field": "Dentist",
+      "userId":"ganesh@gmail.com",
+      "password":"Ganesh@123"
+    },
+    {
+      "doctorName": "Dr. Subramani MS",
+      "field": "Cardiologist",
+      "userId":"subramani@gmail.com",
+      "password":"Subramani@123"
+    },
+    {
+      "doctorName": "Dr. Sreeganesh MD",
+      "field": "Cardiologist",
+      "userId":"sreeganesh@gmail.com",
+      "password":"Sreeganesh@123"
+    },
+    {
+      "doctorName": "Dr. Mythili MD",
+      "field": "Cosmic",
+      "userId":"mythili@gmail.com",
+      "password":"Mythili@123"
+    },
+    {
+      "doctorName": "Dr. Vigneshwaran MD",
+      "field": "Cosmic",
+      "userId":"vigneshwaran@gmail.com",
+      "password":"Vignesh@123"
+    },
+    {
+      "doctorName": "Dr. Manikandan MD",
+      "field": "Otolaryngologist",
+      "userId":"manikandan@gmail.com",
+      "password":"Mani@123"
+    },
+    {
+      "doctorName": "Dr. Arunkumar MD",
+      "field": "Otolaryngologist",
+      "userId":"arunkumar@gmail.com",
+      "password":"Arun@123"
+    },
+    {
+      "doctorName": "Dr. Hemalatha MD",
+      "field": "Psychiatrist",
+      "userId":"hemalatha@gmail.com",
+      "password":"Hemalatha@123"
+    },
+    {
+      "doctorName": "Dr. Sudhandiradhivya MS",
+      "field": "Psychiatrist",
+      "userId":"sudhandiradhivya@gmail.com",
+      "password":"Sudhandira@123"
     }
   ],
   "generalDoctorList": [
@@ -552,7 +660,7 @@
   "cosmic": [
     {
       "image": "../../assets/Image/doctor.png",
-      "doctorName": "Dr. Mythili M MD",
+      "doctorName": "Dr. Mythili MD",
       "field": "Cosmic",
       "experiance": "15 Years",
       "licenseNo": "LI2000B76326",
@@ -648,7 +756,7 @@
     },
     {
       "image": "../../assets/Image/doctor.png",
-      "doctorName": "Dr. Sudhanthradivya MS",
+      "doctorName": "Dr. Sudhandiradhivya MS",
       "field": "Psychiatrist",
       "experiance": "19 Years",
       "licenseNo": "LI2000B729874",
@@ -822,32 +930,7 @@
       "remarkMessage": "Doctor Not Available"
     }
   ],
-  "acceptRequest": [
-    {
-      "name": "MANIKANDAN",
-      "mobileNo": "8072393102",
-      "date": "2023-06-29",
-      "timeing": "10:00AM",
-      "problem": "",
-      "doctorName": "Dr. Malarkodi MBBS",
-      "doctorField": "General doctor",
-      "acceptanceStatus": "Pending",
-      "reporingStatus": "pending",
-      "id": 3
-    },
-    {
-      "name": "SATHISH KUMAR",
-      "mobileNo": "8072702981",
-      "date": "2023-06-29",
-      "timeing": "10:30AM",
-      "problem": "",
-      "doctorName": "Dr. Malarkodi MBBS",
-      "doctorField": "General doctor",
-      "acceptanceStatus": "Pending",
-      "reporingStatus": "pending",
-      "id": 4
-    }
-  ],
+  "acceptRequest": [],
   "billDetails": [
     {
       "patientId": 1,
@@ -918,6 +1001,34 @@
       "paymentStatus": "Paid",
       "appointmentDate": "2023-06-29",
       "id": 5
+    },
+    {
+      "patientId": 3,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "doctorField": "General doctor",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹520",
+      "otherFee": "₹200",
+      "Total": "₹720",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-29",
+      "id": 6
+    },
+    {
+      "patientId": 4,
+      "name": "SATHISH KUMAR",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "doctorField": "General doctor",
+      "mobileNo": "8072702981",
+      "consultingFee": "₹200",
+      "otherFee": "₹150",
+      "Total": "₹350",
+      "status": "sended to patient",
+      "paymentStatus": "Unpaid",
+      "appointmentDate": "2023-06-29",
+      "id": 7
     }
   ],
   "forgotPassDetails": [
@@ -991,6 +1102,19 @@
       "Total": "₹172",
       "paymentStatus": "Success",
       "id": 5
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-06-29",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Malarkodi MBBS",
+      "consultingFee": "₹520",
+      "otherFee": "₹200",
+      "Total": "₹720",
+      "paymentStatus": "Success",
+      "id": 6
     }
   ],
   "Event": [
