@@ -41,19 +41,35 @@ label{
 }
 .inputselect option{
   color: green;
+
 } */
-.makeaAppointment{
+.makeaAppointment {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* .makeaAppointment{
   width: 200px;
-  padding: 10px 30px;
+  padding: 8px 10px;
   display: block;
   margin: auto;
   background: linear-gradient(to right, #e5eaec,#90c79a);
   border: 0;
   outline: none;
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: bolder;
   color: #0e0a01;
-}
+} */
 .field5{
   margin-top: 25px;
 }

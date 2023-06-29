@@ -71,3 +71,18 @@ table thead th{
   /* padding-left:10%; */
   padding: 20px;
 }
+.button {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}

@@ -45,3 +45,18 @@ table thead th{
   color: red;
   font-weight: bolder;
 }
+.button {
+  margin-top: 5px;
+  padding: 2px 4px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}

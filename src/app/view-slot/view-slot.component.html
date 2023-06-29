@@ -25,8 +25,8 @@
         <td>{{appointment.appointmentTime}}</td>
         <!-- <td>{{appointment.say}}</td> -->
         <td>
-          <button class="back"  (click)="accept(appointment,appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate,appointment.appointmentTime, appointment.say, appointment.doctorName, appointment.doctorField)">Accept</button>
-          <button class="back"  (click)="cancel(appointment,appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate, appointment.doctorName )">Cancel</button>
+          <button class="back1"  (click)="accept(appointment,appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate,appointment.appointmentTime, appointment.say, appointment.doctorName, appointment.doctorField)">Accept</button>
+          <button class="back2"  (click)="cancel(appointment,appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate, appointment.doctorName )">Cancel</button>
         </td>
       </tr>
     </tbody>
@@ -91,11 +91,13 @@
         <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>
         <td>{{appointment.cdoctorName}}</td>
         <td>
-          <textarea name="remark" id="" cols="20" rows="3" formControlName="rkMessage"></textarea>
+          <textarea [hidden]="appointment.reporting=='Sended'" name="remark" id="" cols="20" rows="3" formControlName="rkMessage"></textarea>
         </td>
         <td>{{appointment.reporting}}</td>
         <td>
-          <button [disabled]="appointment.reporting=='Sended' " [disabled]="remarkMessage.invalid"  (click)="sendRemarks(appointment)">Send</button>
+          <button class="button" [disabled]="appointment.reporting=='Sended' " [disabled]="remarkMessage.invalid"  (click)="sendRemarks(appointment)"
+          [ngClass]="{blur:remarkMessage.invalid}"
+          >Send</button>
         </td>
         <td>{{appointment.remarkMessage}}</td>
 

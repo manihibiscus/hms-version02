@@ -44,19 +44,16 @@
       "cpassword": "kISHORE@18",
       "id": 2,
       "mobileno": "7373102828",
-      "appointmentDate": "",
-      "appointmentTime": "",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "01:30PM",
       "say": "",
-      "doctorField": "",
-      "doctorName": "",
-      "attemptStatus": "false",
-      "appStatus": "",
-      "appoimtmentHour": "11:30AM",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Murugan MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Accepted for appointment",
+      "appoimtmentHour": "01:30PM",
       "apppointmentMin": "",
-      "remarkMessage": "",
-      "consultingFee": "",
-      "otherFee": "",
-      "Total": ""
+      "remarkMessage": ""
     },
     {
       "patientName": "DINESH",
@@ -71,7 +68,21 @@
       "insurance": "YES",
       "password": "Dinesh@8",
       "cpassword": "Dinesh@8",
-      "id": 3
+      "id": 3,
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Psychiatrist",
+      "doctorName": "Dr. Hemalatha MD",
+      "attemptStatus": "true",
+      "appStatus": "Payment Pending",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "consultingFee": "₹200",
+      "otherFee": "₹10",
+      "Total": "₹210"
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -103,13 +114,13 @@
       "cpassword": "Naveen@777",
       "id": 5,
       "mobileno": "9597243562",
-      "appointmentDate": "",
-      "appointmentTime": "",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "01:00PM",
       "say": "",
-      "doctorField": "",
-      "doctorName": "",
-      "attemptStatus": "false",
-      "appStatus": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Murugan MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
       "appoimtmentHour": "01:00PM",
       "apppointmentMin": "",
       "remarkMessage": "",
@@ -153,13 +164,17 @@
       "doctorField": "",
       "doctorName": "",
       "attemptStatus": "false",
-      "appStatus": "",
+      "appStatus": "Cancelled! (Try again)",
       "appoimtmentHour": "10:00AM",
       "apppointmentMin": "",
       "remarkMessage": "",
       "consultingFee": "",
       "otherFee": "",
-      "Total": ""
+      "Total": "",
+      "cName": "",
+      "cMobileNo": "",
+      "cDate": "",
+      "cdoctorName": ""
     },
     {
       "patientName": "NAVANNETH",
@@ -307,12 +322,6 @@
   ],
   "doctorDetails": [
     {
-      "doctorName": "Dr. Malarkodi MBBS",
-      "field": "General doctor",
-      "userId": "malarkodi@gmail.com",
-      "password": "Malarkodi@123"
-    },
-    {
       "doctorName": "Dr. Murugan MBBS",
       "field": "General doctor",
       "userId": "murugan@gmail.com",
@@ -321,125 +330,107 @@
     {
       "doctorName": "Dr. Thiru MBBS",
       "field": "General doctor",
-      "userId":"thiru@gmail.com",
-      "password":"Thiru@123"
+      "userId": "thiru@gmail.com",
+      "password": "Thiru@123"
     },
     {
       "doctorName": "Dr. Swetha MS",
       "field": "PediatricianList",
-      "userId":"swetha@gmail.com",
-      "password":"swetha@123"
+      "userId": "swetha@gmail.com",
+      "password": "swetha@123"
     },
     {
       "doctorName": "Dr. Pranav Ram MS",
       "field": "PediatricianList",
-      "userId":"pranav@gmail.com",
-      "password":"pranav@123"
+      "userId": "pranav@gmail.com",
+      "password": "pranav@123"
     },
     {
       "doctorName": "Dr. Thilagavathi MS",
       "field": "Gynecologist",
-      "userId":"thilagavathi@gmail.com",
-      "password":"Thilagavathi@123"
+      "userId": "thilagavathi@gmail.com",
+      "password": "Thilagavathi@123"
     },
     {
       "doctorName": "Dr. Kavitha MD",
       "field": "Gynecologist",
-      "userId":"kavitha@gmail.com",
-      "password":"Kavitha@123"
+      "userId": "kavitha@gmail.com",
+      "password": "Kavitha@123"
     },
     {
       "doctorName": "Dr. Hari Gokul MD",
       "field": "Dentist",
-      "userId":"hari@gmail.com",
-      "password":"Hari@123"
+      "userId": "hari@gmail.com",
+      "password": "Hari@123"
     },
     {
       "doctorName": "Dr. Sedhuragavan MS",
       "field": "Dentist",
-      "userId":"sedhu@gmail.com",
-      "password":"Sedhu@123"
+      "userId": "sedhu@gmail.com",
+      "password": "Sedhu@123"
     },
     {
       "doctorName": "Dr. Gautam MS",
       "field": "Dentist",
-      "userId":"gautam@gmail.com",
-      "password":"Gautam@123"
+      "userId": "gautam@gmail.com",
+      "password": "Gautam@123"
     },
     {
       "doctorName": "Dr. Ganesh MD",
       "field": "Dentist",
-      "userId":"ganesh@gmail.com",
-      "password":"Ganesh@123"
+      "userId": "ganesh@gmail.com",
+      "password": "Ganesh@123"
     },
     {
       "doctorName": "Dr. Subramani MS",
       "field": "Cardiologist",
-      "userId":"subramani@gmail.com",
-      "password":"Subramani@123"
+      "userId": "subramani@gmail.com",
+      "password": "Subramani@123"
     },
     {
       "doctorName": "Dr. Sreeganesh MD",
       "field": "Cardiologist",
-      "userId":"sreeganesh@gmail.com",
-      "password":"Sreeganesh@123"
+      "userId": "sreeganesh@gmail.com",
+      "password": "Sreeganesh@123"
     },
     {
       "doctorName": "Dr. Mythili MD",
       "field": "Cosmic",
-      "userId":"mythili@gmail.com",
-      "password":"Mythili@123"
+      "userId": "mythili@gmail.com",
+      "password": "Mythili@123"
     },
     {
       "doctorName": "Dr. Vigneshwaran MD",
       "field": "Cosmic",
-      "userId":"vigneshwaran@gmail.com",
-      "password":"Vignesh@123"
+      "userId": "vigneshwaran@gmail.com",
+      "password": "Vignesh@123"
     },
     {
       "doctorName": "Dr. Manikandan MD",
       "field": "Otolaryngologist",
-      "userId":"manikandan@gmail.com",
-      "password":"Mani@123"
+      "userId": "manikandan@gmail.com",
+      "password": "Mani@123"
     },
     {
       "doctorName": "Dr. Arunkumar MD",
       "field": "Otolaryngologist",
-      "userId":"arunkumar@gmail.com",
-      "password":"Arun@123"
+      "userId": "arunkumar@gmail.com",
+      "password": "Arun@123"
     },
     {
       "doctorName": "Dr. Hemalatha MD",
       "field": "Psychiatrist",
-      "userId":"hemalatha@gmail.com",
-      "password":"Hemalatha@123"
+      "userId": "hemalatha@gmail.com",
+      "password": "Hemalatha@123"
     },
     {
       "doctorName": "Dr. Sudhandiradhivya MS",
       "field": "Psychiatrist",
-      "userId":"sudhandiradhivya@gmail.com",
-      "password":"Sudhandira@123"
+      "userId": "sudhandiradhivya@gmail.com",
+      "password": "Sudhandira@123"
     }
   ],
   "generalDoctorList": [
-    {
-      "image": "../../assets/Image/doctor.png",
-      "doctorName": "Dr. Malarkodi MBBS",
-      "field": "General doctor",
-      "experiance": "26 Years",
-      "licenseNo": "LI2000B72352",
-      "available": "10:00 AM - 01:00 PM",
-      "timing": [
-        "10:00AM",
-        "10:30AM",
-        "11:00AM",
-        "11:30AM",
-        "12:00PM",
-        "12:30PM",
-        "01:00PM"
-      ],
-      "id": 2
-    },
     {
       "image": "../../assets/Image/doctor (1).png",
       "doctorName": "Dr. Murugan MBBS",
@@ -456,10 +447,10 @@
         "03:30PM",
         "04:00PM"
       ],
-      "id": 3
+      "id": 1
     },
     {
-      "image": "../../assets/Image/doctor.png",
+      "image": "../../assets/Image/doctor (1).png",
       "doctorName": "Dr. Thiru MBBS",
       "field": "General doctor",
       "experiance": "16 Years",
@@ -474,7 +465,25 @@
         "02:30PM",
         "03:00PM"
       ],
-      "id": 4
+      "id": 3
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Karthikeyan MBBS",
+      "field": "General doctor",
+      "experiance": "12 Years",
+      "licenseNo": "LI2000B723653",
+      "available": "09:00 AM - 12:00 PM",
+      "timing": [
+        "09:00AM",
+        "09:30AM",
+        "10:00AM",
+        "10:30AM",
+        "11:00AM",
+        "11:00AM",
+        "12:00PM"
+      ],
+      "id": 3
     }
   ],
   "pediatricianList": [
@@ -917,6 +926,102 @@
       "remarkMessage": "",
       "id": 10,
       "status": "Accepted"
+    },
+    {
+      "patientName": "KISHORE KUMAR ",
+      "mobileno": "7373102828",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Subramani MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 11,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "NAVEEN",
+      "mobileno": "9597243562",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "09:30AM",
+      "say": "",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Subramani MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:30AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 12,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "KISHORE KUMAR ",
+      "mobileno": "7373102828",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "10:00AM",
+      "say": "",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Subramani MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "10:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 13,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "NAVEEN",
+      "mobileno": "9597243562",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "01:00PM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Murugan MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "01:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 15,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "KISHORE KUMAR ",
+      "mobileno": "7373102828",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "01:30PM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Murugan MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "01:30PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 17,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "DINESH",
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-06-30",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Psychiatrist",
+      "doctorName": "Dr. Hemalatha MD",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 18,
+      "status": "Accepted"
     }
   ],
   "cancelledRequest": [
@@ -927,10 +1032,44 @@
       "cdoctorName": "Dr. Swetha MS",
       "reporting": "Sended",
       "id": 1,
-      "remarkMessage": "Doctor Not Available"
+      "remarkMessage": ""
+    },
+    {
+      "cName": "KISHORE KUMAR ",
+      "cMobileNo": "7373102828",
+      "cDate": "2023-06-30",
+      "cdoctorName": "Dr. Subramani MS",
+      "reporting": "Sended",
+      "id": 2,
+      "remarkMessage": "Not Available"
     }
   ],
-  "acceptRequest": [],
+  "acceptRequest": [
+    {
+      "name": "NAVEEN",
+      "mobileNo": "9597243562",
+      "date": "2023-06-30",
+      "timeing": "01:00PM",
+      "problem": "",
+      "doctorName": "Dr. Murugan MBBS",
+      "doctorField": "General doctor",
+      "acceptanceStatus": "Pending",
+      "reporingStatus": "pending",
+      "id": 1
+    },
+    {
+      "name": "KISHORE KUMAR ",
+      "mobileNo": "7373102828",
+      "date": "2023-06-30",
+      "timeing": "01:30PM",
+      "problem": "",
+      "doctorName": "Dr. Murugan MBBS",
+      "doctorField": "General doctor",
+      "acceptanceStatus": "Pending",
+      "reporingStatus": "pending",
+      "id": 3
+    }
+  ],
   "billDetails": [
     {
       "patientId": 1,
@@ -1029,6 +1168,48 @@
       "paymentStatus": "Unpaid",
       "appointmentDate": "2023-06-29",
       "id": 7
+    },
+    {
+      "patientId": 1,
+      "name": "KISHORE KUMAR ",
+      "doctorName": "Dr. Subramani MS",
+      "doctorField": "Cardiologist",
+      "mobileNo": "7373102828",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-30",
+      "id": 8
+    },
+    {
+      "patientId": 1,
+      "name": "NAVEEN",
+      "doctorName": "Dr. Subramani MS",
+      "doctorField": "Cardiologist",
+      "mobileNo": "9597243562",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-06-30",
+      "id": 9
+    },
+    {
+      "patientId": 4,
+      "name": "DINESH",
+      "doctorName": "Dr. Hemalatha MD",
+      "doctorField": "Psychiatrist",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹200",
+      "otherFee": "₹10",
+      "Total": "₹210",
+      "status": "sended to patient",
+      "paymentStatus": "Unpaid",
+      "appointmentDate": "2023-06-30",
+      "id": 10
     }
   ],
   "forgotPassDetails": [
@@ -1115,6 +1296,32 @@
       "Total": "₹720",
       "paymentStatus": "Success",
       "id": 6
+    },
+    {
+      "patientName": "KISHORE KUMAR ",
+      "email": "livekishore2001@gmail.com",
+      "phone": "7373102828",
+      "appointmentDate": "2023-06-30",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Subramani MS",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "paymentStatus": "Success",
+      "id": 7
+    },
+    {
+      "patientName": "NAVEEN",
+      "email": "naveenjayanthi3562@gmail.com",
+      "phone": "9597243562",
+      "appointmentDate": "2023-06-30",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Subramani MS",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "paymentStatus": "Success",
+      "id": 8
     }
   ],
   "Event": [

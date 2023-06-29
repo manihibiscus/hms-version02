@@ -94,18 +94,64 @@ color: white;
   outline: none;
   background: transparent;
 }
-.submit{
-  width: 70px;
-  padding: 5px 5px;
-  display: block;
-  margin: auto;
-  background: linear-gradient(to right, #e5eaec,#90c79a);
-  border: 0;
-  outline: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 17px;
-  color: #0e0a01;
+.submit {
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.button {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.blur2{
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(205, 215, 216);
+  border: 1px solid white;
+  color: rgb(235, 235, 235);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.blur{
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(205, 215, 216);
+  border: 1px solid white;
+  color: rgb(235, 235, 235);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 

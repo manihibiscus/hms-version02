@@ -141,7 +141,7 @@ export class ViewSlotComponent {
           status:"Cancelled"
         }
         this.http.patch<any>("http://localhost:3000/appointmentDetails/"+update.id,body).subscribe(()=>{
-          alert("Updated on appointmentDetails DB");
+          alert("Updated on appointmentDetails DB Cancel!!");
           this.ngOnInit();
       });
       }
