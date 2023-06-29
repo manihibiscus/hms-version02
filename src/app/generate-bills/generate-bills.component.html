@@ -29,11 +29,9 @@
         <!-- <td>{{appointment.timeing}}</td> -->
         <td>
           <button [disabled]="appointment.acceptanceStatus=='Pending'" (click)="generate(appointment,appointment.acceptanceStatus)"
-          [ngClass]="{button:appointment.acceptanceStatus=='success',
+          [ngClass]="{button1:appointment.acceptanceStatus=='success',
                      blur2:appointment.acceptanceStatus=='Pending'}"
           >Generate</button>
-
-          <!-- <button class="back">Generate</button> -->
         </td>
       </tr>
     </tbody>
@@ -93,6 +91,8 @@
 <br>
 </form>
 <div class="div">
+  <!-- <button class="button" (click)="sendToAll()">Send to All</button> -->
+
   <h2 style="color: #071468; text-align: center;">Payment Details</h2>
 
   <form class="form">
@@ -129,9 +129,9 @@
             {{appointment.paymentStatus}}
           </td>
           <td>
-            <button class="button" (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' || appointment.paymentStatus=='Paid' "
-            [ngClass]="{blur2:appointment.status=='sended to patient'}"
-            >Send Recepit</button>
+            <button class="sendTo" (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' "
+            [ngClass]="{disable:appointment.status=='sended to patient'}"
+            >Send to Patient</button>
           </td>
         </tr>
       </tbody>

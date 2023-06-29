@@ -27,7 +27,10 @@
         <td>{{appointment.problem}}</td>
         <td>{{appointment.reporingStatus}}</td>
         <td>
-          <button [disabled]="appointment.reporingStatus=='Reported to admin' " id="refchange" (click)="AddToBill(appointment,appointment.id)">ADD</button>
+          <button [disabled]="appointment.reporingStatus=='Reported to admin' " id="refchange" (click)="AddToBill(appointment,appointment.id)"
+          [ngClass]="{button:appointment.reporingStatus=='pending',
+                      blur:appointment.reporingStatus=='Reported to admin'}"
+          >Report</button>
         </td>
       </tr>
     </tbody>

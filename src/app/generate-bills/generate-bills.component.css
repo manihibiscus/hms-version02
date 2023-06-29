@@ -109,7 +109,36 @@ color: white;
   border-radius: 4px;
 }
 .button {
-  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+  position: absolute;
+  margin-left: 1100px;
+}
+.sendTo {
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.button1{
   padding: 6px 8px;
   border: none;
   background-color: rgb(153, 216, 224);
@@ -138,7 +167,7 @@ color: white;
   cursor: pointer;
   border-radius: 4px;
 }
-.blur{
+.disable{
   margin-top: 5px;
   padding: 6px 8px;
   border: none;

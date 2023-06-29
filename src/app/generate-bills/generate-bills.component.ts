@@ -93,7 +93,7 @@ export class GenerateBillsComponent {
     this.generateBillDetailsObj.consultingFee='₹'+this.billForm.value.consultingFee;
     this.generateBillDetailsObj.otherFee= '₹'+this.billForm.value.otherFee;
     this.generateBillDetailsObj.Total='₹'+this.result;
-    this.generateBillDetailsObj.status=" Still not send to patient";
+    this.generateBillDetailsObj.status="Still not send to patient";
     this.generateBillDetailsObj.appointmentDate=this.billForm.value.appointmentDate;
     let ref=document.getElementById("ref");
     ref?.click();
@@ -164,5 +164,10 @@ export class GenerateBillsComponent {
   //   this.http.patch<any>("http://localhost:3000/patientRegistration/"+Userid.id,body).subscribe(()=>{
   //     alert("Appomitment Status Updated");
   //   })
+  // }
+  // sendToAll(){
+  //   alert("Hi");
+  //   let a=document.getElementById('clickAll');
+  //   a?.click();
   // }
   }
