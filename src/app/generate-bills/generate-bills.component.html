@@ -82,7 +82,9 @@
   </div>
   <br>
   <div>
-    <button class="submit" (click)="submitBill()" [disabled]="!billForm.valid">Submit</button>
+    <button class="submit" (click)="submitBill()" [disabled]="!billForm.valid"
+    [ngClass]="{disable:billForm.invalid}"
+    >Submit</button>
   </div>
   </div>
   </div>

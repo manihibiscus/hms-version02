@@ -97,7 +97,7 @@
         <td>
           <button class="button" [disabled]="appointment.reporting=='Sended' " [disabled]="remarkMessage.invalid"  (click)="sendRemarks(appointment)"
           [ngClass]="{blur:remarkMessage.invalid}"
-          >Send</button>
+          >Send to Patient</button>
         </td>
         <td>{{appointment.remarkMessage}}</td>
 

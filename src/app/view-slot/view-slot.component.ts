@@ -201,7 +201,10 @@ export class ViewSlotComponent {
       cdoctorName:this.cdoctorName,
       remarkMessage:this.remarkMessage.value.rkMessage,
       attemptStatus:"false",
-      appStatus:"Cancelled! (Try again)"
+      appStatus:"Cancelled! (Try again)",
+      consultingFee:"",
+      otherFee:"",
+      Total:""
     }
     this.remark.updateRemark(body,getValue.id).subscribe(()=>{
       alert("Remark Updated");
