@@ -19,6 +19,7 @@ import { SlotComponent } from './slot/slot.component';
 import { PayBillsComponent } from './payBills/payBills.component';
 import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.component';
 import { ConformationGuard } from './conformation.guard';
+import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 
 
 const routes: Routes = [
@@ -106,6 +107,10 @@ component:ViewQueryComponent
 {
   path:"forgotPassword",
   component:ForgotPasswordComponent
+},
+{
+  path:"addDoctor",
+  component:AddDoctorComponent
 }
 
 ];

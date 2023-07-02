@@ -70,19 +70,19 @@
       "cpassword": "Dinesh@8",
       "id": 3,
       "mobileno": "9750051165",
-      "appointmentDate": "",
-      "appointmentTime": "",
+      "appointmentDate": "2023-07-05",
+      "appointmentTime": "12:00PM",
       "say": "",
-      "doctorField": "",
-      "doctorName": "",
-      "attemptStatus": "false",
-      "appStatus": "",
-      "appoimtmentHour": "09:00AM",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Gautam MS",
+      "attemptStatus": "true",
+      "appStatus": "Payment Pending",
+      "appoimtmentHour": "12:00PM",
       "apppointmentMin": "",
       "remarkMessage": "",
-      "consultingFee": "",
-      "otherFee": "",
-      "Total": ""
+      "consultingFee": "₹85",
+      "otherFee": "₹96",
+      "Total": "₹181"
     },
     {
       "patientName": "PRATHEEPRAJ ",
@@ -189,7 +189,21 @@
       "insurance": "NO",
       "password": "Navaneeth@777",
       "cpassword": "Navaneeth@777",
-      "id": 8
+      "id": 8,
+      "mobileno": "9361798897",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "Normal Session",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
     },
     {
       "patientName": "PRAVEEN",
@@ -335,15 +349,15 @@
     },
     {
       "doctorName": "Dr. Swetha MS",
-      "field": "PediatricianList",
+      "field": "Pediatrician",
       "userId": "swetha@gmail.com",
-      "password": "swetha@123"
+      "password": "Swetha@123"
     },
     {
       "doctorName": "Dr. Pranav Ram MS",
-      "field": "PediatricianList",
+      "field": "Pediatrician",
       "userId": "pranav@gmail.com",
-      "password": "pranav@123"
+      "password": "Pranav@123"
     },
     {
       "doctorName": "Dr. Thilagavathi MS",
@@ -1086,6 +1100,54 @@
       "remarkMessage": "",
       "id": 22,
       "status": "Accepted"
+    },
+    {
+      "patientName": "NAVANNETH",
+      "mobileno": "9361798897",
+      "appointmentDate": "2023-07-03",
+      "appointmentTime": "09:00AM",
+      "say": "Normal Session",
+      "doctorField": "Psychiatrist",
+      "doctorName": "Dr. Hemalatha MD",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 23,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "DINESH",
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-07-05",
+      "appointmentTime": "03:00PM",
+      "say": "",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Pranav Ram MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "03:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 24,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "DINESH",
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-07-05",
+      "appointmentTime": "12:00PM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Gautam MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "12:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 25,
+      "status": "Accepted"
     }
   ],
   "cancelledRequest": [
@@ -1308,6 +1370,48 @@
       "paymentStatus": "Unpaid",
       "appointmentDate": "2023-07-01",
       "id": 12
+    },
+    {
+      "patientId": 4,
+      "name": "NAVANNETH",
+      "doctorName": "Dr. Hemalatha MD",
+      "doctorField": "Psychiatrist",
+      "mobileNo": "9361798897",
+      "consultingFee": "₹80",
+      "otherFee": "₹50",
+      "Total": "₹130",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-07-03",
+      "id": 13
+    },
+    {
+      "patientId": 4,
+      "name": "DINESH",
+      "doctorName": "Dr. Pranav Ram MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-07-05",
+      "id": 14
+    },
+    {
+      "patientId": 4,
+      "name": "DINESH",
+      "doctorName": "Dr. Gautam MS",
+      "doctorField": "Dentist",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹85",
+      "otherFee": "₹96",
+      "Total": "₹181",
+      "status": "sended to patient",
+      "paymentStatus": "Unpaid",
+      "appointmentDate": "2023-07-05",
+      "id": 15
     }
   ],
   "forgotPassDetails": [
@@ -1446,6 +1550,32 @@
       "Total": "₹210",
       "paymentStatus": "Success",
       "id": 10
+    },
+    {
+      "patientName": "NAVANNETH",
+      "email": "navaneeth@gmail.com",
+      "phone": "9361798897",
+      "appointmentDate": "2023-07-03",
+      "doctorField": "Psychiatrist",
+      "doctorName": "Dr. Hemalatha MD",
+      "consultingFee": "₹80",
+      "otherFee": "₹50",
+      "Total": "₹130",
+      "paymentStatus": "Success",
+      "id": 11
+    },
+    {
+      "patientName": "DINESH",
+      "email": "dineshdharneesh1734@gmail.com",
+      "phone": "9750051165",
+      "appointmentDate": "2023-07-05",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Pranav Ram MS",
+      "consultingFee": "₹20",
+      "otherFee": "₹100",
+      "Total": "₹120",
+      "paymentStatus": "Success",
+      "id": 12
     }
   ],
   "Event": [

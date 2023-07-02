@@ -31,7 +31,6 @@ nav {
   display: grid;
   grid-template-columns: 40px 440px 1fr 1fr;
   padding: 10px 50px 10px 50px;
-
 }
 nav img{
   padding-top: 5px;
@@ -40,7 +39,6 @@ nav ul{
   display: grid;
   grid-template-columns: 110px 90px;
 }
-
 
 nav ul li {
   list-style-type: none;
