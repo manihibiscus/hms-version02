@@ -1,9 +1,25 @@
 <app-doctorHeader></app-doctorHeader>
-<form action="">
+<div class="body">
+  <h2 style="text-align: center;">Add Doctor</h2>
+<form action="" [formGroup]="addDoctorForm">
+  <!-- <div class="doctorName">
+    <label for="">Doctor Name</label>
+    <input type="text" formControlName="doctorName">
+  </div> -->
+  <div class="whole">
+  <div class="split1">
+  <div class="doctorName">
+    <label for="doctorName">Doctor Name</label>
+    <input type="text" id="doctorName" formControlName="doctorName" pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$">
+    <div *ngIf="addDoctorForm.get('doctorName')?.invalid && (addDoctorForm.get('doctorName')?.dirty || addDoctorForm.get('doctorName')?.touched)">
+      <div *ngIf="addDoctorForm.get('doctorName')?.hasError('required')">Doctor Name is required.</div>
+      <div *ngIf="addDoctorForm.controls['doctorName'].errors?.['pattern']">Enter Valid Name</div>
+    </div>
+  </div>
   <div class="medicalField">
     <label for="">Choose Medical Field</label>
     <div class="input">
-      <select name="">
+      <select name="" formControlName="field">
         <option value="" disabled selected>Medical Fields</option>
         <option value="General doctor" >General doctor</option>
         <option value="Pediatrician">Pediatrician</option>
@@ -16,5 +32,36 @@
       </select>
     </div>
     </div>
+    <div class="gender">
+      <label for="">Gender</label>
+      <input type="radio" name="gender" formControlName="gender" value="Male" >Male
+      <input type="radio" name="gender" formControlName="gender" value="Female">Female
+      <input type="radio" name="gender" formControlName="gender" value="Others">Others
+    </div>
+    <div class="email">
+      <label for="">Email</label>
+      <input type="text" formControlName="email">
+    </div>
+  </div>
+  <div class="split2">
+    <div class="phone">
+      <label for="">Phone Number</label>
+      <input type="text" formControlName="phone">
+    </div>
+    <div class="experiance">
+      <label for="">Experiance</label>
+      <input type="text" formControlName="experiance">
+    </div>
+    <div class="lisence">
+      <label for="">Lisence No</label>
+      <input type="text" formControlName="lisenceNo">
+    </div>
+    <div class="availableTime">
+      <label for="">Available Timing</label>
+      <input type="text" formControlName="availableTime">
+    </div>
+    <button (click)="submit()">Submit</button>
+  </div>
+  </div>
 </form>
-<p>add-doctor works!</p>
+</div>

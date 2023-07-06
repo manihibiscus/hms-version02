@@ -1,0 +1,88 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form select {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form select {
+  width: 100%;
+}
+
+form .doctorName,
+form .medicalField,
+form .experiance,
+form .lisence,
+form .availableTime,
+form .phone,
+form .email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+form .gender {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+form .gender label {
+  margin-right: 10px;
+}
+
+form .gender input[type="radio"] {
+  margin-right: 5px;
+}
+
+form button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form button:focus {
+  outline: none;
+}
+
+form select {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+form select option {
+  padding: 8px;
+}
+
+form select option:checked {
+  background-color: #4CAF50;
+  color: #fff;
+}
+.whole{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap:40px;
+}
