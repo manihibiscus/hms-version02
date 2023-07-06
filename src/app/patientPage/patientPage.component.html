@@ -31,7 +31,7 @@
             red:refereshData.appStatus == 'Cancelled! (Try again)',
             green2:refereshData.appStatus == 'Treatment was Completed',
             red2:refereshData.appStatus == 'Payment Pending'} ">
-            {{refereshData.appStatus}} <br> <button class="button" *ngIf="(refereshData.appStatus == 'Payment Pending')" routerLink="/payBills">Pay Now</button>
+            {{refereshData.appStatus}} <br> <button class="button" *ngIf="(refereshData.appStatus == 'Payment Pending')" routerLink="/payBills">Pay Now <br> {{refereshData.Total}}</button>
         </td>
         <td>{{refereshData.remarkMessage}}</td>
         <!-- <td>{{appointment.problem}}</td> -->
@@ -72,6 +72,7 @@
       </tr>
     </tbody>
   </table>
+
   <p [hidden]="!(completed.length==0)" style="color: red;text-align: center;">* No Appointment History Available *</p>
 </form>
 <h2 style="text-align: center;color: #071468;">Cancelled History</h2>

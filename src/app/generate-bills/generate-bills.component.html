@@ -95,7 +95,7 @@
 <div class="div">
   <!-- <button class="button" (click)="sendToAll()">Send to All</button> -->
 
-  <h2 style="color: #071468; text-align: center;">Payment Details</h2>
+  <h2 style="color: #071468; text-align: center;">Send to Patient</h2>
 
   <form class="form">
     <table>
@@ -110,9 +110,8 @@
         <th>Other Fee</th>
         <th>Total</th>
         <th>Status</th>
-        <th>Payment Status</th>
+        <!-- <th>Payment Status</th> -->
         <th>Select</th>
-
       </thead>
       <tbody>
         <tr *ngFor="let appointment of getReceipterDetails">
@@ -126,10 +125,10 @@
           <td>{{appointment.otherFee}}</td>
           <td>{{appointment.Total}}</td>
           <td>{{appointment.status}}</td>
-          <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
+          <!-- <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
           green:appointment.paymentStatus == 'Paid'} ">
             {{appointment.paymentStatus}}
-          </td>
+          </td> -->
           <td>
             <button class="sendTo" (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' "
             [ngClass]="{disable:appointment.status=='sended to patient'}"
@@ -139,6 +138,9 @@
       </tbody>
     </table>
   </form>
+  <div class="notice" *ngIf="getReceipterDetails.length==0">
+    <h3 style="color: green;text-align:center">All the bills have been sent to the rightful ones</h3>
+  </div>
 </div>
 <!-- {{showPatientBill|json}} -->
 <!-- <app-footer></app-footer> -->

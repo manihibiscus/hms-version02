@@ -7,6 +7,8 @@ import { GModel } from './gModel';
 import { ShowBillToPatient } from './showBill.model';
 import { UserServiceService } from '../userService.service';
 import { Router } from '@angular/router';
+import { Observable, map } from 'rxjs';
+
 
 @Component({
   selector: 'app-generate-bills',
@@ -54,7 +56,7 @@ export class GenerateBillsComponent {
     this.service.getAcceptRequest().subscribe(data=>{
       this.getBills=data
     });
-    this.generateBills.getBillDetails().subscribe(value=>{
+    this.searchSentToPatient().subscribe(value=>{
       this.getReceipterDetails=value
     });
     // alert(this.getBills.value.acceptanceStatus);
@@ -64,6 +66,17 @@ export class GenerateBillsComponent {
     // this.gModelObj.status=this.getBills.acceptanceStatus.value;
     // alert(this.gModelObj.status);
   }
+  searchSentToPatient(): Observable<any> {
+    return this.http.get<any>("http://localhost:3000/billDetails").pipe(
+      map((data) => {
+        return data.filter(
+          (item:any) =>
+            item.status === "Still not send to patient"
+        );
+      })
+    );
+  }
+
   result!:number | null
   sum(value1:string, value2:string){
    this.result=parseInt(value1)+parseInt(value2)

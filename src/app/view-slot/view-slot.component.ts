@@ -7,6 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { RemarkServiceService } from './remarkService.service';
 import { PatientPageComponent } from '../patientPage/patientPage.component';
 import { Router } from '@angular/router';
+import {Observable,map} from 'rxjs';
 @Component({
   selector: 'app-view-slot',
   templateUrl: './view-slot.component.html',
@@ -25,7 +26,7 @@ export class ViewSlotComponent {
     ) { }
   getAppointment:any="";
   acceptedAppointment:any="";
-  canceledAppointment:any="";
+  remarkAppointment:any="";
   loggedInUser:any=""
 
   ngOnInit() {
@@ -45,10 +46,20 @@ export class ViewSlotComponent {
     this.http.get<any>("http://localhost:3000/acceptRequest").subscribe(acceptDate=>{
     this.acceptedAppointment=acceptDate;
   });
-  this.http.get<any>("http://localhost:3000/cancelledRequest").subscribe(cancelDate=>{
-    this.canceledAppointment=cancelDate;
+  this.searchRemarking().subscribe(remarkDate=>{
+    this.remarkAppointment=remarkDate;
   });
 
+  }
+  searchRemarking(): Observable<any> {
+    return this.http.get<any>("http://localhost:3000/cancelledRequest").pipe(
+      map((data) => {
+        return data.filter(
+          (item:any) =>
+            item.reporting === "pending"
+        );
+      })
+    );
   }
   date:any=new Date();
   isDisable:any=false;

@@ -52,12 +52,20 @@
           <!-- <td>{{refereshData.phone}}</td> -->
           <td>{{refereshData.consultingFee}}</td>
           <td>{{refereshData.otherFee}}</td>
-          <td>{{refereshData.Total}}</td>
+          <td style="color: green;font-weight: bolder;">{{refereshData.Total}}</td>
         </tr>
       </tbody>
     </table>
   </form><br>
-  <div class="debit" [formGroup]="debitCardForm" [hidden]="(refereshData.consultingFee==null || refereshData.consultingFee=='' )">
+  <div [hidden]="(refereshData.consultingFee==null || refereshData.consultingFee=='' )">
+  <div class="whole">
+    <div class="split1">
+      <img src="../../assets/Image/PayBills.jpg" style="width: 500px;height: 500px;" alt="">
+    </div>
+  <div class="split2">
+  <h2 style="text-align: center;color: #1e1468;background-color: #f5f5f5;margin: auto;width: 35%;padding:5px;border-radius: 10px;">Make Payment</h2>
+<!-- <br> -->
+  <div class="debit" [formGroup]="debitCardForm">
 <h2>Pay on Credit/Debit card</h2>
     <div class="cardNumber">
       <label for="">Debit/Credit Card Number: </label><br><br>
@@ -91,9 +99,12 @@
               Please Enter Valid CVV number
              </p>
           </div><br>
-          <button class="button" [disabled]="debitCardForm.invalid" style="margin: 30px 50px 10px 120px" id="refchange" (click)="pay(refereshData)">Pay</button>
+          <button class="button" [disabled]="true" style="margin: 30px 50px 10px 120px" id="refchange" (click)="pay(refereshData)">Pay {{refereshData.Total}}</button>
     </div>
   </div>
+</div>
+</div>
+</div>
   <br>
   <br>
   <form action="">
