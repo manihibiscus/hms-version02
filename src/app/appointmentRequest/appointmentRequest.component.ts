@@ -181,19 +181,26 @@ doctorName(){
 notice:boolean=false;
 appDet:any=''
 h09:any='';
-h0930:any='';
+h0920:any='';
+h0940:any='';
 h10:any='';
-h1030:any='';
+h1020:any='';
+h1040:any='';
 h11:any='';
-h1130:any='';
+h1120:any='';
+h1140:any='';
 h12:any='';
-h1230:any='';
+h1220:any='';
+h1240:any='';
 h01:any='';
-h0130:any='';
+h0120:any='';
+h0140:any='';
 h02:any='';
-h0230:any='';
+h0220:any='';
+h0240:any='';
 h03:any='';
-h0330:any='';
+h0320:any='';
+h0340:any='';
 h04:any='';
 
 note(){
@@ -208,19 +215,27 @@ note(){
 }
 empty(){
 this.h09='';
-this.h0930='';
+this.h0920='';
+this.h0940='';
 this.h10='';
-this.h1030='';
+this.h1020='';
+this.h1040='';
 this.h11='';
-this.h1130='';
+this.h1120='';
+this.h1140='';
 this.h12='';
-this.h1230='';
+this.h1220='';
+this.h1240='';
 this.h01='';
-this.h0130='';
+this.h0120='';
+this.h0120='';
+this.h0140='';
 this.h02='';
-this.h0230='';
+this.h0220='';
+this.h0240='';
 this.h03='';
-this.h0330='';
+this.h0320='';
+this.h0340='';
 this.h04='';
 this.timimg();
 }
@@ -231,20 +246,29 @@ timimg(){
       if(item.appointmentTime=="09:00AM"){
         this.h09=item.appointmentTime
       }
-      else if(item.appointmentTime=="09:30AM"){
-        this.h0930=item.appointmentTime
+      else if(item.appointmentTime=="09:20AM"){
+        this.h0920=item.appointmentTime
+      }
+      else if(item.appointmentTime=="09:40AM"){
+        this.h0940=item.appointmentTime
       }
       else if(item.appointmentTime=="10:00AM"){
         this.h10=item.appointmentTime
       }
-      else if(item.appointmentTime=="10:30AM"){
-        this.h1030=item.appointmentTime
+      else if(item.appointmentTime=="10:20AM"){
+        this.h1020=item.appointmentTime
+      }
+      else if(item.appointmentTime=="10:40AM"){
+        this.h1040=item.appointmentTime
       }
       else if(item.appointmentTime=="11:00AM"){
         this.h11=item.appointmentTime
       }
-      else if(item.appointmentTime=="11:30AM"){
-        this.h1130=item.appointmentTime
+      else if(item.appointmentTime=="11:20AM"){
+        this.h1120=item.appointmentTime
+      }
+      else if(item.appointmentTime=="11:40AM"){
+        this.h1140=item.appointmentTime
       }
       else if(item.appointmentTime=="12:00PM"){
         this.h12=item.appointmentTime
@@ -252,20 +276,29 @@ timimg(){
       else if(item.appointmentTime=="01:00PM"){
         this.h01=item.appointmentTime
       }
-      else if(item.appointmentTime=="01:30PM"){
-        this.h0130=item.appointmentTime
+      else if(item.appointmentTime=="01:20PM"){
+        this.h0120=item.appointmentTime
+      }
+      else if(item.appointmentTime=="01:40PM"){
+        this.h0140=item.appointmentTime
       }
       else if(item.appointmentTime=="02:00PM"){
         this.h02=item.appointmentTime
       }
-      else if(item.appointmentTime=="02:30PM"){
-        this.h0230=item.appointmentTime
+      else if(item.appointmentTime=="02:20PM"){
+        this.h0220=item.appointmentTime
+      }
+      else if(item.appointmentTime=="02:40PM"){
+        this.h0240=item.appointmentTime
       }
       else if(item.appointmentTime=="03:00PM"){
         this.h03=item.appointmentTime
       }
-      else if(item.appointmentTime=="03:30PM"){
-        this.h0330=item.appointmentTime
+      else if(item.appointmentTime=="03:20PM"){
+        this.h0320=item.appointmentTime
+      }
+      else if(item.appointmentTime=="03:40PM"){
+        this.h0340=item.appointmentTime
       }
       else if(item.appointmentTime=="04:00PM"){
         this.h04=item.appointmentTime

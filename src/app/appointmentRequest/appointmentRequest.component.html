@@ -53,11 +53,12 @@
         <option  value="" disabled selected >Select Timing</option>
         <!-- <option *ngFor="let item of doctorDetails.timing; let i=index" [hidden]="item==h[{{i+1}}]"  value="{{item}}">{{item}}</option> -->
         <option *ngFor="let item of doctorDetails.timing; let i=index"
-        [hidden]="item == h09|| item == h0930 || item== h10 || item == h1030 ||
-                  item == h11|| item == h1130 || item== h12 || item == h1230 ||
-                  item == h12|| item == h1230 || item== h01 || item == h0130 ||
-                  item == h02|| item == h0230 || item== h03 || item == h0330 ||
-                  item == h04"
+        [hidden]="item == h09|| item == h0920 || item == h0940 || item== h10 ||
+                  item == h1020 || item == h1040 || item == h11|| item == h1120 ||
+                  item == h1140  || item== h12 || item == h1220 ||
+                  item == h1240 || item== h01 || item == h0120 || item == h0140 ||
+                  item == h02|| item == h0220 || item == h0240 || item== h03 || item == h0320 ||
+                  item == h0320 || item == h04"
         [value]="item">{{item}}</option>
       </select>
 

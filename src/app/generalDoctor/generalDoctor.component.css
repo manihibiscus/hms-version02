@@ -57,12 +57,12 @@ margin-left: 50%;
 }
 .doctor{
   /* background-color: #1f59b0; */
-  background: linear-gradient(to bottom, #3f76c9,#b9ebff);
+  background: linear-gradient(to bottom, #3f76c9,#b5d5e2);
   margin: 5px 0px;
   color: #ffffff;
   padding: 5px 10px;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 .box2{
   padding-top: 10px;

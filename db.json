@@ -1,30 +1,30 @@
 {
   "patientRegistration": [
     {
-      "patientName": "SATHISH KUMAR",
+      072702981",
+      "address": "3"patientName": "SATHISH KUMAR",
       "fatherName": "SIDHURAJ",
       "gender": "male",
       "blood": "A+",
       "date": "2023-05-17",
       "email": "sathishkumar12062004@gmail.com",
-      "phone": "8072702981",
-      "address": "371/205B, Chella kutti kadu Erumapalayam po,",
+      "phone": "871/205B, Chella kutti kadu Erumapalayam po,",
       "image": "C:\\fakepath\\Untitled.png",
       "insurance": "YES",
       "password": "Sathish@777",
       "cpassword": "Sathish@777",
       "id": 1,
       "mobileno": "8072702981",
-      "appointmentDate": "2023-07-10",
+      "appointmentDate": "2023-07-11",
       "appointmentTime": "01:00PM",
-      "say": "General session",
+      "say": "",
       "doctorField": "General doctor",
       "doctorName": "Dr. Murugan MBBS",
-      "attemptStatus": "false",
-      "appStatus": "Cancelled! (Try again)",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
       "appoimtmentHour": "01:00PM",
       "apppointmentMin": "",
-      "remarkMessage": "Not Available",
+      "remarkMessage": "",
       "consultingFee": "",
       "otherFee": "",
       "Total": "",
@@ -472,11 +472,14 @@
       "available": "01:00 PM - 04:00 PM",
       "timing": [
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM",
-        "03:30PM",
+        "03:20PM",
+        "03:40PM",
         "04:00PM"
       ],
       "id": 1
@@ -490,11 +493,14 @@
       "available": "12:00 PM - 03:00 PM",
       "timing": [
         "12:00PM",
-        "12:30PM",
+        "12:20PM",
+        "12:40PM",
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM"
       ],
       "id": 3
@@ -508,11 +514,14 @@
       "available": "09:00 AM - 12:00 PM",
       "timing": [
         "09:00AM",
-        "09:30AM",
+        "09:20AM",
+        "09:40AM",
         "10:00AM",
-        "10:30AM",
+        "10:20AM",
+        "10:40AM",
         "11:00AM",
-        "11:00AM",
+        "11:20AM",
+        "11:40AM",
         "12:00PM"
       ],
       "id": 3
@@ -529,9 +538,11 @@
       "id": 1,
       "timing": [
         "11:00AM",
-        "11:30AM",
+        "11:20AM",
+        "11:40AM",
         "12:00AM",
-        "12:30AM",
+        "12:20AM",
+        "12:40AM",
         "01:00PM"
       ]
     },
@@ -545,9 +556,11 @@
       "id": 2,
       "timing": [
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM",
-        "03:30PM",
+        "03:20PM",
+        "03:40PM",
         "04:00PM"
       ]
     }
@@ -562,11 +575,14 @@
       "available": "01:00 PM - 04:00 PM",
       "timing": [
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM",
-        "03:30PM",
+        "03:20PM",
+        "03:40PM",
         "04:00PM"
       ],
       "id": 1
@@ -580,9 +596,11 @@
       "available": "02:00 PM - 06:00 PM",
       "timing": [
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM",
-        "03:30PM",
+        "03:20PM",
+        "03:40PM",
         "04:00PM"
       ],
       "id": 2
@@ -598,9 +616,11 @@
       "available": "01:00 PM - 03:00 PM",
       "timing": [
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM"
       ],
       "id": 1
@@ -614,13 +634,17 @@
       "available": "09:00 AM - 01:00 PM",
       "timing": [
         "09:00AM",
-        "09:30AM",
+        "09:20AM",
+        "09:40AM",
         "10:00AM",
-        "10:30AM",
+        "10:20AM",
+        "10:40AM",
         "11:00AM",
-        "11:30AM",
+        "11:20AM",
+        "11:40AM",
         "12:00PM",
-        "12:30PM",
+        "12:20PM",
+        "12:40PM",
         "01:00PM"
       ],
       "id": 2
@@ -634,11 +658,14 @@
       "available": "12:00 PM - 03:00 PM",
       "timing": [
         "12:00PM",
-        "12:30PM",
+        "12:20PM",
+        "12:40PM",
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM"
       ],
       "id": 3
@@ -652,9 +679,11 @@
       "available": "09:00 AM - 11:00 AM",
       "timing": [
         "09:00AM",
-        "09:30AM",
+        "09:20AM",
+        "09:40AM",
         "10:00AM",
-        "11:30AM",
+        "10:20AM",
+        "10:40AM",
         "11:00AM"
       ],
       "id": 4
@@ -670,13 +699,17 @@
       "available": "09:00 AM - 01:00 PM",
       "timing": [
         "09:00AM",
-        "09:30AM",
+        "09:20AM",
+        "09:40AM",
         "10:00AM",
-        "10:30AM",
+        "10:20AM",
+        "10:40AM",
         "11:00AM",
-        "11:30AM",
+        "11:20AM",
+        "11:40AM",
         "12:00PM",
-        "12:30PM",
+        "12:20PM",
+        "12:40PM",
         "01:00PM"
       ],
       "id": 1
@@ -690,9 +723,11 @@
       "available": "12:00 PM - 02:00 PM",
       "timing": [
         "12:00PM",
-        "12:30PM",
+        "12:20PM",
+        "12:40PM",
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM"
       ],
       "id": 2
@@ -705,16 +740,19 @@
       "field": "Cosmic",
       "experiance": "15 Years",
       "licenseNo": "LI2000B76326",
-      "available": "09:00 AM - 12:30 PM",
+      "available": "09:00 AM - 12:20 PM",
       "timing": [
         "09:00AM",
-        "09:30AM",
+        "09:20AM",
+        "09:40AM",
         "10:00AM",
-        "10:30AM",
+        "10:20AM",
+        "10:40AM",
         "11:00AM",
-        "11:30AM",
+        "11:20AM",
+        "11:40AM",
         "12:00PM",
-        "12:30PM"
+        "12:20PM"
       ],
       "id": 1
     },
@@ -727,11 +765,14 @@
       "available": "01:00 PM - 04:00 PM",
       "timing": [
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM",
-        "03:30PM",
+        "03:20PM",
+        "03:40PM",
         "04:00PM"
       ],
       "id": 2
@@ -747,11 +788,14 @@
       "available": "09:00 AM - 12:00 PM",
       "timing": [
         "09:00AM",
-        "09:30AM",
+        "09:20AM",
+        "09:40AM",
         "10:00AM",
-        "10:30AM",
+        "10:20AM",
+        "10:40AM",
         "11:00AM",
-        "11:30AM",
+        "11:20AM",
+        "11:40AM",
         "12:00PM"
       ],
       "id": 1
@@ -765,13 +809,17 @@
       "available": "12:30 PM - 04:00 PM",
       "timing": [
         "12:00PM",
-        "12:30PM",
+        "12:20PM",
+        "12:40PM",
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM",
-        "03:30PM",
+        "03:20PM",
+        "03:40PM",
         "04:00PM"
       ],
       "id": 2
@@ -784,14 +832,16 @@
       "field": "Psychiatrist",
       "experiance": "16 Years",
       "licenseNo": "LI2000B723826",
-      "available": "09:00 AM - 11:30 AM",
+      "available": "09:00 AM - 11:20 AM",
       "timing": [
         "09:00AM",
-        "09:30AM",
+        "09:20AM",
+        "09:40AM",
         "10:00AM",
-        "10:30AM",
+        "10:20AM",
+        "10:40AM",
         "11:00AM",
-        "11:30AM"
+        "11:20AM"
       ],
       "id": 1
     },
@@ -804,11 +854,14 @@
       "available": "01:00 PM - 04:00 PM",
       "timing": [
         "01:00PM",
-        "01:30PM",
+        "01:20PM",
+        "01:40PM",
         "02:00PM",
-        "02:30PM",
+        "02:20PM",
+        "02:40PM",
         "03:00PM",
-        "03:30PM",
+        "03:20PM",
+        "03:40PM",
         "04:00PM"
       ],
       "id": 2
@@ -1262,6 +1315,21 @@
       "remarkMessage": "",
       "id": 31,
       "status": "Accepted"
+    },
+    {
+      "patientName": "SATHISH KUMAR",
+      "mobileno": "8072702981",
+      "appointmentDate": "2023-07-11",
+      "appointmentTime": "01:00PM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Murugan MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "01:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 32
     }
   ],
   "cancelledRequest": [
@@ -1837,32 +1905,32 @@
       "id": 4
     }
   ],
-  "dipalayCardiologist":[
+  "dipalayCardiologist": [
     {
-      "topic":"Cardiology",
-      "title":"Best Heart Treatment in Salem, Tamil Nadu – MMCH Hospital",
-      "content":"The Cardiology Department provides a continuum care for the prevention, treatment, recovery & rehabilitation of heart and vascular diseases.It is the pioneer institute in introducing quality cardiology procedures in South India at a time when cardiac surgery was considered the only solution for treatment of serious heart ailments. MMCH is one among the first few hospitals in India to offer 24/7 Primary PCI program. Cardiology Day Care Center, CCU and Cath Lab provide state of the art care to achieve the ideal goal of “door to needle & door to balloon time” in Coronary Revascularisation therapy.",
-      "doctorList":[
+      "topic": "Cardiology",
+      "title": "Best Heart Treatment in Salem, Tamil Nadu – MMCH Hospital",
+      "content": "The Cardiology Department provides a continuum care for the prevention, treatment, recovery & rehabilitation of heart and vascular diseases.It is the pioneer institute in introducing quality cardiology procedures in South India at a time when cardiac surgery was considered the only solution for treatment of serious heart ailments. MMCH is one among the first few hospitals in India to offer 24/7 Primary PCI program. Cardiology Day Care Center, CCU and Cath Lab provide state of the art care to achieve the ideal goal of “door to needle & door to balloon time” in Coronary Revascularisation therapy.",
+      "doctorList": [
         "Dr. Swetha MD., DM., FACC., FICC",
         "Dr. Pranavram MD., DM(Cardiology)"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/cardio-01.jpeg",
         "../../assets/Image/fieldImages/cardio-02.jpeg",
         "../../assets/Image/fieldImages/cardio-03.jpeg"
       ]
     },
     {
-      "topic":"Dentist",
-      "title":"Dental Treatment in Salem, Tamil Nadu – MMCH Hospital",
-      "content":"Dental department in Mani Medical Center specialises preventive, interceptive and corrective treatment of teeth and jaw problems.The dental department is a specialized branch of healthcare that focuses on the diagnosis, prevention, and treatment of conditions affecting the oral cavity and surrounding structures. It plays a vital role in maintaining oral health and promoting overall well-being. Dental departments can be found in various healthcare settings, including hospitals, clinics, and specialized dental practices.",
-        "doctorList":[
+      "topic": "Dentist",
+      "title": "Dental Treatment in Salem, Tamil Nadu – MMCH Hospital",
+      "content": "Dental department in Mani Medical Center specialises preventive, interceptive and corrective treatment of teeth and jaw problems.The dental department is a specialized branch of healthcare that focuses on the diagnosis, prevention, and treatment of conditions affecting the oral cavity and surrounding structures. It plays a vital role in maintaining oral health and promoting overall well-being. Dental departments can be found in various healthcare settings, including hospitals, clinics, and specialized dental practices.",
+      "doctorList": [
         "Dr. Hari Gokul B.D.S, M.D.S",
         "Dr. Sedhuragavan B.D.S, M.D.S",
         "Dr. Gautam B.D.S",
         "Dr. Ganesh B.D.S"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/dentist-01.jpeg",
         "../../assets/Image/fieldImages/dentist-02.jpeg",
         "../../assets/Image/fieldImages/dentist-03.jpeg",
@@ -1872,71 +1940,71 @@
       ]
     },
     {
-      "topic":"Gendral Ward",
-      "title":"Gendral Ward – MMCH Hospital",
-      "content":"The general department provides a continuum care for the prevention, treatment, recovery of common injury. General ward is a common unit where patients who are admitted share the same room. The ward is equipped with health monitoring systems with one-to-one care assistance for patients as required. Facilities are catered as per patient's diagnosis, age, comfort and other essential factors.Staff Nurses-to-bed ratio: General wards- 1:6; Special wards-1:4; ICUs-1:1; Nursery Unit-1:2; Major OT- 2 staff nurses per table; Minor OT- 01 staff nurse per table",
-      "doctorList":[
+      "topic": "Gendral Ward",
+      "title": "Gendral Ward – MMCH Hospital",
+      "content": "The general department provides a continuum care for the prevention, treatment, recovery of common injury. General ward is a common unit where patients who are admitted share the same room. The ward is equipped with health monitoring systems with one-to-one care assistance for patients as required. Facilities are catered as per patient's diagnosis, age, comfort and other essential factors.Staff Nurses-to-bed ratio: General wards- 1:6; Special wards-1:4; ICUs-1:1; Nursery Unit-1:2; Major OT- 2 staff nurses per table; Minor OT- 01 staff nurse per table",
+      "doctorList": [
         "Dr. Murugan MBBS",
         "Dr. Thiru MBBS",
         "Dr. Karthikeyan MBBS"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/general-01.jpeg",
         "../../assets/Image/fieldImages/general-02.jpeg",
         "../../assets/Image/fieldImages/general-03.jpeg"
       ]
     },
     {
-      "topic":"Pediatrician",
-      "title":"Pediatrician – MMCH Hospital",
-      "content":"Pediatricians are medical doctors who specialize in the care and treatment of infants, children, and adolescents. They play a critical role in monitoring and promoting the physical, emotional, and social well-being of children from birth until young adulthood. Pediatricians are trained to diagnose and manage a wide range of childhood illnesses, developmental disorders, and provide preventive care.",
-      "doctorList":[
+      "topic": "Pediatrician",
+      "title": "Pediatrician – MMCH Hospital",
+      "content": "Pediatricians are medical doctors who specialize in the care and treatment of infants, children, and adolescents. They play a critical role in monitoring and promoting the physical, emotional, and social well-being of children from birth until young adulthood. Pediatricians are trained to diagnose and manage a wide range of childhood illnesses, developmental disorders, and provide preventive care.",
+      "doctorList": [
         "Dr. Swetha MS",
         "Dr. Pranav Ram MS"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/Pediatrician-01.jpeg",
         "../../assets/Image/fieldImages/Pediatrician-02.jpeg",
         "../../assets/Image/fieldImages/Pediatrician-03.jpeg"
       ]
     },
     {
-      "topic":"Gynecologist",
-      "title":"Gynecologist – MMCH Hospital",
-      "content":"Gynecologists are medical doctors who specialize in the health and well-being of the female reproductive system. In a hospital setting, gynecologists play a crucial role in providing comprehensive care to women of all ages. They diagnose and treat various gynecological conditions, offer preventive screenings, and provide reproductive health services.",
-      "doctorList":[
+      "topic": "Gynecologist",
+      "title": "Gynecologist – MMCH Hospital",
+      "content": "Gynecologists are medical doctors who specialize in the health and well-being of the female reproductive system. In a hospital setting, gynecologists play a crucial role in providing comprehensive care to women of all ages. They diagnose and treat various gynecological conditions, offer preventive screenings, and provide reproductive health services.",
+      "doctorList": [
         "Dr. Thilagavathi MS",
         "Dr. Kavitha MD"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/gyno-01.jpeg",
         "../../assets/Image/fieldImages/gyno-02.jpeg",
         "../../assets/Image/fieldImages/gyno-03.jpeg"
       ]
     },
     {
-      "topic":"Cosmic Surgery",
-      "title":"Cosmic Surgery – MMCH Hospital",
-      "content":"Cosmic surgery, as a term used in a hospital setting, is not a recognized medical procedure. Cosmic typically refers to outer space or the universe, and it does not have a specific medical meaning. Surgical procedures performed in hospitals are typically related to treating specific medical conditions or diseases. If you're referring to a specific surgical procedure or have more details about what you mean by cosmic surgery, please provide further clarification so I can assist you more effectively.",
-      "doctorList":[
+      "topic": "Cosmic Surgery",
+      "title": "Cosmic Surgery – MMCH Hospital",
+      "content": "Cosmic surgery, as a term used in a hospital setting, is not a recognized medical procedure. Cosmic typically refers to outer space or the universe, and it does not have a specific medical meaning. Surgical procedures performed in hospitals are typically related to treating specific medical conditions or diseases. If you're referring to a specific surgical procedure or have more details about what you mean by cosmic surgery, please provide further clarification so I can assist you more effectively.",
+      "doctorList": [
         "Dr. Mythili MD",
         "Dr. Vigneshwaran MD"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/cosmic-01.jpeg",
         "../../assets/Image/fieldImages/cosmic-02.jpeg",
         "../../assets/Image/fieldImages/cosmic-03.jpeg"
       ]
     },
     {
-      "topic":"Otolaryngologist - ENT",
-      "title":"Otolaryngologist - ENT – MMCH Hospital",
-      "content":"An otolaryngologist, commonly known as an ENT (Ear, Nose, and Throat) doctor, is a medical specialist who diagnoses and treats conditions related to the ear, nose, throat, and structures of the head and neck. Otolaryngologists are often found practicing in hospitals, where they provide specialized care to patients of all ages. Here's some information about otolaryngologists in a hospital setting. Otolaryngologists are trained to diagnose and treat a wide range of conditions affecting the ear, nose, throat, head, and neck. This includes conditions such as ear infections, hearing loss, sinusitis, allergies, tonsillitis, voice disorders, swallowing difficulties, and tumors of the head and neck.",
-      "doctorList":[
+      "topic": "Otolaryngologist - ENT",
+      "title": "Otolaryngologist - ENT – MMCH Hospital",
+      "content": "An otolaryngologist, commonly known as an ENT (Ear, Nose, and Throat) doctor, is a medical specialist who diagnoses and treats conditions related to the ear, nose, throat, and structures of the head and neck. Otolaryngologists are often found practicing in hospitals, where they provide specialized care to patients of all ages. Here's some information about otolaryngologists in a hospital setting. Otolaryngologists are trained to diagnose and treat a wide range of conditions affecting the ear, nose, throat, head, and neck. This includes conditions such as ear infections, hearing loss, sinusitis, allergies, tonsillitis, voice disorders, swallowing difficulties, and tumors of the head and neck.",
+      "doctorList": [
         "Dr. Manikandan MD",
         "Dr. Arunkumar MD"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/ent-01.jpeg",
         "../../assets/Image/fieldImages/ent-02.jpeg",
         "../../assets/Image/fieldImages/ent-03.jpeg",
@@ -1946,19 +2014,18 @@
       ]
     },
     {
-      "topic":"Psychiatrist",
-      "title":"Psychiatrist – MMCH Hospital",
-      "content":"Psychiatrists evaluate patients to diagnose mental health disorders through comprehensive assessments, including interviews, observations, and psychological tests. They gather information about patients' symptoms, medical history, and psychosocial factors to develop an accurate diagnosis.Psychiatrists create individualized treatment plans based on the specific needs of each patient. They consider various factors such as the severity of the disorder, patient preferences, and the availability of treatment options. Treatment plans may include psychotherapy (talk therapy), medication management, and other therapeutic interventions.",
-      "doctorList":[
+      "topic": "Psychiatrist",
+      "title": "Psychiatrist – MMCH Hospital",
+      "content": "Psychiatrists evaluate patients to diagnose mental health disorders through comprehensive assessments, including interviews, observations, and psychological tests. They gather information about patients' symptoms, medical history, and psychosocial factors to develop an accurate diagnosis.Psychiatrists create individualized treatment plans based on the specific needs of each patient. They consider various factors such as the severity of the disorder, patient preferences, and the availability of treatment options. Treatment plans may include psychotherapy (talk therapy), medication management, and other therapeutic interventions.",
+      "doctorList": [
         "Dr. Hemalatha MD",
         "Dr. Sudhandiradhivya MS"
       ],
-      "infrastructureImages":[
+      "infrastructureImages": [
         "../../assets/Image/fieldImages/psycho-01.jpeg",
         "../../assets/Image/fieldImages/psycho-02.jpeg",
         "../../assets/Image/fieldImages/psycho-03.jpeg"
       ]
     }
-
   ]
 }
