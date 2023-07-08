@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { GenerateBillsService } from '../generate-bills/generateBills.service';
 import { PatientServiceService } from '../patientPage/patientService.service';
 import { BillServiceService } from '../payBills/billService.service';
 import { FormBuilder,FormControl,FormGroup, Validators } from '@angular/forms'
+import { confirmedValidator } from '../confrimPass';
+
 
 
 @Component({
@@ -15,9 +17,11 @@ import { FormBuilder,FormControl,FormGroup, Validators } from '@angular/forms'
 export class PatientHistoryComponent implements OnInit {
   constructor(private http:HttpClient,
     private generateBills:GenerateBillsService,
-    private bill:BillServiceService, 
+    private bill:BillServiceService,
     private service:PatientServiceService,
-    private fb:FormBuilder) { }
+    private fb:FormBuilder,
+    private renderer:Renderer2,
+    private elRef: ElementRef) { }
 
 
   loggedUser:any="";
@@ -96,6 +100,20 @@ export class PatientHistoryComponent implements OnInit {
     this.showImage="true"
   }
   dialogBox:boolean=false;
+  changePasswordBox:boolean=false;
+  show:boolean=false
+
+  visiblePassword() {
+    this.show = !this.show;
+  }
+
+  changePassForm=this.fb.group({
+    password:[,[Validators.required]],
+    cpassword:[,[Validators.required]]
+  },
+  { validator: confirmedValidator('password', 'cpassword') }
+
+  )
 editForm=this.fb.group({
   name:[,[Validators.required]],
   fatherName:[,[Validators.required]],
@@ -114,15 +132,15 @@ editForm=this.fb.group({
     // alert("Working...")
   }
   changePassword(){
-
+    this.changePasswordBox=true
   }
   closeBanner(){
     this.dialogBox=false
+    this.changePasswordBox=false
 
   }
+
   editProfile(){
-    var ref=document.getElementById('reference');
-    ref?.click();
     var body={
       "patientName": this.editForm.value.name,
       "fatherName": this.editForm.value.fatherName,
@@ -130,8 +148,54 @@ editForm=this.fb.group({
       "email": this.editForm.value.emailId,
       "phone": this.editForm.value.phoneNumber
     }
+    if(this.editForm.invalid){
+      alert("Enter all the fields")
+    }
+    else{
     this.http.patch<any>("http://localhost:3000/patientRegistration/"+this.loggedUser.id,body).subscribe(()=>{
-      alert("Profile Edited Successfully")
+      alert("Profile Edited Successfully");
+      var ref=document.getElementById('reference');
+      ref?.click();
+      this.http.get<any>("http://localhost:3000/patientRegistration/"+this.loggedUser.id).subscribe((value)=>{
+      sessionStorage.setItem('loggedInUser', JSON.stringify(value));
+      this.ngOnInit();
+      this.editForm.reset();
+      })
+
     })
+    }
+  }
+  changePass(){
+    var body={
+      "password": this.changePassForm.value.password,
+      "cpassword": this.changePassForm.value.cpassword
+    }
+    if(this.changePassForm.invalid){
+      alert("Enter the Field");
+    }
+    else{
+    this.http.patch<any>("http://localhost:3000/patientRegistration/"+this.loggedUser.id,body).subscribe(()=>{
+      alert("Password Successfully Changed");
+      var ref=document.getElementById('reference');
+      ref?.click();
+      this.http.get<any>("http://localhost:3000/patientRegistration/"+this.loggedUser.id).subscribe((value)=>{
+      sessionStorage.setItem('loggedInUser', JSON.stringify(value));
+      this.ngOnInit();
+      this.changePassForm.reset();
+      })
+
+    })
+    }
+
+  }
+  printing:boolean=false;
+  clicking() {
+    this.printing=true
+  }
+  printForm(){
+    window.print();
+  }
+  back(){
+    this.printing=false
   }
 }

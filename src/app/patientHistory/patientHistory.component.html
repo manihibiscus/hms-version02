@@ -170,6 +170,46 @@
           </div>
           <button class="editButton" (click)="editProfile()">Edit</button>
         </dialog>
+        <dialog [open]="changePasswordBox" class="dialog" [formGroup]="changePassForm">
+          <img id='reference' src="../../assets/multiply.png" style="width: 30px;height: 30px;position: absolute; right: 15px;" (click)="closeBanner() ">
+          <h3 style="color: #818c98; font-weight: bold;text-align: center;">Change Password</h3>
+          <div class="name">
+            <label>Patient Name</label><br />
+            <p class="fixed">{{loggedUser.patientName}}</p>
+          </div>
+          <div>
+            <label for="email">Email</label><br />
+            <p class="fixed">{{loggedUser.email}}</p>
+            <div>
+              <label>Create New Password</label><br>
+              <!-- <small>*minimum 6 to maximum 14 character, <br> *minimum 1 special character and number</small> -->
+              <input type="{{ show ? 'text' : 'password' }}" formControlName="password" class="inp-box"
+                pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
+
+              <div class="error" *ngIf="changePassForm.controls['password'].dirty">
+                <p *ngIf="changePassForm.controls['password'].errors?.['required']">Please set your Password</p>
+                <p *ngIf="changePassForm.controls['password'].errors?.['pattern']">Password Invalid</p>
+              </div>
+              <div class="ShowPassword">
+                <!-- <input type="checkbox" onclick="showPassword()">Show Password -->
+                <input type="checkbox" (change)="visiblePassword()">
+                <label style="color: #233863;"> Show Password</label>
+              </div>
+            </div>
+            <div>
+              <label>Re-enter Password</label><br>
+              <input type="{{ show ? 'text' : 'password' }}" class="inp-box"
+                formControlName="cpassword" />
+              <div class="error" *ngIf="changePassForm.controls['cpassword'].dirty">
+                <p *ngIf="changePassForm.controls['cpassword'].errors?.['required']">Please enter the same password</p>
+                <p *ngIf="changePassForm.controls['cpassword'].errors?.['confirmedValidator']">Password not match</p>
+              </div>
+              <div class="sub">
+                <button type="submit" class="editButton" (click)="changePass()">Change Password</button>
+              </div>
+            </div>
+          </div>
+        </dialog>
       </div>
     </div>
     <div *ngIf="showCancel == 'true'">
@@ -264,6 +304,7 @@
             <th>Other Fee</th>
             <th>Total</th>
             <th>Payment Status</th>
+            <th>Print</th>
           </thead>
           <tbody>
             <tr *ngFor="let item of history; let i = index">
@@ -279,10 +320,19 @@
               <td [ngClass]="{ green: item.paymentStatus == 'Success' }">
                 {{ item.paymentStatus }}
               </td>
+              <td>
+                <button (click)="clicking()">Click</button>
+              </td>
             </tr>
           </tbody>
         </table>
       </form>
+
     </div>
   </div>
+  <dialog class="printDialog" [open]="printing">
+    Welcome to all
+    <button (click)="printForm()">Print</button>
+    <button (click)="back()">Back</button>
+  </dialog>
 </div>

@@ -86,7 +86,7 @@ table thead th{
   display: grid;
   grid-template-columns: auto 1fr;
   background-color: #f1e0e0;
-  grid-column-gap: 10px;
+  /* grid-column-gap: 10px; */
   /* border-radius: 15px; */
 
 }
@@ -141,6 +141,8 @@ table thead th{
 }
 
 .dialog {
+  color: #233863;
+
   width: 600px;
   /* margin: 0 auto; */
   margin-left: 35%;
@@ -155,7 +157,8 @@ table thead th{
 }
 
 .dialog input[type="text"],
-.dialog input[type="email"] {
+.dialog input[type="email"],
+.dialog input[type="password"] {
   width: 60%;
   padding: 10px;
   margin-bottom: 10px;
@@ -166,7 +169,16 @@ table thead th{
   border-radius: 4px;
   /* background: transparent; */
 }
-
+.dialog .fixed{
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+}
 .dialog input[type="text"]:focus,
 .dialog input[type="email"]:focus {
   outline: none;
@@ -204,4 +216,14 @@ table thead th{
 
 .dialog .editButton:hover {
   background-color: #0c7cd5;
+}
+.ShowPassword{
+  position: absolute;
+  margin-left: 450px;
+}
+.printDialog{
+  margin-left: 300px;
+  width: 73%;
+  height: 500px;
+
 }
