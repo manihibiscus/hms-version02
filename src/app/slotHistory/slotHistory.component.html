@@ -15,6 +15,9 @@
     </div>
   </div>
 <div class="split2">
+  <div class="view" *ngIf="showImage=='true'">
+    <img src="../../assets/Image/slotHistory.jpg" style="width: 400px;height: 350px;padding-left: 300px;padding-top: 20px;" alt="">
+  </div>
   <div *ngIf="showCancel=='true'">
 <h2 style="text-align: center;color: #071468;">Cancelled Slot</h2>
 <form class="form">
@@ -23,7 +26,7 @@
       <th>S.No</th>
       <th>Patient Name</th>
       <th>Contact No</th>
-      <th>Appointment Date</th>
+      <th>Appointed Date</th>
       <th>Doctor Name</th>
       <th>Report to Patinet</th>
       <th>Sended Message</th>
@@ -59,7 +62,7 @@
       <th>Contact No</th>
       <th>Doctor Name</th>
       <th>Doctor Field</th>
-      <th>Appointment Date</th>
+      <th>Appointed Date</th>
       <th>Appointment Time</th>
       <!-- <th>Health issue</th> -->
     </thead>
@@ -89,13 +92,13 @@
         <th>Contact No</th>
         <th>Doctor Name</th>
         <th>Doctor Field</th>
-        <th>Appointment Date</th>
+        <th>Appointed Date</th>
         <th>Consulting Fee</th>
         <th>Other Fee</th>
         <th>Total</th>
         <th>Status</th>
         <th>Payment Status</th>
-        
+
 
       </thead>
       <tbody>
@@ -131,13 +134,13 @@
         <th>Contact No</th>
         <th>Doctor Name</th>
         <th>Doctor Field</th>
-        <th>Appointment Date</th>
+        <th>Appointed Date</th>
         <th>Consulting Fee</th>
         <th>Other Fee</th>
         <th>Total</th>
         <th>Status</th>
         <th>Payment Status</th>
-        
+
 
       </thead>
       <tbody>

@@ -61,28 +61,37 @@ export class SlotHistoryComponent implements OnInit {
   showAccept:any="false"
   showPending:any="false"
   showSuccess:any="false"
+  showImage:any="true"
   cancel(){
     this.showCancel="true";
     this.showAccept="false";
     this.showPending="false";
     this.showSuccess="false";
+    this.showImage="false"
+
   }
   accept(){
     this.showCancel="false";
     this.showAccept="true";
     this.showPending="false";
-    this.showSuccess="false";  
+    this.showSuccess="false";
+    this.showImage="false"
+
   }
   paymentPending(){
     this.showCancel="false";
     this.showAccept="false";
     this.showPending="true";
     this.showSuccess="false";
+    this.showImage="false"
+
   }
   paymentSuccess(){
     this.showCancel="false";
     this.showAccept="false";
     this.showPending="false";
     this.showSuccess="true";
+    this.showImage="false"
+
   }
 }

@@ -13,28 +13,35 @@ export class MedialSpecPageComponent implements OnInit {
   ngOnInit() {
   }
   general(){
-    this.service.store="generalDoctorList";
+    this.service.store="Gendral Ward";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
   pediatrician(){
-    this.service.store="pediatricianList";
+    this.service.store="Pediatrician";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
   gynecologist(){
-    this.service.store="gynecologist";
+    this.service.store="Gynecologist";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
   dental(){
-    this.service.store="dentist";
-
+    this.service.store="Dentist";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
   cardiologist(){
-    this.service.store="cardiologist";
+    this.service.store="Cardiology";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
   cosmetic(){
-    this.service.store="cosmic";
+    this.service.store="Cosmic Surgery";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
   otolaryngologist(){
-    this.service.store="otolaryngologist";
+    this.service.store="Otolaryngologist - ENT";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
   psychiatrist(){
-    this.service.store="psychiatrist";
+    this.service.store="Psychiatrist";
+    sessionStorage.setItem('field', JSON.stringify(this.service.store))
   }
 }

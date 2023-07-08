@@ -99,7 +99,11 @@
               Please Enter Valid CVV number
              </p>
           </div><br>
-          <button class="button" [disabled]="true" style="margin: 30px 50px 10px 120px" id="refchange" (click)="pay(refereshData)">Pay {{refereshData.Total}}</button>
+    </div>
+    <div>
+      <button class="button" [disabled]="debitCardForm.invalid"
+      [ngClass]="{invalid:debitCardForm.invalid}"
+      style="margin: 30px 50px 10px 120px" id="refchange" (click)="pay(refereshData)">Pay {{refereshData.Total}}</button>
     </div>
   </div>
 </div>

@@ -14,15 +14,26 @@ export class GeneralDoctorComponent implements OnInit {
   generalDocDet:any="";
   SearchFor:any="";
   final:any=this.doctorDetails.store;
+  check:any=""
+  storing:any=""
   ngOnInit() {
     // this.doctorDetails.getGeneralDoctorDetails().subscribe(data=>{
     //   this.generalDocDet=data
     // })
-    this.http.get<any>("http://localhost:3000"+'/'+this.final).subscribe((data:any)=>{
-      this.generalDocDet=data;
-      this.route.params.subscribe(paramdata=>{
-        this.SearchFor=paramdata['check'];
-    })
+    const data=sessionStorage.getItem('field')  ;
+    if(data){
+      this.storing= JSON.parse(data);
+    }
+  this.http.get<any>("http://localhost:3000/dipalayCardiologist").subscribe(value=>{
+      const choose=value.find((a:any)=>{
+        return a.topic === this.storing
+      });
+      if(choose){
+        this.check=choose;
+        this.route.params.subscribe(paramdata=>{
+          this.SearchFor=paramdata['check'];
+        })
+      }
   })
 }
 

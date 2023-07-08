@@ -8,9 +8,9 @@
     <div class="Title">
           <h3 style="font-size: 21px;color: #233863;">Login</h3>
     </div>
-      <form id="Login" class="inp-grp" [formGroup]="loginForm" (ngSubmit)="login()">
+      <form id="Login" class="inp-grp" [formGroup]="loginForm" (ngSubmit)="login(username.value, password.value)">
           <input type="text" class="inp-box" name="user"
-          placeholder="Enter Email id " formControlName="userId"
+          placeholder="Enter Email id "#username formControlName="userId"
         pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
         /> <br>
           <div class="error" *ngIf="loginForm.controls['userId'].dirty">
@@ -22,7 +22,7 @@
             </p>
           </div>
           <input type="{{ show ? 'text' : 'password' }}" class="inp-box" name="l-password" placeholder="Enter Pin" id="showme"
-          formControlName="password"
+          #password formControlName="password"
           pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
 
           <div class="error" *ngIf="loginForm.controls['password'].dirty">

@@ -21,6 +21,7 @@ import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.compone
 import { ConformationGuard } from './conformation.guard';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { SlotHistoryComponent } from './slotHistory/slotHistory.component';
+import { PatientHistoryComponent } from './patientHistory/patientHistory.component';
 
 
 const routes: Routes = [
@@ -116,6 +117,10 @@ component:ViewQueryComponent
 {
   path:"slotHistory",
   component:SlotHistoryComponent
+},
+{
+  path:"patientHistory",
+  component:PatientHistoryComponent
 }
 
 ];

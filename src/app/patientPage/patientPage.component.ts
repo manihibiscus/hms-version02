@@ -24,7 +24,7 @@ export class PatientPageComponent implements OnInit {
     completed:any=""
   ngOnInit() {
     // sessionStorage.setItem('updateUser', JSON.stringify(this.userServeice.loggedInUser));
-    let sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    let sessionUser = sessionStorage.getItem('loggedInUser');
     if (sessionUser) {
       this.loggedUser = JSON.parse(sessionUser);
       // this.refresh(sessionUser);
@@ -52,7 +52,7 @@ export class PatientPageComponent implements OnInit {
     this.service.searchAccept(this.loggedUser.phone).subscribe((data1)=>{
       this.completed=data1;
     })
-    
+
   }
 
   // loggedOff(value:any){

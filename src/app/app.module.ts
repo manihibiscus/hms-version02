@@ -37,8 +37,9 @@ import { ConformationGuard } from './conformation.guard';
 import { CurrencyPipe } from './currency.pipe';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { SlotHistoryComponent } from './slotHistory/slotHistory.component';
+import { PatientHistoryComponent } from './patientHistory/patientHistory.component';
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
       ContactUsPageComponent,
       AboutUsPageComponent,
@@ -62,7 +63,8 @@ import { SlotHistoryComponent } from './slotHistory/slotHistory.component';
       ForgotPasswordComponent,
       CurrencyPipe,
       AddDoctorComponent,
-      SlotHistoryComponent
+      SlotHistoryComponent,
+      PatientHistoryComponent
    ],
   imports: [
     BrowserModule,

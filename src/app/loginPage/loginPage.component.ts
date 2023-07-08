@@ -27,7 +27,7 @@ export class LoginPageComponent implements OnInit {
   })
   errors:any=false;
   userLogObj : PatientModel=new PatientModel();
-  login(){
+  login(user:any, pass:any){
     this.patients();
     this.admins();
     this.doctors();
@@ -35,6 +35,30 @@ export class LoginPageComponent implements OnInit {
       alert("INVALID")
       this.refresh();
     }
+    // this.http.get<any>("http://localhost:3000/patientRegistration").subscribe((data1)=>{
+    //   const user=data1.find((a:any)=>{
+    //     return a.email === username && a.cpassword === password;
+    //   });
+    //   if(user){
+    //     this.patients();
+    //   }
+    // });
+    // this.http.get<any>("http://localhost:3000/adminDetails").subscribe((data2)=>{
+    //   const admin=data2.find((b:any)=>{
+    //     return b.userId === username && b.password === password;
+    //   });
+    //   if(admin){
+    //     this.admins();
+    //   }
+    // });
+    // this.http.get<any>("http://localhost:3000/doctorDetails").subscribe((data3)=>{
+    //   const doctor=data3.find((c:any)=>{
+    //     return c.userId === username && c.password === password;
+    //   });
+    //   if(doctor){
+    //     this.doctors();
+    //   }
+    // });
   }
   patients() {
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{

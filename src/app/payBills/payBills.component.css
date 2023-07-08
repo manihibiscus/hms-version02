@@ -73,11 +73,27 @@ table thead th{
   color: #1e1468;
 
 }
-.button {
+ .button {
   margin-top: 5px;
   padding: 6px 8px;
   border: none;
   background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  border-radius: 10px;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.invalid {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(167, 164, 164);
   border: 1px solid white;
   border-radius: 10px;
   color: #1e1468;
@@ -98,3 +114,4 @@ table thead th{
 .split1{
   padding-left:100px;
 }
+

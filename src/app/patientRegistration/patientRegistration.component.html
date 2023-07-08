@@ -89,7 +89,7 @@
       <input type="email" id="email"
         class="inp-box"
       placeholder="Enter Email Id"
-        pattern="^[a-z0-9]+[a-z0-9]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
+        pattern="^(?=[a-zA-Z0-9._%+-]{4,})(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\3)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
 
         formControlName="email" />
 
