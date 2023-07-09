@@ -21,7 +21,7 @@
       <!-- <img src="../../assets/Image/slotHistory.jpg" style="width: 400px;height: 350px;padding-left: 300px;padding-top: 20px;" alt=""> -->
       <div class="profile">
         <div class="div1">
-          <h4 style="color: #5f6a75; font-size: 18px">Profile</h4>
+          <h4 style="color: #5f6a75; font-size: 18px">Personal Details</h4>
           <p>
             Patient Name: <span>{{ loggedUser.patientName }}</span>
           </p>
@@ -173,16 +173,17 @@
         <dialog [open]="changePasswordBox" class="dialog" [formGroup]="changePassForm">
           <img id='reference' src="../../assets/multiply.png" style="width: 30px;height: 30px;position: absolute; right: 15px;" (click)="closeBanner() ">
           <h3 style="color: #818c98; font-weight: bold;text-align: center;">Change Password</h3>
-          <div class="name">
-            <label>Patient Name</label><br />
-            <p class="fixed">{{loggedUser.patientName}}</p>
-          </div>
           <div>
             <label for="email">Email</label><br />
             <p class="fixed">{{loggedUser.email}}</p>
             <div>
+              <label>Enter Old Password</label><br><br>
+              <input type="text" formControlName="oldPassword" />
+
+            </div>
+            <div>
               <label>Create New Password</label><br>
-              <!-- <small>*minimum 6 to maximum 14 character, <br> *minimum 1 special character and number</small> -->
+              <small style="color: green;">*Minimum 6 to Maximum 14 Character, *Minimum 1 Special Character and Number</small><br><br>
               <input type="{{ show ? 'text' : 'password' }}" formControlName="password" class="inp-box"
                 pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
 
@@ -197,7 +198,7 @@
               </div>
             </div>
             <div>
-              <label>Re-enter Password</label><br>
+              <label>Re-enter Password</label><br><br>
               <input type="{{ show ? 'text' : 'password' }}" class="inp-box"
                 formControlName="cpassword" />
               <div class="error" *ngIf="changePassForm.controls['cpassword'].dirty">
@@ -259,9 +260,9 @@
             <th>Doctor Name</th>
             <th>Doctor Field</th>
             <th>Appointment Date</th>
-            <th>Consulting Fees</th>
+            <!-- <th>Consulting Fees</th>
             <th>Other Fees</th>
-            <th>Total</th>
+            <th>Total</th> -->
             <!-- <th>Health issue</th> -->
           </thead>
           <tbody>
@@ -272,11 +273,11 @@
               <td>{{ item.doctorName }}</td>
               <td>{{ item.doctorField }}</td>
               <td>{{ item.appointmentDate | date : "MMM d, y" }}</td>
-              <td>{{ item.consultingFee }}</td>
+              <!-- <td>{{ item.consultingFee }}</td>
               <td>{{ item.otherFee }}</td>
               <td>
                 {{ item.Total }}
-              </td>
+              </td> -->
               <!-- <td>{{appointment.problem}}</td> -->
             </tr>
           </tbody>
@@ -326,6 +327,12 @@
             </tr>
           </tbody>
         </table>
+        <p
+          [hidden]="!(history.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Payment History Available *
+        </p>
       </form>
 
     </div>

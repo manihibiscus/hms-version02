@@ -57,7 +57,7 @@
       </tbody>
     </table>
   </form><br>
-  <div [hidden]="(refereshData.consultingFee==null || refereshData.consultingFee=='' )">
+  <div>
   <div class="whole">
     <div class="split1">
       <img src="../../assets/Image/PayBills.jpg" style="width: 500px;height: 500px;" alt="">
@@ -101,15 +101,15 @@
           </div><br>
     </div>
     <div>
-      <button class="button" [disabled]="debitCardForm.invalid"
-      [ngClass]="{invalid:debitCardForm.invalid}"
+      <button class="button" [disabled]="debitCardForm.invalid || refereshData.consultingFee==null || refereshData.consultingFee=='' "
+      [ngClass]="{invalid:debitCardForm.invalid || refereshData.consultingFee==null || refereshData.consultingFee==''}"
       style="margin: 30px 50px 10px 120px" id="refchange" (click)="pay(refereshData)">Pay {{refereshData.Total}}</button>
     </div>
   </div>
 </div>
 </div>
 </div>
-  <br>
+  <!-- <br>
   <br>
   <form action="">
     <h2 style="text-align: center;color: #071468;">Payment History</h2>
@@ -119,9 +119,9 @@
       <th>Patient Name</th>
       <th>Appointment Date</th>
       <th>Doctor Name</th>
-      <th>Doctor Field</th>
+      <th>Doctor Field</th> -->
       <!-- <th>Contact no</th> -->
-      <th>Consulting Fee</th>
+      <!-- <th>Consulting Fee</th>
       <th>Other Fee</th>
       <th>Total</th>
       <th>Payment Status</th>
@@ -132,9 +132,9 @@
           <td>{{item.patientName}}</td>
           <td>{{item.appointmentDate}}</td>
           <td>{{item.doctorName}}</td>
-          <td>{{item.doctorField}}</td>
+          <td>{{item.doctorField}}</td> -->
           <!-- <td>{{item.phone}}</td> -->
-          <td>{{item.consultingFee}}</td>
+          <!-- <td>{{item.consultingFee}}</td>
           <td>{{item.otherFee}}</td>
           <td>{{item.Total}}</td>
           <td [ngClass]="{green:item.paymentStatus == 'Success' }">{{item.paymentStatus}}</td>
@@ -142,5 +142,5 @@
 
       </tbody>
     </table>
-  </form>
+  </form> -->
 <!-- <app-footer></app-footer> -->

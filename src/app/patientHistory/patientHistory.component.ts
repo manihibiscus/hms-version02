@@ -108,6 +108,7 @@ export class PatientHistoryComponent implements OnInit {
   }
 
   changePassForm=this.fb.group({
+    oldPassword:[,[Validators.required]],
     password:[,[Validators.required]],
     cpassword:[,[Validators.required]]
   },
@@ -137,6 +138,8 @@ editForm=this.fb.group({
   closeBanner(){
     this.dialogBox=false
     this.changePasswordBox=false
+    this.changePassForm.reset();
+
 
   }
 
@@ -174,6 +177,10 @@ editForm=this.fb.group({
       alert("Enter the Field");
     }
     else{
+      if(this.changePassForm.value.oldPassword != this.loggedUser.password){
+        alert("Your old Password was Incorrect");
+      }
+      else{
     this.http.patch<any>("http://localhost:3000/patientRegistration/"+this.loggedUser.id,body).subscribe(()=>{
       alert("Password Successfully Changed");
       var ref=document.getElementById('reference');
@@ -186,6 +193,7 @@ editForm=this.fb.group({
 
     })
     }
+  }
 
   }
   printing:boolean=false;

@@ -92,7 +92,7 @@ table thead th{
 }
 .div1{
   padding: 10px 0px 0px 25px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   width: 325px;
   height: 380px;
   font-family: sans-serif;
@@ -106,7 +106,7 @@ table thead th{
   font-weight: bold;
 }
 .div2{
-  background-color: #f5f2f2;
+  background-color: #ffffff;
   margin-top:10px;
   padding-left: 65px;
   padding-top: 25px;
@@ -141,6 +141,11 @@ table thead th{
 }
 
 .dialog {
+  max-height: 420px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* Additional styling */
+  /* border: 1px solid #ccc; */
+  padding: 10px;
   color: #233863;
 
   width: 600px;
@@ -219,7 +224,7 @@ table thead th{
 }
 .ShowPassword{
   position: absolute;
-  margin-left: 450px;
+  margin-left: 420px;
 }
 .printDialog{
   margin-left: 300px;

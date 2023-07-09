@@ -1329,7 +1329,8 @@
       "appoimtmentHour": "01:00PM",
       "apppointmentMin": "",
       "remarkMessage": "",
-      "id": 32
+      "id": 32,
+      "status": "Cancelled"
     }
   ],
   "cancelledRequest": [
@@ -1404,6 +1405,15 @@
       "reporting": "Sended",
       "id": 8,
       "remarkMessage": "Not Available"
+    },
+    {
+      "cName": "SATHISH KUMAR",
+      "cMobileNo": "8072702981",
+      "cDate": "2023-07-11",
+      "cdoctorName": "Dr. Murugan MBBS",
+      "reporting": "Sended",
+      "id": 9,
+      "remarkMessage": "That day doctor was not available. please choose next day slot"
     }
   ],
   "acceptRequest": [
