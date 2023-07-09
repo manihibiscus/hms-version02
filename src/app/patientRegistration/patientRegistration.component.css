@@ -1,144 +1,126 @@
-.adddoc{
-  background-color: #ffffff;
-  width: 80%;
-  height: 100%;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  padding-bottom: 20px;
-  /* padding-top:  20px;
-  align-items: center;
-  justify-content: center; */
-}
-
-.container{
-  width: 80%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 12px;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-}
-.adddoc h3{
-text-align: center;
-}
-.inp-box{
-  width: 80%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-bottom: 1px solid #999;
-  outline: none;
-  background: transparent;
-}
-
-.split1{
-  background-color: whitesmoke;
-  width: 350px;
-  height: 630px;
-  /* float: left; */
-  border: 3px solid white;
-  /* margin-left: 130px;
-  margin-top: 25px;
-  padding: 20px; */
-  padding-left: 25px;
-  border-radius: 10px;
-
-  /* margin: 30px 20px 40px 20px; */
-}
-.sel-box{
-    width: 100%;
-    padding: 10px 0;
-    margin: 5px 0;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-bottom: 1px solid #999;
-    outline: none;
-    background: transparent;
-}
-.split2{
-  background-color: whitesmoke;
-  width: 350px;
-  height: 630px;
-  /* float: right; */
-  /* margin-right: 130px;
-  margin-top: 25px;
-  padding: 20px; */
-  border: 3px solid white;
-  padding-left: 25px;
-  border-radius: 10px;
-
-  /* margin: 30px 10px 40px 40px; */
-}
-.adddoc h4{
-  text-align: center;
-  padding-top: 20px;
-
-}
-.hide{
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-color: #999;
-  outline: none;
-  color: black;
-  background: transparent;
-}
-.drop{
-  background-color: white;
-  border-radius: 10px;
-}
-.title{
-  text-align: center;
-}
-.submit{
-  /* clear: both; */
-  width: 110px;
-  padding: 10px 30px;
+.adddoc {
   display: flex;
-  background: linear-gradient(to right, #e5eaec,#90c79a);
-  border: 0;
-  outline: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 50px;
   border-radius: 10px;
-  font-weight: bold;
+
+}
+
+.split1, .split2 {
+  flex-basis: 48%;
+}
+
+.title {
   color: #071468;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
-.sub{
-  margin: 40px 100px;
+
+.inp-box, .SelectInput, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
-.error p{
+
+.gender-category {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+
+.error {
   color: red;
-  font-size: 13px;
+  margin-top: 4px;
+  font-size: 12px;
 }
 
-/* input.ng-valid{
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 2px solid green;
-  outline: none;
-  background: transparent;
-} */
-
-.SelectInput{
-  width: 50%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-bottom: 1px solid #999;
-  outline: none;
-  background: transparent;
-
+.submit {
+  margin-top: 10px;
+  background-color: #071468;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
 }
-/* input.ng-invalid
-{border :5px solid red;}
-input.ng-valid
-{border :5px solid green;} */
+
+.uploadImage input[type="file"] {
+  border: none;
+  padding: 4px;
+}
+
+.uploadImage small {
+  color: #666;
+}
+
+/* Additional styling */
+
+h3 {
+  color: #071468;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: #071468;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+small {
+  font-size: 12px;
+}
+
+.error p {
+  margin: 4px 0;
+}
+
+.error p:first-child {
+  margin-top: 10px;
+}
+
+.error p:last-child {
+  margin-bottom: 10px;
+}
+
+.split1 {
+  padding-right: 10px;
+}
+
+.split2 {
+  padding-left: 10px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.selectInput:focus {
+  outline: none;
+}
+

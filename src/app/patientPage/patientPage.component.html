@@ -1,9 +1,20 @@
 <app-patientHeader></app-patientHeader>
 <!-- {{loggedUser|json}} -->
-<div class="body">
-  <div class="greet">
 
+<div class="welcome">
+  <div class="container1">
+    <h3 style="text-align: center;">Weclome {{loggedUser.patientName}} {{loggedUser.fatherName}}</h3>
+    <div class="annoncement">
+
+    </div>
   </div>
+  <div class="container2">
+    <img [src]="loggedUser.uploadFile" style="width: 140px;padding-left: 22%;padding-top: 26px;color: #071468; " alt="">
+    <p style="text-align: center;">Patient Id:1852000{{loggedUser.id}}</p>
+  </div>
+</div>
+<div class="body">
+
 <h2 style="text-align: center;color: #071468;">Current Appointment Status</h2>
 
 <form class="form">
@@ -102,8 +113,11 @@
     </tbody>
   </table>
   <p [hidden]="!(cancel.length==0)" style="color: red;text-align: center;">* No Cancelled History Available *</p>
-
-</form> -->
+[
+</]form> -->
 </div>
 <!-- <button (click)="ve()" >Verify</button> -->
 <!-- <app-footer></app-footer> -->
+
+
+

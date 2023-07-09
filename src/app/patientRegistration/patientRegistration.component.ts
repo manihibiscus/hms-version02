@@ -38,6 +38,7 @@ export class PatientRegistrationComponent implements OnInit,IDeactivateComponent
     blood:[,[Validators.required]],
     date:[,[Validators.required]],
     email:[,[Validators.required]],
+    uploadFile:[,[Validators.required]],
     phone:[,[Validators.required]],
     address:[,[Validators.required]],
     insurance:[,[Validators.required]],
@@ -48,11 +49,23 @@ export class PatientRegistrationComponent implements OnInit,IDeactivateComponent
   )
 
   register(){
-
+    var body={
+        "patientName":this.PatientRegister.value.patientName,
+        "fatherName":this.PatientRegister.value.fatherName,
+        "gender":this.PatientRegister.value.gender,
+        "blood":this.PatientRegister.value.blood,
+        "date":this.PatientRegister.value.date,
+        "email":this.PatientRegister.value.email,
+        "uploadFile":"../../assets/Image/UploadImage/"+this.PatientRegister.value.uploadFile.substring(12),
+        "phone":this.PatientRegister.value.phone,
+        "address":this.PatientRegister.value.address,
+        "insurance":this.PatientRegister.value.insurance,
+        "password":this.PatientRegister.value.password,
+        "cpassword":this.PatientRegister.value.cpassword
+    }
     if(this.PatientRegister.invalid){
       alert("Please Enter all the Fields");
     }
-
     else if(this.PatientRegister.valid){
       this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
     const compare=data.find((a:any)=>{
@@ -62,7 +75,7 @@ export class PatientRegistrationComponent implements OnInit,IDeactivateComponent
       alert(this.PatientRegister.value.email+','+' '+"This Email was Already Registered ");
     }
     else{
-      this.service.postRegDet(this.PatientRegister.value).subscribe(data =>{
+      this.service.postRegDet(body).subscribe(data =>{
         alert("Registerd Sucessfully Press ok to Login");
         // this.PatientRegister.reset();
         this.route.navigate(['login']);
@@ -74,7 +87,7 @@ export class PatientRegistrationComponent implements OnInit,IDeactivateComponent
     }
 
   }
-  
+
   ngOnInit() {
 
   }
@@ -87,4 +100,11 @@ export class PatientRegistrationComponent implements OnInit,IDeactivateComponent
       return true;
     }
   }
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+
+    if (file) {
+    }
+  }
+
 }
