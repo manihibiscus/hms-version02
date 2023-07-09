@@ -64,7 +64,7 @@ table thead th{
 
 .welcome{
 margin: auto;
-width: 60%;
+width: 807px;
 height: 250px;
 background: linear-gradient(to right, #e6e6e6,#faf0f0);
 display: grid;
@@ -82,7 +82,7 @@ color: #233863;
 }
 .annoncement{
   background: linear-gradient(to right, #e6e6e6,#faf0f0);
-  width: 90%;
+  width: 275px;
   height: 180px;
   margin: auto;
   display: grid;
@@ -96,7 +96,7 @@ color: #233863;
   margin: auto;
   font-size: 18px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 20px ;
   padding-left:20px ;
   font-weight: bold;
 }
@@ -111,7 +111,10 @@ color: #233863;
 }
 .result{
   background: linear-gradient(to right, #e6e6e6,#faf0f0);
+  /* background-color: #1e1468; */
   padding-left: 15px;
+  width: 275px;
+
 }
 .bmiDialog{
   margin-top: 40px;;

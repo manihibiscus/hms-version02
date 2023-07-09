@@ -36,10 +36,11 @@
       <div class="result" *ngIf="true">
         <h3>Your BMI:</h3>
         <p>{{ bmi | number:'1.2-2' }}</p>
+
         <h3>Interpretation:</h3>
         <p>{{ bmi | bmiCalcular }} <br>
           <span *ngIf="bmi <16.0"><img  src="../../assets/Image/Icons/sad.png" alt="" style="width: 40px; height: 40px;"> Please consult a healthcare professional</span>
-          <span *ngIf="bmi >= 16.0 && bmi <= 18.4"><img  src="../../assets/Image/Icons/clapping.png" alt="" style="width: 40px; height: 40px;"> Please maintaining a healthy weight</span>
+          <span *ngIf="bmi >= 16.0 && bmi <= 18.4"><img  src="../../assets/Image/Icons/sad.png" alt="" style="width: 40px; height: 40px;"> Please maintaining a healthy weight</span>
           <span *ngIf="bmi >= 18.5 && bmi <= 24.9"><img  src="../../assets/Image/Icons/clapping.png" alt="" style="width: 40px; height: 40px;"> Good, Stay healthy!</span>
           <span *ngIf="bmi >= 25.0 && bmi < 29.9"><img  src="../../assets/Image/Icons/sad.png" alt="" style="width: 40px; height: 40px;"> Regular exercise, adopting a balanced diet needed</span>
           <span *ngIf="bmi >= 30.0 && bmi <=34.9"><img  src="../../assets/Image/Icons/sad.png" alt="" style="width: 40px; height: 40px;"> Healthy eating habits, portion control, and consulting with a healthcare needed </span>
@@ -59,7 +60,7 @@
     <p style="text-align: center;font-weight: bolder;">Age: {{age}}</p>
   </div>
 </div>
-<br>
+<br><br><br>
 <div class="body">
 
 <h2 style="text-align: center;color: #071468;">Current Appointment Status</h2>
