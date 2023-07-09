@@ -108,6 +108,7 @@ color: #233863;
 .wholeView{
   display:grid ;
   grid-template-columns: auto auto;
+  grid-column-gap:8px ;
 }
 .result{
   background: linear-gradient(to right, #e6e6e6,#faf0f0);
@@ -123,7 +124,6 @@ color: #233863;
   height: 210px;
   border-radius: 15px;
   background: linear-gradient(to right, #ebd3d3,#faf0f0);
-
 }
 .calculator {
   max-width: 400px;
