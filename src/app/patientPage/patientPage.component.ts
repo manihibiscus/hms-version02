@@ -13,16 +13,22 @@ import { PatientModel } from './patient.model';
 })
 export class PatientPageComponent implements OnInit {
   loggedUser:any=""
+  currDate=new Date();
+  currYear=this.currDate.getFullYear()
+  age:any=""
   constructor(private userServeice:UserServiceService, private route:Router,
     private pr:PatientServiceService,
-    private http:HttpClient, private service:PatientServiceService
+    private http:HttpClient,
+    private service:PatientServiceService
     ) { }
     userLogObj : PatientModel=new PatientModel();
     refereshData:any="";
     color:any=""
     cancel:any=""
     completed:any=""
+    bmiCommand:any=""
   ngOnInit() {
+
     // sessionStorage.setItem('updateUser', JSON.stringify(this.userServeice.loggedInUser));
     let sessionUser = sessionStorage.getItem('loggedInUser');
     if (sessionUser) {
@@ -38,6 +44,10 @@ export class PatientPageComponent implements OnInit {
       alert('You are Loggedout. Login to continue');
       this.route.navigate(['/login']);
     }
+    // Age
+    var birthYear=this.loggedUser.date.substring(0,4)
+    this.age=this.currYear-birthYear;
+    // End
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(data=>{
         const value=data.find((a:any)=>{
           return a.email===this.loggedUser.email
@@ -66,6 +76,25 @@ export class PatientPageComponent implements OnInit {
   //   alert("Reload"+this.userLogObj.userLogged);
   // }
 
+  weight!: number;
+  height!: number;
+  bmi!: number;
+
+  calculateBMI() {
+    const heightInMeters = this.height / 100;
+    this.bmi = this.weight / (heightInMeters * heightInMeters);
+    var ref=document.getElementById("reference");
+    ref?.click();
+  }
+  
+
+  closeBMI:boolean=false;
+  closeBanner(){
+    this.closeBMI=false
+  }
+  checkBMI(){
+    this.closeBMI=true
+  }
 }
 
 

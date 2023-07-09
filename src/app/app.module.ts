@@ -38,6 +38,7 @@ import { CurrencyPipe } from './currency.pipe';
 import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { SlotHistoryComponent } from './slotHistory/slotHistory.component';
 import { PatientHistoryComponent } from './patientHistory/patientHistory.component';
+import { BmiCalcularPipe } from './bmi-calcular.pipe';
 @NgModule({
   declarations: [		
     AppComponent,
@@ -64,7 +65,8 @@ import { PatientHistoryComponent } from './patientHistory/patientHistory.compone
       CurrencyPipe,
       AddDoctorComponent,
       SlotHistoryComponent,
-      PatientHistoryComponent
+      PatientHistoryComponent,
+      BmiCalcularPipe
    ],
   imports: [
     BrowserModule,
