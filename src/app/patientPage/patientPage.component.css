@@ -118,7 +118,7 @@ color: #233863;
 }
 .bmiDialog{
   margin-top: 40px;;
-  margin-left: 10px;
+  margin-left: 35px;
   width: 200px;
   height: 210px;
   border-radius: 15px;
@@ -163,5 +163,9 @@ input[type="number"] {
   font-weight: bolder;
   border: 1px solid #233863;
 }
-
+/* .body1{
+  background-image: url(../../assets/Image/registerBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+} */
 
