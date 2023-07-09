@@ -85,3 +85,8 @@ grid-template-columns: auto auto;
   height: 180px;
   margin: auto;
 }
+.viewReport{
+  width: 100px;
+  height: 100px;
+  background-color: wheat;
+}

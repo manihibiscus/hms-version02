@@ -66,7 +66,8 @@ export class PatientHistoryComponent implements OnInit {
     this.showPending="false";
     this.showSuccess="false";
     this.showImage="false"
-
+    var ref=document.getElementById("back");
+    ref?.click();
   }
   accept(){
     this.showCancel="false";
@@ -74,7 +75,8 @@ export class PatientHistoryComponent implements OnInit {
     this.showPending="false";
     this.showSuccess="false";
     this.showImage="false"
-
+    var ref=document.getElementById("back");
+    ref?.click();
   }
   paymentPending(){
     this.showCancel="false";
@@ -82,7 +84,8 @@ export class PatientHistoryComponent implements OnInit {
     this.showPending="true";
     this.showSuccess="false";
     this.showImage="false"
-
+    var ref=document.getElementById("back");
+    ref?.click();
   }
   paymentSuccess(){
     this.showCancel="false";
@@ -98,6 +101,9 @@ export class PatientHistoryComponent implements OnInit {
     this.showPending="false";
     this.showSuccess="false";
     this.showImage="true"
+
+    var ref=document.getElementById("back");
+    ref?.click();
   }
   dialogBox:boolean=false;
   changePasswordBox:boolean=false;
@@ -197,8 +203,31 @@ editForm=this.fb.group({
 
   }
   printing:boolean=false;
-  clicking() {
+
+  printPatientId:any="";
+  printName:any="";
+  printDoctorName:any="";
+  printDoctorField:any="";
+  printConFee:any="";
+  printOthFee:any="";
+  printTotFee:any="";
+  printStatus:any="";
+  printAppointmentDate:any="";
+
+  clicking(item:any) {
     this.printing=true
+    this.generate(item);
+  }
+  generate(item:any){
+    this.printName=item.patientName;
+    this.printDoctorName=item.doctorName;
+    this.printDoctorField=item.doctorField;
+    this.printConFee=item.consultingFee;
+    this.printOthFee=item.otherFee;
+    this.printTotFee=item.Total;
+    this.printStatus=item.paymentStatus;
+   this.printAppointmentDate= item.appointmentDate;
+
   }
   printForm(){
     window.print();

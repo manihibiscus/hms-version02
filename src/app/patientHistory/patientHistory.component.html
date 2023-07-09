@@ -322,7 +322,7 @@
                 {{ item.paymentStatus }}
               </td>
               <td>
-                <button (click)="clicking()">Click</button>
+                <button (click)="clicking(item)">Click</button>
               </td>
             </tr>
           </tbody>
@@ -338,8 +338,21 @@
     </div>
   </div>
   <dialog class="printDialog" [open]="printing">
-    Welcome to all
+    <h2 style="text-align: center;">Payment Successfully</h2>
+    <div class="content">
+      <p><span>Patient Name:</span> {{printName}}</p>
+      <p><span>Doctor Name:</span> {{printDoctorName}}</p>
+      <p><span>Doctor Field:</span> {{printDoctorField}}</p>
+      <p><span>Appointed Date:</span> {{printAppointmentDate}}</p>
+      <p><span>Consulting Fee:</span> {{printConFee}}</p>
+      <p><span>Other Fee:</span> {{printOthFee}}</p>
+      <p><span>Total Fee:</span> {{printTotFee}}</p>
+      <p style="color: green"><span>Payment Status:</span> {{printStatus}}</p>
+    </div>
+    <br>
+    <div style="margin-left: 400px;">
     <button (click)="printForm()">Print</button>
-    <button (click)="back()">Back</button>
+    <button (click)="back()" id="back">Back</button>
+  </div>
   </dialog>
 </div>
