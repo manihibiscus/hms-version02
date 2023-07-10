@@ -86,7 +86,7 @@ export class PatientPageComponent implements OnInit {
     var ref=document.getElementById("reference");
     ref?.click();
   }
-  
+
 
   closeBMI:boolean=false;
   closeBanner(){
