@@ -54,6 +54,8 @@ table thead th{
   width: 150px;
   height: 90px;
   background-color:#e6e6e6;
+  /* background: linear-gradient(to bottom, #ebd3d3,#faf0f0); */
+
   margin: auto;
   border-radius: 15px;
   /* border: 2px solid white; */
