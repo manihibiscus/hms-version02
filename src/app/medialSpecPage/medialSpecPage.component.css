@@ -1,0 +1,30 @@
+.medicalbody {
+  width: 90%;
+  height: 100vh;
+  color: white;
+  margin: auto;
+  display: grid;
+  padding-top: 50px;
+  /* background-image: url(../Image/); */
+  justify-content: center;
+  grid-template-rows: 220px 220px 220px 220px;
+  grid-template-columns: 220px 220px 220px 220px;
+  grid-row-gap: 100px;
+  grid-column-gap: 100px;
+}
+
+.box {
+  background-color: whitesmoke;
+  border-radius: 50px;
+  text-align: center;
+  padding: 55px 50px;
+  color:#2371b4;
+  font-weight: bold;
+  border-color: #f7a955;
+}
+.box:hover{
+  border: 2px solid #006df0;
+}
+.icons{
+  border-radius: 30px;
+}

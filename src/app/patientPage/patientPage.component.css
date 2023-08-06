@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');.welH3{
+  font-family: 'Poppins', sans-serif;
+}
+.form{
+
+  margin: auto 0 ;
+  background-color: white;
+  /* justify-content: space-between ; */
+
+}
+table,thead,th,tbody,tr,td{
+  border: 4px solid white;
+  border-collapse:collapse;
+}
+table{
+  /* justify-content: space-between ; */
+  margin: 0 auto ;
+  background-color: whitesmoke;
+  width: 80%;
+}
+
+table tbody tr td{
+  text-align: center;
+  padding: 12px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 12px;
+
+}
+.violet{
+  color: rgb(235, 0, 235);
+  font-weight: bolder;
+}
+.red{
+  color: red;
+  font-weight: bolder;
+}
+.green{
+  color:green;
+  font-size: bolder;
+}
+.green2{
+  color: green;
+  font-size: bolder;
+}
+.red2{
+  color: red;
+  font-weight: bolder;
+}
+.button {
+  margin-top: 5px;
+  padding: 2px 4px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.welcome{
+margin: auto;
+width: 807px;
+height: 250px;
+background: linear-gradient(to right, #e6e6e6,#faf0f0);
+display: grid;
+grid-template-columns: auto auto;
+color: #233863;
+}
+.container1{
+  background: linear-gradient(to right, #e6e6e6,#faf0f0);
+  width: 550px;
+}
+.container2{
+  background: linear-gradient(to right, #e6e6e6,#faf0f0);
+  width: 257px;
+  font-family: 'Poppins', sans-serif;
+}
+.annoncement{
+  background: linear-gradient(to right, #e6e6e6,#faf0f0);
+  width: 275px;
+  height: 180px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 5px;
+}
+.viewReport{
+  width: 200px;
+  height: 80px;
+  background: linear-gradient(to right, #e6e6e6,#faf0f0);
+  margin: auto;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 20px ;
+  padding-left:20px ;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+
+}
+.viewReport1 img{
+  width:70px;
+  height: 70px;
+  padding-left: 40%;
+}
+.wholeView{
+  display:grid ;
+  grid-template-columns: auto auto;
+  grid-column-gap:8px ;
+}
+.result{
+  background: linear-gradient(to right, #e6e6e6,#faf0f0);
+  /* background-color: #1e1468; */
+  padding-left: 15px;
+  width: 275px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.bmiDialog{
+  margin-top: 40px;;
+  margin-left: 35px;
+  width: 200px;
+  height: 210px;
+  border-radius: 15px;
+  background: linear-gradient(to right, #ebd3d3,#faf0f0);
+  border: 2px solid #ffffff;
+}
+.calculator {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.bmisubmit {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #ebd3d3,#faf0f0);
+  border-radius: 15px;
+  color: #233863;
+  font-weight: bolder;
+  border: 1px solid #233863;
+}
+/* .body1{
+  background-image: url(../../assets/Image/registerBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+} */
+

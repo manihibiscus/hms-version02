@@ -1,0 +1,41 @@
+<app-doctorHeader></app-doctorHeader>
+<!-- {{getQuery|json}} -->
+<!-- {{loggedInUser|json}} -->
+<h2 style="text-align:center;color: #071468;">Patient Details</h2>
+{{slotAllocated.name}}
+<form class="form">
+  <table>
+    <thead style="color: #071468;">
+      <th>S.No</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Doctor Name</th>
+      <th>Appointment Date</th>
+      <th>Appointment Time</th>
+      <th>Health Issue</th>
+      <th>Reporting Status</th>
+      <th>Select</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of slotAllocated let i =index">
+        <td>{{i+1}}</td>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.mobileNo}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
+        <td>{{appointment.timeing}}</td>
+        <td>{{appointment.problem}}</td>
+        <td>{{appointment.reporingStatus}}</td>
+        <td>
+          <button [disabled]="appointment.reporingStatus=='Reported to admin' " id="refchange" (click)="AddToBill(appointment,appointment.id)"
+          [ngClass]="{button:appointment.reporingStatus=='pending',
+                      blur:appointment.reporingStatus=='Reported to admin'}"
+          >Report</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    <p [hidden]="!(slotAllocated.length==0)" style="color: red;text-align: center;">* No Patients Available *</p>
+</form>
+
+<!-- <app-footer></app-footer> -->

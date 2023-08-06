@@ -1,0 +1,99 @@
+<app-patientHeader></app-patientHeader>
+<!-- {{getTiming|json}} -->
+<h2 style="text-align:center">Make Appointment</h2>
+<form action="" class="form" #appointmentForm="ngForm">
+  <div class="field1">
+    <label for="">Your Name</label>
+    <div class="input" style="color: #335a00;">{{loggedInUser.patientName}} {{loggedInUser.fatherName}}</div>
+  </div>
+  <div class="field4">
+    <label for="">Choose Medical Field</label>
+    <div class="input">
+      <select name="" id=""  name="appointmentField" #field="ngModel" [(ngModel)]="appointmentField" (change)="changeValue()" [disabled]="Attempt">
+        <option value="" disabled selected>Medical Fields</option>
+        <option value="General doctor" >General doctor</option>
+        <option value="Pediatrician">Pediatrician</option>
+        <option value="Gynecologist">Gynecologist</option>
+        <option value="Dentist" >Dentist</option>
+        <option value="Cardiologist" >Cardiologist</option>
+        <option value="Cosmic" >Cosmic</option>
+        <option value="Otolaryngologist" >Otolaryngologist</option>
+        <option value="Psychiatrist" >Psychiatrist</option>
+      </select>
+    </div>
+  </div>
+  <div *ngIf="field.errors && (field.dirty)" class="error">
+    <div [hidden]="!field.errors['required']">Please Choose the Field</div>
+    <!-- <div [hidden]="!field.errors['pattern']">Enter Only Alphabets </div> -->
+  </div>
+    <div class="field2">
+    <label for="">Choose Doctor Name</label>
+    <div class="input" >
+      <select   name="appointmentDocName" #dname="ngModel"
+      [(ngModel)]="appointmentDocName" [disabled]="Attempt" (change)="doctorName()">
+      <option value="" disabled selected>Doctors Name</option>
+        <option *ngFor="let docName of storedField" value="{{docName.doctorName}}">{{docName.doctorName}}</option>
+      </select>
+    </div>
+    </div>
+    <div class="field7" >
+      <label for="">Choose Date</label>
+      <!-- <div class="input"><input type="date" [disabled]="!filterDates()" class="inputfield" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" /></div> -->
+      <div class="input" >
+        <input (change)="note()" type="date" class="inputfield" [min]="minDate" [max]="maxDate" #ddate="ngModel" required name="appointmentDate" [(ngModel)]="appointmentDate" [disabled]="Attempt"/>
+      </div>
+    </div>
+
+  <div class="field3">
+    <label for="">Choose your Timing</label>
+    <div class="input">
+    <!-- <select class="inputfield" #dtime="ngModel" required name="appointmentTime" [(ngModel)]="appointmentTime" > -->
+      <select name="" id="" (change)="checking()" name="appointmentTime" #timing="ngModel"
+      [(ngModel)]="appointmentTime" >
+        <option  value="" disabled selected >Select Timing</option>
+        <!-- <option *ngFor="let item of doctorDetails.timing; let i=index" [hidden]="item==h[{{i+1}}]"  value="{{item}}">{{item}}</option> -->
+        <option *ngFor="let item of doctorDetails.timing; let i=index"
+        [hidden]="item == h09|| item == h0920 || item == h0940 || item== h10 ||
+                  item == h1020 || item == h1040 || item == h11|| item == h1120 ||
+                  item == h1140  || item== h12 || item == h1220 ||
+                  item == h1240 || item== h01 || item == h0120 || item == h0140 ||
+                  item == h02|| item == h0220 || item == h0240 || item== h03 || item == h0320 ||
+                  item == h0320 || item == h04"
+        [value]="item">{{item}}</option>
+      </select>
+
+</div>
+  </div>
+
+  <div class="field4">
+    <label for="">Anything to Say</label>
+    <small style="padding-left: 6px;color:#435a05 ; font-size:13px;">*if any</small>
+    <div class="input"><textarea name="" id="" cols="20" rows="3" name="appointmentSpecific" [(ngModel)]="appointmentSpecific" [disabled]="Attempt"></textarea></div>
+  </div>
+
+  <div class="field5">
+    <button class="makeaAppointment" [disabled]="!appointmentForm.valid" (click)="appointmentSubmit()" [disabled]="Attempt">Make Appointment</button>
+  </div>
+</form>
+
+<div class="notice" *ngIf="notice" style="width: 100%; color: green; font-weight: bolder;">
+  <p >Check the working hours details of the doctor below and select the time</p>
+</div>
+
+<div class="doctor">
+  <div *ngFor="let det of storedField" id="ref">
+    <div class="box">
+      <img [src]="det.image" alt="" />
+      <p>Name: {{ det.doctorName }}</p>
+      <p>Specialist: {{ det.field }}</p>
+      <p>Experiance: {{ det.experiance }}</p>
+      <p>Licence no: {{ det.licenseNo }}</p>
+      <p>Available time: {{ det.available }}</p>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="message" [hidden]="!field.disabled">
+    <p style="color:red; font-size: 20px;">** You will not permitted to make another appointment until your previous appointment status as completed or cancelled.</p>
+  </div>
+<!-- <app-footer></app-footer> -->

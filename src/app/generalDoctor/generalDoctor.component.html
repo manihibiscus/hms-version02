@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="main">
+  <div class="box1">
+    <div style="font-size: 22px;font-family:sans-serif;color: #3B475F;">
+      <p>{{check.topic}}</p>
+    </div>
+    <div style="font-size: 33px;font-family:sans-serif;color: #818C98;">
+      <p>{{check.title}}</p>
+    </div>
+    <div style="font-size: 18px;
+    font-family:sans-serif;
+    /* padding: 10px 0px 0px; */
+    color: #5F6A75;
+    width: 100%;text-align: justify;">
+      <p>{{check.content}}</p>
+    </div>
+  </div>
+  <div class="box2" >
+    <div class="doctorList" >
+      <p style="color: #818C98; font-size: 16px;font-family: sans-serif;">Team of Consultants</p>
+      <div  *ngFor="let list of check.doctorList">
+        <div class="doctor"><pre style="text-align: left; font-weight: bold;">{{list}}</pre></div>
+        <!-- {{check|json}} -->
+      </div>
+    </div>
+  </div>
+</div>
+<h2 style="font-size: 33px;font-family:sans-serif;color: #818C98; text-align: center;">Infrastructure</h2>
+<div class="Gallery">
+  <div  *ngFor="let list of check.infrastructureImages">
+   <div class="picture">
+    <img [src]="list" style="width: 250px;
+    height: 200px;">
+   </div>
+  </div>
+</div>
+<div>
+  <button routerLink="/medicalSpec" class="back"> Back </button>
+</div>
+
+
+
+<app-footer></app-footer>
+
+<!-- <router-outlet></router-outlet> -->

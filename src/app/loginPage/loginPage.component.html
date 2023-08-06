@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="body">
+<div class="bimg">
+  <img src="../../assets/Image/4949534_19801.jpg" alt="">
+</div>
+<div class="blogin">
+  <div class="form-box">
+    <div class="Title">
+          <h3 style="font-size: 21px;color: #233863;">Login</h3>
+    </div>
+      <form id="Login" class="inp-grp" [formGroup]="loginForm" (ngSubmit)="login()">
+          <input type="text" class="inp-box" name="user"
+          placeholder="Enter Email id "#username formControlName="userId"
+        pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
+        /> <br>
+          <div class="error" *ngIf="loginForm.controls['userId'].dirty">
+            <p *ngIf="loginForm.controls['userId'].errors?.['required']">
+              Enter the field
+            </p>
+            <p *ngIf="loginForm.controls['userId'].errors?.['pattern'] || loginForm.controls['userId'].errors?.['pattern2'] ">
+              Enter valid Email id
+            </p>
+          </div>
+          <input type="{{ show ? 'text' : 'password' }}" class="inp-box" name="l-password" placeholder="Enter Pin" id="showme"
+          #password formControlName="password"
+          pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
+
+          <div class="error" *ngIf="loginForm.controls['password'].dirty">
+            <p *ngIf="loginForm.controls['password'].errors?.['required']">
+              Enter the field
+            </p>
+            <p *ngIf="loginForm.controls['password'].errors?.['pattern']">
+              Enter valid password
+            </p>
+          </div><br><br>
+          <div class="ShowPassword">
+            <!-- <input type="checkbox" onclick="showPassword()">Show Password -->
+            <input type="checkbox" (change)="visiblePassword()">
+            <label style="color: #233863;"> Show Password</label>
+          </div><br>
+          <a style="font-size: 16px;" routerLink="/forgotPassword" class="forgot">Forgot Password?</a><br><br>
+          <!-- <input type="checkbox" class="check-box" /><span>Remember me</span><br> -->
+          <button type="submit" class="sub-box" name="l-submit" [disabled]="loginForm.invalid">Log in</button>
+          <div class="Goto">
+            <ul>
+              <li style="font-size: 17px;">If you are New user ? <a routerLink="/patientregister" style="font-size: 17px;">Click here</a></li>
+              </ul><br>
+              <!-- <ul>
+              <li><a routerLink="/home">Back to Home Page</a></li>
+              </ul> -->
+          </div>
+      </form>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,103 @@
+.form{
+  margin: auto 0 ;
+  background-color: white;
+  /* justify-content: space-between ; */
+
+}
+table,thead,th,tbody,tr,td{
+  border: 4px solid white;
+  border-collapse:collapse;
+}
+table{
+  /* justify-content: space-between ; */
+  margin: 0 auto ;
+  background-color: whitesmoke;
+  width: 90%;
+}
+
+table tbody tr td{
+  text-align: center;
+  padding: 12px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 12px;
+
+}
+
+.back1 {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.back2 {
+  margin-left: 8px;
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.button {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.blur{
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(205, 215, 216);
+  border: 1px solid white;
+  color: rgb(235, 235, 235);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* .back[hidden] {
+  display: none;
+} */
+
+/* .c1
+{
+background-color: green;
+color: white;
+} */
+/* .c2{
+background-color: red;
+color: white;
+} */

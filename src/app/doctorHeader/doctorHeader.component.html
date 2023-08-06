@@ -1,0 +1,14 @@
+<header class="header">
+  <nav>
+     <img [src]="doctorHeaderImg.logo" id="eveimg" />
+     <h2>Mani Medical Care and Hospital</h2>
+     <div> <marquee behavior="" direction="right"><img [src]="doctorHeaderImg.ambulance" id="eveimg" /></marquee> </div>
+     <ul>
+        <li><a routerLink="/slot" routerLinkActive="active"><img [src]="doctorHeaderImg.contactIcon" alt="">View Patient</a></li>
+        <li><a routerLink="/requestSlot" routerLinkActive="active"><img [src]="doctorHeaderImg.contactIcon" alt="">Request Slot</a></li>
+        <li><a routerLink="/doctorViewHistory" routerLinkActive="active"><img [src]="doctorHeaderImg.homeIcon" alt="">Profile</a></li>
+        <li><img [src]="doctorHeaderImg.homeIcon" /> <button (click)="logout()" class="logout">Logout</button></li>
+      </ul>
+  </nav>
+</header>
+<hr>

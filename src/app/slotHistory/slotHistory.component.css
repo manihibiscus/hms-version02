@@ -1,0 +1,73 @@
+.form{
+  margin: auto 0 ;
+  background-color: white;
+  /* justify-content: space-between ; */
+
+}
+table,thead,th,tbody,tr,td{
+  border: 4px solid white;
+  border-collapse:collapse;
+}
+table{
+  /* justify-content: space-between ; */
+  margin: 0 auto ;
+  background-color: whitesmoke;
+  width: 95%;
+  display:flexbox;
+}
+
+table tbody tr td{
+  text-align: center;
+  padding: 12px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 12px;
+
+}
+.whole{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1%;
+}
+.split1{
+  margin-top: 20px;
+  margin-left: 15px;
+  background-color: #f5f5f5;
+  width: 250px;
+  height: 420px;
+  border-radius: 15px;
+  border: 2px solid #233863;
+  color: #233863;
+
+}
+.split2{
+  max-height: 400px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* Additional styling */
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+}
+
+.Slot{
+  width: 120px;
+  height: 80px;
+  background-color:#e6e6e6;
+  margin: auto;
+  border-radius: 15px;
+  /* border: 2px solid white; */
+}
+.Slot h3{
+  text-align: center;
+  padding: 18%;
+}
+.Slot:hover{
+  background-color: white;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}

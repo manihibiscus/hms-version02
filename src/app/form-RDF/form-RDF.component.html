@@ -1,0 +1,27 @@
+<form [formGroup]="loginForm1">
+
+  <div class="form-group">
+    <label for="">Username:</label>
+    <input type="text" name="username" formControlName="username">
+  </div>
+
+  <div *ngIf="loginForm1.controls['username'].invalid&&loginForm1.controls['username'].touched">
+    <small *ngIf="loginForm1.controls['username'].errors?.['required']">Please enter username</small>
+    <small *ngIf="loginForm1.controls['username'].errors?.['minlength']">Please enter username with atleast 3
+      characters</small>
+  </div>
+
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" name="password" formControlName="password">
+  </div>
+
+  <div class="form-group">
+    <label for="">Confirm Password</label>
+    <input type="password" name="cpassoword" formControlName="cpassword">
+  </div>
+  <div *ngIf="loginForm1.controls['cpassword'].touched">
+    <small *ngIf="loginForm1.controls['cpassword'].errors?.['confirmedValidator']">Password not match</small>
+  </div>
+  <button [disabled]="!loginForm1.valid">Login</button>
+</form>

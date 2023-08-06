@@ -1,0 +1,146 @@
+<app-adminHeader></app-adminHeader>
+<!-- {{getQuery|json}} -->
+
+<form class="form">
+  <div class="split">
+  <table>
+    <thead style="color: #071468;">
+      <th>S.No</th>
+      <!-- <th>Patient ID</th> -->
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Appointment Date</th>
+      <th>Treatment Status</th>
+      <th>Generate Bills</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of getBills let i=index" class="tableScroll">
+        <td>{{i+1}}</td>
+        <!-- <td>{{appointment.id}}</td> -->
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.mobileNo}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.doctorField}}</td>
+        <td>{{appointment.date}}</td>
+        <td>{{appointment.acceptanceStatus}}</td>
+        <!-- <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td> -->
+        <!-- <td>{{appointment.timeing}}</td> -->
+        <td>
+          <button [disabled]="appointment.acceptanceStatus=='Pending'" (click)="generate(appointment,appointment.acceptanceStatus)"
+          [ngClass]="{button1:appointment.acceptanceStatus=='success',
+                     blur2:appointment.acceptanceStatus=='Pending'}"
+          >Generate</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="generateBills" [formGroup]="billForm" >
+    <h2 style="text-align: center;color: #071468;">Generate Recepit</h2>
+    <h5 style="padding-left: 355px;margin-top: 0px;">Date: {{dateNow| date:"dd/MM/YYYY"}}</h5>
+    <small style="padding-top:0;padding-left: 355px;margin-top: 0px;">Time: {{dateNow| date: 'shortTime'}}</small>
+    <!-- <div class="idField">
+      <label for="">Patient Id: </label>
+      <input type="number" class="id-box" formControlName="patientId">
+    </div> -->
+    <div class="split2">
+    <div class="Box1">
+    <div class="field">
+      <label for="" style="color: #071468;">Patient Name: </label>
+      <input type="text" class="inp-box" formControlName="patinetName">
+    </div>
+    <div class="field">
+      <label for="" style="color: #071468;">Doctor Name: </label>
+      <input type="text" class="inp-box" formControlName="doctorName">
+    </div>
+    <div class="field">
+      <label for="" style="color: #071468;">Doctor Field: </label>
+      <input type="text" class="inp-box" formControlName="doctorField">
+    </div>
+    <div class="field">
+      <label for="" style="color: #071468;">Contact No: </label>
+      <input type="text" class="inp-box" formControlName="contactNo">
+    </div>
+    <!-- <div class="dName">
+      <label for="">Doctor Name</label>
+      <input type="text" formControlName="doctorName">
+    </div> -->
+  </div>
+  <div class="Box2">
+ <div class="field2">
+    <label for="" style="color: #071468;">Consulting Fee: </label>
+    <input type="number" class="amount" #consultingfee formControlName="consultingFee">
+  </div>
+  <div class="field2">
+    <label for="" style="color: #071468;">Other Fee: </label>
+    <input type="number" class="amount" #otherfee formControlName="otherFee" id="ref" (change)="sum(consultingfee.value,otherfee.value)"  >
+  </div>
+  <div class="field2">
+    <label for="" style="color: #071468;">Total Fee:₹ {{result }} </label><br><br>
+    <!-- <input type="number" class="amount" > -->
+  </div>
+  <br>
+  <div>
+    <button class="submit" (click)="submitBill()" [disabled]="!billForm.valid"
+    [ngClass]="{disable:billForm.invalid}"
+    >Submit</button>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+<br>
+</form>
+<div class="div">
+  <!-- <button class="button" (click)="sendToAll()">Send to All</button> -->
+
+  <h2 style="color: #071468; text-align: center;">Send to Patient</h2>
+
+  <form class="form">
+    <table>
+      <thead style="color: #071468;">
+        <th>S.No</th>
+        <th>Patient Name</th>
+        <th>Contact No</th>
+        <th>Doctor Name</th>
+        <th>Doctor Field</th>
+        <th>Appointment Date</th>
+        <th>Consulting Fee</th>
+        <th>Other Fee</th>
+        <th>Total</th>
+        <th>Status</th>
+        <!-- <th>Payment Status</th> -->
+        <th>Select</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of getReceipterDetails">
+          <td>{{appointment.id}}</td>
+          <td>{{appointment.name}}</td>
+          <td>{{appointment.mobileNo}}</td>
+          <td>{{appointment.doctorName}}</td>
+          <td>{{appointment.doctorField}}</td>
+          <td>{{appointment.appointmentDate}}</td>
+          <td>{{appointment.consultingFee}}</td>
+          <td>{{appointment.otherFee}}</td>
+          <td>{{appointment.Total}}</td>
+          <td>{{appointment.status}}</td>
+          <!-- <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
+          green:appointment.paymentStatus == 'Paid'} ">
+            {{appointment.paymentStatus}}
+          </td> -->
+          <td>
+            <button class="sendTo" (click)="showBill(appointment)" [disabled]="appointment.status=='sended to patient' "
+            [ngClass]="{disable:appointment.status=='sended to patient'}"
+            >Send to Patient</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  <div class="notice" *ngIf="getReceipterDetails.length==0">
+    <h3 style="color: green;text-align:center">All the bills have been sent to the rightful ones</h3>
+  </div>
+</div>
+<!-- {{showPatientBill|json}} -->
+<!-- <app-footer></app-footer> -->

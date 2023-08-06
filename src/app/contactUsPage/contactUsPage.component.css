@@ -1,0 +1,144 @@
+.contact{
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  /* overflow: visible; */
+  display: grid;
+  grid-template-columns: 70% auto;
+
+}
+.contact .Box1{
+  /* width: 22%;
+  height: 500px;
+  float: left; */
+  background-color: #fafafa;
+  padding-left: 15px;
+  border-radius: 5px;
+  /* border:1px solid #233863; */
+}
+/* .Box1:hover{
+  border:2px solid #233863;
+}
+.Box2:hover{
+  border:2px solid #233863;
+} */
+.Box1 h2{
+text-align: center;
+}
+.Box1 .head{
+  text-align: center;
+  }
+.Box2 h2{
+  text-align: center;
+  }
+.Box1 .pad{
+  line-height: 1.8;
+  padding-left: 15px;
+}
+.contact .Box2{
+  /* width: 74%;
+  height: 500px;
+  float: right; */
+  background-color: #fafafa;
+  border-radius: 5px;
+  border:2px solid #233863;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 420px;
+  margin-top: 20px;
+}
+.head{
+  background-color: whitesmoke;
+}
+.head h2{
+  text-align: center;
+}
+
+.contact2{
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  /* overflow: visible; */
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 32.3%;
+  grid-column-gap: 10px;
+
+}
+
+.b1{
+  background-color: whitesmoke;
+  padding-left: 15px;
+  padding-top: 15px;
+  border-radius: 10px;
+  border:2px solid #233863;
+
+
+}
+.b2{
+  background-color: whitesmoke;
+  padding-left: 15px;
+  padding-top: 15px;
+  border-radius: 10px;
+  border:2px solid #233863;
+
+
+}
+.b3{
+  background-color: whitesmoke;
+  padding-left: 15px;
+  padding-top: 15px;
+  border-radius: 10px;
+  border:2px solid #233863;
+
+
+}
+.email
+{
+  padding-left: 45px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #233863;
+
+}
+.email textarea{
+  border-radius: 8px;
+}
+.error{
+  padding-left:100px;
+  color: red;
+  font-size: 12px;
+  padding-top: 4px;
+}
+.field
+{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 50%;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: transparent;
+
+}
+.submit{
+  text-align: center;
+}
+
+.queryform{
+  margin-top: 55px;
+
+}
+
+
+input.ng-valid{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid green;
+  outline: none;
+  background: transparent;
+}
+textarea.ng.valid{
+  border: 2px solid green;
+  outline: none;
+  background: transparent;
+}
+

@@ -1,0 +1,121 @@
+<app-doctorHeader></app-doctorHeader>
+<div class="whole">
+  <div class="split1">
+    <div class="Slot" (click)="profile()">
+      <h3>View Profile</h3>
+    </div>
+    <div class="Slot" (click)="accept()">
+      <h3>Appointments History</h3>
+    </div>
+    <div class="Slot" (click)="cancel()">
+      <h3>Cancelled History</h3>
+    </div>
+  </div>
+  <div class="split2">
+    <div class="view" *ngIf="showImage == 'true'">
+      <!-- <img src="../../assets/Image/slotHistory.jpg" style="width: 400px;height: 350px;padding-left: 300px;padding-top: 20px;" alt=""> -->
+      <div class="profile">
+        <div class="div1">
+          <h4 style="color: #5f6a75; font-size: 18px">Personal Details</h4>
+          <p>
+            Doctor Name: <span>{{ loggedUser.doctorName }}</span>
+          </p>
+          <p>
+            Doctor Field: <span>{{ loggedUser.field }}</span>
+          </p>
+          <p>
+            Email Id: <span>{{ loggedUser.userId }}</span>
+          </p>
+          <p>
+            Year of Experiance: <span>{{ storedField.experiance }}</span>
+          </p>
+          <p>
+            License Id: <span>{{ storedField.licenseNo }}</span>
+          </p>
+          <p>
+            Available Timing: <span>{{ storedField.available }}</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div *ngIf="showCancel == 'true'">
+      <h2 style="text-align: center; color: #071468">Cancelled History</h2>
+      <form class="form">
+        <table>
+          <thead style="color: #071468">
+            <th>S.No</th>
+            <th>Patient Name</th>
+            <!-- <th>Contact no</th> -->
+            <th>Appointment Date</th>
+            <th>Doctor Name</th>
+            <th>Remarks</th>
+            <!-- <th>Send</th> -->
+            <!-- <th>Appointment time</th> -->
+            <!-- <th>Health issue</th> -->
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cancelled; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.cName }}</td>
+              <!-- <td>{{item.cMobileNo}}</td> -->
+              <td>{{ item.cDate | date : "MMM d, y" }}</td>
+              <td>{{ item.cdoctorName }}</td>
+              <td>{{ item.remarkMessage }}</td>
+              <!-- <td>{{appointment.problem}}</td> -->
+            </tr>
+          </tbody>
+        </table>
+        <p
+          [hidden]="!(cancelled.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Cancelled History Available *
+        </p>
+      </form>
+    </div>
+    <div class="accept" *ngIf="showAccept == 'true'">
+      <h2 style="text-align: center; color: #071468">Appointments History</h2>
+
+      <form class="form">
+        <table>
+          <thead style="color: #071468">
+            <th>S.No</th>
+            <th>Patient Name</th>
+            <!-- <th>Contact no</th> -->
+            <th>Doctor Name</th>
+            <th>Doctor Field</th>
+            <th>Appointment Date</th>
+            <!-- <th>Consulting Fees</th>
+            <th>Other Fees</th>
+            <th>Total</th> -->
+            <!-- <th>Health issue</th> -->
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of completed; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.name }}</td>
+              <!-- <td>{{item.mobileNo}}</td> -->
+              <td>{{ item.doctorName }}</td>
+              <td>{{ item.doctorField }}</td>
+              <td>{{ item.date | date : "MMM d, y" }}</td>
+              <!-- <td>{{ item.consultingFee }}</td>
+              <td>{{ item.otherFee }}</td>
+              <td>
+                {{ item.Total }}
+              </td> -->
+              <!-- <td>{{appointment.problem}}</td> -->
+            </tr>
+          </tbody>
+        </table>
+        <p
+          [hidden]="!(completed.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Appointment History Available *
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>

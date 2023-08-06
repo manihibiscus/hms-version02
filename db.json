@@ -1,0 +1,1168 @@
+{
+  "patientRegistration": [
+    {
+      "patientName": "SATHISH KUMAR",
+      "fatherName": "SIDHURAJ",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2004-06-12",
+      "email": "sathishkumar12062004@gmail.com",
+      "phone": "8072702981",
+      "address": "371/205B, Chella kuttikadu erumapalayam",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "YES",
+      "password": "Sathish@777",
+      "cpassword": "Sathish@777",
+      "id": 1
+    },
+    {
+      "patientName": "KISHORE KUMAR ",
+      "fatherName": "SIVA KUMAR ",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-07-18",
+      "email": "livekishore2001@gmail.com",
+      "phone": "7373102828",
+      "address": "9-1, KUPPU STREET, PONNAMMAPET, SALEM",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "YES",
+      "password": "kISHORE@18",
+      "cpassword": "kISHORE@18",
+      "id": 2
+    },
+    {
+      "patientName": "DINESH",
+      "fatherName": "RAJENDRAN",
+      "gender": "male",
+      "blood": "A+",
+      "date": "1998-12-24",
+      "email": "dineshdharneesh1734@gmail.com",
+      "phone": "9750051165",
+      "address": "9/1/29 poolampatti(po).edappadi(tk),salem(dt) ",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "YES",
+      "password": "Dinesh@8",
+      "cpassword": "Dinesh@8",
+      "id": 3,
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-08-02",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Subramani MS",
+      "attemptStatus": "false",
+      "appStatus": "Cancelled! (Try again)",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "Sorry, That day I am not available, Please pick some other day",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": "",
+      "cName": "DINESH",
+      "cMobileNo": "9750051165",
+      "cDate": "2023-08-02",
+      "cdoctorName": "Dr. Subramani MS"
+    },
+    {
+      "patientName": "PRATHEEPRAJ ",
+      "fatherName": "RAJARATHINAM",
+      "gender": "male",
+      "blood": "O+",
+      "date": "2002-03-28",
+      "email": "pratheepraj2002@gmail.com",
+      "phone": "8667095212",
+      "address": "67/21,kulasekara azhwar street,salem",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "NO",
+      "password": "pratheep@28",
+      "cpassword": "pratheep@28",
+      "id": 4
+    },
+    {
+      "patientName": "NAVEEN",
+      "fatherName": "SELVARAJ",
+      "gender": "male",
+      "blood": "O+",
+      "date": "2002-09-12",
+      "email": "naveenjayanthi3562@gmail.com",
+      "phone": "9597243562",
+      "address": "Erode",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "NO",
+      "password": "Naveen@777",
+      "cpassword": "Naveen@777",
+      "id": 5
+    },
+    {
+      "patientName": "SARASWATHI",
+      "fatherName": "SUBRAMANI",
+      "gender": "female",
+      "blood": "A+",
+      "date": "1980-02-03",
+      "email": "saras@gmail.com",
+      "phone": "8564217856",
+      "address": "371/205B, Chella kutti kadu Erumapalayam po,",
+      "uploadFile": "../../assets/Image/UploadImage/female.png",
+      "insurance": "NO",
+      "password": "Saras@777",
+      "cpassword": "Saras@777",
+      "id": 6
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "fatherName": "SIDHURAJ",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-10-05",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "address": "371/205B, Chella kuttikadu erumapalayam",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "NO",
+      "password": "Mani@777",
+      "cpassword": "Mani@777",
+      "id": 7,
+      "mobileno": "8072393102",
+      "appointmentDate": "",
+      "appointmentTime": "",
+      "say": "",
+      "doctorField": "",
+      "doctorName": "",
+      "attemptStatus": "false",
+      "appStatus": "",
+      "appoimtmentHour": "01:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "consultingFee": "",
+      "otherFee": "",
+      "Total": ""
+    },
+    {
+      "patientName": "NAVANNETH",
+      "fatherName": "SABARAI",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2004-03-20",
+      "email": "navaneeth@gmail.com",
+      "phone": "9361798897",
+      "address": "Kumarapalayam",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "NO",
+      "password": "Navaneeth@777",
+      "cpassword": "Navaneeth@777",
+      "id": 8
+    },
+    {
+      "patientName": "PRAVEEN",
+      "fatherName": "SELVARAJ",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-12-05",
+      "email": "praveen@gmail.com",
+      "phone": "8659745965",
+      "address": "Salem",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "YES",
+      "password": "Praveen@777",
+      "cpassword": "Praveen@777",
+      "id": 9
+    },
+    {
+      "patientName": "RAMU",
+      "fatherName": "RAJAN",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2002-10-06",
+      "email": "ramu@gmail.com",
+      "phone": "8072506348",
+      "address": "Salem",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "YES",
+      "password": "Ramu@777",
+      "cpassword": "Ramu@777",
+      "id": 10
+    },
+    {
+      "patientName": "THILAGAVATHI",
+      "fatherName": "MAARIYAPPAN",
+      "gender": "female",
+      "blood": "A+",
+      "date": "1991-02-02",
+      "email": "thilagavathi@gmail.com",
+      "phone": "9361798632",
+      "address": "Salem",
+      "uploadFile": "../../assets/Image/UploadImage/female.png",
+      "insurance": "YES",
+      "password": "Thilaga@777",
+      "cpassword": "Thilaga@777",
+      "id": 11
+    },
+    {
+      "patientName": "PALANIYAPPAN",
+      "fatherName": "MURTHI",
+      "gender": "male",
+      "blood": "A+",
+      "date": "1997-12-05",
+      "email": "palaniyappan@gmail.com",
+      "phone": "8265974589",
+      "address": "Thiruppur",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "YES",
+      "password": "Palani@777",
+      "cpassword": "Palani@777",
+      "id": 12
+    },
+    {
+      "patientName": "THRUVAN",
+      "fatherName": "LINGAM",
+      "gender": "male",
+      "blood": "A+",
+      "date": "1999-10-07",
+      "email": "thuruvan@gmail.com",
+      "phone": "8956234785",
+      "address": "Nammakkal",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "NO",
+      "password": "Thuruvan@777",
+      "cpassword": "Thuruvan@777",
+      "id": 14
+    },
+    {
+      "patientName": "PURUSH",
+      "fatherName": "MANIKANDAN",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2003-10-12",
+      "email": "purush@gmail.com",
+      "phone": "9865865975",
+      "address": "Salem",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "insurance": "YES",
+      "password": "Purush@777",
+      "cpassword": "Purush@777",
+      "id": 15
+    },
+    {
+      "patientName": "PRAVEEN KUMAR",
+      "fatherName": "MANU",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-06-05",
+      "email": "praveenkumar@gmail.com",
+      "phone": "8569578459",
+      "address": "ERODE",
+      "insurance": "NO",
+      "password": "Praveen@777",
+      "cpassword": "Praveen@777",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "id": 16
+    },
+    {
+      "patientName": "KAMAL",
+      "fatherName": "RAJAN",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-10-05",
+      "email": "kamal@gmail.com",
+      "phone": "8564785236",
+      "address": "Erode",
+      "insurance": "YES",
+      "password": "Kamal@777",
+      "cpassword": "Kamal@777",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "id": 17
+    },
+    {
+      "patientName": "TAMILARASAN",
+      "fatherName": "MUTHU",
+      "gender": "male",
+      "blood": "A+",
+      "date": "2001-05-12",
+      "email": "tamil@gmail.com",
+      "phone": "7859658478",
+      "address": "Tirupur",
+      "insurance": "NO",
+      "password": "Tamil@777",
+      "cpassword": "Tamil@777",
+      "uploadFile": "../../assets/Image/UploadImage/male.png",
+      "id": 18
+    },
+    {
+      "patientName": "DIVYA",
+      "fatherName": "MAANIKKAM",
+      "gender": "female",
+      "blood": "A+",
+      "date": "1999-10-20",
+      "email": "divya@gmail.com",
+      "uploadFile": "../../assets/Image/UploadImage/female.png",
+      "phone": "8596574852",
+      "address": "Salem",
+      "insurance": "YES",
+      "password": "Divya@777",
+      "cpassword": "Divya@777",
+      "id": 19
+    },
+    {
+      "patientName": "SARANYA",
+      "fatherName": "VISWANATHAN",
+      "gender": "female",
+      "blood": "A+",
+      "date": "2003-04-09",
+      "email": "saranya@gmail.com",
+      "uploadFile": "../../assets/Image/UploadImage/female.png",
+      "phone": "9654785213",
+      "address": "Salem",
+      "insurance": "YES",
+      "password": "Saranya@777",
+      "cpassword": "Saranya@777",
+      "id": 20
+    },
+    {
+      "patientName": "MINMINI",
+      "fatherName": "SANTHOSH",
+      "gender": "female",
+      "blood": "A+",
+      "date": "2001-05-05",
+      "email": "minmini@gmail.com",
+      "uploadFile": "../../assets/Image/UploadImage/female.png",
+      "phone": "9632587451",
+      "address": "Coimbatore",
+      "insurance": "NO",
+      "password": "Minmini@777",
+      "cpassword": "Minmini@777",
+      "id": 21
+    }
+  ],
+  "adminDetails": [
+    {
+      "userId": "admin@gmail.com",
+      "password": "Admin@7"
+    },
+    {
+      "userId": "admin2@gmail.com",
+      "password": "Admin2@7"
+    }
+  ],
+  "doctorDetails": [
+    {
+      "doctorName": "Dr. Murugan MBBS",
+      "field": "General doctor",
+      "userId": "murugan@gmail.com",
+      "password": "Murugan@123"
+    },
+    {
+      "doctorName": "Dr. Thiru MBBS",
+      "field": "General doctor",
+      "userId": "thiru@gmail.com",
+      "password": "Thiru@123"
+    },
+    {
+      "doctorName": "Dr. Swetha MS",
+      "field": "Pediatrician",
+      "userId": "swetha@gmail.com",
+      "password": "Swetha@123"
+    },
+    {
+      "doctorName": "Dr. Pranav Ram MS",
+      "field": "Pediatrician",
+      "userId": "pranav@gmail.com",
+      "password": "Pranav@123"
+    },
+    {
+      "doctorName": "Dr. Thilagavathi MS",
+      "field": "Gynecologist",
+      "userId": "thilagavathi@gmail.com",
+      "password": "Thilagavathi@123"
+    },
+    {
+      "doctorName": "Dr. Kavitha MD",
+      "field": "Gynecologist",
+      "userId": "kavitha@gmail.com",
+      "password": "Kavitha@123"
+    },
+    {
+      "doctorName": "Dr. Hari Gokul MD",
+      "field": "Dentist",
+      "userId": "hari@gmail.com",
+      "password": "Hari@123"
+    },
+    {
+      "doctorName": "Dr. Sedhuragavan MS",
+      "field": "Dentist",
+      "userId": "sedhu@gmail.com",
+      "password": "Sedhu@123"
+    },
+    {
+      "doctorName": "Dr. Gautam MS",
+      "field": "Dentist",
+      "userId": "gautam@gmail.com",
+      "password": "Gautam@123"
+    },
+    {
+      "doctorName": "Dr. Ganesh MD",
+      "field": "Dentist",
+      "userId": "ganesh@gmail.com",
+      "password": "Ganesh@123"
+    },
+    {
+      "doctorName": "Dr. Subramani MS",
+      "field": "Cardiologist",
+      "userId": "subramani@gmail.com",
+      "password": "Subramani@123"
+    },
+    {
+      "doctorName": "Dr. Sreeganesh MD",
+      "field": "Cardiologist",
+      "userId": "sreeganesh@gmail.com",
+      "password": "Sreeganesh@123"
+    },
+    {
+      "doctorName": "Dr. Mythili MD",
+      "field": "Cosmic",
+      "userId": "mythili@gmail.com",
+      "password": "Mythili@123"
+    },
+    {
+      "doctorName": "Dr. Vigneshwaran MD",
+      "field": "Cosmic",
+      "userId": "vigneshwaran@gmail.com",
+      "password": "Vignesh@123"
+    },
+    {
+      "doctorName": "Dr. Manikandan MD",
+      "field": "Otolaryngologist",
+      "userId": "manikandan@gmail.com",
+      "password": "Mani@123"
+    },
+    {
+      "doctorName": "Dr. Arunkumar MD",
+      "field": "Otolaryngologist",
+      "userId": "arunkumar@gmail.com",
+      "password": "Arun@123"
+    },
+    {
+      "doctorName": "Dr. Hemalatha MD",
+      "field": "Psychiatrist",
+      "userId": "hemalatha@gmail.com",
+      "password": "Hemalatha@123"
+    },
+    {
+      "doctorName": "Dr. Sudhandiradhivya MS",
+      "field": "Psychiatrist",
+      "userId": "sudhandiradhivya@gmail.com",
+      "password": "Sudhandira@123"
+    }
+  ],
+  "generalDoctorList": [
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Murugan MBBS",
+      "field": "General doctor",
+      "experiance": "16 Years",
+      "licenseNo": "LI2000B72332",
+      "available": "01:00 PM - 04:00 PM",
+      "timing": [
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM",
+        "03:20PM",
+        "03:40PM",
+        "04:00PM"
+      ],
+      "id": 1
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Thiru MBBS",
+      "field": "General doctor",
+      "experiance": "16 Years",
+      "licenseNo": "LI2000B723663",
+      "available": "12:00 PM - 03:00 PM",
+      "timing": [
+        "12:00PM",
+        "12:20PM",
+        "12:40PM",
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM"
+      ],
+      "id": 3
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Karthikeyan MBBS",
+      "field": "General doctor",
+      "experiance": "12 Years",
+      "licenseNo": "LI2000B723653",
+      "available": "09:00 AM - 12:00 PM",
+      "timing": [
+        "09:00AM",
+        "09:20AM",
+        "09:40AM",
+        "10:00AM",
+        "10:20AM",
+        "10:40AM",
+        "11:00AM",
+        "11:20AM",
+        "11:40AM",
+        "12:00PM"
+      ],
+      "id": 3
+    }
+  ],
+  "pediatricianList": [
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Swetha MS",
+      "field": "PediatricianList",
+      "experiance": "10 Years",
+      "licenseNo": "LI2000B723645",
+      "available": "11:00 AM - 01:00 PM",
+      "id": 1,
+      "timing": [
+        "11:00AM",
+        "11:20AM",
+        "11:40AM",
+        "12:00AM",
+        "12:20AM",
+        "12:40AM",
+        "01:00PM"
+      ]
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Pranav Ram MS",
+      "field": "PediatricianList",
+      "experiance": "10 Years",
+      "licenseNo": "LI2000B723645",
+      "available": "02:00 PM - 04:00 PM",
+      "id": 2,
+      "timing": [
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM",
+        "03:20PM",
+        "03:40PM",
+        "04:00PM"
+      ]
+    }
+  ],
+  "gynecologist": [
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Thilagavathi MS",
+      "field": "Gynecologist",
+      "experiance": "13 Years",
+      "licenseNo": "LI2000B723665",
+      "available": "01:00 PM - 04:00 PM",
+      "timing": [
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM",
+        "03:20PM",
+        "03:40PM",
+        "04:00PM"
+      ],
+      "id": 1
+    },
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Kavitha MD",
+      "field": "Gynecologist",
+      "experiance": "12 Years",
+      "licenseNo": "LI2000B723655",
+      "available": "02:00 PM - 06:00 PM",
+      "timing": [
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM",
+        "03:20PM",
+        "03:40PM",
+        "04:00PM"
+      ],
+      "id": 2
+    }
+  ],
+  "dentist": [
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Hari Gokul MD",
+      "field": "Dentist",
+      "experiance": "13 Years",
+      "licenseNo": "LI2000B72363",
+      "available": "01:00 PM - 03:00 PM",
+      "timing": [
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM"
+      ],
+      "id": 1
+    },
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Sedhuragavan MS",
+      "field": "Dentist",
+      "experiance": "20 Years",
+      "licenseNo": "LI2000B72375",
+      "available": "09:00 AM - 01:00 PM",
+      "timing": [
+        "09:00AM",
+        "09:20AM",
+        "09:40AM",
+        "10:00AM",
+        "10:20AM",
+        "10:40AM",
+        "11:00AM",
+        "11:20AM",
+        "11:40AM",
+        "12:00PM",
+        "12:20PM",
+        "12:40PM",
+        "01:00PM"
+      ],
+      "id": 2
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Gautam MS",
+      "field": "Dentist",
+      "experiance": "10 Years",
+      "licenseNo": "LI2000B72331",
+      "available": "12:00 PM - 03:00 PM",
+      "timing": [
+        "12:00PM",
+        "12:20PM",
+        "12:40PM",
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM"
+      ],
+      "id": 3
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Ganesh MD",
+      "field": "Dentist",
+      "experiance": "12 Years",
+      "licenseNo": "LI2000B745663",
+      "available": "09:00 AM - 11:00 AM",
+      "timing": [
+        "09:00AM",
+        "09:20AM",
+        "09:40AM",
+        "10:00AM",
+        "10:20AM",
+        "10:40AM",
+        "11:00AM"
+      ],
+      "id": 4
+    }
+  ],
+  "cardiologist": [
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Subramani MS",
+      "field": "Cardiologist",
+      "experiance": "13 Years",
+      "licenseNo": "LI2000B745653",
+      "available": "09:00 AM - 01:00 PM",
+      "timing": [
+        "09:00AM",
+        "09:20AM",
+        "09:40AM",
+        "10:00AM",
+        "10:20AM",
+        "10:40AM",
+        "11:00AM",
+        "11:20AM",
+        "11:40AM",
+        "12:00PM",
+        "12:20PM",
+        "12:40PM",
+        "01:00PM"
+      ],
+      "id": 1
+    },
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Sreeganesh MD",
+      "field": "Cardiologist",
+      "experiance": "12 Years",
+      "licenseNo": "LI2000B76323",
+      "available": "12:00 PM - 02:00 PM",
+      "timing": [
+        "12:00PM",
+        "12:20PM",
+        "12:40PM",
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM"
+      ],
+      "id": 2
+    }
+  ],
+  "cosmic": [
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Mythili MD",
+      "field": "Cosmic",
+      "experiance": "15 Years",
+      "licenseNo": "LI2000B76326",
+      "available": "09:00 AM - 12:20 PM",
+      "timing": [
+        "09:00AM",
+        "09:20AM",
+        "09:40AM",
+        "10:00AM",
+        "10:20AM",
+        "10:40AM",
+        "11:00AM",
+        "11:20AM",
+        "11:40AM",
+        "12:00PM",
+        "12:20PM"
+      ],
+      "id": 1
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Vigneshwaran MD",
+      "field": "Cosmic",
+      "experiance": "12 Years",
+      "licenseNo": "LI2000B76326",
+      "available": "01:00 PM - 04:00 PM",
+      "timing": [
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM",
+        "03:20PM",
+        "03:40PM",
+        "04:00PM"
+      ],
+      "id": 2
+    }
+  ],
+  "otolaryngologist": [
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Manikandan MD",
+      "field": "Otolaryngologist",
+      "experiance": "8 Years",
+      "licenseNo": "LI2000B72326",
+      "available": "09:00 AM - 12:00 PM",
+      "timing": [
+        "09:00AM",
+        "09:20AM",
+        "09:40AM",
+        "10:00AM",
+        "10:20AM",
+        "10:40AM",
+        "11:00AM",
+        "11:20AM",
+        "11:40AM",
+        "12:00PM"
+      ],
+      "id": 1
+    },
+    {
+      "image": "../../assets/Image/doctor (1).png",
+      "doctorName": "Dr. Arunkumar MD",
+      "field": "Otolaryngologist",
+      "experiance": "13 Years",
+      "licenseNo": "LI2000B723859",
+      "available": "12:30 PM - 04:00 PM",
+      "timing": [
+        "12:00PM",
+        "12:20PM",
+        "12:40PM",
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM",
+        "03:20PM",
+        "03:40PM",
+        "04:00PM"
+      ],
+      "id": 2
+    }
+  ],
+  "psychiatrist": [
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Hemalatha MD",
+      "field": "Psychiatrist",
+      "experiance": "16 Years",
+      "licenseNo": "LI2000B723826",
+      "available": "09:00 AM - 11:20 AM",
+      "timing": [
+        "09:00AM",
+        "09:20AM",
+        "09:40AM",
+        "10:00AM",
+        "10:20AM",
+        "10:40AM",
+        "11:00AM",
+        "11:20AM"
+      ],
+      "id": 1
+    },
+    {
+      "image": "../../assets/Image/doctor.png",
+      "doctorName": "Dr. Sudhandiradhivya MS",
+      "field": "Psychiatrist",
+      "experiance": "19 Years",
+      "licenseNo": "LI2000B729874",
+      "available": "01:00 PM - 04:00 PM",
+      "timing": [
+        "01:00PM",
+        "01:20PM",
+        "01:40PM",
+        "02:00PM",
+        "02:20PM",
+        "02:40PM",
+        "03:00PM",
+        "03:20PM",
+        "03:40PM",
+        "04:00PM"
+      ],
+      "id": 2
+    }
+  ],
+  "queryDetails": [
+    {
+      "emailId": "manihibiscus@gmail.com",
+      "name": "Manikandan S",
+      "mobile": "8072393102",
+      "queryMessage": "HI Hello",
+      "id": 5
+    },
+    {
+      "emailId": "praveen@gmail.com",
+      "name": "Praveen",
+      "mobile": "7585965859",
+      "queryMessage": "I want vaccine for polio",
+      "id": 6
+    }
+  ],
+  "appointmentDetails": [
+    {
+      "patientName": "DINESH",
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-08-01",
+      "appointmentTime": "11:00AM",
+      "say": "",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Swetha MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "11:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 1,
+      "status": "Accepted"
+    },
+    {
+      "patientName": "DINESH",
+      "mobileno": "9750051165",
+      "appointmentDate": "2023-08-02",
+      "appointmentTime": "09:00AM",
+      "say": "",
+      "doctorField": "Cardiologist",
+      "doctorName": "Dr. Subramani MS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "09:00AM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 2,
+      "status": "Cancelled"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-08-03",
+      "appointmentTime": "01:00PM",
+      "say": "",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Hari Gokul MD",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "01:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 3,
+      "status": "Accepted"
+    }
+  ],
+  "cancelledRequest": [
+    {
+      "cName": "DINESH",
+      "cMobileNo": "9750051165",
+      "cDate": "2023-08-02",
+      "cdoctorName": "Dr. Subramani MS",
+      "reporting": "Sended",
+      "id": 1,
+      "remarkMessage": "Sorry, That day I am not available, Please pick some other day"
+    }
+  ],
+  "acceptRequest": [],
+  "billDetails": [
+    {
+      "patientId": 1,
+      "name": "DINESH",
+      "doctorName": "Dr. Swetha MS",
+      "doctorField": "Pediatrician",
+      "mobileNo": "9750051165",
+      "consultingFee": "₹82",
+      "otherFee": "₹100",
+      "Total": "₹182",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-08-01",
+      "id": 1
+    },
+    {
+      "patientId": 1,
+      "name": "MANIKANDAN",
+      "doctorName": "Dr. Hari Gokul MD",
+      "doctorField": "Dentist",
+      "mobileNo": "8072393102",
+      "consultingFee": "₹52",
+      "otherFee": "₹100",
+      "Total": "₹152",
+      "status": "sended to patient",
+      "paymentStatus": "Paid",
+      "appointmentDate": "2023-08-03",
+      "id": 2
+    }
+  ],
+  "forgotPassDetails": [
+    {
+      "userId": "manihibiscus@gmail.com",
+      "id": 1
+    }
+  ],
+  "paymentHistory": [
+    {
+      "patientName": "DINESH",
+      "email": "dineshdharneesh1734@gmail.com",
+      "phone": "9750051165",
+      "appointmentDate": "2023-08-01",
+      "doctorField": "Pediatrician",
+      "doctorName": "Dr. Swetha MS",
+      "consultingFee": "₹82",
+      "otherFee": "₹100",
+      "Total": "₹182",
+      "paymentStatus": "Success",
+      "id": 1
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "email": "manikandan@gmail.com",
+      "phone": "8072393102",
+      "appointmentDate": "2023-08-03",
+      "doctorField": "Dentist",
+      "doctorName": "Dr. Hari Gokul MD",
+      "consultingFee": "₹52",
+      "otherFee": "₹100",
+      "Total": "₹152",
+      "paymentStatus": "Success",
+      "id": 2
+    }
+  ],
+  "Event": [
+    {
+      "eventName": "Happy Health Day",
+      "date": "Jun 18",
+      "content1": "Health is the greatest wealth. Happy World Health Day!",
+      "content2": "Staying healthy is physical, emotional, and social. Stay healthy. Happy World Health Day!",
+      "content3": "To keep the body in good health is a duty",
+      "content4": "otherwise, we shall not be able to trim the lamp of wisdom and keep our mind strong and clear",
+      "link": "../../assets/world-cancer-day.png",
+      "id": 1
+    },
+    {
+      "eventName": "Wish you Many More Happy Christmas!",
+      "date": "Dec 25",
+      "content1": "Christmas isn't just a day, it's a frame of mind.",
+      "content2": "Love the giver more than the gift.",
+      "content3": "Christmas is a stocking stuffed with sugary goodness.",
+      "content4": "It's the most wonderful time of the year!",
+      "link": "../../assets/christmas-tree.png",
+      "id": 2
+    },
+    {
+      "eventName": "Wish you Happy New Year!",
+      "date": "Jan 01",
+      "content1": "Dear world, I am excited to be alive in you, and I am thankful for another year.",
+      "content2": "Cheers to a New year and another chance for us to get it right.",
+      "content3": "Don't live the same year 75 times and call it a life.” —Robin Sharma",
+      "content4": "Celebrate endings—for they precede new beginnings.",
+      "link": "../../assets/calendar.png",
+      "id": 3
+    },
+    {
+      "eventName": "World Blood Donor Day 🩸❤️",
+      "date": "Jun 20",
+      "content1": "Each and every drop of blood that is donated has the power to save a life.",
+      "content2": "One small act, one life saved.",
+      "content3": "Giving blood is giving life. Join the lifesavers today!",
+      "content4": "Every drop counts. Make a difference, donate blood.",
+      "link": "../../assets/blood-donation.png",
+      "id": 4
+    }
+  ],
+  "dipalayCardiologist": [
+    {
+      "topic": "Cardiology",
+      "title": "Best Heart Treatment in Salem, Tamil Nadu – MMCH Hospital",
+      "content": "The Cardiology Department provides a continuum care for the prevention, treatment, recovery & rehabilitation of heart and vascular diseases.It is the pioneer institute in introducing quality cardiology procedures in South India at a time when cardiac surgery was considered the only solution for treatment of serious heart ailments. MMCH is one among the first few hospitals in India to offer 24/7 Primary PCI program. Cardiology Day Care Center, CCU and Cath Lab provide state of the art care to achieve the ideal goal of “door to needle & door to balloon time” in Coronary Revascularisation therapy.",
+      "doctorList": [
+        "Dr. Swetha MD., DM., FACC., FICC",
+        "Dr. Pranavram MD., DM(Cardiology)"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/cardio-01.jpeg",
+        "../../assets/Image/fieldImages/cardio-02.jpeg",
+        "../../assets/Image/fieldImages/cardio-03.jpeg"
+      ]
+    },
+    {
+      "topic": "Dentist",
+      "title": "Dental Treatment in Salem, Tamil Nadu – MMCH Hospital",
+      "content": "Dental department in Mani Medical Center specialises preventive, interceptive and corrective treatment of teeth and jaw problems.The dental department is a specialized branch of healthcare that focuses on the diagnosis, prevention, and treatment of conditions affecting the oral cavity and surrounding structures. It plays a vital role in maintaining oral health and promoting overall well-being. Dental departments can be found in various healthcare settings, including hospitals, clinics, and specialized dental practices.",
+      "doctorList": [
+        "Dr. Hari Gokul B.D.S, M.D.S",
+        "Dr. Sedhuragavan B.D.S, M.D.S",
+        "Dr. Gautam B.D.S",
+        "Dr. Ganesh B.D.S"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/dentist-01.jpeg",
+        "../../assets/Image/fieldImages/dentist-02.jpeg",
+        "../../assets/Image/fieldImages/dentist-03.jpeg",
+        "../../assets/Image/fieldImages/dentist-04.jpeg",
+        "../../assets/Image/fieldImages/dentist-05.jpeg",
+        "../../assets/Image/fieldImages/dentist-06.jpeg"
+      ]
+    },
+    {
+      "topic": "Gendral Ward",
+      "title": "Gendral Ward – MMCH Hospital",
+      "content": "The general department provides a continuum care for the prevention, treatment, recovery of common injury. General ward is a common unit where patients who are admitted share the same room. The ward is equipped with health monitoring systems with one-to-one care assistance for patients as required. Facilities are catered as per patient's diagnosis, age, comfort and other essential factors.Staff Nurses-to-bed ratio: General wards- 1:6; Special wards-1:4; ICUs-1:1; Nursery Unit-1:2; Major OT- 2 staff nurses per table; Minor OT- 01 staff nurse per table",
+      "doctorList": [
+        "Dr. Murugan MBBS",
+        "Dr. Thiru MBBS",
+        "Dr. Karthikeyan MBBS"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/general-01.jpeg",
+        "../../assets/Image/fieldImages/general-02.jpeg",
+        "../../assets/Image/fieldImages/general-03.jpeg"
+      ]
+    },
+    {
+      "topic": "Pediatrician",
+      "title": "Pediatrician – MMCH Hospital",
+      "content": "Pediatricians are medical doctors who specialize in the care and treatment of infants, children, and adolescents. They play a critical role in monitoring and promoting the physical, emotional, and social well-being of children from birth until young adulthood. Pediatricians are trained to diagnose and manage a wide range of childhood illnesses, developmental disorders, and provide preventive care.",
+      "doctorList": [
+        "Dr. Swetha MS",
+        "Dr. Pranav Ram MS"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/Pediatrician-01.jpeg",
+        "../../assets/Image/fieldImages/Pediatrician-02.jpeg",
+        "../../assets/Image/fieldImages/Pediatrician-03.jpeg"
+      ]
+    },
+    {
+      "topic": "Gynecologist",
+      "title": "Gynecologist – MMCH Hospital",
+      "content": "Gynecologists are medical doctors who specialize in the health and well-being of the female reproductive system. In a hospital setting, gynecologists play a crucial role in providing comprehensive care to women of all ages. They diagnose and treat various gynecological conditions, offer preventive screenings, and provide reproductive health services.",
+      "doctorList": [
+        "Dr. Thilagavathi MS",
+        "Dr. Kavitha MD"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/gyno-01.jpeg",
+        "../../assets/Image/fieldImages/gyno-02.jpeg",
+        "../../assets/Image/fieldImages/gyno-03.jpeg"
+      ]
+    },
+    {
+      "topic": "Cosmic Surgery",
+      "title": "Cosmic Surgery – MMCH Hospital",
+      "content": "Cosmic surgery, as a term used in a hospital setting, is not a recognized medical procedure. Cosmic typically refers to outer space or the universe, and it does not have a specific medical meaning. Surgical procedures performed in hospitals are typically related to treating specific medical conditions or diseases. If you're referring to a specific surgical procedure or have more details about what you mean by cosmic surgery, please provide further clarification so I can assist you more effectively.",
+      "doctorList": [
+        "Dr. Mythili MD",
+        "Dr. Vigneshwaran MD"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/cosmic-01.jpeg",
+        "../../assets/Image/fieldImages/cosmic-02.jpeg",
+        "../../assets/Image/fieldImages/cosmic-03.jpeg"
+      ]
+    },
+    {
+      "topic": "Otolaryngologist - ENT",
+      "title": "Otolaryngologist - ENT – MMCH Hospital",
+      "content": "An otolaryngologist, commonly known as an ENT (Ear, Nose, and Throat) doctor, is a medical specialist who diagnoses and treats conditions related to the ear, nose, throat, and structures of the head and neck. Otolaryngologists are often found practicing in hospitals, where they provide specialized care to patients of all ages. Here's some information about otolaryngologists in a hospital setting. Otolaryngologists are trained to diagnose and treat a wide range of conditions affecting the ear, nose, throat, head, and neck. This includes conditions such as ear infections, hearing loss, sinusitis, allergies, tonsillitis, voice disorders, swallowing difficulties, and tumors of the head and neck.",
+      "doctorList": [
+        "Dr. Manikandan MD",
+        "Dr. Arunkumar MD"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/ent-01.jpeg",
+        "../../assets/Image/fieldImages/ent-02.jpeg",
+        "../../assets/Image/fieldImages/ent-03.jpeg",
+        "../../assets/Image/fieldImages/ent-04.jpeg",
+        "../../assets/Image/fieldImages/ent-05.jpeg",
+        "../../assets/Image/fieldImages/ent-06.jpeg"
+      ]
+    },
+    {
+      "topic": "Psychiatrist",
+      "title": "Psychiatrist – MMCH Hospital",
+      "content": "Psychiatrists evaluate patients to diagnose mental health disorders through comprehensive assessments, including interviews, observations, and psychological tests. They gather information about patients' symptoms, medical history, and psychosocial factors to develop an accurate diagnosis.Psychiatrists create individualized treatment plans based on the specific needs of each patient. They consider various factors such as the severity of the disorder, patient preferences, and the availability of treatment options. Treatment plans may include psychotherapy (talk therapy), medication management, and other therapeutic interventions.",
+      "doctorList": [
+        "Dr. Hemalatha MD",
+        "Dr. Sudhandiradhivya MS"
+      ],
+      "infrastructureImages": [
+        "../../assets/Image/fieldImages/psycho-01.jpeg",
+        "../../assets/Image/fieldImages/psycho-02.jpeg",
+        "../../assets/Image/fieldImages/psycho-03.jpeg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+<app-header></app-header>
+<form div class="adddoc" [formGroup]="PatientRegister">
+  <br>
+  <h2 style="color: #071468;">Patient Registration</h2>
+  <div class="container">
+  <div class="split1" style="color: #071468;">
+    <h4 class="title">Personal Details</h4>
+    <label>Patient Name:</label><br />
+    <input type="text" placeholder="Enter your Name" class="inp-box" formControlName="patientName"
+    pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$"
+
+    oninput="this.value = this.value.toUpperCase()"/>
+
+    <div class="error" *ngIf="PatientRegister.controls['patientName'].dirty" >
+      <p *ngIf="PatientRegister.controls['patientName'].errors?.['required']">
+        Enter the Field
+      </p>
+      <p *ngIf="PatientRegister.controls['patientName'].errors?.['pattern']">
+        Enter Valid Name
+      </p>
+      <!-- <p *ngIf="PatientRegister.controls['patientName'].errors?.['minlength']">
+        Enter Valid Name
+      </p> -->
+    </div>
+    <br /> <br>
+    <label>Father Name:</label><br />
+    <input type="text" placeholder="Enter your Father Name" class="inp-box" formControlName="fatherName"
+    pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$"
+
+     oninput="this.value = this.value.toUpperCase()"/>
+    <div class="error" *ngIf="PatientRegister.controls['fatherName'].dirty">
+      <p *ngIf="PatientRegister.controls['fatherName'].errors?.['required']">
+        Enter the field
+      </p>
+      <p *ngIf="PatientRegister.controls['fatherName'].errors?.['pattern']">
+        Enter Valid Name
+      </p>
+
+    </div>
+    <br /> <br>
+    <label>Gender:</label><br><br>
+    <div class="gender-category">
+          <input type="radio" name="gender" formControlName="gender" value="male" >
+          <label for="male">Male</label>
+          <input type="radio" name="gender" formControlName="gender" value="female" >
+          <label for="female">Female</label>
+          <input type="radio" name="gender" formControlName="gender" value="other" >
+          <label for="other">Other</label>
+    </div>
+    <br />
+    <!-- <label>Blood Group</label><br />
+    <input type="text" class="sel-box" placeholder="Blood Group" required formControlName="blood"
+      pattern="^(A|B|AB|O)[+-]$" oninput="this.value = this.value.toUpperCase()"  />
+    <div class="error" *ngIf="PatientRegister.controls['blood'].dirty">
+      <p *ngIf="PatientRegister.controls['blood'].errors?.['required']">
+        Enter the Blood Group
+      </p>
+      <p *ngIf="PatientRegister.controls['blood'].errors?.['pattern']">
+        Enter valid value
+      </p>
+    </div> -->
+    <label>Blood Group</label><br />
+    <select class="SelectInput" formControlName="blood">
+      <option  value="" disabled selected>Choose Blood Group</option>
+      <option value="A+">A+ve</option>
+      <option value="A+">B+ve</option>
+      <option value="A+">A-ve</option>
+      <option value="A+">B-ve</option>
+      <option value="A+">O+ve</option>
+      <option value="A+">O-ve</option>
+      <option value="A+">AB+ve</option>
+      <option value="A+">AB-ve</option>
+      </select>
+       <div class="error" *ngIf="PatientRegister.controls['blood'].dirty">
+      <p *ngIf="PatientRegister.controls['blood'].errors?.['required']">
+        Choose the Blood Group
+      </p>
+      <!-- <p *ngIf="PatientRegister.controls['blood'].errors?.['pattern']">
+        Enter valid value
+      </p> -->
+    </div>
+    <br /><br />
+    <label>Date of Birth</label><br />
+    <input type="date" class="inp-box" placeholder="Date" required formControlName="date" />
+<br>
+    <br>
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" id="email"
+        class="inp-box"
+      placeholder="Enter Email Id"
+        pattern="^(?=[a-zA-Z0-9._%+-]{4,})(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\3)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+
+        formControlName="email" />
+
+      <div class="error" *ngIf="PatientRegister.controls['email'].dirty">
+        <p *ngIf="PatientRegister.controls['email'].errors?.['required']">Please enter your Email Id</p>
+        <p *ngIf="PatientRegister.controls['email'].errors?.['pattern']">Please enter the valid mail id</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="split2" style="color: #071468;">
+    <br><br>
+    <label>Contact Number</label><br />
+    <input type="text" class="inp-box" name="phno" placeholder="Phone number" required formControlName="phone"
+      pattern="^[6-9](?!.*(\d)\1{4})\d{9}$" />
+    <div class="error" *ngIf="PatientRegister.controls['phone'].dirty">
+      <p *ngIf="PatientRegister.controls['phone'].errors?.['required']">
+        Enter the Phone Number
+      </p>
+      <p *ngIf="PatientRegister.controls['phone'].errors?.['pattern']">
+        Enter valid number
+      </p>
+    </div>
+    <br /><br>
+    <label>Address</label><br />
+
+    <textarea type="text" class="inp-box" name="phno" placeholder="Enter Address" required
+      formControlName="address"
+      pattern="^[a-zA-Z0-9\s,.'-/]{3,}$" ></textarea>
+    <div class="error" *ngIf="PatientRegister.controls['address'].dirty">
+      <p *ngIf="PatientRegister.controls['address'].errors?.['required']">
+        Enter the address
+      </p>
+      <p *ngIf="PatientRegister.controls['address'].errors?.['pattern']">
+        Enter the valid field
+      </p>
+    </div>
+
+    <!-- <label>Uplaod Patient Image</label><br /><br />
+    <input type="file" id="file" required multiple accept="image/*" formControlName="image"/> <br> -->
+
+    <br><br>
+    <label>Insurance Policy Card Availability:</label><br><br>
+    <div>
+          <input type="radio" name="insurence" formControlName="insurance" value="YES" >
+          <label>Yes</label>
+          <input type="radio" name="insurence" formControlName="insurance" value="NO" >
+          <label>No</label>
+    </div><br>
+    <label for="Upload Photo">Upload Photo</label><br>
+    <small>* upload png, jpg, jpeg format only</small><br><br>
+    <div class="uploadImage">
+      <input type="file" formControlName="uploadFile" accept=".png, .jpg, .jpeg" (change)="onFileSelected($event)" />
+    </div><br>
+    <div>
+      <label>Password</label><br>
+      <small>*minimum 6 to maximum 14 character, <br> *minimum 1 special character and number</small>
+      <input type="password" formControlName="password" class="inp-box"
+        pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
+
+      <div class="error" *ngIf="PatientRegister.controls['password'].dirty">
+        <p *ngIf="PatientRegister.controls['password'].errors?.['required']">Please set your Password</p>
+        <p *ngIf="PatientRegister.controls['password'].errors?.['pattern']">Password Invalid</p>
+      </div>
+    </div><br>
+    <div>
+      <label>Confirm Password</label>
+      <input type="password" class="inp-box"
+        formControlName="cpassword" />
+      <div class="error" *ngIf="PatientRegister.controls['cpassword'].dirty">
+        <p *ngIf="PatientRegister.controls['cpassword'].errors?.['required']">Please enter the same password</p>
+        <p *ngIf="PatientRegister.controls['cpassword'].errors?.['confirmedValidator']">Password not match</p>
+      </div>
+      <div class="sub">
+        <button type="submit" class="submit" (click)="register()">Register</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</form>
+<app-footer></app-footer>

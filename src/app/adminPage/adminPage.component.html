@@ -1,0 +1,77 @@
+<app-adminHeader></app-adminHeader>
+<!-- {{loggedUser|json}} -->
+<h2 style="color: #071468;text-align: center;">Welcome to Admin</h2>
+<marquee direction="left"></marquee>
+<div class="content">
+  <div class="box1">
+    <h2 style="color:#071468;">Requested Appointment</h2>
+    <button class="button2" routerLink="/requestSlot" style="color:#071468;">View Applicants</button>
+
+  </div>
+ <div class="box1">
+  <h2 style="color:#071468;">Registered People Count</h2>
+  <!-- <div class="count" ><p>{{registeredCount.length}}</p></div> -->
+  <button class="button4" style="color:#071468;">{{registeredCount.length}}</button>
+
+</div>
+<div class="box1">
+  <h2 style="color:#071468;">Query Count : <span>{{queryCount.length}}</span></h2>
+  <button class="button3" routerLink="/viewQuery" style="color:#071468;">View Query</button>
+</div>
+ <a class="box1">
+  <div >
+  <h2 style="color:#071468;">Patients Details</h2>
+  <button class="button" (click)="show()" style="color:#071468;">Show Details</button>
+</div>
+</a>
+
+</div>
+<br><br>
+<form class="form" *ngIf="status">
+  <table>
+    <thead>
+      <th>Patient Id</th>
+      <th>Patient Name</th>
+      <th>Father Name</th>
+      <th>Gender</th>
+      <th>Blood</th>
+      <th>D.O.B</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+      <th>Insurance</th>
+      <th>Select</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of registeredCount">
+        <td>{{patient.id}}</td>
+        <td>
+          {{patient.fatherName}}
+        </td>
+        <!-- <td>
+          <div *ngIf="patient.isEdit">
+              <input type="text" [(ngModel)]="patient.fatherName" class="form-control"/>
+          </div>
+          <div *ngIf="!patient.isEdit">
+              {{patient.fatherName}}
+          </div>
+      </td> -->
+        <td>{{patient.fatherName}}</td>
+        <td>{{patient.gender}}</td>
+        <td>{{patient.blood}}</td>
+        <td>{{patient.date}}</td>
+        <td>{{patient.email}}</td>
+        <td>{{patient.phone}}</td>
+        <td>{{patient.address}}</td>
+        <td>{{patient.insurance}}</td>
+        <!-- <td>
+          <button [disabled]="patient.isDisabled" id="refchange" (click)="edit(patient)">Edit Account</button>
+        </td> -->
+        <td>
+          <button [disabled]="patient.isDisabled" id="refchange" (click)="deleted(patient)">Delete Account</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>

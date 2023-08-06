@@ -1,0 +1,15 @@
+<header class="header">
+  <nav>
+     <img [src]="adminHeaderImg.logo" id="eveimg" />
+     <h2>Mani Medical Care and Hospital </h2>
+     <div> <marquee behavior="" direction="right"><img [src]="adminHeaderImg.ambulance" id="eveimg" /></marquee> </div>
+     <ul>
+        <li><a routerLink="/generateBills" routerLinkActive="active"><img [src]="adminHeaderImg.homeIcon">Bills</a></li>
+        <li><a routerLink="/viewQuery" routerLinkActive="active"><img [src]="adminHeaderImg.homeIcon" alt="">View Query</a></li>
+        <li><a routerLink="/slotHistory" routerLinkActive="active"><img [src]="adminHeaderImg.homeIcon" alt="">Slot History</a></li>
+        <li><img [src]="adminHeaderImg.homeIcon" /> <button (click)="logout()" class="logout">Logout</button></li>
+
+     </ul>
+  </nav>
+</header>
+<hr>

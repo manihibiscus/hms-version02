@@ -1,0 +1,112 @@
+<app-doctorHeader></app-doctorHeader>
+<!-- {{getQuery|json}} -->
+<h2 style="text-align: center;color: #071468;">Requested Slot</h2>
+<form class="form">
+  <table>
+    <thead style="color: #071468;">
+      <!-- <th>S.No</th> -->
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Medical Field</th>
+      <th>Doctor Name</th>
+      <th>Appointment Date</th>
+      <th>Appointment Time</th>
+      <!-- <th>Health issue</th> -->
+      <th>Select</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of getAppointment let i =index" [hidden]="appointment.status=='Accepted' ||appointment.status=='Cancelled' ">
+        <!-- <td>{{i+1}}</td> -->
+        <td>{{appointment.patientName}}</td>
+        <td>{{appointment.mobileno}}</td>
+        <td>{{appointment.doctorField}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.appointmentDate}}</td>
+        <td>{{appointment.appointmentTime}}</td>
+        <!-- <td>{{appointment.say}}</td> -->
+        <td>
+          <button class="back1"  (click)="accept(appointment,appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate,appointment.appointmentTime, appointment.say, appointment.doctorName, appointment.doctorField)">Accept</button>
+          <button class="back2"  (click)="cancel(appointment,appointment.id,appointment.patientName,appointment.mobileno,appointment.appointmentDate, appointment.doctorName )">Cancel</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<br>
+<br>
+<br>
+<h2 style="text-align: center;color: #071468;">Accepted Slot</h2>
+
+<form class="form">
+  <table>
+    <thead style="color: #071468;">
+      <th>S.No</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Appointment Date</th>
+      <th>Appointment Time</th>
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of acceptedAppointment let i =index">
+        <td>{{i+1}}</td>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.mobileNo}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.doctorField}}</td>
+        <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
+        <td>{{appointment.timeing}}</td>
+        <!-- <td>{{appointment.problem}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</form>
+<br>
+<br>
+<br>
+<h2 style="text-align: center;color: #071468;">Remark Update</h2>
+<form class="form">
+  <table>
+    <thead style="color: #071468;">
+      <th>S.No</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Appointment Date</th>
+      <th>Doctor Name</th>
+      <th>Remarks</th>
+      <th>Report to Patinet</th>
+      <th>Select</th>
+
+      <!-- <th>Appointment time</th> -->
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of remarkAppointment let i =index "[formGroup]="remarkMessage"  >
+        <td>{{i+1}}</td>
+        <td>{{appointment.cName}}</td>
+        <td>{{appointment.cMobileNo}}</td>
+        <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{appointment.cdoctorName}}</td>
+        <td>
+          <textarea [hidden]="appointment.reporting=='Sended'" name="remark" id="" cols="20" rows="3" formControlName="rkMessage"></textarea>
+        </td>
+        <td>{{appointment.reporting}}</td>
+        <td>
+          <button class="button" [disabled]="appointment.reporting=='Sended'"  (click)="sendRemarks(appointment)"
+          [ngClass]="{blur:appointment.reporting=='Sended'}"
+          >Send to Patient</button>
+        </td>
+
+        <!-- <td>{{appointment.timeing}}</td> -->
+        <!-- <td>{{appointment.problem}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</form>
+<div class="notice" *ngIf="remarkAppointment.length==0">
+  <h3 style="color: green;text-align:center">All the remarks have been sent to the rightful ones</h3>
+</div>
+<!-- <button (click)="doctorView()">Doctor View</button> -->
+<!-- <app-footer></app-footer> -->

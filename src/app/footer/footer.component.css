@@ -1,0 +1,36 @@
+.footer{
+  width: 100%;
+  height: 300px;
+  background-color: #238ca1;
+  margin-top: 15px;
+  border-radius: 5px;
+  color:#233863;
+  border: 2px solid #ffb4a1;
+  color: white;
+
+}
+/* .footer:hover{
+  background-color: #9fc3ee;
+  border-radius: 5px;
+} */
+.FootStyle{
+ padding-left: 20px;
+ padding-right: 20px;
+ text-align: left;
+}
+.rights h4{
+  text-align: center;
+
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+}
+nav ul li img{
+  padding-right: 10px;
+}

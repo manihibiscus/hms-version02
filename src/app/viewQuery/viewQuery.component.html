@@ -1,0 +1,24 @@
+<app-adminHeader></app-adminHeader>
+<!-- {{getQuery|json}} -->
+<h2 style="color: #071468;text-align: center;">Details of Queries</h2>
+<form class="form">
+  <table>
+    <thead style="color: #071468;">
+      <th>S.No</th>
+      <th>Name</th>
+      <th>Email Id</th>
+      <th>Mobile No</th>
+      <th>Query Message</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let query of getQuery ; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{query.name}}</td>
+        <td>{{query.emailId}}</td>
+        <td>{{query.mobile}}</td>
+        <td>{{query.queryMessage}}</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<!-- <app-footer></app-footer> -->

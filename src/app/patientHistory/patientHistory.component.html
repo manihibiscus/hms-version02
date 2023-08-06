@@ -1,0 +1,358 @@
+<app-patientHeader></app-patientHeader>
+<div class="whole">
+  <div class="split1">
+    <div class="Slot" (click)="profile()">
+      <h3>View Profile</h3>
+    </div>
+    <div class="Slot" (click)="accept()">
+      <h3>Appointments History</h3>
+    </div>
+
+    <div class="Slot" (click)="cancel()">
+      <h3>Cancelled History</h3>
+    </div>
+
+    <div class="Slot" (click)="paymentPending()">
+      <h3>Payment History</h3>
+    </div>
+  </div>
+  <div class="split2">
+    <div class="view" *ngIf="showImage == 'true'">
+      <!-- <img src="../../assets/Image/slotHistory.jpg" style="width: 400px;height: 350px;padding-left: 300px;padding-top: 20px;" alt=""> -->
+      <div class="profile">
+        <div class="div1">
+          <h4 style="color: #5f6a75; font-size: 18px">Personal Details</h4>
+          <p>
+            Patient Name: <span>{{ loggedUser.patientName }}</span>
+          </p>
+          <p>
+            Father Name: <span>{{ loggedUser.fatherName }}</span>
+          </p>
+          <p>
+            Blood Group: <span>{{ loggedUser.blood }}</span>
+          </p>
+          <p>
+            Gender: <span>{{ loggedUser.gender }}</span>
+          </p>
+          <p>
+            D.O.B: <span>{{ loggedUser.date | date : "MMM d, y" }}</span>
+          </p>
+          <p>
+            Email Id: <span>{{ loggedUser.email }}</span>
+          </p>
+          <p>
+            Phone no: <span>{{ loggedUser.phone }}</span>
+          </p>
+          <p>
+            Health Insurance: <span>{{ loggedUser.insurance }}</span>
+          </p>
+        </div>
+        <div class="div2">
+          <img [src]="loggedUser.uploadFile" alt="" />
+          <p style="color: #818c98; font-size: 16px; font-weight: bold">
+            Patient Id:
+            <span style="color: #071468; font-weight: bold"
+              >1852000{{ loggedUser.id }}</span
+            >
+          </p>
+          <div (click)="changePassword()">
+            <pre class="change">Change Password</pre>
+          </div>
+          <div (click)="changeProfile()"><pre class="change">      Edit Profile</pre></div>
+        </div>
+
+        <!-- dialog box for Edit Profile -->
+        <dialog [open]="dialogBox" class="dialog">
+          <img id='reference' src="../../assets/multiply.png" style="width: 30px;height: 30px;position: absolute; right: 15px;" (click)="closeBanner() ">
+
+          <h3 style="color: #818c98; font-weight: bold;text-align: center;">Edit Profile</h3>
+          <div [formGroup]="editForm">
+            <div class="name">
+              <label>Patient Name:</label><br />
+              <input
+                type="text"
+                placeholder="Enter your Name"
+                class="inp-box"
+                formControlName="name"
+                pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$"
+                oninput="this.value = this.value.toUpperCase()"
+              />
+
+              <div class="error" *ngIf="editForm.controls['name'].dirty">
+                <p *ngIf="editForm.controls['name'].errors?.['required']">
+                  Enter the Field
+                </p>
+                <p *ngIf="editForm.controls['name'].errors?.['pattern']">
+                  Enter Valid Name
+                </p>
+              </div>
+            </div>
+            <div class="fatherName">
+              <label>Father Name:</label><br />
+              <input
+                type="text"
+                placeholder="Enter your Name"
+                class="inp-box"
+                formControlName="fatherName"
+                pattern="^(?!.*([a-zA-Z])\1\1)(?=.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z])[\sA-Za-z]+$"
+                oninput="this.value = this.value.toUpperCase()"
+              />
+
+              <div class="error" *ngIf="editForm.controls['fatherName'].dirty">
+                <p *ngIf="editForm.controls['fatherName'].errors?.['required']">
+                  Enter the Field
+                </p>
+                <p *ngIf="editForm.controls['fatherName'].errors?.['pattern']">
+                  Enter Valid Name
+                </p>
+              </div>
+            </div>
+            <div class="blood">
+              <label>Blood Group</label><br />
+              <input type="text" name="" id="" formControlName="bloodGroup" />
+              <div class="error" *ngIf="editForm.controls['bloodGroup'].dirty">
+                <p *ngIf="editForm.controls['bloodGroup'].errors?.['required']">
+                  Enter the Blood Group
+                </p>
+              </div>
+            </div>
+            <!-- <div class="gender">
+              <label>Gender:</label><br />
+              <input type="text" name="" id="" formControlName="gender" />
+              <div class="error" *ngIf="editForm.controls['gender'].dirty">
+                <p *ngIf="editForm.controls['gender'].errors?.['required']">
+                  Enter the gender
+                </p>
+              </div>
+            </div> -->
+            <div>
+              <label for="email">Email</label><br />
+              <input
+                type="email"
+                id="email"
+                class="inp-box"
+                placeholder="Enter Email Id"
+                pattern="^(?=[a-zA-Z0-9._%+-]{4,})(?!.*([a-zA-Z0-9])\1\1\1)(?!.*(\d)\3)[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                formControlName="emailId"
+              />
+
+              <div class="error" *ngIf="editForm.controls['emailId'].dirty">
+                <p *ngIf="editForm.controls['emailId'].errors?.['required']">
+                  Please enter your Email Id
+                </p>
+                <p *ngIf="editForm.controls['emailId'].errors?.['pattern']">
+                  Please enter the valid mail id
+                </p>
+              </div>
+            </div>
+            <div>
+              <label>Contact Number</label><br />
+              <input
+                type="text"
+                class="inp-box"
+                name="phno"
+                placeholder="Phone number"
+                required
+                formControlName="phoneNumber"
+                pattern="^[6-9](?!.*(\d)\1{4})\d{9}$"
+              />
+              <div class="error" *ngIf="editForm.controls['phoneNumber'].dirty">
+                <p
+                  *ngIf="editForm.controls['phoneNumber'].errors?.['required']"
+                >
+                  Enter the Phone Number
+                </p>
+                <p *ngIf="editForm.controls['phoneNumber'].errors?.['pattern']">
+                  Enter valid number
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="editButton" (click)="editProfile()">Edit</button>
+        </dialog>
+        <dialog [open]="changePasswordBox" class="dialog" [formGroup]="changePassForm">
+          <img id='reference' src="../../assets/multiply.png" style="width: 30px;height: 30px;position: absolute; right: 15px;" (click)="closeBanner() ">
+          <h3 style="color: #818c98; font-weight: bold;text-align: center;">Change Password</h3>
+          <div>
+            <label for="email">Email</label><br />
+            <p class="fixed">{{loggedUser.email}}</p>
+            <div>
+              <label>Enter Old Password</label><br><br>
+              <input type="text" formControlName="oldPassword" />
+
+            </div>
+            <div>
+              <label>Create New Password</label><br>
+              <small style="color: green;">*Minimum 6 to Maximum 14 Character, *Minimum 1 Special Character and Number</small><br><br>
+              <input type="{{ show ? 'text' : 'password' }}" formControlName="password" class="inp-box"
+                pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}$" />
+
+              <div class="error" *ngIf="changePassForm.controls['password'].dirty">
+                <p *ngIf="changePassForm.controls['password'].errors?.['required']">Please set your Password</p>
+                <p *ngIf="changePassForm.controls['password'].errors?.['pattern']">Password Invalid</p>
+              </div>
+              <div class="ShowPassword">
+                <!-- <input type="checkbox" onclick="showPassword()">Show Password -->
+                <input type="checkbox" (change)="visiblePassword()">
+                <label style="color: #233863;"> Show Password</label>
+              </div>
+            </div>
+            <div>
+              <label>Re-enter Password</label><br><br>
+              <input type="{{ show ? 'text' : 'password' }}" class="inp-box"
+                formControlName="cpassword" />
+              <div class="error" *ngIf="changePassForm.controls['cpassword'].dirty">
+                <p *ngIf="changePassForm.controls['cpassword'].errors?.['required']">Please enter the same password</p>
+                <p *ngIf="changePassForm.controls['cpassword'].errors?.['confirmedValidator']">Password not match</p>
+              </div>
+              <div class="sub">
+                <button type="submit" class="editButton" (click)="changePass()">Change Password</button>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </div>
+    <div *ngIf="showCancel == 'true'">
+      <h2 style="text-align: center; color: #071468">Cancelled History</h2>
+      <form class="form">
+        <table>
+          <thead style="color: #071468">
+            <th>S.No</th>
+            <th>Patient Name</th>
+            <!-- <th>Contact no</th> -->
+            <th>Appointment Date</th>
+            <th>Doctor Name</th>
+            <th>Remarks</th>
+            <!-- <th>Send</th> -->
+            <!-- <th>Appointment time</th> -->
+            <!-- <th>Health issue</th> -->
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cancelled; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.cName }}</td>
+              <!-- <td>{{item.cMobileNo}}</td> -->
+              <td>{{ item.cDate | date : "MMM d, y" }}</td>
+              <td>{{ item.cdoctorName }}</td>
+              <td>{{ item.remarkMessage }}</td>
+              <!-- <td>{{appointment.problem}}</td> -->
+            </tr>
+          </tbody>
+        </table>
+        <p
+          [hidden]="!(cancelled.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Cancelled History Available *
+        </p>
+      </form>
+    </div>
+    <div class="accept" *ngIf="showAccept == 'true'">
+      <h2 style="text-align: center; color: #071468">Appointments History</h2>
+
+      <form class="form">
+        <table>
+          <thead style="color: #071468">
+            <th>S.No</th>
+            <th>Patient Name</th>
+            <!-- <th>Contact no</th> -->
+            <th>Doctor Name</th>
+            <th>Doctor Field</th>
+            <th>Appointment Date</th>
+            <!-- <th>Consulting Fees</th>
+            <th>Other Fees</th>
+            <th>Total</th> -->
+            <!-- <th>Health issue</th> -->
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of completed; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.name }}</td>
+              <!-- <td>{{item.mobileNo}}</td> -->
+              <td>{{ item.doctorName }}</td>
+              <td>{{ item.doctorField }}</td>
+              <td>{{ item.appointmentDate | date : "MMM d, y" }}</td>
+              <!-- <td>{{ item.consultingFee }}</td>
+              <td>{{ item.otherFee }}</td>
+              <td>
+                {{ item.Total }}
+              </td> -->
+              <!-- <td>{{appointment.problem}}</td> -->
+            </tr>
+          </tbody>
+        </table>
+        <p
+          [hidden]="!(completed.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Appointment History Available *
+        </p>
+      </form>
+    </div>
+    <div class="pending" *ngIf="showPending == 'true'">
+      <h2 style="color: #071468; text-align: center">Payment History</h2>
+      <form class="form">
+        <table>
+          <thead style="color: #071468">
+            <th>S.No</th>
+            <th>Patient Name</th>
+            <th>Appointment Date</th>
+            <th>Doctor Name</th>
+            <th>Doctor Field</th>
+            <!-- <th>Contact no</th> -->
+            <th>Consulting Fee</th>
+            <th>Other Fee</th>
+            <th>Total</th>
+            <th>Payment Status</th>
+            <th>Print</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of history; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.patientName }}</td>
+              <td>{{ item.appointmentDate }}</td>
+              <td>{{ item.doctorName }}</td>
+              <td>{{ item.doctorField }}</td>
+              <!-- <td>{{item.phone}}</td> -->
+              <td>{{ item.consultingFee }}</td>
+              <td>{{ item.otherFee }}</td>
+              <td>{{ item.Total }}</td>
+              <td [ngClass]="{ green: item.paymentStatus == 'Success' }">
+                {{ item.paymentStatus }}
+              </td>
+              <td>
+                <button (click)="clicking(item)">Click</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p
+          [hidden]="!(history.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Payment History Available *
+        </p>
+      </form>
+
+    </div>
+  </div>
+  <dialog class="printDialog" [open]="printing">
+    <h2 style="text-align: center;">Payment Successfully</h2>
+    <div class="content">
+      <p><span>Patient Name:</span> {{printName}}</p>
+      <p><span>Doctor Name:</span> {{printDoctorName}}</p>
+      <p><span>Doctor Field:</span> {{printDoctorField}}</p>
+      <p><span>Appointed Date:</span> {{printAppointmentDate}}</p>
+      <p><span>Consulting Fee:</span> {{printConFee}}</p>
+      <p><span>Other Fee:</span> {{printOthFee}}</p>
+      <p><span>Total Fee:</span> {{printTotFee}}</p>
+      <p style="color: green"><span>Payment Status:</span> {{printStatus}}</p>
+    </div>
+    <br>
+    <div style="margin-left: 400px;">
+    <button (click)="printForm()">Print</button>
+    <button (click)="back()" id="back">Back</button>
+  </div>
+  </dialog>
+</div>

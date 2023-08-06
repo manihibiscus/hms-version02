@@ -1,0 +1,177 @@
+.form
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 200px 1fr 1fr;
+  grid-column-gap: 5px;
+  background-color: white;
+  border: 1px solid rgb(16, 61, 121);
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 109px;
+  background-color: whitesmoke;
+
+}
+.input
+{
+  margin-top: 15px;
+  text-align: left;
+}
+.field1 label{
+  text-align: center;
+
+}
+.inputfield{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: transparent;
+  text-align: center;
+}
+label{
+  font-size: 18px;
+}
+/* .inputselect{
+  width: 160px;
+  text-align: center;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: transparent;
+}
+.inputselect option{
+  color: green;
+
+} */
+.makeaAppointment {
+  margin-top: 5px;
+  padding: 6px 8px;
+  border: none;
+  background-color: rgb(153, 216, 224);
+  border: 1px solid white;
+  color: #1e1468;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* .makeaAppointment{
+  width: 200px;
+  padding: 8px 10px;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #e5eaec,#90c79a);
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  font-weight: bolder;
+  color: #0e0a01;
+} */
+.field5{
+  margin-top: 25px;
+}
+
+.doctor {
+  width: 70%;
+  color: white;
+  margin: auto;
+  display: grid;
+  /* grid-auto-flow: row; */
+  grid-template-columns: 1fr 1fr;
+  padding-top: 50px;
+  /* background-image: url(../Image/); */
+  justify-content: center;
+  /* grid-template-rows:  220px 220px; */
+  /* grid-template-columns: 220px 220px; */
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.box {
+  background-color: whitesmoke;
+  border-radius: 50px;
+  text-align: center;
+  padding: 55px 50px;
+  color:#2371b4;
+  font-weight: bold;
+  border-color: #f7a955;
+}
+.box p{
+  text-align: left;
+}
+
+.form{
+  margin: auto 0 ;
+  /* background-color: rgba(233, 231, 231, 0.603); */
+  padding-top: 15px;
+  /* justify-content: space-between ; */
+
+}
+table,thead,th,tbody,tr,td{
+  border: 4px solid white;
+  border-collapse:collapse;
+}
+table{
+  /* justify-content: space-between ; */
+  margin: 0 auto ;
+  background-color: whitesmoke;
+  width: 80%;
+}
+.field1, .field4, .field2, .field7, .field3, .field4, .field5{
+  text-align: left;
+  color: #07142e;
+  font-weight:bolder ;
+  background-color: whitesmoke;
+
+}
+
+table tbody tr td{
+  text-align: center;
+  padding: 12px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 12px;
+
+}
+
+select {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+select:hover{
+  border:1px solid black;
+}
+select option {
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+
+input[type="date"] {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+

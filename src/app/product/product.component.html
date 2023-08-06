@@ -1,0 +1,21 @@
+<h3>PRODUCTS</h3>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Brand Name</th>
+    <th>Showcase</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let eachData of getData">
+      <td>{{eachData.id}}</td>
+
+      <td><a routerLink="/product/{{eachData.name}}">{{eachData.name}}</a></td>
+
+      <td><img [src] = eachData.image /></td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <router-outlet> </router-outlet>
+</div>

@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="medicalbody">
+  <div class="box">
+     <a routerLink="General"><img [src]="mediacalFieldImg.general" alt="General internists" class="icons" (click)="general()" ></a>
+     <h4>General Internists</h4>
+  </div>
+  <div class="box">
+     <a routerLink="Pediatrician"><img [src]="mediacalFieldImg.pediatrician" alt="Pediatrician" class="icons" (click)="pediatrician()" ></a>
+     <h4>Pediatrician</h4>
+  </div>
+  <div class="box">
+    <a routerLink="Gynecologist"> <img [src]="mediacalFieldImg.gyno" alt="Gynecologist" class="icons" (click)="gynecologist()"> </a>
+    <h4>Gynecologist </h4>
+  </div>
+  <div class="box">
+    <a routerLink="Dentist"><img [src]="mediacalFieldImg.dentist" alt="Dentist" class="icons" (click)="dental()"></a>
+    <h4>Dentist</h4>
+  </div>
+  <div class="box" >
+     <div class="subcardio"></div>
+     <a routerLink="Cardiologist"><img [src]="mediacalFieldImg.cardio" alt="Cardiologist" class="icons" (click)="cardiologist()">
+     </a>
+     <h4>Cardiologist</h4>
+  </div>
+  <div class="box">
+    <a routerLink="Cosmetic"><img [src]="mediacalFieldImg.cosmic" alt="Cosmetic surgery" class="icons" (click)="cosmetic()">
+    </a>
+     <h4>Cosmetic</h4>
+  </div>
+  <div class="box">
+    <a routerLink="Otolaryngologist"><img [src]="mediacalFieldImg.ent" alt="Anesthesiologist" class="icons" (click)="otolaryngologist()">
+    </a>
+     <h4>Otolaryngologist</h4>
+  </div>
+  <div class="box">
+     <a routerLink="Psychiatrist"><img [src]="mediacalFieldImg.psycho" alt="Psychiatrist" class="icons" (click)="psychiatrist()"></a>
+     <h4>Psychiatrist</h4>
+  </div>
+
+</div>
+<app-footer></app-footer>
+
+
+

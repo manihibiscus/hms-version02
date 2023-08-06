@@ -1,0 +1,108 @@
+<app-header></app-header>
+<div class="contact">
+  <div class="Box1">
+
+    <!-- <h2>Contact Us</h2>
+    <h3 class="head">MANI MEDICAL CENTER AND HOSPITAL</h3>
+    <h3 class="pad">Details</h3>
+    <p class="pad"> <i>99, Avanashi Road, <br>
+    Coimbatore-641014, India. <br>
+
+    Appointments (Selected Specialities) :+ 91-422-*****, <br>
+
+    + 91-422-680 3838 <br>
+    Guest Relations :+91 82902 833**,  + 91-80863 70*** (Whatsapp) <br>
+    Marketing : + 91- 73993 334** ,+ 91- 88548 875** <br>
+    Medical Records : + 91-422-4 82 31**, 3641 <br>
+    Phone : + 91-422 432 38** , +91-422 432 *00* , +91-422 580 3*0* <br>
+</i>
+  </p> -->
+  <img [src]="contactImg.frontImage" alt="" style="height: 500px; width: 900px;">
+  </div>
+  <div class="Box2">
+    <h2>Query Box</h2>
+    <form  #queryForm="ngForm" class="queryform" (ngSubmit)="submitQuery()" >
+      <div class="email">
+        <label >Email : </label>
+        <input type="email" class="field" name="email" #emailId="ngModel" [(ngModel)]="email" required
+        pattern="^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"
+        placeholder="Enter your Email"
+        />
+      </div>
+      <div *ngIf="emailId.errors && (emailId.dirty)" class="error">
+        <div [hidden]="!emailId.errors['required']">Please Enter Email</div>
+        <div [hidden]="!emailId.errors['pattern']">Please Enter Valid Email</div>
+      </div>
+      <br>
+      <div class="email">
+        <label>Name :  </label>
+        <input type="text" class="field" name="qName" #name="ngModel" [(ngModel)]="contactName" required
+        pattern="^[A-Za-z ]+$" placeholder="Enter your Name" minlength="3"
+        />
+        <!-- <textarea name="" id="" cols="30" rows="5" formControlName="message"></textarea> -->
+      </div>
+      <div *ngIf="name.errors && (name.dirty)" class="error">
+        <div [hidden]="!name.errors['required']">Please Enter Name</div>
+        <div [hidden]="!name.errors['minlength']">Please Valid Name</div>
+        <div [hidden]="!name.errors['pattern']">Enter Only Alphabets </div>
+      </div>
+      <br>
+      <div class="email">
+        <label for="">Mobile Number:</label>
+        <input type="text" name="mobileNo" #qMobile="ngModel"
+
+        [(ngModel)]="mobile" required pattern="^[6789][0-9]{9}$" class="field"
+        placeholder="Enter your Mobile Number">
+      </div>
+      <br>
+      <div *ngIf="qMobile.errors && (qMobile.dirty)" class="error">
+        <div [hidden]="!qMobile.errors['required']">Enter Mobile Number</div>
+        <div [hidden]="!qMobile.errors['pattern']">Enter Valid Mobile Number</div>
+      </div>
+      <div class="email">
+        <label>Enter your Query :  </label><br><br>
+        <!-- <input type="email" class="emailfield"/> -->
+        <textarea name="" id="" cols="30" rows="5" name="message" #qMessage="ngModel" [(ngModel)]="message" required minlength="3"
+        placeholder="Enter your Questions"></textarea>
+      </div>
+      <div *ngIf="qMessage.errors && (qMessage.dirty)" class="error">
+        <div [hidden]="!qMessage.errors['required']">Please Enter Your Query</div>
+        <div [hidden]="!qMessage.errors['minlength']">Enter atleast 3 character </div>
+      </div>
+      <br>
+      <div class="submit">
+        <button [disabled]="!queryForm.valid">Submit Query</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="head"><h2>Peripheral Centers</h2></div>
+<div class="contact2">
+<div class="b1">
+<h4 style="color: #071468;text-align: center;">MMCH CITY CENTER</h4>
+<p style="text-align: center;font-size: 18px;">No.18, Vivekananda Road, Ram Nagar, <br>
+Coimbatore-641009, India. <br>
+Phone :+91 422  43797**, 22325** <br>
+</p>
+</div>
+<div class="b2">
+<h4 style="color: #071468;text-align: center;">MMCH SULUR HOSPITAL</h4>
+<p style="text-align: center;font-size: 18px;">
+242 b, Trichy Road, Sulur, <br>
+Coimbatore-641402, India. <br>
+Phone :+91 422  222 8 2** <br>
+
+</p>
+</div>
+<div class="b3">
+<h4 style="color: #071468;text-align: center;">MMCH SPECIALITY HOSPITAL</h4>
+<p style="text-align: center;font-size: 18px;">
+16, Palaniappa Street, <br>
+Erode  638009, India. <br>
+Phone :+91 424 2256**6, 22264** <br>
+</p>
+</div>
+
+</div>
+
+<app-footer></app-footer>

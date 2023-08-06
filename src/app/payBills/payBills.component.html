@@ -1,0 +1,146 @@
+<app-patientHeader></app-patientHeader>
+<!-- <form class="form">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Patient name</th>
+      <th>Contact no</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Consulting Fee</th>
+      <th>Other Fee</th>
+      <th>Total</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of loggedInUser">
+        <td>{{payment.id}}</td>
+        <td>{{payment.name}}</td>
+        <td>{{payment.mobileNo}}</td>
+        <td>{{payment.doctorName}}</td>
+        <td>{{payment.doctorField}}</td>
+        <td>{{payment.consultingFee}}</td>
+        <td>{{payment.otherFee}}</td>
+        <td>{{payment.Total}}</td>
+        <td>
+          <button [disabled]="payment.isDisabled" id="refchange" (click)="pay(payment,payment.id)">Pay</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+
+
+  <form action="">
+    <h2 style="text-align: center;color: #071468;">Your Bill</h2>
+    <table>
+      <thead style="color: #071468;">
+      <th>Patient Id</th>
+      <th>Patient Name</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <!-- <th>Contact no</th> -->
+      <th>Consulting Fee</th>
+      <th>Other Fee</th>
+      <th>Total</th>
+      <!-- <th>Select</th> -->
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{refereshData.id}}</td>
+          <td>{{refereshData.patientName}}</td>
+          <td>{{refereshData.doctorName}}</td>
+          <td>{{refereshData.doctorField}}</td>
+          <!-- <td>{{refereshData.phone}}</td> -->
+          <td>{{refereshData.consultingFee}}</td>
+          <td>{{refereshData.otherFee}}</td>
+          <td style="color: green;font-weight: bolder;">{{refereshData.Total}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </form><br>
+  <div>
+  <div class="whole">
+    <div class="split1">
+      <img [src]="payBillImg.paymentImg" style="width: 500px;height: 500px;" alt="">
+    </div>
+  <div class="split2">
+  <h2 style="text-align: center;color: #1e1468;background-color: #f5f5f5;margin: auto;width: 35%;padding:5px;border-radius: 10px;">Make Payment</h2>
+<!-- <br> -->
+  <div class="debit" [formGroup]="debitCardForm">
+<h2>Pay on Credit/Debit card</h2>
+    <div class="cardNumber">
+      <label for="">Debit/Credit Card Number: </label><br><br>
+      <input type="text" name="cardNumber" formControlName="cardNumber" pattern="[0-9]{16}" id="field1" placeholder="Enter the 16 digits Card No">
+      <div class="cardNoValid" *ngIf="debitCardForm.controls['cardNumber'].dirty">
+        <p *ngIf="debitCardForm.controls['cardNumber'].errors?.['required']">
+          Enter the Field
+        </p>
+        <p *ngIf="debitCardForm.controls['cardNumber'].errors?.['pattern']">
+          Enter the Valid Credit/Debit Card Number
+        </p>
+      </div>
+      </div><br>
+      <div class="month">
+        <label for="">Expiration Date (MM/YY): </label><br><br>
+        <input type="month" name="expireDate" formControlName="expireDate" id="field2">
+        <div class="expDateValid" *ngIf="debitCardForm.controls['expireDate'].dirty">
+          <p *ngIf="debitCardForm.controls['expireDate'].errors?.['required']">
+           Please Enter the Field
+          </p>
+        </div>
+        </div><br>
+        <div class="ccv">
+          <label for="">CCV Number:</label>
+          <input type="text" name="ccvNumber" formControlName="ccvNumber" pattern="^[0-9]{3,4}$" id="field3" placeholder="CCV No">
+          <div class="ccvValid" *ngIf="(debitCardForm.controls['ccvNumber'].dirty || debitCardForm.controls['ccvNumber'].touched) && debitCardForm.controls['ccvNumber'].invalid ">
+            <p *ngIf="debitCardForm.controls['ccvNumber'].errors?.['required']">
+             Please Enter the Field
+            </p>
+            <p *ngIf="debitCardForm.controls['ccvNumber'].errors?.['pattern']">
+              Please Enter Valid CVV number
+             </p>
+          </div><br>
+    </div>
+    <div>
+      <button class="button" [disabled]="debitCardForm.invalid || refereshData.consultingFee==null || refereshData.consultingFee=='' "
+      [ngClass]="{invalid:debitCardForm.invalid || refereshData.consultingFee==null || refereshData.consultingFee==''}"
+      style="margin: 30px 50px 10px 120px" id="refchange" (click)="pay(refereshData)">Pay {{refereshData.Total}}</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  <!-- <br>
+  <br>
+  <form action="">
+    <h2 style="text-align: center;color: #071468;">Payment History</h2>
+    <table>
+      <thead style="color: #071468;">
+      <th>S.No</th>
+      <th>Patient Name</th>
+      <th>Appointment Date</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th> -->
+      <!-- <th>Contact no</th> -->
+      <!-- <th>Consulting Fee</th>
+      <th>Other Fee</th>
+      <th>Total</th>
+      <th>Payment Status</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of history; let i=index">
+          <td>{{i+1}}</td>
+          <td>{{item.patientName}}</td>
+          <td>{{item.appointmentDate}}</td>
+          <td>{{item.doctorName}}</td>
+          <td>{{item.doctorField}}</td> -->
+          <!-- <td>{{item.phone}}</td> -->
+          <!-- <td>{{item.consultingFee}}</td>
+          <td>{{item.otherFee}}</td>
+          <td>{{item.Total}}</td>
+          <td [ngClass]="{green:item.paymentStatus == 'Success' }">{{item.paymentStatus}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </form> -->
+<!-- <app-footer></app-footer> -->

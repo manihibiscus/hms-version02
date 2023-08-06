@@ -1,0 +1,122 @@
+.form{
+  margin: auto 0 ;
+  background-color: white;
+  /* justify-content: space-between ; */
+  font-size: 12px;
+}
+table,thead,th,tbody,tr,td{
+  border: 4px solid white;
+  border-collapse:collapse;
+}
+table{
+  /* justify-content: space-between ; */
+  margin: 0 auto ;
+  background-color: whitesmoke;
+  width: 80%;
+}
+
+table tbody tr td{
+  text-align: center;
+  padding: 12px;
+}
+
+table thead th{
+  text-align: center;
+  padding: 12px;
+
+}
+.back{
+  width: 70px;
+  padding: 5px 5px;
+  display: inline;
+  margin: auto;
+  background: linear-gradient(to right, #e5eaec,#dfebe1);
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #0e0a01;
+}
+
+.content
+{
+  display:grid;
+  grid-template-columns: 25% 24% 24% 24.5%;
+  grid-column-gap:10px;
+  width: 100%;
+  height: 250px;
+  margin: auto 0 ;
+  margin-top: 45px;
+}
+.box1{
+  background-color: white;
+  border-radius: 10px;
+  border: 3px solid #077caa;
+}
+.box1 h2{
+  text-align: center;
+  padding-top: 50px;
+  color: #077caa;
+
+}
+.box1 p{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.button{
+  margin-left: 100px;
+  padding:15px 15px 15px 15px ;
+  margin-top:10px;
+  border:0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
+
+}
+.button2{
+  margin-left: 90px;
+  padding:15px 15px 15px 15px ;
+  margin-top:10px;
+  border:0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #077caa;
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
+
+}
+.button3{
+  margin-left: 100px;
+  padding:15px 15px 15px 15px ;
+  margin-top:10px;
+  border:0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #077caa;
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
+
+}
+.button4{
+  margin-left: 133px;
+  padding:15px 15px 15px 15px ;
+  margin-top:10px;
+  border:0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #077caa;
+  font-size: 22px;
+  background-color:whitesmoke;
+  color: #077caa;
+  border: 2px solid #077caa;
+}

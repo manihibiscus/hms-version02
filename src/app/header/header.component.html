@@ -1,0 +1,17 @@
+<header class="header">
+  <nav>
+     <a routerLink="/home"><img [src]="headerImg.logo" id="eveimg" />
+      <!-- <div style="position: absolute; width: 10%;padding-left: 70px;background-color: aqua;" ><marquee behavior="" direction="right"><img src="../../assets/Image/ambulance.png" id="eveimg" /></marquee></div> -->
+    </a>
+     <h2>Mani Medical Care and Hospital</h2>
+     <div> <marquee behavior="" direction="right"><img [src]="headerImg.ambulance" id="eveimg" /></marquee> </div>
+     <ul>
+        <li><a routerLink="/home" routerLinkActive="active"><img [src]="headerImg.homeIcon" alt="">Home</a></li>
+        <li><a routerLink="/medicalSpec" routerLinkActive="active"><img [src]="headerImg.medSpeIcon" alt="">Medical Specialist</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active"><img [src]="headerImg.contactIcon" alt="">Contact</a></li>
+        <li> <a routerLink="/login" routerLinkActive="active"><img [src]="headerImg.loginIcon" alt=""> Login</a>
+        </li>
+     </ul>
+  </nav>
+  <hr>
+</header>

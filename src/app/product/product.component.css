@@ -1,0 +1,28 @@
+h3{
+  text-align: center;
+  color: orange;
+}
+
+table{
+  text-align: center;
+  margin:0 auto;
+  width:750px ;
+  height: 600px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  font-size: 22px;
+}
+
+tbody tr td img{
+  width:150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+thead,tbody,th,tr,td{
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: orange;
+}
+
+

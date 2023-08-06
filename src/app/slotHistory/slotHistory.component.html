@@ -1,0 +1,198 @@
+<app-adminHeader></app-adminHeader>
+<div class="whole">
+  <div class="split1">
+    <div class="Slot" (click)="cancel()">
+      <h3>Cancelled Slot</h3>
+    </div>
+    <div class="Slot" (click)="accept()">
+      <h3>Accepted Slot</h3>
+    </div>
+    <div class="Slot" (click)="paymentPending()">
+      <h3>Payment Pending</h3>
+    </div>
+    <div class="Slot" (click)="paymentSuccess()">
+      <h3>Payment Success</h3>
+    </div>
+  </div>
+<div class="split2">
+  <div class="view" *ngIf="showImage=='true'">
+    <img src="../../assets/Image/slotHistory.jpg" style="width: 400px;height: 350px;padding-left: 300px;padding-top: 20px;" alt="">
+  </div>
+  <div *ngIf="showCancel=='true'">
+<h2 style="text-align: center;color: #071468;">Cancelled Slot</h2>
+<form class="form">
+  <table>
+    <thead style="color: #071468;">
+      <th>S.No</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Appointed Date</th>
+      <th>Doctor Name</th>
+      <th>Report to Patinet</th>
+      <th>Sended Message</th>
+
+      <!-- <th>Appointment time</th> -->
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of canceledAppointment let i =index">
+        <td>{{i+1}}</td>
+        <td>{{appointment.cName}}</td>
+        <td>{{appointment.cMobileNo}}</td>
+        <td>{{appointment.cDate | date: 'dd/MM/yyyy'}}</td>
+        <td>{{appointment.cdoctorName}}</td>
+        <td>{{appointment.reporting}}</td>
+        <td>{{appointment.remarkMessage}}</td>
+
+        <!-- <td>{{appointment.timeing}}</td> -->
+        <!-- <td>{{appointment.problem}}</td> -->
+
+      </tr>
+    </tbody>
+
+  </table>
+  <p
+          [hidden]="!(canceledAppointment.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Cancelled Slot Available *
+        </p>
+</form>
+</div>
+<div class="accept" *ngIf="showAccept=='true'">
+<h2 style="text-align: center;color: #071468;">Accepted Slot</h2>
+
+<form class="form">
+  <table>
+    <thead style="color: #071468;">
+      <th>S.No</th>
+      <th>Patient Name</th>
+      <th>Contact No</th>
+      <th>Doctor Name</th>
+      <th>Doctor Field</th>
+      <th>Appointed Date</th>
+      <th>Appointment Time</th>
+      <!-- <th>Health issue</th> -->
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of acceptedAppointment let i =index">
+        <td>{{i+1}}</td>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.mobileNo}}</td>
+        <td>{{appointment.doctorName}}</td>
+        <td>{{appointment.doctorField}}</td>
+        <td>{{appointment.date| date: 'dd/MM/yyyy'}}</td>
+        <td>{{appointment.timeing}}</td>
+        <!-- <td>{{appointment.problem}}</td> -->
+
+      </tr>
+
+    </tbody>
+  </table>
+  <p
+          [hidden]="!(acceptedAppointment.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Accepted Slot Available *
+        </p>
+</form>
+</div>
+<div class="pending" *ngIf="showPending=='true'">
+  <h2 style="color: #071468; text-align: center;">Payment Pending</h2>
+
+  <form class="form">
+    <table>
+      <thead style="color: #071468;">
+        <th>S.No</th>
+        <th>Patient Name</th>
+        <th>Contact No</th>
+        <th>Doctor Name</th>
+        <th>Doctor Field</th>
+        <th>Appointed Date</th>
+        <th>Consulting Fee</th>
+        <th>Other Fee</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Payment Status</th>
+
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of getUnpaidList let i =index">
+          <td>{{i+1}}</td>
+          <td>{{appointment.name}}</td>
+          <td>{{appointment.mobileNo}}</td>
+          <td>{{appointment.doctorName}}</td>
+          <td>{{appointment.doctorField}}</td>
+          <td>{{appointment.appointmentDate}}</td>
+          <td>{{appointment.consultingFee}}</td>
+          <td>{{appointment.otherFee}}</td>
+          <td>{{appointment.Total}}</td>
+          <td>{{appointment.status}}</td>
+          <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
+          green:appointment.paymentStatus == 'Paid'} ">
+            {{appointment.paymentStatus}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p
+          [hidden]="!(getUnpaidList.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Payment Pending Available *
+        </p>
+  </form>
+
+</div>
+<div class="success" *ngIf="showSuccess=='true'">
+  <h2 style="color: #071468; text-align: center;">Payment Success</h2>
+
+  <form class="form">
+    <table>
+      <thead style="color: #071468;">
+        <th>S.No</th>
+        <th>Patient Name</th>
+        <th>Contact No</th>
+        <th>Doctor Name</th>
+        <th>Doctor Field</th>
+        <th>Appointed Date</th>
+        <th>Consulting Fee</th>
+        <th>Other Fee</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Payment Status</th>
+
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of getPaidList">
+          <td>{{appointment.id}}</td>
+          <td>{{appointment.name}}</td>
+          <td>{{appointment.mobileNo}}</td>
+          <td>{{appointment.doctorName}}</td>
+          <td>{{appointment.doctorField}}</td>
+          <td>{{appointment.appointmentDate}}</td>
+          <td>{{appointment.consultingFee}}</td>
+          <td>{{appointment.otherFee}}</td>
+          <td>{{appointment.Total}}</td>
+          <td>{{appointment.status}}</td>
+          <td [ngClass]="{red:appointment.paymentStatus == 'Unpaid',
+          green:appointment.paymentStatus == 'Paid'} ">
+            {{appointment.paymentStatus}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p
+          [hidden]="!(getPaidList.length == 0)"
+          style="color: red; text-align: center"
+        >
+          * No Payment Success Available *
+        </p>
+  </form>
+
+</div>
+
+</div>
+</div>
