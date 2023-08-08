@@ -30,6 +30,7 @@ import { PatientHistoryComponent } from './patientHistory/patientHistory.compone
 import { BmiCalcularPipe } from './bmi-calcular.pipe';
 import { DoctorViewHistoryComponent } from './doctorViewHistory/doctorViewHistory.component';
 import { LoggerModule, NgxLoggerLevel } from "ngx-logger";
+import { BillStyleDirective } from './bill-style.directive';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { LoggerModule, NgxLoggerLevel } from "ngx-logger";
       SlotHistoryComponent,
       PatientHistoryComponent,
       BmiCalcularPipe,
-      DoctorViewHistoryComponent
+      DoctorViewHistoryComponent,
+      BillStyleDirective
    ],
   imports: [
     BrowserModule,
