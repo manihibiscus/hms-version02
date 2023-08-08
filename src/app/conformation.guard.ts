@@ -12,6 +12,7 @@ export interface IDeactivateComponent{
 
 export class ConformationGuard implements  CanDeactivate<IDeactivateComponent> {
 
+  
   canDeactivate(
     component: IDeactivateComponent,
     currentRoute: ActivatedRouteSnapshot,

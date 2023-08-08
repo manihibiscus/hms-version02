@@ -26,8 +26,8 @@ export class GeneralDoctorComponent implements OnInit {
       this.storing= JSON.parse(data);
     }
   this.http.get<any>(environment.getInfrastructureDetails).subscribe(value=>{
-      const choose=value.find((a:any)=>{
-        return a.topic === this.storing
+      const choose=value.find((item:any)=>{
+        return item.topic === this.storing
       });
       if(choose){
         this.check=choose;

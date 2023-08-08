@@ -16,7 +16,6 @@ import { AdminPageComponent } from './adminPage/adminPage.component';
 import { PatientHeaderComponent } from './patientHeader/patientHeader.component';
 import { PatientPageComponent } from './patientPage/patientPage.component';
 import { DoctorHeaderComponent } from './doctorHeader/doctorHeader.component';
-import { DoctorPageComponent } from './doctorPage/doctorPage.component';
 import { AppointmentRequestComponent } from './appointmentRequest/appointmentRequest.component';
 import { ViewQueryComponent } from './viewQuery/viewQuery.component';
 import { ViewSlotComponent } from './view-slot/view-slot.component';
@@ -25,10 +24,13 @@ import { SlotComponent } from './slot/slot.component';
 import { PayBillsComponent } from './payBills/payBills.component';
 import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.component';
 import { ConformationGuard } from './conformation.guard';
+import { CurrencyPipe } from './currency.pipe';
 import { SlotHistoryComponent } from './slotHistory/slotHistory.component';
 import { PatientHistoryComponent } from './patientHistory/patientHistory.component';
 import { BmiCalcularPipe } from './bmi-calcular.pipe';
 import { DoctorViewHistoryComponent } from './doctorViewHistory/doctorViewHistory.component';
+import { LoggerModule, NgxLoggerLevel } from "ngx-logger";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,6 @@ import { DoctorViewHistoryComponent } from './doctorViewHistory/doctorViewHistor
       PatientHeaderComponent,
       PatientPageComponent,
       DoctorHeaderComponent,
-      DoctorPageComponent,
       AppointmentRequestComponent,
       ViewQueryComponent,
       ViewSlotComponent,
@@ -51,6 +52,7 @@ import { DoctorViewHistoryComponent } from './doctorViewHistory/doctorViewHistor
       SlotComponent,
       PayBillsComponent,
       ForgotPasswordComponent,
+      CurrencyPipe,
       SlotHistoryComponent,
       PatientHistoryComponent,
       BmiCalcularPipe,
@@ -61,7 +63,12 @@ import { DoctorViewHistoryComponent } from './doctorViewHistory/doctorViewHistor
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: 'http://localhost:3000/',
+      level: NgxLoggerLevel.DEBUG,
+      serverLogLevel: NgxLoggerLevel.ERROR
+    })
     ],
   providers: [ConformationGuard],
   bootstrap:[AppComponent]

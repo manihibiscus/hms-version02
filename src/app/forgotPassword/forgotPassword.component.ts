@@ -22,8 +22,8 @@ status:boolean=false;
   proceed(){
     if(this.forgotForm.valid){
       this.http.get<any>(environment.getForgotPassDetails).subscribe(data=>{
-        const compare=data.find((a:any)=>{
-          return a.userId===this.forgotForm.value.userId;
+        const compare=data.find((item:any)=>{
+          return item.userId===this.forgotForm.value.userId;
         });
         if(compare){
           alert("Already Sended");
@@ -38,7 +38,7 @@ status:boolean=false;
   }
 
 
-   
+
   }
   ngOnInit() {
   }

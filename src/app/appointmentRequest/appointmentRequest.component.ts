@@ -54,8 +54,8 @@ getTimingBefore:any='';
       this.route.navigate(['/login']);
     }
     this.http.get<any>("http://localhost:3000/patientRegistration").subscribe(value=>{
-      const attempt=value.find((a:any)=>{
-        return a.patientName===this.loggedInUser.patientName
+      const attempt=value.find((item:any)=>{
+        return item.patientName===this.loggedInUser.patientName
       });
       if(attempt){
         this.Attempt=attempt.attemptStatus;

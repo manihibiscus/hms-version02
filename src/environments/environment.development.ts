@@ -19,7 +19,8 @@ export const environment = {
   getPaymentHistoryDetails:'http://localhost:3000/paymentHistory/',
   getEventDetails:'http://localhost:3000/Event/',
   getInfrastructureDetails:'http://localhost:3000/dipalayCardiologist/',
-  getUrl:'http://localhost:3000/'
+  getUrl:'http://localhost:3000/',
+  getLogger:'http://localhost:3000/loggerHistory/'
 };
 export const homePageImages={
   frontImage:"../../assets/Image/19836.jpg",
@@ -48,6 +49,7 @@ export const medicalFieldImages={
 export const homeHeaderImages={
   logo:"../../assets/Image/Icons/hospital (3).png",
   ambulance:"../../assets/Image/ambulance.png",
+  homeSymbolIcon:"../../assets/Image/Icons/home.png",
   homeIcon:"../../assets/Image/Icons/enter.png",
   medSpeIcon:"../../assets/Image/Icons/operator.png",
   contactIcon:"../../assets/Image/Icons/favorite.png",

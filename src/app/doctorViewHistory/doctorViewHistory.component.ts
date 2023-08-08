@@ -74,8 +74,8 @@ getDoctorProfile(){
 }
 activateDb(){
   this.http.get<any>(environment.getUrl+this.storeField).subscribe(data=>{
-    var value=data.find((a:any)=>{
-      return a.doctorName===this.loggedUser.doctorName
+    var value=data.find((item:any)=>{
+      return item.doctorName===this.loggedUser.doctorName
     });
     if(value){
       this.storedField=value;

@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../userService.service';
 import { Router } from '@angular/router';
-import { PatientServiceService } from '../patientPage/patientService.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { BillServiceService } from './billService.service';
 import { environment } from 'src/environments/environment';
@@ -14,6 +13,7 @@ import { patientPageImages } from 'src/environments/environment.development';
   styleUrls: ['./payBills.component.css']
 })
 export class PayBillsComponent implements OnInit {
+
   payBillImg=patientPageImages
   loggedInUser:any=""
   refereshData:any=""
@@ -25,7 +25,7 @@ export class PayBillsComponent implements OnInit {
     private http:HttpClient, private service:BillServiceService) { }
 
   ngOnInit() {
-    const sessionUser = sessionStorage.getItem('loggedInUser'); // <-- retrieve user details from session storage
+    const sessionUser = sessionStorage.getItem('loggedInUser');
     if (sessionUser) {
       this.loggedInUser = JSON.parse(sessionUser);
     }

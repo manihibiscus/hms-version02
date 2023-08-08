@@ -5,7 +5,6 @@ import { PatientServiceService } from './patientService.service';
 import { HttpClient } from '@angular/common/http';
 import { PatientModel } from './patient.model';
 import { environment } from 'src/environments/environment';
-import { patientPageImages } from 'src/environments/environment.development';
 
 
 @Component({
@@ -14,7 +13,6 @@ import { patientPageImages } from 'src/environments/environment.development';
   styleUrls: ['./patientPage.component.css']
 })
 export class PatientPageComponent implements OnInit {
-  patientPageImg=patientPageImages
   loggedUser:any=""
   currDate=new Date();
   currYear=this.currDate.getFullYear()

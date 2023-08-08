@@ -28,7 +28,7 @@
         If you want to know your BMI, Please Click BMI Icon
       </div>
       <div class="viewReport1">
-        <img [src]="patientPageImg.bmiIcon" alt="" (click)="checkBMI()">
+        <img src="../../assets/Image/bmi.png" alt="" (click)="checkBMI()">
       </div>
     </div>
       <div class="result" *ngIf="true">
@@ -45,7 +45,9 @@
           <span *ngIf="bmi >= 35.0 && bmi <=39.9"><img  src="../../assets/Image/Icons/sad.png" alt="" style="width: 40px; height: 40px;"> Important to consult with a healthcare</span>
           <span *ngIf="bmi >= 40.0"><img  src="../../assets/Image/Icons/sad.png" alt="" style="width: 40px; height: 40px;"> Important to consult with a healthcare</span>
         </p>
-        
+        <!-- <div class="commands">
+          <img src="../../assets/Image/Icons/clapping.png" alt="" style="width: 40px; height: 40px;">
+        </div> -->
       </div>
 
   </div>

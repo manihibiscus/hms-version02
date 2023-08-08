@@ -6,8 +6,8 @@ import { GetLoginService } from '../getLogin.service';
 import { UserServiceService } from '../userService.service';
 import { Location } from '@angular/common';
 import { PatientModel } from '../patientPage/patient.model';
-import { environment } from 'src/environments/environment';
-
+import { environment } from 'src/environments/environment.development';
+import { NGXLogger } from 'ngx-logger';
 @Component({
   selector: 'app-loginPage',
   templateUrl: './loginPage.component.html',
@@ -16,7 +16,9 @@ import { environment } from 'src/environments/environment';
 export class LoginPageComponent implements OnInit {
 
 
-  constructor(private service:GetLoginService, private formBuilder:FormBuilder, private http:HttpClient, private router:Router, private userService:UserServiceService, private location: Location) { }
+  constructor(private service:GetLoginService,
+    private logger:NGXLogger,
+    private formBuilder:FormBuilder, private http:HttpClient, private router:Router, private userService:UserServiceService, private location: Location) { }
   logindetails:any="";
   ngOnInit(){
 
@@ -46,7 +48,12 @@ export class LoginPageComponent implements OnInit {
 
       if(patient){
         alert("Login Successfully");
-        // this.loginForm.reset();
+        const logData = {
+          message : `User Logged In : ${this.loginForm.value.userId}`,
+          timestamp : new Date().toLocaleString()
+        }
+        this.http.post(environment.getLogger, logData).subscribe({
+        });
           this.userLogObj.userLogged=patient;
           this.userService.loggedInUser = patient;
           sessionStorage.setItem('loggedInUser', JSON.stringify(patient));

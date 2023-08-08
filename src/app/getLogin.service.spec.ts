@@ -2,11 +2,13 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { GetLoginService } from './getLogin.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 describe('Service: GetLogin', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [GetLoginService]
+      providers: [GetLoginService],
+      imports:[HttpClientModule]
     });
   });
 

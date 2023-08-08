@@ -19,6 +19,5 @@ export const environment = {
     getPaymentHistoryDetails:'http://localhost:3000/paymentHistory/',
     getEventDetails:'http://localhost:3000/Event/',
     getInfrastructureDetails:'http://localhost:3000/dipalayCardiologist/',
-    getUrl:'http://localhost:3000/',
+    getUrl:'http://localhost:3000/'
 };
-

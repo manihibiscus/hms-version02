@@ -4,7 +4,6 @@ import { AdminHeaderComponent } from './adminHeader/adminHeader.component';
 import { AdminPageComponent } from './adminPage/adminPage.component';
 import { AppointmentRequestComponent } from './appointmentRequest/appointmentRequest.component';
 import { ContactUsPageComponent } from './contactUsPage/contactUsPage.component';
-import { DoctorPageComponent } from './doctorPage/doctorPage.component';
 import { GeneralDoctorComponent } from './generalDoctor/generalDoctor.component';
 
 import { HomePageComponent } from './homePage/homePage.component';
@@ -76,10 +75,6 @@ component:ViewQueryComponent
 {
   path:'patienthome',
   component:PatientPageComponent
-},
-{
-  path:"doctorhome",
-  component:DoctorPageComponent
 },
 {
   path:"patientregister",

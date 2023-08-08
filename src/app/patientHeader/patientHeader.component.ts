@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UserServiceService } from '../userService.service';
 import { PatientPageComponent } from '../patientPage/patientPage.component';
 import { PatientServiceService } from '../patientPage/patientService.service';
+import { homeHeaderImages } from 'src/environments/environment.development';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { PatientServiceService } from '../patientPage/patientService.service';
 })
 export class PatientHeaderComponent implements OnInit  {
 
+  patientImg:any=homeHeaderImages
   constructor(private route:Router, private user:UserServiceService,
     private patService:PatientServiceService) { }
     ngOnInit(): void{
