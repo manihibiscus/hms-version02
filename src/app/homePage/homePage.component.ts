@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TimingService } from './timing.service';
-import { count } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment, homePageImages } from 'src/environments/environment.development';
 
@@ -12,10 +10,8 @@ import { environment, homePageImages } from 'src/environments/environment.develo
 export class HomePageComponent implements OnInit {
 
   homePageImg:any=homePageImages
-  constructor(private service:TimingService, private http:HttpClient) { }
-//   interval:any=setInterval(()=>{
-//     this.closepopup();
-//     },5000)
+  constructor(private http:HttpClient) { }
+
 cancel:boolean=false;
 eventTitile:any="";
 con1:any="";
@@ -55,7 +51,6 @@ this.open(event);
     setInterval(()=>{
       this.con1=event.content3;
       this.con2=event.content4;
-      this.service.counting=2;
       this.close();
     },4000);
   }

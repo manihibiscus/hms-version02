@@ -1,22 +1,4 @@
 {
-  "loggerHistory": [
-    {
-      "message": "User Logged In : sathishkumar12062004@gmail.com",
-      "level": "INFO",
-      "timestamp": "8/8/2023, 12:31:43 PM",
-      "id": 1
-    },
-    {
-      "message": "User Logged In : sathishkumar12062004@gmail.com",
-      "timestamp": "8/8/2023, 12:36:44 PM",
-      "id": 2
-    },
-    {
-      "message": "User Logged In : sathishkumar12062004@gmail.com",
-      "timestamp": "8/11/2023, 2:40:56 PM",
-      "id": 3
-    }
-  ],
   "patientRegistration": [
     {
       "patientName": "SATHISH KUMAR",
@@ -155,19 +137,23 @@
       "cpassword": "Mani@777",
       "id": 7,
       "mobileno": "8072393102",
-      "appointmentDate": "",
-      "appointmentTime": "",
+      "appointmentDate": "2023-08-15",
+      "appointmentTime": "12:00PM",
       "say": "",
-      "doctorField": "",
-      "doctorName": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Thiru MBBS",
       "attemptStatus": "false",
-      "appStatus": "",
-      "appoimtmentHour": "01:00PM",
+      "appStatus": "Cancelled! (Try again)",
+      "appoimtmentHour": "12:00PM",
       "apppointmentMin": "",
-      "remarkMessage": "",
+      "remarkMessage": "Not Available",
       "consultingFee": "",
       "otherFee": "",
-      "Total": ""
+      "Total": "",
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-08-15",
+      "cdoctorName": "Dr. Thiru MBBS"
     },
     {
       "patientName": "NAVANNETH",
@@ -970,6 +956,22 @@
       "remarkMessage": "",
       "id": 4,
       "status": "Accepted"
+    },
+    {
+      "patientName": "MANIKANDAN",
+      "mobileno": "8072393102",
+      "appointmentDate": "2023-08-15",
+      "appointmentTime": "12:00PM",
+      "say": "",
+      "doctorField": "General doctor",
+      "doctorName": "Dr. Thiru MBBS",
+      "attemptStatus": "true",
+      "appStatus": "Pending for appointment",
+      "appoimtmentHour": "12:00PM",
+      "apppointmentMin": "",
+      "remarkMessage": "",
+      "id": 5,
+      "status": "Cancelled"
     }
   ],
   "cancelledRequest": [
@@ -981,6 +983,15 @@
       "reporting": "Sended",
       "id": 1,
       "remarkMessage": "Sorry, That day I am not available, Please pick some other day"
+    },
+    {
+      "cName": "MANIKANDAN",
+      "cMobileNo": "8072393102",
+      "cDate": "2023-08-15",
+      "cdoctorName": "Dr. Thiru MBBS",
+      "reporting": "Sended",
+      "id": 2,
+      "remarkMessage": "Not Available"
     }
   ],
   "acceptRequest": [],
@@ -1238,6 +1249,29 @@
         "../../assets/Image/fieldImages/psycho-02.jpeg",
         "../../assets/Image/fieldImages/psycho-03.jpeg"
       ]
+    }
+  ],
+  "loggerHistory": [
+    {
+      "message": "User Logged In : sathishkumar12062004@gmail.com",
+      "level": "INFO",
+      "timestamp": "8/8/2023, 12:31:43 PM",
+      "id": 1
+    },
+    {
+      "message": "User Logged In : sathishkumar12062004@gmail.com",
+      "timestamp": "8/8/2023, 12:36:44 PM",
+      "id": 2
+    },
+    {
+      "message": "User Logged In : sathishkumar12062004@gmail.com",
+      "timestamp": "8/11/2023, 2:40:56 PM",
+      "id": 3
+    },
+    {
+      "message": "User Logged In : manikandan@gmail.com",
+      "timestamp": "8/14/2023, 10:32:50 AM",
+      "id": 4
     }
   ]
 }
